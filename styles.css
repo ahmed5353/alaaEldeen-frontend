@@ -1,0 +1,524 @@
+:root {
+  --primary-color: #bfa274;
+  --primary-color-light: #f2ece3;
+  --dark-gray: #1a232b;
+  --gray-font: #7a808a;
+  --active-font: #fff;
+  --active-bg: #e630501a;
+  --black-font: #071739;
+  --bg-gray: #f3f6f9;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue W23 for SKY';
+  src: url('assets/fonts/Helvetica font/HelveticaNeueW23forSKY-Reg.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue W23 for SKY';
+  src: url('assets/fonts/Helvetica font/Helvetica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* scrollbat */
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* For horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #999 #f1f1f1;
+}
+
+body {
+  font-family: 'Helvetica Neue W23 for SKY', sans-serif;
+  direction: rtl;
+  font-size: 14px;
+}
+
+.active-color {
+  color: var(--active-font);
+}
+.gray-color {
+  color: var(--gray-font);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s;
+    z-index: 1030;
+  }
+  #sidebar.show {
+    right: 0;
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1029;
+  }
+  .overlay.show {
+    display: block;
+  }
+}
+header.navbar {
+  background: #1a232b;
+  min-height: 85px;
+  border-width: 0px 0px 1px 0px;
+}
+header.navbar h5 {
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+header.navbar h5 .icon {
+  color: var(--active-font);
+}
+header.navbar span {
+  color: #b3b9c0;
+  margin: 0;
+  font-size: 11px;
+}
+#sidebar {
+  min-height: 100vh;
+  padding-top: 1rem;
+  border-left: 1px solid #e1e1e1;
+  background: #ffff;
+  overflow: auto;
+}
+
+#sidebar .nav-link {
+  font-size: 14px;
+  color: var(--gray-font);
+  padding: 0px 15px 0px 15px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+#sidebar .nav-link.active {
+  background: var(--primary-color);
+  color: var(--active-font);
+  font-weight: 400;
+  border-radius: 8px;
+  img {
+    color: #fff !important;
+  }
+}
+#sidebar .nav-link.active img {
+  color: #fff;
+}
+.breadcrumb-nav {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--gray-font) !important;
+  gap: 4px;
+}
+.breadcrumb-nav a {
+  color: var(--gray-font) !important;
+}
+.breadcrumb-nav .breadcrumb-item.active {
+  color: var(--active-font) !important;
+}
+.title-page {
+  font-size: 20px;
+  color: var(--black-font);
+  padding: 20px 0px;
+}
+.main-content {
+  padding: 2rem;
+}
+.container-tabel {
+  background: var(--bg-gray);
+  height: 100%;
+  margin-top: 10px;
+}
+.table-responsive {
+  background: #fff;
+}
+
+.table thead th {
+  vertical-align: middle;
+  text-wrap: nowrap;
+  padding: 10px 1.8rem;
+}
+
+.table tbody td {
+  vertical-align: middle;
+}
+.daterangepicker .drp-calendar.left {
+  display: block;
+}
+.daterangepicker .drp-calendar.right {
+  display: none;
+}
+.daterangepicker .drp-buttons {
+  float: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.daterangepicker .in-range {
+  background-color: var(--active-bg) !important;
+}
+
+.daterangepicker .active,
+.daterangepicker .active:hover {
+  background-color: var(
+    --active-font
+  ) !important; /* Your desired start/end date background color */
+  border-radius: 4px !important;
+}
+.daterange-input {
+  border: 1.3px solid #dbdee1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  border-radius: 5px;
+}
+.daterange-input input {
+  background: transparent;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.daterange-input img {
+  margin-left: -20px;
+  margin-right: 6px;
+}
+
+.daterange-input i {
+  margin-right: -20px;
+  margin-left: 6px;
+}
+.search-input {
+  color: var(--gray-font);
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+.search-input input {
+  background: var(--bg-gray);
+  color: var(--gray-font);
+  padding: 0px 23px;
+  height: 40px;
+  font-size: 13px;
+}
+.search-input i {
+  z-index: 10;
+  right: 4px;
+  position: absolute;
+}
+
+/* ----------------------------- input Wrappers ----------------------------- */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  border: 1px solid #dbdee1;
+  border-radius: 6px;
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  line-height: 6ex;
+  height: 40px;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: -0.8ex;
+  z-index: 1;
+  font-size: 12px;
+  right: 0.8em;
+  background-color: white;
+  padding: 0 5px;
+  color: var(--gray-font);
+}
+.input-wrapper.select:after {
+  content: '\f078';
+  font: normal normal normal 17px/1 FontAwesome;
+  color: var(--active-font);
+  left: 11px;
+  top: 30%;
+  height: 20px;
+
+  position: absolute;
+  pointer-events: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.input-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 142px;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 5px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--gray-font);
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid var(--gray-font);
+  -ms-word-break: normal;
+  word-break: normal;
+  height: 40px;
+}
+.btn-add,
+.btn-add:hover {
+  background-color: var(--primary-color);
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+}
+.form-check-custom {
+  font-size: 12px;
+  color: var(--gray-font);
+  direction: initial;
+}
+
+/* table */
+.table tr th {
+  color: var(--gray-font);
+  background: var(--bg-gray);
+  text-wrap: none;
+  font-size: 13px;
+  font-weight: 400;
+  border-color: var(--bg-gray) !important;
+}
+.table tr td {
+  white-space: nowrap;
+}
+
+.table tr {
+  border-color: var(--bg-gray) !important;
+  text-align: center;
+}
+.select-img img {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  border: 2px dashed var(--active-font);
+  margin: auto;
+}
+.select-user-img img {
+  width: 135px;
+  height: 135px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid rgba(230, 48, 80, 0.22);
+  margin: auto;
+}
+
+/*splash page*/
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-gray);
+  justify-content: center;
+  gap: 5px;
+}
+.login-form form {
+  width: 375px;
+  gap: 5px;
+}
+.login-form form input,
+.login-form form label {
+  background: var(--bg-gray) !important;
+}
+.login-form form input {
+  font-size: 15px;
+  padding-top: 25px;
+  height: 45px;
+}
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.input-custom.error input {
+  border: 1px solid red;
+}
+.valid-error {
+  color: red;
+  font-size: 11px;
+  padding: 0px 20px 10px;
+  display: none;
+}
+.input-custom.error .valid-error {
+  display: block grid;
+}
+div#preview-container {
+  position: absolute;
+  left: 12px;
+  top: 0;
+}
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  border-radius: 0px;
+}
+.page-item .page-link {
+  border-color: var(--bg-gray);
+  color: var(--gray-font);
+}
+.page-item .page-link.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn-logout,
+.btn-logout:hover {
+  background: #fff;
+  color: var(--black-font);
+}
+.tab-btn,
+.tab-btn:hover {
+  color: #606c7e;
+  border: 1.3px solid #dbdee1;
+  font-size: 14px;
+  min-height: 40px;
+  padding: 0px 30px;
+}
+.tab-btn.active,
+.tab-btn.active:hover {
+  color: var(--active-font);
+  border: 1.3px solid var(--active-font);
+  font-size: 14px;
+  min-height: 40px;
+  padding: 0px 30px;
+  background: var(--active-bg);
+}
+.action-btn {
+  background: var(--bg-gray);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-check-input:checked {
+  background-color: #28b446;
+  font-size: 20px;
+  border-color: #28b446;
+}
+.form-check-input {
+  background-color: #e1e1e1;
+  font-size: 20px;
+  border-color: var(--bg-gray);
+}
+
+/* Modal */
+
+.modal-header {
+  border-bottom: none;
+  button {
+    background-color: #ededed;
+    border-radius: 50%;
+  }
+}
+.modal-body {
+  text-align: center;
+}
+.modal-body .icon {
+  font-size: 45px;
+  color: #eb3d34;
+}
+.modal-body .message {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 80;
+}
+.modal-footer {
+  justify-content: center;
+  border-top: none;
+}
+.btn-delete {
+  background-color: #dd1e47;
+  height: 40px;
+  border-radius: 10px;
+  width: 12rem;
+  border: none;
+  color: white;
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  max-width: 24rem;
+  max-height: 20rem;
+  margin: auto;
+}
+
+/* DatePicker */
+
+/* Custom CSS for the selected date in the Date Range Picker */
+.daterangepicker td.active,
+.daterangepicker td.active:hover,
+.daterangepicker td.active.start-date,
+.daterangepicker td.active.end-date {
+  background-color: var(--primary-color) !important;
+  color: #33343a !important;
+}
+/* Custom CSS for the selected date range in the Date Range Picker */
+.daterangepicker td.in-range {
+  background-color: var(
+    --primary-color-light
+  ) !important; /* Your custom color for in-range dates */
+  color: black !important; /* Ensure text is readable */
+}
