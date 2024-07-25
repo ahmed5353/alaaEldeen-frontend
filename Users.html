@@ -270,14 +270,14 @@
             </nav>
           </div>
 
-          <div class="container">
-            <div class="   ">
+          <div class="container pb-3">
+            <div class="">
               <h2 class="title-page mb-0">المستخدمين</h2>
 
               <div
                 class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
               >
-                <div class="d-flex align-items-center gap-2 flex-wrap">
+                <div class="d-flex align-items-center gap-3 flex-wrap">
                   <div class="search-input">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input
@@ -288,12 +288,13 @@
                   </div>
                   <div class="input-wrapper select">
                     <label>طريقة التسجيل</label>
-                    <select class="">
+                    <select style="position: relative;">
                       <option value="">الكل</option>
                       <option value="1">مطبع</option>
                       <option value="2">تجار</option>
                       <option value="3">مس��ول</option>
                     </select>
+                    <i class="fa-solid fa-chevron-down" style="width: 10px; color: #bfa274; position: absolute; left: 10px; top: 18px; z-index: 999;"></i>
                   </div>
                  
                     <span class="daterange-input">
@@ -303,7 +304,7 @@
                         name="daterange"
                         class="custom-daterangepicker border-0 text-center"
                       />
-                      <i class="fa-solid fa-chevron-left active-color"></i>
+                      <i class="fa-solid fa-chevron-left" style="width: 10px; color: #bfa274;"></i>
                     </span>
                 </div>
 
@@ -315,18 +316,15 @@
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <img
-                    width="23"
-                    height="23"
+                    width="22"
+                    height="22"
                     src="assets/images/icon/add.svg"
                   />
                   اضافة مستخدم
                 </button>
               </div>
               <div class="d-flex">
-                <div class="form-check form-check-custom mt-2">
-                  <label for="flexCheckDefault"> المستخدمين المحظورين </label>
-                  <input type="checkbox" value="" id="flexCheckDefault" />
-                </div>
+                
               </div>
             </div>
           </div>
