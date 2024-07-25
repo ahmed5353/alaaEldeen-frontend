@@ -139,7 +139,8 @@ header.navbar span {
   font-weight: 400;
   border-radius: 8px;
   img {
-    color: #fff !important;
+    /* NOTE:check late why it doesn't work */
+    fill: #fff !important;
   }
 }
 #sidebar .nav-link.active img {
