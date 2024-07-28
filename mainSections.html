@@ -292,7 +292,11 @@
             >
               <a href="#">لوحة التحكم </a>
               /
-              <span class="breadcrumb-item active" aria-current="page">
+              <span
+                class="breadcrumb-item active"
+                aria-current="page"
+                style="font-weight: 800"
+              >
                 الاقسام الرئيسية
               </span>
             </nav>
@@ -330,7 +334,7 @@
                         name="daterange"
                         class="custom-daterangepicker border-0 text-center"
                       />
-                      <i class="fa-solid fa-chevron-left active-color"></i>
+                      <i class="fa-solid fa-chevron-left" style="color: #bfa274;"></i>
                     </span>
                   </div>
 
@@ -344,33 +348,37 @@
                     <img
                       width="23"
                       height="23"
-                      src="assets/images/icon/add.svg"
+                      src="assets/images/Add.gif"
                     />
-                    اضافة قسم
+                   اضافة قسم رئيسي
                   </button>
                 </div>
               </div>
-              <div class="container-tabel p-3 py-4">
-                <div class="container">
-                  <div class="table-responsive mb-3">
-                    <div class="p-3 my-2">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>اسم القسم</th>
-                            <th>عدد الاقسام الفرعية المندرجة</th>
-                            <th class="text-start">الحالة</th>
-                            <th style="width: 10%"></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
+              
+            <!--tabel-->
+          <div class="container-tabel p-3 py-4">
+            <div class="container">
+              <div class="table-responsive mb-3">
+                <div class="p-3 my-2">
+                  <table class="table">
+                    <thead>
+                       <tr>
+                        <th>#</th>
+                        <th>اسم القسم الرئيسي</th>
+                        <th>عدد الاقسام الفرعية المسجلة</th>
+                        <th >السمات المتاحة</th>
+                        <th>الحالة</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <tr>
                             <td>1</td>
-                            <td>مصطفى خالد</td>
-                            <td>6841856</td>
-                            <td class="text-start">
-                              <div class="form-switch">
+                            <td>ملابس رجالي</td>
+                            <td>22</td>
+                            <td>اللون</td>
+                            <td>
+                              <div class="form-switch ms-2">
                                 <input
                                   class="form-check-input"
                                   type="checkbox"
@@ -381,20 +389,29 @@
                               </div>
                             </td>
 
-                            <!-- events icon -->
-                            <td class="d-flex gap-3 justify-content-end">
-                              <button class="btn text-info action-btn">
-                                <i class="fa-regular fa-eye"></i>
+                           
+                            <td class="d-flex gap-2 justify-content-end">
+                              
+                              <button
+                                class="add-feature-btn"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#addFeatures"
+                                aria-controls="addFeatures"
+                              >
+                                
+                              اضافة خصائص
                               </button>
+                             
                               <button
                                 class="btn text-success action-btn"
                                 data-bs-toggle="offcanvas"
                                 data-bs-target="#edite-section"
                                 aria-controls="edite-section"
                               >
-                                <i class="fa-solid fa-pencil"></i>
+                                <img src="/assets/images/icon/pencil 1.svg" alt="">
                               </button>
-                              <!-- trash -->
+                              
                               <button
                                 style="color: red"
                                 class="btn action-btn"
@@ -405,40 +422,30 @@
                               </button>
                             </td>
                           </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <nav aria-label="Page navigation example  ">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">القادم</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div
-                  class="tab-pane fade"
-                  id="v-pills-profile"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-profile-tab"
-                  tabindex="0"
-                >
-                  ...
+                    
+                     
+                     
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              <nav aria-label="Page navigation example   ">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">السابق</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link active" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">القادم</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
             </div>
             <!--tabel-->
           </div>
@@ -455,16 +462,34 @@
     >
       <div class="offcanvas-body">
         <h2 class="title-page border-bottom text-center">اضافة قسم رئيسي</h2>
-        <form class="d-flex flex-column px-3">
-          <div class="input-custom">
-            <div class="input-wrapper">
-              <label> اسم القسم </label>
-              <input class="w-100" type="text" />
-            </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
+        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+          <div class="input-wrapper">
+            <label> اسم القسم </label>
+            <input class="w-100 p-2" type="text" />
+          </div>
+          <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
+          <div class="input-wrapper">
+            <label>السمات المتاحة</label>
+            <select class="w-100" position: relative">
+              <option value="">اللون</option>
+              <option value="1">لوريم</option>
+              <option value="2">اللون</option>
+              <option value="3">لوريم</option>
+            </select>
+            <i
+              class="fa-solid fa-chevron-down"
+              style="
+                width: 10px;
+                color: #bfa274;
+                position: absolute;
+                left:1.5rem;
+                top: 18px;
+                z-index: 999;
+              "
+            ></i>
           </div>
 
-          <div class="w-100 text-center">
+          <div class="= text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
               اضافة
             </button>
@@ -473,32 +498,134 @@
       </div>
     </div>
 
-    <!--edit  section-->
+   
+
+    <!-- add-New-features -->
+    
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="addFeatures"
+      aria-labelledby="addFeatures"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center">اضافة خصائص</h2>
+        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+          
+        <div class="d-flex flex-column gap-2">
+          <button class="add-new-feature d-flex gap-2 justify-content-center align-items-center">
+            <img src="/assets/images/icon/add.svg" alt="">
+            اضافة خصائص جديدية
+          </button>
+          <div class="radio-group">
+            <label for="option1-1">البوليستر</label>
+            <div class="d-flex gap-4">
+              <div>
+                <input type="radio" id="option1-2" name="customRadio1" class="custom-control-input" >
+                <label for="option1-2">نعم</label>
+              </div>
+              <div>
+                <input type="radio" id="option1-1" name="customRadio1" class="custom-control-input">
+                <label for="option1-1">لا</label>
+              </div>
+            </div>
+          </div>
+          <div class="radio-group">
+            <label for="option2-1">سوستة</label>
+            <div class="d-flex gap-4">
+              <div>
+                <input type="radio" id="option2-2" name="customRadio2" class="custom-control-input" >
+                <label for="option2-2">نعم</label>
+              </div>
+              <div>
+                <input type="radio" id="option2-1" name="customRadio2" class="custom-control-input">
+                <label for="option2-1">لا</label>
+              </div>
+            </div>
+          </div>
+          <div class="radio-group">
+            <label for="option3-1">نوع العنصر</label>
+            <div class="d-flex gap-4">
+              <div>
+                <input type="radio" id="option3-2" name="customRadio3" class="custom-control-input" >
+                <label for="option3-2">ملابس خارجية</label>
+              </div>
+              <div>
+                <input type="radio" id="option3-1" name="customRadio3" class="custom-control-input">
+                <label for="option3-1">ازياء خاصة</label>
+              </div>
+            </div>
+          </div>
+          <div class="radio-group">
+            <label for="option4-1">الاسلوب</label>
+            <div class="d-flex gap-4">
+              <div>
+                <input type="radio" id="option4-2" name="customRadio4" class="custom-control-input" >
+                <label for="option4-2">سترة صغيرة</label>
+              </div>
+              <div>
+                <input type="radio" id="option4-1" name="customRadio4" class="custom-control-input">
+                <label for="option4-1">سترة كبيرة</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="= text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Edit main section -->
+    
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
       id="edite-section"
-      aria-labelledby="offcanvasWithBothOptionsLabel"
+      aria-labelledby="edite-section"
     >
-      <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">
-          تعديل القسم الرئيسي
-        </h2>
-        <form class="d-flex flex-column px-3">
-          <div class="input-custom">
-            <div class="input-wrapper">
-              <label> اسم القسم </label>
-              <input class="w-100" type="text" />
-            </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
+        <h2 class="title-page border-bottom text-center">تعديل القسم الرئيسي</h2>
+        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+          <div class="input-wrapper">
+            <label> اسم القسم </label>
+            <input class="w-100 p-2" type="text" value="ملابس رجالي" />
+          </div>
+          <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
+          <div class="input-wrapper">
+            <label>السمات المتاحة</label>
+            <select class="w-100" position: relative">
+              <option value="">اللون</option>
+              <option value="1">لوريم</option>
+              <option value="2">اللون</option>
+              <option value="3">لوريم</option>
+            </select>
+            <i
+              class="fa-solid fa-chevron-down"
+              style="
+                width: 10px;
+                color: #bfa274;
+                position: absolute;
+                left:1.5rem;
+                top: 18px;
+                z-index: 999;
+              "
+            ></i>
           </div>
 
-          <div class="w-100 text-center">
+          <div class="text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
               حفظ
             </button>
           </div>
+
+
         </form>
       </div>
     </div>

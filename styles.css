@@ -261,11 +261,11 @@ header.navbar span {
 
 .input-wrapper input,
 .input-wrapper select {
-  border: 1px solid #dbdee1;
+  border: 1px solid #dbdee1 !important;
   border-radius: 6px;
   position: relative;
-  width: 200px;
-  margin: 10px;
+  /* width: 200px; */
+  /* margin: 10px; */
   line-height: 6ex;
   height: 40px;
 }
@@ -303,7 +303,7 @@ select::-ms-expand {
   min-width: 142px;
   display: block;
   width: 100%;
-  max-width: 320px;
+  /* max-width: 320px; */
   height: 50px;
   float: right;
   margin: 5px 0px;
@@ -522,4 +522,78 @@ div#preview-container {
     --primary-color-light
   ) !important; /* Your custom color for in-range dates */
   color: black !important; /* Ensure text is readable */
+}
+
+/* add-feature-btn */
+.add-feature-btn {
+  background: var(--primary-color-light);
+  border: none;
+  color: var(--primary-color);
+  border-radius: 8px;
+  padding: 0.6rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+  &:hover {
+    background: var(--primary-color);
+    color: var(--active-font);
+    transition-duration: 0.3s;
+  }
+}
+
+/* add-new-feature */
+.add-new-feature {
+  color: var(--primary-color);
+  border: 1px dashed var(--primary-color);
+  padding: 0.6rem 0;
+  border-radius: 8px;
+  &:hover {
+    background: var(--primary-color-light);
+    transition-duration: 0.3s;
+  }
+}
+
+/* Cutom Radio */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #f4f4f4;
+  padding: 10px 14px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+.radio-group label {
+  font-size: 1rem;
+  color: #2c3e50; /* Customize the text color */
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 2px 0px var(--primary-color) inset;
+}
+
+input[type='radio']:hover {
+  box-shadow: 0 0 5px 0px var(--primary-color) inset;
+}
+
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+  background: var(--primary-color);
 }
