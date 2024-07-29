@@ -14,20 +14,25 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="overlay" id="overlay"></div>
+
     <div>
       <div class="row m-0">
-        <!--   aside section-->
+       <!--   aside section-->
         <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
           <div class="position-sticky">
             <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
@@ -50,21 +55,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/Users.html">
+                <a class="nav-link " href="/Users.html">
                   <img src="./assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/mainSections.html">
+                <a class="nav-link " href="/mainSections.html    ">
                   <img src="./assets/images/icon/list-check 1 (1).svg" alt="" />
 
                   الاقسام الرئيسية
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/subCategories.html">
+                <a class="nav-link active" href="/subCategories.html">
                   <img src="./assets/images/icon/folder 1.svg" alt="" />
 
                   الاقسام الفرعية
@@ -211,52 +216,19 @@
             </ul>
           </div>
         </aside>
-        <div
-          class="modal fade"
-          id="deleteModal"
-          tabindex="-1"
-          aria-labelledby="deleteModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered"
-            style="max-width: 24rem"
-          >
-            <div
-              class="modal-content"
-              style="max-height: 20rem; overflow: hidden"
-            >
-              <div class="modal-header">
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body text-center">
-                <img
-                  src="./assets/images/icon/Delete gif.gif"
-                  width="120"
-                  height="120"
-                  alt=""
-                />
-                <div class="message">هل أنت متأكد من الحذف</div>
-              </div>
-              <div class="modal-footer justify-content-center">
-                <button type="button" class="btn-delete">حذف</button>
-              </div>
-            </div>
-          </div>
-        </div>
         <!--  end aside section-->
         <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
           <!--header navbar-->
           <header class="navbar">
-            <div class="container justify-content-between">
+            <div class="container d-flex justify-content-between">
               <button class="btn btn-logout d-flex d-none d-md-block">
                 <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
               </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <!-- <img src="./assets/images/Header.svg" height="70" alt="logo"> -->
+              
               <button class="btn btn-logout d-md-none" id="toggleSidebar">
                 <i class="fa-solid fa-bars"></i>
               </button>
@@ -292,41 +264,30 @@
             >
               <a href="#">لوحة التحكم </a>
               /
-              <span
-                class="breadcrumb-item active"
-                aria-current="page"
-                
-              >
-                الاقسام الرئيسية
+              <span class="breadcrumb-item active" aria-current="page">
+                الاقسام الفرعية
               </span>
             </nav>
           </div>
 
-          <div class="container">
-            <h2 class="title-page mb-0">الاقسام الرئيسية</h2>
-          </div>
-          <div class="tab-content" id="v-pills-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="v-pills-home"
-              role="tabpanel"
-              aria-labelledby="v-pills-home-tab"
-              tabindex="0"
-            >
-              <div class="container">
-                <div
-                  class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
-                >
-                  <div class="d-flex align-items-center gap-2 flex-wrap">
-                    <div class="search-input">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="ابحث...  "
-                      />
-                    </div>
+          <div class="container pb-3">
+            <div class="">
+              <h2 class="title-page mb-0">الاقسام الفرعية</h2>
 
+              <div
+                class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                  <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="ابحث ..."
+                    />
+                  </div>
+                
+                 
                     <span class="daterange-input">
                       <img src="assets/images/icon/calander.svg" />
                       <input
@@ -334,94 +295,112 @@
                         name="daterange"
                         class="custom-daterangepicker border-0 text-center"
                       />
-                      <i class="fa-solid fa-chevron-left" style="color: #bfa274;"></i>
+                      <i class="fa-solid fa-chevron-left" style="width: 10px; color: #bfa274;"></i>
                     </span>
-                  </div>
+                </div>
 
-                  <button
-                    class="btn btn-add"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions"
-                  >
-                    <img
-                      width="23"
-                      height="23"
-                      src="assets/images/Add.gif"
-                    />
-                   اضافة قسم رئيسي
-                  </button>
+                <button
+                  class="btn btn-add"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  <img
+                    width="24"
+                    height="24"
+                    src="assets/images/Add.gif"
+                  />
+                  اضافة قسم فرعي
+                </button>
+              </div>
+              <div class="d-flex">
+                
+              </div>
+            </div>
+          </div>
+
+
+          <!-- confirm delete -->
+         <!-- Modal -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 24rem;">
+              <div class="modal-content" style="max-height: 20rem; overflow: hidden;">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img src="./assets/images/icon/Delete gif.gif" width="120" height="120" alt="">
+                  <div class="message">هل أنت متأكد من الحذف</div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn-delete">حذف</button>
                 </div>
               </div>
-              
-            <!--tabel-->
+            </div>
+          </div>
+
+
+
+          <!--tabel-->
           <div class="container-tabel p-3 py-4">
             <div class="container">
               <div class="table-responsive mb-3">
                 <div class="p-3 my-2">
                   <table class="table">
                     <thead>
-                       <tr>
+                      <tr>
                         <th>#</th>
+                        <th>اسم القسم الفرعي</th>
                         <th>اسم القسم الرئيسي</th>
-                        <th>عدد الاقسام الفرعية المسجلة</th>
-                        <th >السمات المتاحة</th>
+                        <th>عدد المنتجات المسجلة</th>        
                         <th>الحالة</th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
-                     <tr>
-                            <td>1</td>
-                            <td>ملابس رجالي</td>
-                            <td>22</td>
-                            <td>اللون</td>
-                            <td>
-                              <div class="form-switch ms-2">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="flexSwitchCheckChecked"
-                                  checked
-                                />
-                              </div>
-                            </td>
+                      <tr>
+                        <td>1</td>
+                        
+                        <td>جواكت رجالي</td>
+                        <td>ملابس رجالي</td>
+                        <td>22</td>
+                        
+                        <td class="text-start">
+                          <div
+                            class="form-switch ms-2 d-flex justify-content-center"
+                          >
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="flexSwitchCheckChecked"
+                              checked
+                            />
+                          </div>
+                        </td>
+                       
+                        <td class="d-flex gap-1 justify-content-end">
+                          <button
+                            class="btn text-success action-btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#editSubCategory"
+                            aria-controls="editSubCategory"
+                          >
+                            <img
+                              src="./assets/images/icon/pencil 1.svg"
+                              alt=""
+                            />
+                          </button>
+                          <!-- trash -->
+                         <button style="color: red
+                         ;" class="btn  action-btn" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                          <i class="fa-regular fa-trash-can"></i>
+                          </button>
 
-                           
-                            <td class="d-flex gap-2 justify-content-end">
-                              
-                              <button
-                                class="add-feature-btn"
-                                type="button"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#addFeatures"
-                                aria-controls="addFeatures"
-                              >
-                                
-                              اضافة خصائص
-                              </button>
-                             
-                              <button
-                                class="btn text-success action-btn"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#edite-section"
-                                aria-controls="edite-section"
-                              >
-                                <img src="/assets/images/icon/pencil 1.svg" alt="">
-                              </button>
-                              
-                              <button
-                                style="color: red"
-                                class="btn action-btn"
-                                data-bs-toggle="modal"
-                                data-bs-target="#deleteModal"
-                              >
-                                <i class="fa-regular fa-trash-can"></i>
-                              </button>
-                            </td>
-                          </tr>
+                        </td>
+                      </tr>
+                     
                     
                      
                      
@@ -446,13 +425,10 @@
               </nav>
             </div>
           </div>
-            </div>
-            <!--tabel-->
-          </div>
         </main>
       </div>
     </div>
-    <!--add section-->
+    <!--add subCategory-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
@@ -461,19 +437,17 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة قسم رئيسي</h2>
-        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
-          <div class="input-wrapper">
-            <label> اسم القسم </label>
-            <input class="w-100 p-2" type="text" />
-          </div>
-          <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
-          <div class="input-wrapper">
-            <label>السمات المتاحة</label>
+        <h2 class="title-page border-bottom text-center">اضافة قسم فرعي</h2>
+        <form class="d-flex flex-column px-4 gap-4">
+          
+
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label>القسم الرئيسي</label>
             <select class="w-100" position: relative">
-              <option value="">اللون</option>
+              <option value="">ملابس</option>
               <option value="1">لوريم</option>
-              <option value="2">اللون</option>
+              <option value="2">ملابس</option>
               <option value="3">لوريم</option>
             </select>
             <i
@@ -488,122 +462,86 @@
               "
             ></i>
           </div>
+            
+          </div>
+          <div class="input-custom">
+            <div class="input-wrapper">
+              <label> اسم القسم الفرعي-1 بالعربية</label>
+              <input class="w-100 p-2 mt-3" type="text" placeholder="مثل: ملابس رجالي"/>
 
-          <div class="= text-center">
+            </div>
+            
+          </div>
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label> اسم القسم الفرعي-1 بالانجليزية</label>
+
+              <input class="w-100 p-2 mt-3" type="text" placeholder="مثل: Men clothes"/>
+            </div>
+            
+          </div>
+         
+  
+         
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label> اسم القسم الفرعي-2 بالعربية</label>
+
+              <input class="w-100 p-2 mt-3" type="text" placeholder="مثل: سويت شيرت"/>
+            </div>
+            
+          </div>
+  
+         
+          <div class="input-custom error" >
+            <div class="input-wrapper" >
+            <label> اسم القسم الفرعي-2 بالانجليزية</label>
+
+               <div class="d-flex gap-2" >
+                  <input class="w-100 pt-3 p-2" type="text" placeholder="مثل: Men clothes"/>
+                  <!-- trash -->
+                 <button style="color: red
+                 ;" class="btn p-0 action-btn align-self-center " >
+                 <i class="fa-regular fa-trash-can"></i>
+                 </button>
+                
+               </div>
+            </div>
+            
+          </div>
+          <button class="add-new-feature ">
+            <img src="/assets/images/icon/add.svg" alt="">
+           اضافة قسم فرعي جديد
+          </button>
+         
+          <div class="w-100 text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
               اضافة
             </button>
           </div>
+          </div>
         </form>
       </div>
-    </div>
-
-   
-
-    <!-- add-New-features -->
-    
+    <!--edit subCategory-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
-      id="addFeatures"
-      aria-labelledby="addFeatures"
+      id="editSubCategory"
+      aria-labelledby="editSubCategoryLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة خصائص</h2>
-        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+        <h2 class="title-page border-bottom text-center">تعديل القسم الفرعي</h2>
+        <form class="d-flex flex-column px-4 gap-4">
           
-        <div class="d-flex flex-column gap-2">
-          <button class="add-new-feature d-flex gap-2 justify-content-center align-items-center">
-            <img src="/assets/images/icon/add.svg" alt="">
-            اضافة خصائص جديدية
-          </button>
-          <div class="radio-group">
-            <label for="option1-1">البوليستر</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option1-2" name="customRadio1" class="custom-control-input" >
-                <label for="option1-2">نعم</label>
-              </div>
-              <div>
-                <input type="radio" id="option1-1" name="customRadio1" class="custom-control-input">
-                <label for="option1-1">لا</label>
-              </div>
-            </div>
-          </div>
-          <div class="radio-group">
-            <label for="option2-1">سوستة</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option2-2" name="customRadio2" class="custom-control-input" >
-                <label for="option2-2">نعم</label>
-              </div>
-              <div>
-                <input type="radio" id="option2-1" name="customRadio2" class="custom-control-input">
-                <label for="option2-1">لا</label>
-              </div>
-            </div>
-          </div>
-          <div class="radio-group">
-            <label for="option3-1">نوع العنصر</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option3-2" name="customRadio3" class="custom-control-input" >
-                <label for="option3-2">ملابس خارجية</label>
-              </div>
-              <div>
-                <input type="radio" id="option3-1" name="customRadio3" class="custom-control-input">
-                <label for="option3-1">ازياء خاصة</label>
-              </div>
-            </div>
-          </div>
-          <div class="radio-group">
-            <label for="option4-1">الاسلوب</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option4-2" name="customRadio4" class="custom-control-input" >
-                <label for="option4-2">سترة صغيرة</label>
-              </div>
-              <div>
-                <input type="radio" id="option4-1" name="customRadio4" class="custom-control-input">
-                <label for="option4-1">سترة كبيرة</label>
-              </div>
-            </div>
-          </div>
-        </div>
 
-          <div class="= text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              حفظ
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-
-    <!-- Edit main section -->
-    
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="edite-section"
-      aria-labelledby="edite-section"
-    >
-        <h2 class="title-page border-bottom text-center">تعديل القسم الرئيسي</h2>
-        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
-          <div class="input-wrapper">
-            <label> اسم القسم </label>
-            <input class="w-100 p-2" type="text" value="ملابس رجالي" />
-          </div>
-          <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
-          <div class="input-wrapper">
-            <label>السمات المتاحة</label>
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label>القسم الرئيسي</label>
             <select class="w-100" position: relative">
-              <option value="">اللون</option>
+              <option value="">ملابس</option>
               <option value="1">لوريم</option>
-              <option value="2">اللون</option>
+              <option value="2">ملابس</option>
               <option value="3">لوريم</option>
             </select>
             <i
@@ -618,22 +556,72 @@
               "
             ></i>
           </div>
+            
+          </div>
+          <div class="input-custom">
+            <div class="input-wrapper">
+              <label> اسم القسم الفرعي-1 بالعربية</label>
+              <input class="w-100 p-2 mt-3" type="text" value="ملابس رجالي"/>
 
-          <div class="text-center">
+            </div>
+            
+          </div>
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label> اسم القسم الفرعي-1 بالانجليزية</label>
+
+              <input class="w-100 p-2 mt-3" type="text" value="Men clothes"/>
+            </div>
+            
+          </div>
+         
+  
+         
+          <div class="input-custom error">
+            <div class="input-wrapper">
+            <label> اسم القسم الفرعي-2 بالعربية</label>
+
+              <input class="w-100 p-2 mt-3" type="text" value="سويت شيرت"/>
+            </div>
+            
+          </div>
+  
+         
+          <div class="input-custom error" >
+            <div class="input-wrapper" >
+            <label> اسم القسم الفرعي-2 بالانجليزية</label>
+
+               <div class="d-flex gap-2" >
+                  <input class="w-100 pt-3 p-2" type="text" value="Men clothes"/>
+                  <!-- trash -->
+                 <button style="color: red
+                 ;" class="btn p-0 action-btn align-self-center " >
+                 <i class="fa-regular fa-trash-can"></i>
+                 </button>
+                
+               </div>
+            </div>
+            
+          </div>
+          <button class="add-new-feature ">
+            <img src="/assets/images/icon/add.svg" alt="">
+           اضافة قسم فرعي جديد
+          </button>
+         
+          <div class="w-100 text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
               حفظ
             </button>
           </div>
-
-
+          </div>
         </form>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
+    <script src="/assets/script.js"></script>
     <script>
-      $(function () {
+       $(function () {
         $('input[name="daterange"]').daterangepicker(
           {
             opens: 'left',
@@ -683,6 +671,7 @@
           }
         );
       });
+
       $(document).ready(function () {
         $('.toggle-password').on('click', function () {
           const target = $(this).data('target');

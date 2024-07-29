@@ -158,7 +158,7 @@ header.navbar span {
   color: var(--gray-font) !important;
 }
 .breadcrumb-nav .breadcrumb-item.active {
-  color: var(--active-font) !important;
+  color: var(--primary-color) !important;
 }
 .title-page {
   font-size: 20px;
@@ -417,7 +417,7 @@ div#preview-container {
 }
 .page-item .page-link.active {
   background: var(--primary-color);
-  color: #fff;
+  color: black;
 }
 .btn-logout,
 .btn-logout:hover {
