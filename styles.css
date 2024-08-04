@@ -1,6 +1,7 @@
 :root {
   --primary-color: #bfa274;
   --primary-color-light: #f2ece3;
+  --primary-color-dark: #a6885a;
   --dark-gray: #1a232b;
   --gray-font: #7a808a;
   --active-font: #fff;
@@ -370,7 +371,7 @@ select::-ms-expand {
   height: 135px;
   padding: 2px;
   border-radius: 50%;
-  border: 2px solid rgba(230, 48, 80, 0.22);
+  border: 2px solid var(--primary-color);
   margin: auto;
 }
 
@@ -612,7 +613,7 @@ input[type='radio']:checked:before {
   background: var(--primary-color);
   color: var(--active-font);
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 0.25rem 0.75rem;
   font-weight: 500;
   cursor: pointer;
@@ -620,4 +621,48 @@ input[type='radio']:checked:before {
     color: var(--active-font);
     transition-duration: 0.3s;
   }
+}
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7rem;
+  border: 1px solid #dbdee1;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.icon-button {
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+}
+
+.add-product {
+  background: var(--primary-color);
+
+  &:hover {
+    background: var(--primary-color-dark);
+  }
+}
+
+.add-work-space {
+  background: #919ba9;
+
+  &:hover {
+    background: #788290;
+  }
+}
+
+.down-list-icon {
+  width: 10px;
+  color: #bfa274;
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  z-index: 999;
 }
