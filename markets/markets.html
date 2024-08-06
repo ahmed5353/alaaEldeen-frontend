@@ -552,7 +552,7 @@
                         <th>اسم المتجر</th>
                         <th>اسم المسؤول</th>
                         <th>رقم الموبايل</th>
-                        <th>البريد الالكتروني/th></th>
+                        <th>البريد الالكتروني</th>
                         <th>البلد</th>
                         <th>العملة</th>
                         <th>التقييم الاجمالي</th>
@@ -619,14 +619,29 @@
                           </div>
                         </td>
                         <td>
-                          <button class="icon-button add-product">
-                            <span> ic </span>
+                          <a
+                            class="icon-button add-product d-flex align-items-center gap-2"
+                            href="#"
+                          >
+                            <span>
+                              <i
+                                class="fa-solid fa-plus"
+                                style="color: #ffffff"
+                              ></i>
+                            </span>
                             <span> اضافة منتج </span>
-                          </button>
+                          </a>
                         </td>
                         <td>
-                          <button class="icon-button add-work-space">
-                            <span>ic</span>
+                          <button
+                            class="icon-button add-work-space d-flex align-items-center gap-2"
+                          >
+                            <span>
+                              <i
+                                class="fa-solid fa-location-dot"
+                                style="color: #ffffff"
+                              ></i>
+                            </span>
                             <span>اضافة نطاق عمل</span>
                           </button>
                         </td>
@@ -645,9 +660,12 @@
                               ></i>
                             </button>
 
-                            <button class="btn text-info action-btn">
+                            <a
+                              class="btn text-info action-btn"
+                              href="/markets/productDetails.html"
+                            >
                               <i class="fa-regular fa-eye"></i>
-                            </button>
+                            </a>
 
                             <button
                               class="btn text-success action-btn"
@@ -704,77 +722,237 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة مستخدم جديد</h2>
-        <form class="d-flex flex-column px-3 gap-3">
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> الاسم</label>
-              <input class="w-100" type="text" />
+        <h2 class="title-page border-bottom text-center">اضافة متجر جديد</h2>
+        <form class="d-flex flex-column px-3">
+          <label
+            class="select-img m-auto text-center position-relative"
+            for="upploadImg"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                id="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom">
-            <div class="input-wrapper mb-1">
-              <label> رقم الموبايل</label>
-              <input class="w-100" type="text" />
-            </div>
-            <p class="valid-error">هذا الحقل مطلوب</p>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> البريد الالكتروني</label>
-              <input class="w-100" type="text" />
-            </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> كلمة المرور</label>
-              <div class="form-group position-relative">
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  class="form-control w-100"
-                />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
+            <input type="file" id="upploadImg" class="d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة الشعار
+            </h5>
+            <div id="preview-container" class="text-center mt-2 d-none">
+              <span id="remove-img"
+                ><svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#confirmPassword"
-                    style="cursor: pointer"
-                  ></i>
-                </span>
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+
+          <div class="d-flex flex-column gap-3 mt-3">
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> الاسم المتجر</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> اسم المسؤول</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> رقم الموبايل</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> البريد الالكتروني</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+
+            <div class="input-wrapper select">
+              <label>البلد</label>
+              <select class="position-relative">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لوريم</option>
+                <option value="3">لوريم</option>
+              </select>
+              <i class="fa-solid fa-chevron-down down-list-icon"></i>
+            </div>
+
+            <div class="input-wrapper select">
+              <label>العملة</label>
+              <select class="position-relative">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لوريم</option>
+                <option value="3">لوريم</option>
+              </select>
+              <i class="fa-solid fa-chevron-down down-list-icon"></i>
+            </div>
+
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> كلمة المرور</label>
+                <div class="form-group position-relative">
+                  <input
+                    type="password"
+                    id="passwordnew"
+                    class="form-control w-100"
+                  />
+                  <span
+                    class="position-absolute top-50 translate-middle-y"
+                    style="left: 1rem"
+                  >
+                    <i
+                      class="fas fa-eye toggle-password w-100"
+                      data-target="#passwordnew"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> تأكيد كلمة المرور</label>
+                <div class="form-group position-relative">
+                  <input
+                    type="password"
+                    id="confirmPasswordnew"
+                    class="form-control w-100"
+                  />
+                  <span
+                    class="position-absolute translate-middle-y"
+                    style="left: 1rem; top: 29%"
+                  >
+                    <i
+                      class="fas fa-eye toggle-password w-100"
+                      data-target="#confirmPasswordnew"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                  <div class="valid-error">هذا الحقل مطلوب</div>
+                </div>
               </div>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> تأكيد كلمة المرور</label>
-              <div class="form-group position-relative mb-3">
-                <input
-                  type="password"
-                  id="password"
-                  class="form-control w-100"
+
+            <!-- upload -->
+            <div class="upload-container">
+              <input type="file" id="file-upload-first" class="file-upload" />
+              <label
+                for="file-upload-first"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق السجل التجاري</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
                 />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
-                >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#password"
-                    style="cursor: pointer"
-                  ></i>
-                </span>
-              </div>
+              </label>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
+            <div class="upload-container">
+              <input type="file" id="file-upload-second" class="file-upload" />
+              <label
+                for="file-upload-second"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق التأمين</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
+                />
+              </label>
+            </div>
+            <div class="upload-container">
+              <input type="file" id="file-upload-third" class="file-upload" />
+              <label
+                for="file-upload-third"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق بطاقة الهوية-الوجه/الظهر</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
+                />
+              </label>
+            </div>
+            <div id="file-details-first" class="file-details d-none">
+              <h5>تفاصيل ملف السجل التجاري</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-first"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-first"></span>
+                </li>
+              </ul>
+            </div>
+            <div id="file-details-second" class="file-details d-none">
+              <h5>تفاصيل ملف التأمين</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-second"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-second"></span>
+                </li>
+              </ul>
+            </div>
+            <div id="file-details-third" class="file-details d-none">
+              <h5>تفاصيل ملف بطاقة الهوية</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-third"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-third"></span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
               اضافة
             </button>
           </div>
@@ -784,7 +962,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="../assets/script.js"></script>
+
     <script>
+      $(document).ready(function () {
+        $('.file-upload').change(function () {
+          // Get the ID of the file input
+          const fileInputId = $(this).attr('id');
+
+          // Determine the index from the ID
+          const index = fileInputId.split('-').pop(); // This gets 'first', 'second', or 'third'
+
+          // Construct the IDs for the file details and its elements
+          const fileDetailsId = `#file-details-${index}`;
+          const fileNameId = `#file-name-${index}`;
+          const fileSizeId = `#file-size-${index}`;
+
+          const file = this.files[0];
+          if (file) {
+            const fileName = file.name;
+            const fileSize = (file.size / 1024).toFixed(2) + ' KB';
+
+            $(fileNameId).text(fileName);
+            $(fileSizeId).text(fileSize);
+
+            $(fileDetailsId).removeClass('d-none');
+          } else {
+            $(fileDetailsId).addClass('d-none');
+          }
+        });
+      });
+
       $(function () {
         $('input[name="daterange"]').daterangepicker(
           {
