@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div>
+      <div class="row m-0">
+        <!--   aside section-->
+        <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
+              <a class="  " aria-current="page" href="#">
+                <img src="../assets/images/logo.svg" />
+              </a>
+            </div>
+            <ul class="nav flex-column p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <img src="../assets/images/icon/grid.svg" alt="" />
+                  لوحة التحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/users 1.svg" alt="" />
+
+                  المسؤولين الفرعيين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Users.html">
+                  <img src="../assets/images/icon/chart-user 1.svg" alt="" />
+
+                  المستخدمين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mainSections.html    ">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  الاقسام الرئيسية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subCategories.html">
+                  <img src="../assets/images/icon/folder 1.svg" alt="" />
+
+                  الاقسام الفرعية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  سمات المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countries.html">
+                  <img src="../assets/images/icon/marker 1.svg" alt="" />
+
+                  البلاد
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/markets/markets.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المتاجر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
+
+                  نقاط التوزيع
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مناديب التوصيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المخازن
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
+
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/restock 1.svg" alt="" />
+
+                  المرتجعات<span class="badge bg-danger rounded-circle">3</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  طلبات التعديل على الاوراق<span
+                    class="badge bg-danger rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  المتاجر المعلفة
+                  <span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  نقاط التوزيع المعلفة<span
+                    class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مندوبين التوصيل المعلقين<span
+                    class="badge bg-danger rounded-circle"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/messages-question 1.svg"
+                    alt=""
+                  />
+
+                  الاستفسارات على المنتجات
+                  <span class="badge bg-danger rounded-circle">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
+
+                  اكواد الخصم<span class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/settings 1.svg" alt="" />
+
+                  اعدادات النظام
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--  end aside section-->
+        <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
+          <!--header navbar-->
+          <header class="navbar">
+            <div class="container justify-content-between">
+              <button class="btn btn-logout d-flex d-none d-md-block">
+                <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
+              </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="d-flex">
+                <a class="mx-3">
+                  <img src="../assets/images/icon/notific.svg" />
+                </a>
+                <a class="d-flex">
+                  <img
+                    src="../assets/images/avatar.png"
+                    alt="User Avatar"
+                    class="rounded-circle ms-2"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <h5 class="navbar-text text-white">
+                      Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
+                    </h5>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!--            breadcrumb -->
+          <div class="border-bottom">
+            <nav
+              dir="rtl"
+              class="breadcrumb-nav container"
+              aria-label="breadcrumb"
+            >
+              <a href="#">لوحة التحكم </a>
+              /
+              <a href="#">المخازن</a>
+
+              /
+              <span class="breadcrumb-item active" aria-current="page">
+                تفاصيل المخزن</span
+              >
+            </nav>
+          </div>
+
+          <!-- Main page -->
+          <div class="container">
+            <div class="container d-flex jus gap-2">
+              <img
+                src="../assets/images/icon/back.svg"
+                alt="back icon"
+                style="cursor: pointer"
+              />
+              <h2 class="title-page mb-0">تفاصيل المخزن</h2>
+            </div>
+            <!-- PRODUCT Rate -->
+            <div class="d-flex flex-column container">
+              <div class="d-flex flex-column text-nowrap gap-1">
+                <p class="m-0" style="font-size: 18px">مخزن الفتح</p>
+                <span style="color: #606c7e">0102213231231</span>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column gap-1 flex-grow-1">
+                  <span style="color: #64748b; font-size: 16px">
+                    بيانات المخزن</span
+                  >
+                  <p>لوريملوريم لوريم لوريم لوريم لوريم لوريم</p>
+                </div>
+                <!-- vertical line -->
+                <div
+                  class="border-end"
+                  style="border-width: 2px; margin-left: 1.25rem"
+                ></div>
+                <div class="d-flex gap-2 align-items-center w-25">
+                  <span>
+                    <img src="/assets/images/icon/gray-marker.svg" alt="" />
+                  </span>
+                  <div class="d-flex flex-column align-self-end">
+                    <span class="fs-6">العنوان</span>
+                    <span>بني سبعة ,لوريم</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex gap-2 my-4 id="v-pills-tab" role="tablist"
+              aria-orientation="vertical" >
+              <button
+                class="btn tab-btn active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                الطلبات
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                العنوان على الخريطة
+              </button>
+            </div>
+            <!-- products -->
+            <div class="tab-content" id="v-pills-tabContent">
+              <!--NOTE: First Slider  -->
+              <div
+                class="tab-pane fade show active"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+                tabindex="0"
+              >
+                <!--tabel-->
+                <div class="container-tabel p-3 py-4">
+                  <div class="container">
+                    <div class="table-responsive mb-3 rounded-3">
+                      <div class="p-3 my-2">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>رقم الطلب</th>
+                              <th>عدد المتاجر داخل الطلب</th>
+                              <th>محافظة العميل</th>
+                              <th>محافظة المتجر</th>
+                              <th>اسم المخزن في محافظة العميل</th>
+                              <th>تاريخ ووقت الطلب</th>
+                              <th>نوع المنتجات</th>
+                              <th>نوع التوصيل</th>
+                              <th>اسم مندوب التوصيل</th>
+                              <th>رقم موبايل المندوب</th>
+                              <th>اسم نقطة التوزيع</th>
+                              <th>رقم موبايل نقطة التوزيع</th>
+                              <th>اجمالي تكلفة الطلب</th>
+                              <th>المبلغ المستحق لعلاء الدين</th>
+                              <th>قيمة التوصيل الاجمالية</th>
+                              <th>نسبة المندوب من قيمة التوصيل</th>
+                              <th>نسبة علاء الدين من قيمة التوصيل</th>
+                              <th>المبلغ المستحق لعلاء الدين</th>
+                              <th>المبلغ المستحق لنقطة التوزيع</th>
+                              <th>قيمة الخصم</th>
+                              <th>نوع الطلب</th>
+                              <th>طريقة الدفع</th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>123456</td>
+                              <td>12</td>
+                              <td>صنعاء</td>
+                              <td>صنعاء</td>
+                              <td>صنعاء</td>
+                              <td>22/01/2024 - 01:30 PM</td>
+                              <td>قابلة للتخزين</td>
+                              <td>مندوب</td>
+                              <td>مصطفى خالد</td>
+                              <td>012234</td>
+                              <td>الصفا للتوزيع</td>
+                              <td>012234</td>
+                              <td>500 ريال</td>
+                              <td>500 ريال</td>
+                              <td>500 ريال</td>
+                              <td>10%</td>
+                              <td>500 ريال</td>
+                              <td>10%</td>
+
+                              <td>500 ريال</td>
+                              <td>10%</td>
+                              <td>حالي</td>
+                              <td>نقدي</td>
+                              <td>
+                                <button class="btn-status btn-gray-scale">
+                                  وصول مندوب علاء الدين للمخزن
+                                </button>
+                              </td>
+                              <td>
+                                <button class="btn-status btn-yellow">
+                                  تم التغلف في المخزن
+                                </button>
+                              </td>
+                              <td>
+                                <button class="btn-status add">
+                                  تم التسليم للكابتن
+                                </button>
+                              </td>
+                              <td>
+                                <button class="btn-status btn-gray-scale">
+                                  نقل الطلب للمعلقة
+                                </button>
+                              </td>
+                              <td>
+                                <button class="btn-status btn-cancell">
+                                  الغاء الطلب بالكامل
+                                </button>
+                              </td>
+
+                              <td class="d-flex gap-1 justify-content-end">
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/storeHouses/orderDetails.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>123456</td>
+                              <td>12</td>
+                              <td>صنعاء</td>
+                              <td>صنعاء</td>
+                              <td>صنعاء</td>
+                              <td>22/01/2024 - 01:30 PM</td>
+                              <td>قابلة للتخزين</td>
+                              <td>مندوب</td>
+                              <td>مصطفى خالد</td>
+                              <td>012234</td>
+                              <td>الصفا للتوزيع</td>
+                              <td>012234</td>
+                              <td>500 ريال</td>
+                              <td>500 ريال</td>
+                              <td>500 ريال</td>
+                              <td>10%</td>
+                              <td>500 ريال</td>
+                              <td>10%</td>
+
+                              <td>500 ريال</td>
+                              <td>10%</td>
+                              <td>حالي</td>
+                              <td>نقدي</td>
+                              <td>
+                                <button class="btn-status btn-success">
+                                  الموافقة على الطلب
+                                </button>
+                              </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+
+                              <td class="d-flex gap-1 justify-content-end">
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/storeHouses/orderDetails.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">السابق</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link active" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">القادم</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade slider"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+                tabindex="0"
+              >
+                <div class="container d-flex flex-column gap-3">
+                  <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="ابحث ..."
+                    />
+                  </div>
+                  <div id="map2"></div>
+                  <div>
+                    <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2 ">
+                      حفظ
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="../assets/script.js"></script>
+    <script>
+       $('#v-pills-profile-tab').on('shown.bs.tab', function (e) {
+          var map2 = L.map('map2').setView([29.8206, 30.8025], 10);
+
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+           
+          }).addTo(map2);
+
+          var marker2 = null;
+
+          map2.on('click', function(e) {
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+
+            if (marker2) {
+              map2.removeLayer(marker2);
+            }
+
+            marker2 = L.marker([lat, lng]).addTo(map2);
+            console.log("Map 2 - Latitude: " + lat + ", Longitude: " + lng);
+          });
+        });
+    </script>
+ 
+</body>
+</html>
+
+  </body>
+</html>

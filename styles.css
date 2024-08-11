@@ -56,6 +56,7 @@ body {
   font-family: 'Helvetica Neue W23 for SKY', sans-serif;
   direction: rtl;
   font-size: 14px;
+  color: #071739;
 }
 
 .active-color {
@@ -271,10 +272,24 @@ header.navbar span {
 }
 
 .input-wrapper input,
+.input-wrapper textarea,
 .input-wrapper select {
   border: 1px solid #dbdee1 !important;
   border-radius: 6px;
   position: relative;
+  /* width: 200px; */
+  /* margin: 10px; */
+  line-height: 6ex;
+  height: 40px;
+}
+
+.map-btn {
+  border: 1px solid #dbdee1 !important;
+  border-radius: 6px;
+  position: relative;
+  text-align: start;
+  display: flex;
+  align-items: center;
   /* width: 200px; */
   /* margin: 10px; */
   line-height: 6ex;
@@ -803,4 +818,131 @@ input[type='radio']:checked:before {
   padding: 2px;
   border: 1px solid #e3e3e3;
   border-radius: 0.8rem;
+}
+
+/* Map */
+#map,
+#map2 {
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ----------------------------- Custom Buttons ----------------------------- */
+
+.btn-status {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.btn-gray-scale {
+  background-color: #dddedf;
+  color: var(--gray-font);
+}
+
+.btn-yellow {
+  background-color: #fef1e0;
+  color: #f9a130;
+}
+
+.btn-cancell {
+  color: #e63050;
+  border: 1px solid #e63050;
+  background-color: white;
+}
+
+.btn-success {
+  background-color: #28b446;
+  color: white;
+}
+
+/* order details */
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  min-width: 13rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  span {
+    color: #242e42;
+  }
+}
+
+.total-alaaEldin {
+  background-color: #fff6eb;
+  strong {
+    color: #f9a130;
+  }
+}
+
+.total-order-cost {
+  background-color: #fdebee;
+  strong {
+    color: #e63050;
+  }
+}
+
+.back-img {
+  cursor: pointer;
+  align-self: flex-start;
+  padding-top: 5px;
+}
+.tiny-btn {
+  background-color: #e3f5e7;
+  color: #28b446;
+  padding: 4px 8px;
+  border-radius: 1rem;
+}
+
+/* Stepper */
+.container {
+  direction: rtl; /* Set direction to right-to-left for Arabic */
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.completed .circle {
+  background-color: #28b446;
+  z-index: 999;
+}
+
+.line {
+  height: 2px;
+  background-color: #ccc;
+  position: absolute;
+  top: 8px;
+  width: 106%;
+  /* z-index:1; */
+  transform: translateX(-50%);
+}
+
+.completed .line {
+  z-index: 2;
+  background-color: #28b446;
+}
+
+.label {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.date {
+  font-size: 10px;
+  color: #888;
+  margin-top: 5px;
 }
