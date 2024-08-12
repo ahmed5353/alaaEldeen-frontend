@@ -946,3 +946,25 @@ input[type='radio']:checked:before {
   color: #888;
   margin-top: 5px;
 }
+
+.card-title {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+.card {
+  border: none;
+  border-radius: 12px;
+}
+.card-body {
+  color: var(--black-font);
+  small {
+    color: var(--gray-font) !important;
+  }
+}
+
+.marker-icon {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--bg-gray);
+  border-radius: 8px;
+}
