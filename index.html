@@ -1,77 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
     <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <div class="row m-0" style="height: 100vh; width: 100%" ">
+      <div
+        class="col-12 col-md-6 order-2 order-md-1"
+        style="
+          background-color: #1a232b;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <img src="assets/images/login.svg" />
+      </div>
+      <div class="col-12 col-md-6 login-form order-1 order-md-2">
+        <form>
+          <h1 class="title-page text-center pb-1 mb-0 login-title">
+            مرحبـــاً بعودتــك
+          </h1>
+          <p class="gray-color text-center">تسجيل الدخول إلى حسابك</p>
+          <div class="input-custom">
+            <div class="input-wrapper mb-4 mt-1">
+              <label> البريد الالكتروني</label>
+              <div class="form-group position-relative">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control w-100"
+                  value="user1"
+                />
+                <span
+                  class="position-absolute top-50 start-0 translate-middle-y me-3"
+                  style="left: 1rem !important"
+                >
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper mb-4">
+                <label> كلمة المرور</label>
+                <div class="form-group position-relative">
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control w-100"
+                    value="124423"
+                  />
+                  <span
+                    class="position-absolute top-50 translate-middle-y me-3"
+                    style="left: 1rem"
+                  >
+                    <i
+                      class="fas fa-eye toggle-password w-100"
+                      data-target="#password"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                </div>
+                <div class="valid-error">هذا الحقل مطلوب</div>
+              </div>
 
+              <div class="w-100 text-center mt-3">
+                <a
+                  type="submit"
+                  style="width: 100% !important"
+                  href="/Dashboard.html"
+                  class="btn btn-add px-5 m-2 w-100"
+                >
+                  تسجيل الدخول
+                </a>
+              </div>
+            </div>
+          </div>
 
-<div>
-    <div class="row m-0" style="height: 100vh; width: 100%" ">
-        <div class="col-12 col-md-6 order-2 order-md-1" style="background-color: #1a232b; display: flex; justify-content: center; align-items: center;">
-            <img   src="assets/images/login.svg"/>
-        </div>
-        <div class="col-12 col-md-6 login-form order-1 order-md-2">
-            <form>
-                <h1 class="title-page text-center pb-1 mb-0 login-title ">مرحبـــاً بعودتــك</h1>
-                <p class="gray-color text-center">تسجيل الدخول إلى حسابك</p>
-                <div class="input-custom">
-                    <div class="input-wrapper  mb-4 mt-1">
-                        <label> البريد الالكتروني</label>
-                        <div class="form-group position-relative">
-                            <input type="email" id="email" class="form-control  w-100">
-                            <span class="position-absolute top-50 start-0 translate-middle-y me-3" style="left: 1rem !important">
-                               <i class="fa-regular fa-envelope"></i>
-                            </span>
-                        </div>
-                        <div class="valid-error">هذا الحقل مطلوب</div>
-                    </div>
-                    <div class="input-custom error">
-                        <div class="input-wrapper   mb-4">
-                            <label> كلمة المرور</label>
-                            <div class="form-group position-relative">
-                                <input type="password" id="password" class="form-control  w-100">
-                                <span class="position-absolute top-50 translate-middle-y me-3" style="left: 1rem;">
-            <i class="fas fa-eye toggle-password w-100" data-target="#password" style="cursor: pointer;"></i>
-        </span>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+          <script src="/assets/script.js"></script>
 
-                            </div>
-                            <div class="valid-error">هذا الحقل مطلوب</div>
-                        </div>
-
-                        <div class="w-100 text-center mt-3">
-                            <button type="submit" style="width: 100% !important;"
-                                    class="btn btn-add     px-5  m-2 w-100">
-                                تسجيل الدخول
-                            </button>
-                        </div>
-
-            </form>
-        </div>
+          <script>
+            $(document).ready(function () {
+              $('.toggle-password').on('click', function () {
+                const target = $(this).data('target');
+                const input = $(target);
+                const type =
+                  input.attr('type') === 'password' ? 'text' : 'password';
+                input.attr('type', type);
+                $(this).toggleClass('fa-eye fa-eye-slash');
+              });
+            });
+          </script>
+        </form>
+      </div>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-<script src="/assets/script.js"></script>
-
-<script>
-    $(document).ready(function () {
-        $('.toggle-password').on('click', function () {
-            const target = $(this).data('target');
-            const input = $(target);
-            const type = input.attr('type') === 'password' ? 'text' : 'password';
-            input.attr('type', type);
-            $(this).toggleClass('fa-eye fa-eye-slash');
-        });
-    });
-</script>
-</body>
+  </body>
 </html>

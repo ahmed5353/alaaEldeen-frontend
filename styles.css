@@ -21,7 +21,7 @@
 @font-face {
   font-family: 'Helvetica Neue W23 for SKY';
   src: url('assets/fonts/Helvetica font/Helvetica-Bold.ttf') format('truetype');
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: normal;
 }
 
@@ -62,6 +62,7 @@ body {
 .active-color {
   color: var(--primary-color);
 }
+
 .trash-color {
   color: #eb3d34;
   &:hover {
@@ -281,6 +282,7 @@ header.navbar span {
   /* margin: 10px; */
   line-height: 6ex;
   height: 40px;
+  padding: 0 10px;
 }
 
 .map-btn {
@@ -298,18 +300,17 @@ header.navbar span {
 
 .input-wrapper label {
   position: absolute;
-  top: -0.8ex;
+  top: -1.3ex;
   z-index: 1;
   font-size: 12px;
   right: 0.8em;
   background-color: white;
-  padding: 0 5px;
   color: var(--gray-font);
 }
 .input-wrapper.select:after {
   content: '\f078';
   font: normal normal normal 17px/1 FontAwesome;
-  color: var(--active-font);
+  color: var(--primary-color);
   left: 11px;
   top: 30%;
   height: 20px;
@@ -352,7 +353,7 @@ select::-ms-expand {
   color: white;
 }
 .form-check-custom {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--gray-font);
   direction: initial;
 }
@@ -779,6 +780,9 @@ input[type='radio']:checked:before {
   border: 1px solid #e3e3e3;
   border-radius: 0.6rem;
 }
+.trader-statistics-dashboard {
+  width: 16%;
+}
 
 .btn-money {
   background: var(--primary-color);
@@ -967,4 +971,126 @@ input[type='radio']:checked:before {
   padding: 0.5rem 0.75rem;
   background-color: var(--bg-gray);
   border-radius: 8px;
+}
+
+/* -------------------------------- DashBoard ------------------------------- */
+.new-users {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-right: 3px;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------- sub-officcials --------------------------------- */
+.radio-group-sub-officcials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  /* width: 20rem; */
+  /* margin-right: 9px; */
+  border-radius: 8px;
+  border: 1px solid #dbdee1;
+}
+.radio-group-sub-officcials label {
+  font-size: 1rem;
+  color: #2c3e50; /* Customize the text color */
+}
+
+.img-container {
+  display: inline-block;
+  position: relative;
+}
+
+.remove-img {
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+.preview-container .remove-img {
+  display: block;
+}
+
+/* -------------------------------- check-box ------------------------------- */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group label {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox span {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.custom-checkbox input:checked + span {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.custom-checkbox span:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked + span:after {
+  display: block;
+}
+
+.custom-checkbox span:after {
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.check-box-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a232b;
+}
+
+.form-check {
+  padding-left: 5.25px;
+}
+
+.check-box-width {
+  width: 100%;
+}
+.small-check-box {
+  width: 33%;
+}
+
+.system-setting {
+  color: var(--primary-color);
+  font-weight: bold;
 }
