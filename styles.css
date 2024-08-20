@@ -520,7 +520,9 @@ div#preview-container {
   border: none;
   color: white;
 }
-
+.btn-accept {
+  background-color: var(--primary-color);
+}
 .modal-dialog-centered {
   display: flex;
   align-items: center;
@@ -1093,4 +1095,17 @@ input[type='radio']:checked:before {
 .system-setting {
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.done {
+  color: #28b446 !important;
+}
+.not-purchased {
+  color: #f9a130 !important;
+}
+.cancelled {
+  color: var(--active-font) !important;
+}
+.no-time {
+  color: #868d98 !important;
 }
