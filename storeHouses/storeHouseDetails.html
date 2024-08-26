@@ -14,10 +14,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <link rel="stylesheet" href="../styles.css" />
@@ -49,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-               <a class="nav-link" href="/users/users.html">
+                <a class="nav-link" href="/users/users.html">
                   <img src="../assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -94,7 +93,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/distribution-points/distribution-points.html">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
                   <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
 
                   نقاط التوزيع
@@ -517,24 +519,28 @@
                 </div>
               </div>
               <div
-                class="tab-pane fade slider"
+                class="tab-pane fade slider p-2 rounded-3"
+                style="background-color: #f7f9fb"
                 id="v-pills-profile"
                 role="tabpanel"
                 aria-labelledby="v-pills-profile-tab"
                 tabindex="0"
               >
-                <div class="container d-flex flex-column gap-3">
+                <div class="container d-flex flex-column gap-3 p-3 rounded-3">
                   <div class="search-input">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control bg-white"
                       placeholder="ابحث ..."
                     />
                   </div>
                   <div id="map2"></div>
                   <div>
-                    <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2 ">
+                    <button
+                      type="submit"
+                      class="btn btn-add w-auto m-auto px-5 mt-2"
+                    >
                       حفظ
                     </button>
                   </div>
@@ -551,32 +557,27 @@
 
     <script src="../assets/script.js"></script>
     <script>
-       $('#v-pills-profile-tab').on('shown.bs.tab', function (e) {
-          var map2 = L.map('map2').setView([29.8206, 30.8025], 10);
+      $('#v-pills-profile-tab').on('shown.bs.tab', function (e) {
+        var map2 = L.map('map2').setView([29.8206, 30.8025], 10);
 
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-           
-          }).addTo(map2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+        }).addTo(map2);
 
-          var marker2 = null;
+        var marker2 = null;
 
-          map2.on('click', function(e) {
-            var lat = e.latlng.lat;
-            var lng = e.latlng.lng;
+        map2.on('click', function (e) {
+          var lat = e.latlng.lat;
+          var lng = e.latlng.lng;
 
-            if (marker2) {
-              map2.removeLayer(marker2);
-            }
+          if (marker2) {
+            map2.removeLayer(marker2);
+          }
 
-            marker2 = L.marker([lat, lng]).addTo(map2);
-            console.log("Map 2 - Latitude: " + lat + ", Longitude: " + lng);
-          });
+          marker2 = L.marker([lat, lng]).addTo(map2);
+          console.log('Map 2 - Latitude: ' + lat + ', Longitude: ' + lng);
         });
+      });
     </script>
- 
-</body>
-</html>
-
   </body>
 </html>

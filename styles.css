@@ -833,6 +833,9 @@ input[type='radio']:checked:before {
   width: 100%;
   border-radius: 12px;
 }
+.small-map {
+  height: 18rem !important;
+}
 
 /* ----------------------------- Custom Buttons ----------------------------- */
 
