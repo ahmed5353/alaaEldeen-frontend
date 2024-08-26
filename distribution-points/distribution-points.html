@@ -41,7 +41,7 @@
             </div>
             <ul class="nav flex-column p-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/Dashboard.html">
+                <a class="nav-link" aria-current="page" href="#">
                   <img src="../assets/images/icon/grid.svg" alt="" />
                   لوحة التحكم
                 </a>
@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/Users.html">
+                <a class="nav-link" href="/users/users.html">
                   <img src="../assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -100,7 +100,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link active"
                   href="/distribution-points/distribution-points.html"
                 >
                   <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
@@ -116,7 +116,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/storeHouses/storeHouses.html">
+                <a class="nav-link" href="#">
                   <img src="../assets/images/icon/shop 1.svg" alt="" />
 
                   المخازن
@@ -241,11 +241,11 @@
               </button>
               <div class="d-flex">
                 <a class="mx-3">
-                  <img src="assets/images/icon/notific.svg" />
+                  <img src="../assets/images/icon/notific.svg" />
                 </a>
                 <a class="d-flex">
                   <img
-                    src="assets/images/avatar.png"
+                    src="../assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -272,14 +272,14 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                المستخدمين
+                نقاط التوزيع
               </span>
             </nav>
           </div>
 
           <div class="container pb-3">
             <div class="">
-              <h2 class="title-page mb-0">المستخدمين</h2>
+              <h2 class="title-page mb-0 fw-bold">نقاط التوزيع</h2>
 
               <div
                 class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
@@ -290,17 +290,8 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="ابحث باسم المستخدم أو رقم الموبايل..."
+                      placeholder="ابحث بالاسم او رقم الموبايل او البريد الالكتروني ..."
                     />
-                  </div>
-                  <div class="input-wrapper select">
-                    <label>طريقة التسجيل</label>
-                    <select style="position: relative">
-                      <option value="">الكل</option>
-                      <option value="1">مطبع</option>
-                      <option value="2">تجار</option>
-                      <option value="3">مس��ول</option>
-                    </select>
                   </div>
 
                   <span class="daterange-input">
@@ -325,14 +316,55 @@
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <img width="22" height="22" src="../assets/images/Add.gif" />
-                  اضافة مستخدم
+                  اضافة متجر جديد
                 </button>
               </div>
-              <div class="d-flex"></div>
+              <div class="d-flex mt-3 gap-2">
+                <div class="input-wrapper select">
+                  <label>البلد</label>
+                  <select style="position: relative">
+                    <option value="">الجميع</option>
+                    <option value="1">مطبع</option>
+                    <option value="2">تجار</option>
+                    <option value="3">مس��ول</option>
+                  </select>
+                </div>
+                <div class="input-wrapper select">
+                  <label>المحافظة</label>
+                  <select style="position: relative">
+                    <option value="">الجميع</option>
+                    <option value="1">مطبع</option>
+                    <option value="2">تجار</option>
+                    <option value="3">مس��ول</option>
+                  </select>
+                </div>
+                <div class="input-wrapper select">
+                  <label>المدينة</label>
+                  <select style="position: relative">
+                    <option value="">الجميع</option>
+                    <option value="1">مطبع</option>
+                    <option value="2">تجار</option>
+                    <option value="3">مس��ول</option>
+                  </select>
+                </div>
+              </div>
+              <div
+                class="form-check form-check-custom d-flex mt-2 align-items-center justify-content-end gap-1"
+              >
+                <label for="flexCheckDefault"
+                  >نقاط التوزيع الذي تم وصولهم للحد الائتماني</label
+                >
+                <input
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                  style="width: 1rem; height: 1rem"
+                />
+              </div>
             </div>
           </div>
 
-          <!-- edit user data -->
+          <!-- edit market data -->
           <div
             class="offcanvas offcanvas-start"
             data-bs-scroll="true"
@@ -340,42 +372,86 @@
             id="edite-section"
             aria-labelledby="offcanvasWithBothOptionsLabel"
           >
-            <form class="d-flex flex-column gap-4 justify-content-center p-4">
-              <div class="p-2 border-bottom d-flex justify-content-center">
-                <h4 class="fw-bold">تعديل المستخدم</h4>
-              </div>
-              <!-- NOTE:if you wanted to put edit user imaga put it here -->
+            <div class="offcanvas-body">
+              <h2 class="title-page border-bottom text-center">تعديل المتجر</h2>
+              <form class="d-flex flex-column px-3">
+                <label
+                  class="select-user-img m-auto text-center position-relative"
+                  for="upploadImg"
+                >
+                  <img
+                    src="../assets/images/biggerLogo.png"
+                    alt="User Avatar"
+                    class="rounded-circle position-relative ms-2"
+                    width="40"
+                    height="40"
+                  />
 
-              <div class="d-flex flex-column gap-3">
-                <div class="input-custom">
-                  <div class="input-wrapper">
-                    <label> الاسم</label>
-                    <input class="w-100" type="text" />
+                  <div class="p-2 position-absolute start-0 end-50 top-0">
+                    <i
+                      class="fa-solid fa-circle-xmark fa-xl"
+                      style="color: #e63050; cursor: pointer"
+                    ></i>
                   </div>
-                </div>
-                <div class="input-custom">
+
+                  <h5
+                    class="active-color text-decoration-underline mt-2"
+                    style="cursor: pointer; font-size: 17px"
+                  >
+                    تعديل صورة الشعار
+                  </h5>
+                </label>
+
+                <div class="d-flex flex-column gap-3 mt-3">
+                  <div class="input-wrapper">
+                    <label> اسم المتجر</label>
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label> اسم المسؤول</label>
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
                   <div class="input-wrapper">
                     <label> رقم الموبايل</label>
-                    <input class="w-100" type="text" />
+                    <input class="w-100" type="text" value="لوريم" />
                   </div>
-                </div>
-                <div class="input-custom">
+
                   <div class="input-wrapper">
                     <label> البريد الالكتروني</label>
-                    <input class="w-100" type="text" />
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
+                  <div class="input-wrapper select">
+                    <label>البلد</label>
+                    <select class="position-relative">
+                      <option value="">اليمن</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لوريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select flex-grow-1">
+                    <label>العملة</label>
+                    <select class="position-relative">
+                      <option value="">ريال يمني</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
                   </div>
                 </div>
-              </div>
-
-              <div class="w-100 text-center">
-                <button
-                  type="submit"
-                  class="btn btn-add w-auto m-auto mt-2 px-5"
-                >
-                  حفظ
-                </button>
-              </div>
-            </form>
+                <div class="w-100 text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-add w-auto m-auto px-5 mt-3"
+                  >
+                    حفظ
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
           <!-- edit password -->
           <div
@@ -494,33 +570,63 @@
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>الاسم</th>
+                        <th>الشعار</th>
+                        <th>اسم المتجر</th>
+                        <th>اسم المسؤول</th>
                         <th>رقم الموبايل</th>
                         <th>البريد الالكتروني</th>
-                        <th>تاريخ ووقت التسجيل</th>
+                        <th>البلد</th>
+                        <th>العملة</th>
+                        <th>التقييم الاجمالي</th>
                         <th>طريقة التسجيل</th>
+                        <th>تاريخ ووقت التسجيل</th>
                         <th>عدد الطلبات</th>
-                        <th>اخر تسجيل</th>
-                        <th>عدد مرات الدخول على التطبيق</th>
-                        <th>عدد مرات الدخول على الموقع</th>
+                        <th>عدد المرتجعات</th>
+                        <th>عدد الطلبات الملغية</th>
+                        <th>عدد المنتجات</th>
+                        <th>عدد مرات الاضافة للمفضلة</th>
+                        <th>عدد مرات المشاركة</th>
                         <th>الحالة</th>
-
+                        <th></th>
+                        <th></th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>2</td>
+                        <td>1</td>
 
+                        <td>
+                          <img
+                            src="../assets/images/market-logo.png"
+                            alt="market-logo"
+                            width="50px"
+                            height="50px"
+                          />
+                        </td>
+                        <td>النور للملابس</td>
                         <td>Mostafa Ahmed</td>
                         <td>+2010123455</td>
-                        <td>example@test.com</td>
-                        <td>22/03/2024-8:30pm</td>
-                        <td>جيميل</td>
-                        <td>45</td>
+                        <td>test@test.com</td>
+                        <td>مصر</td>
+                        <td>جنيه مصري</td>
+                        <td>
+                          <span>4.5</span>
+                          <img
+                            src="../assets/images/icon/Star 1.svg"
+                            alt="icon"
+                            class="mb-1"
+                          />
+                        </td>
+                        <td>ادمن</td>
                         <td>22/03/2024-8:30pm</td>
                         <td>31</td>
                         <td>21</td>
+                        <td>22</td>
+                        <td>31</td>
+                        <td>21</td>
+                        <td>22</td>
+
                         <td class="text-start">
                           <div
                             class="form-switch ms-2 d-flex justify-content-center"
@@ -534,46 +640,75 @@
                             />
                           </div>
                         </td>
-
-                        <td class="d-flex gap-1 justify-content-end">
-                          <button
-                            class="btn text-success action-btn"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#edit-password"
-                            aria-controls="edit-password"
-                          >
-                            <i
-                              class="fa-solid fa-user-lock"
-                              style="color: #9469b2"
-                            ></i>
-                          </button>
-
+                        <td>
                           <a
-                            class="btn text-info action-btn"
-                            href="/users/user-details.html"
+                            class="icon-button add-product d-flex align-items-center gap-2"
+                            href="#"
                           >
-                            <i class="fa-regular fa-eye"></i>
+                            <span>
+                              <img
+                                src="/assets/images/icon/shopping-bag.svg"
+                                alt="shopping bag"
+                              />
+                            </span>
+                            <span> اضافة منتج </span>
                           </a>
+                        </td>
+                        <td>
+                          <button
+                            class="icon-button add-work-space d-flex align-items-center gap-2"
+                          >
+                            <span>
+                              <img
+                                src="/assets/images/icon/add-work-place.svg"
+                                alt="add"
+                              />
+                            </span>
+                            <span>اضافة نطاق عمل</span>
+                          </button>
+                        </td>
 
-                          <button
-                            class="btn text-success action-btn"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#edite-section"
-                            aria-controls="edite-section"
-                          >
-                            <img
-                              src="../assets/images/icon/pencil 1.svg"
-                              alt=""
-                            />
-                          </button>
-                          <!-- trash -->
-                          <button
-                            class="btn trash-color action-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#deleteModal"
-                          >
-                            <i class="fa-regular fa-trash-can"></i>
-                          </button>
+                        <td>
+                          <div class="d-flex gap-1 justify-content-end">
+                            <button
+                              class="btn text-success action-btn"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit-password"
+                              aria-controls="edit-password"
+                            >
+                              <i
+                                class="fa-solid fa-user-lock"
+                                style="color: #9469b2"
+                              ></i>
+                            </button>
+
+                            <a
+                              class="btn text-info action-btn"
+                              href="/markets/productDetails.html"
+                            >
+                              <i class="fa-regular fa-eye"></i>
+                            </a>
+
+                            <button
+                              class="btn text-success action-btn"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edite-section"
+                              aria-controls="edite-section"
+                            >
+                              <img
+                                src="../assets/images/icon/pencil 1.svg"
+                                alt=""
+                              />
+                            </button>
+                            <!-- trash -->
+                            <button
+                              class="btn trash-color action-btn"
+                              data-bs-toggle="modal"
+                              data-bs-target="#deleteModal"
+                            >
+                              <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -609,77 +744,235 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة مستخدم جديد</h2>
-        <form class="d-flex flex-column px-3 gap-3">
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> الاسم</label>
-              <input class="w-100" type="text" />
+        <h2 class="title-page border-bottom text-center">اضافة متجر جديد</h2>
+        <form class="d-flex flex-column px-3">
+          <label
+            class="select-img m-auto text-center position-relative"
+            for="upploadImg"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                id="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom">
-            <div class="input-wrapper mb-1">
-              <label> رقم الموبايل</label>
-              <input class="w-100" type="text" />
-            </div>
-            <p class="valid-error">هذا الحقل مطلوب</p>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> البريد الالكتروني</label>
-              <input class="w-100" type="text" />
-            </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> كلمة المرور</label>
-              <div class="form-group position-relative">
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  class="form-control w-100"
-                />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
+            <input type="file" id="upploadImg" class="d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة الشعار
+            </h5>
+            <div id="preview-container" class="text-center mt-2 d-none">
+              <span id="remove-img"
+                ><svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#confirmPassword"
-                    style="cursor: pointer"
-                  ></i>
-                </span>
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+
+          <div class="d-flex flex-column gap-3 mt-3">
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> الاسم المتجر</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> اسم المسؤول</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> رقم الموبايل</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> البريد الالكتروني</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+
+            <div class="input-wrapper select">
+              <label>البلد</label>
+              <select class="position-relative">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لوريم</option>
+                <option value="3">لوريم</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper select">
+              <label>العملة</label>
+              <select class="position-relative">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لوريم</option>
+                <option value="3">لوريم</option>
+              </select>
+            </div>
+
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> كلمة المرور</label>
+                <div class="form-group position-relative">
+                  <input
+                    type="password"
+                    id="passwordnew"
+                    class="form-control w-100"
+                  />
+                  <span
+                    class="position-absolute top-50 translate-middle-y"
+                    style="left: 1rem"
+                  >
+                    <i
+                      class="fas fa-eye toggle-password w-100"
+                      data-target="#passwordnew"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <div class="valid-error">هذا الحقل مطلوب</div>
+            </div>
+            <div class="input-custom error">
+              <div class="input-wrapper">
+                <label> تأكيد كلمة المرور</label>
+                <div class="form-group position-relative">
+                  <input
+                    type="password"
+                    id="confirmPasswordnew"
+                    class="form-control w-100"
+                  />
+                  <span
+                    class="position-absolute translate-middle-y"
+                    style="left: 1rem; top: 29%"
+                  >
+                    <i
+                      class="fas fa-eye toggle-password w-100"
+                      data-target="#confirmPasswordnew"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                  <div class="valid-error">هذا الحقل مطلوب</div>
+                </div>
               </div>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> تأكيد كلمة المرور</label>
-              <div class="form-group position-relative mb-3">
-                <input
-                  type="password"
-                  id="password"
-                  class="form-control w-100"
+
+            <!-- upload -->
+            <div class="upload-container">
+              <input type="file" id="file-upload-first" class="file-upload" />
+              <label
+                for="file-upload-first"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق السجل التجاري</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
                 />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
-                >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#password"
-                    style="cursor: pointer"
-                  ></i>
-                </span>
-              </div>
+              </label>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
+            <div class="upload-container">
+              <input type="file" id="file-upload-second" class="file-upload" />
+              <label
+                for="file-upload-second"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق التأمين</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
+                />
+              </label>
+            </div>
+            <div class="upload-container">
+              <input type="file" id="file-upload-third" class="file-upload" />
+              <label
+                for="file-upload-third"
+                class="upload-label d-flex justify-content-between"
+              >
+                <!-- <span class="upload-icon">&#x2B06;</span> -->
+                <span class="upload-text">ارفاق بطاقة الهوية-الوجه/الظهر</span>
+                <img
+                  class="upload-icon"
+                  src="../assets/images/icon/upload.svg"
+                />
+              </label>
+            </div>
+            <div id="file-details-first" class="file-details d-none">
+              <h5>تفاصيل ملف السجل التجاري</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-first"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-first"></span>
+                </li>
+              </ul>
+            </div>
+            <div id="file-details-second" class="file-details d-none">
+              <h5>تفاصيل ملف التأمين</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-second"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-second"></span>
+                </li>
+              </ul>
+            </div>
+            <div id="file-details-third" class="file-details d-none">
+              <h5>تفاصيل ملف بطاقة الهوية</h5>
+              <ul>
+                <li>
+                  <strong>Name:</strong> <span id="file-name-third"></span>
+                </li>
+                <li>
+                  <strong>Size:</strong> <span id="file-size-third"></span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
               اضافة
             </button>
           </div>
@@ -689,7 +982,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="../assets/script.js"></script>
+
     <script>
+      $(document).ready(function () {
+        $('.file-upload').change(function () {
+          // Get the ID of the file input
+          const fileInputId = $(this).attr('id');
+
+          // Determine the index from the ID
+          const index = fileInputId.split('-').pop(); // This gets 'first', 'second', or 'third'
+
+          // Construct the IDs for the file details and its elements
+          const fileDetailsId = `#file-details-${index}`;
+          const fileNameId = `#file-name-${index}`;
+          const fileSizeId = `#file-size-${index}`;
+
+          const file = this.files[0];
+          if (file) {
+            const fileName = file.name;
+            const fileSize = (file.size / 1024).toFixed(2) + ' KB';
+
+            $(fileNameId).text(fileName);
+            $(fileSizeId).text(fileSize);
+
+            $(fileDetailsId).removeClass('d-none');
+          } else {
+            $(fileDetailsId).addClass('d-none');
+          }
+        });
+      });
+
       $(function () {
         $('input[name="daterange"]').daterangepicker(
           {

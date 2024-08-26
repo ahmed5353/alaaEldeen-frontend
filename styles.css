@@ -239,12 +239,12 @@ header.navbar span {
   font-size: 13px;
 }
 .daterange-input img {
-  margin-left: -20px;
+  margin-left: -24px;
   margin-right: 6px;
 }
 
 .daterange-input i {
-  margin-right: -20px;
+  margin-right: -24px;
   margin-left: 6px;
 }
 .search-input {
@@ -378,7 +378,7 @@ select::-ms-expand {
 .select-img img {
   width: 135px;
   height: 135px;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 2px dashed var(--active-font);
   margin: auto;
 }
@@ -1108,4 +1108,42 @@ input[type='radio']:checked:before {
 }
 .no-time {
   color: #868d98 !important;
+}
+
+/* statistics */
+.statistics {
+  display: inline-block;
+  height: 5rem;
+  width: 12.1rem;
+  padding: 2px;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.6rem;
+}
+/* Add discount */
+
+.wallet-btns {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+.discount {
+  background-color: #fbe0e5;
+  color: #e63050;
+  &:hover {
+    background-color: #f9d3dc;
+    color: #e63050;
+  }
+}
+.flash-sale {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--active-font);
+  }
+}
+.percent-icon {
+  position: absolute;
+  left: 13px;
+  top: 0.6rem;
 }

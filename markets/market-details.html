@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div>
+      <div class="row m-0">
+        <!--   aside section-->
+        <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
+              <a class="  " aria-current="page" href="#">
+                <img src="../assets/images/logo.svg" />
+              </a>
+            </div>
+            <ul class="nav flex-column p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <img src="../assets/images/icon/grid.svg" alt="" />
+                  لوحة التحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/users 1.svg" alt="" />
+
+                  المسؤولين الفرعيين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/users.html">
+                  <img src="../assets/images/icon/chart-user 1.svg" alt="" />
+
+                  المستخدمين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mainSections.html    ">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  الاقسام الرئيسية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subCategories.html">
+                  <img src="../assets/images/icon/folder 1.svg" alt="" />
+
+                  الاقسام الفرعية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  سمات المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countries.html">
+                  <img src="../assets/images/icon/marker 1.svg" alt="" />
+
+                  البلاد
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/markets/markets.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المتاجر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
+                  <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
+
+                  نقاط التوزيع
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مناديب التوصيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المخازن
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
+
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/restock 1.svg" alt="" />
+
+                  المرتجعات<span class="badge bg-danger rounded-circle">3</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  طلبات التعديل على الاوراق<span
+                    class="badge bg-danger rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  المتاجر المعلفة
+                  <span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  نقاط التوزيع المعلفة<span
+                    class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مندوبين التوصيل المعلقين<span
+                    class="badge bg-danger rounded-circle"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/messages-question 1.svg"
+                    alt=""
+                  />
+
+                  الاستفسارات على المنتجات
+                  <span class="badge bg-danger rounded-circle">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
+
+                  اكواد الخصم<span class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/settings 1.svg" alt="" />
+
+                  اعدادات النظام
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--  end aside section-->
+        <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
+          <!--header navbar-->
+          <header class="navbar">
+            <div class="container justify-content-between">
+              <button class="btn btn-logout d-flex d-none d-md-block">
+                <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
+              </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="d-flex">
+                <a class="mx-3">
+                  <img src="../assets/images/icon/notific.svg" />
+                </a>
+                <a class="d-flex">
+                  <img
+                    src="../assets/images/avatar.png"
+                    alt="User Avatar"
+                    class="rounded-circle ms-2"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <h5 class="navbar-text text-white">
+                      Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
+                    </h5>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!-- confirm delete -->
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            aria-labelledby="deleteModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="max-width: 24rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 20rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img
+                    src="../assets/images/icon/Delete gif.gif"
+                    width="120"
+                    height="120"
+                    alt=""
+                  />
+                  <div class="message">هل أنت متأكد من الحذف</div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn-delete">حذف</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- confirm delete -->
+          <!-- add balance -->
+          <div
+            class="modal fade"
+            id="balanceModal"
+            tabindex="-1"
+            aria-labelledby="balanceModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="width: 20rem; height: 15rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 20rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center d-flex flex-column gap-4">
+                  <div class="message">تسوية الرصيد</div>
+                  <div class="input-custom position-relative">
+                    <div class="input-wrapper">
+                      <label> المبلغ</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span style="position: absolute; left: 10px; top: 0.75rem"
+                      >جنيه</span
+                    >
+                  </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button
+                    type="button"
+                    class="btn-delete"
+                    style="background-color: #bfa274"
+                  >
+                    تأكيد
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--            breadcrumb -->
+          <div class="border-bottom">
+            <nav
+              dir="rtl"
+              class="breadcrumb-nav container"
+              aria-label="breadcrumb"
+            >
+              <a href="#">لوحة التحكم </a>
+              /
+              <a href="#">المتاجر</a>
+
+              /
+              <span class="breadcrumb-item active" aria-current="page">
+                تفاصيل المتجر</span
+              >
+            </nav>
+          </div>
+
+          <!-- Main page -->
+          <div class="container">
+            <div class="container d-flex jus gap-2">
+              <img
+                src="../assets/images/icon/back.svg"
+                alt="back icon"
+                style="cursor: pointer"
+              />
+              <h2 class="title-page mb-0 fw-bold">تفاصيل المتجر</h2>
+            </div>
+            <!-- PRODUCT Rate -->
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-3 mb-3">
+                <img
+                  src="../assets/images/market-logo.png"
+                  alt="product"
+                  width="77px"
+                  height="75px"
+                />
+                <div class="d-flex flex-column text-nowrap">
+                  <p class="m-0" style="font-size: 18px">النور للملابس</p>
+                  <span style="color: #606c7e"
+                    >اسم المسؤول : Mostafa Ahmed</span
+                  >
+
+                  <div class="d-flex gap-1 align-items-center">
+                    <img src="../assets/images/icon/Star 1.svg" alt="icon" />
+                    <div style="margin-top: 3px">
+                      <span>4.5</span>
+                      <span>)23(</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Statistics -->
+              <div class="d-flex gap-2">
+                <div class="trader-statistics p-2">
+                  <div class="d-flex flex-column">
+                    <div class="icon-trader" style="background-color: #f1fae6">
+                      <div class="d-flex justify-content-center mt-1">
+                        <img
+                          src="../assets/images/gifs/box.gif"
+                          alt="box icon"
+                          width="33px"
+                          height="33px"
+                        />
+                      </div>
+                    </div>
+                    <strong class="fs-4" style="color: #0f172a">20</strong>
+                    <p class="fs-6" style="color: #64748b">عدد المنتجات</p>
+                  </div>
+                </div>
+
+                <div class="trader-statistics p-2">
+                  <div class="d-flex flex-column">
+                    <div class="icon-trader" style="background-color: #f1edfe">
+                      <div class="d-flex justify-content-center mt-1">
+                        <img
+                          src="../assets/images/gifs/cart.gif"
+                          alt="box icon"
+                          width="33px"
+                          height="33px"
+                        />
+                      </div>
+                    </div>
+                    <strong class="fs-4" style="color: #0f172a">20</strong>
+                    <p class="fs-6" style="color: #64748b">عدد الطلبات</p>
+                  </div>
+                </div>
+                <div class="trader-statistics p-2">
+                  <div class="d-flex flex-column">
+                    <div class="icon-trader" style="background-color: #feeef6">
+                      <div class="d-flex justify-content-center mt-1">
+                        <img
+                          src="../assets/images/gifs/setting.gif"
+                          alt="box icon"
+                          width="33px"
+                          height="33px"
+                        />
+                      </div>
+                    </div>
+                    <strong class="fs-4" style="color: #0f172a">13</strong>
+                    <p class="fs-6" style="color: #64748b">
+                      عدد الطلبات الملغية
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-2">
+                  <div class="trader-statistics-money p-2">
+                    <div class="d-flex gap-2">
+                      <div
+                        class="icon-trader"
+                        style="background-color: #f1fae6"
+                      >
+                        <div class="d-flex justify-content-center mt-1">
+                          <img
+                            src="../assets/images/gifs/money.gif"
+                            alt="box icon"
+                            width="33px"
+                            height="33px"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <strong style="color: #0f172a; font-size: 14px">
+                          800 ريال يمني</strong
+                        >
+                        <p style="color: #64748b; font-size: 13px">
+                          صافي الربح
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="trader-statistics-money p-2">
+                    <div class="d-flex gap-2">
+                      <div
+                        class="icon-trader"
+                        style="background-color: #f1fae6"
+                      >
+                        <div class="d-flex justify-content-center mt-1">
+                          <img
+                            src="../assets/images/gifs/money.gif"
+                            alt="box icon"
+                            width="33px"
+                            height="33px"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <strong style="color: #0f172a; font-size: 14px">
+                          800 ريال يمني</strong
+                        >
+                        <p style="color: #64748b; font-size: 13px">
+                          صافي ربح الادمن
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="trader-statistics">
+                  <div class="d-flex flex-column align-items-center">
+                    <strong class="fs-4" style="color: #28b446">
+                      12000جنيه</strong
+                    >
+                    <p class="fs-6" style="color: #64748b">المحفظة</p>
+                    <button
+                      class="btn btn-money"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#balanceModal"
+                    >
+                      تسوية رصيد
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex gap-2 my-4 id="v-pills-tab" role="tablist"
+              aria-orientation="vertical" >
+              <button
+                class="btn tab-btn active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                المنتجات
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                الاوراق
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-categories-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-categories"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-categories"
+                aria-selected="false"
+              >
+                الاقسام الرئيسية والفرعية
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-workplaces-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-workplaces"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-workplaces"
+                aria-selected="false"
+              >
+                مناطق العمل
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-address-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-address"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-address"
+                aria-selected="false"
+              >
+                العنوان على الخريطة
+              </button>
+              <button
+                class="btn tab-btn"
+                id="v-pills-rate-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-rate"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-rate"
+                aria-selected="false"
+              >
+                التقييمات
+              </button>
+            </div>
+            <!-- products -->
+            <div class="tab-content" id="v-pills-tabContent">
+              <!--NOTE: First Slider  -->
+              <div
+                class="tab-pane fade show active"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+                tabindex="0"
+              >
+                <!--tabel-->
+                <div class="container-tabel p-3 py-4">
+                  <div class="container">
+                    <div class="table-responsive mb-3 rounded-3">
+                      <div class="p-3 my-2">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>الصورة</th>
+                              <th>اسم المنتج</th>
+                              <th>القسم الرئيسي</th>
+                              <th>القسم الفرعي</th>
+                              <th>التقييم الاجمالي</th>
+                              <th>السعر الافتراضي</th>
+                              <th>الكمية المتاحة</th>
+                              <th>يحتوي على الوان</th>
+                              <th>يحتوي على مقاسات</th>
+                              <th>الخصم</th>
+                              <th>تاريخ انتهاء الخصم</th>
+                              <th>تاريخ ووقت الاضافة</th>
+                              <th>عدد مرات الشراء</th>
+                              <th>عدد مرات الاضافة للمفضلة</th>
+                              <th>عدد مرات المشاركة</th>
+                              <th>مدة الفلاش سيل</th>
+                              <th>الحالة</th>
+
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>
+                                <img
+                                  src="../assets/images/jacket.png"
+                                  class="rounded"
+                                  width="60"
+                                  height="49"
+                                />
+                              </td>
+                              <td>جاكيت جلد بسوستة</td>
+                              <td>ملابس رجالي</td>
+                              <td>جواكت رجالي</td>
+                              <td>
+                                <span>4.5</span>
+                                <img
+                                  src="../assets/images/icon/Star 1.svg"
+                                  alt="icon"
+                                  class="mb-1"
+                                />
+                              </td>
+                              <td>100 ريال يمني</td>
+                              <td>40</td>
+                              <td>نعم</td>
+                              <td>نعم</td>
+                              <td>يوجد</td>
+                              <td>20/02/2024</td>
+                              <td>
+                                20/02/2024-8:30<span style="float: right"
+                                  >PM</span
+                                >
+                              </td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>نعم</td>
+
+                              <td class="text-start">
+                                <div
+                                  class="form-switch ms-2 d-flex justify-content-center"
+                                >
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckChecked"
+                                    checked
+                                  />
+                                </div>
+                              </td>
+                              <td>
+                                <div class="d-flex gap-1 justify-content-end">
+                                  <a
+                                    class="btn text-info action-btn"
+                                    href="/markets/markets-product-details.html"
+                                  >
+                                    <i class="fa-regular fa-eye"></i>
+                                  </a>
+
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>
+                                <img
+                                  src="../assets/images/jacket.png"
+                                  class="rounded"
+                                  width="60"
+                                  height="49"
+                                />
+                              </td>
+                              <td>
+                                <div
+                                  class="d-flex align-items-center gap-2"
+                                  style="color: #bfa274"
+                                >
+                                  <span>جاكيت جلد بسوستة</span>
+                                  <span>
+                                    <img
+                                      src="/assets/images/icon/alert.svg"
+                                      alt="alert"
+                                    />
+                                  </span>
+                                </div>
+                              </td>
+                              <td>ملابس رجالي</td>
+                              <td>جواكت رجالي</td>
+                              <td>
+                                <span>4.5</span>
+                                <img
+                                  src="../assets/images/icon/Star 1.svg"
+                                  alt="icon"
+                                  class="mb-1"
+                                />
+                              </td>
+                              <td>100 ريال يمني</td>
+                              <td>40</td>
+                              <td>نعم</td>
+                              <td>نعم</td>
+                              <td>يوجد</td>
+                              <td>20/02/2024</td>
+                              <td>
+                                20/02/2024-8:30<span style="float: right"
+                                  >PM</span
+                                >
+                              </td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>نعم</td>
+
+                              <td class="text-start">
+                                <div
+                                  class="form-switch ms-2 d-flex justify-content-center"
+                                >
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckChecked"
+                                    checked
+                                  />
+                                </div>
+                              </td>
+                              <td>
+                                <div class="d-flex gap-1 justify-content-end">
+                                  <a
+                                    class="btn text-info action-btn"
+                                    href="/markets/markets-product-details.html"
+                                  >
+                                    <i class="fa-regular fa-eye"></i>
+                                  </a>
+
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>
+                                <img
+                                  src="../assets/images/jacket.png"
+                                  class="rounded"
+                                  width="60"
+                                  height="49"
+                                />
+                              </td>
+                              <td>
+                                <span class="no-time">جاكيت جلد بسوستة</span>
+                              </td>
+                              <td>ملابس رجالي</td>
+                              <td>جواكت رجالي</td>
+                              <td>
+                                <span>4.5</span>
+                                <img
+                                  src="../assets/images/icon/Star 1.svg"
+                                  alt="icon"
+                                  class="mb-1"
+                                />
+                              </td>
+                              <td>100 ريال يمني</td>
+                              <td>40</td>
+                              <td>نعم</td>
+                              <td>نعم</td>
+                              <td>يوجد</td>
+                              <td>20/02/2024</td>
+                              <td>
+                                20/02/2024-8:30<span style="float: right"
+                                  >PM</span
+                                >
+                              </td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>20</td>
+                              <td>نعم</td>
+
+                              <td class="text-start">
+                                <div
+                                  class="form-switch ms-2 d-flex justify-content-center"
+                                >
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="flexSwitchCheckChecked"
+                                    checked
+                                  />
+                                </div>
+                              </td>
+                              <td>
+                                <div class="d-flex gap-1 justify-content-end">
+                                  <a
+                                    class="btn text-info action-btn"
+                                    href="/markets/markets-product-details.html"
+                                  >
+                                    <i class="fa-regular fa-eye"></i>
+                                  </a>
+
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">السابق</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link active" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">القادم</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade slider"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+                tabindex="0"
+              >
+                <!--tabel-->
+                <div class="container-tabel">
+                  <div class="table-responsive mb-3 rounded-3">
+                    <div class="p-3 my-2">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>الصورة</th>
+                            <th>الاسم</th>
+                            <th>القسم الرئيسي</th>
+                            <th>اسم التاجر</th>
+                            <th>الرقم التعريفي للتاجر</th>
+                            <th>عدد طلب الخدمة</th>
+                            <th>التقييم الاجمالي</th>
+                            <th>عدد المقيمين</th>
+                            <th>السعر</th>
+                            <th>الماركة</th>
+                            <th>الضمان</th>
+                            <th>مدة الضمان</th>
+                            <th>الخصم</th>
+                            <th>تاريخ بدء الخصم</th>
+                            <th>تاريخ انتهاء الخصم</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <img
+                                src="../assets/images/service.png"
+                                alt="service"
+                              />
+                            </td>
+                            <td>غسيل سيارات</td>
+                            <td>غسيل سيارات</td>
+                            <td>مصطفى خالد</td>
+                            <td>123456</td>
+                            <td>22</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
+                            <td>22</td>
+                            <td>100 جنيه</td>
+                            <td>BMW</td>
+                            <td>يوجد</td>
+                            <td>30 يوم</td>
+                            <td>يوجد</td>
+                            <td>2022-10-10</td>
+                            <td>2022-11-10</td>
+
+                            <td class="d-flex gap-1 justify-content-end me-4">
+                              <a
+                                class="btn text-info action-btn"
+                                href="/traders/serviceDetailsTrader.html"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
+
+                              <!-- trash -->
+                              <button
+                                class="btn active-color action-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                              >
+                                <i class="fa-regular fa-trash-can"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">القادم</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <!-- /Table here -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-rate"
+              role="tabpanel"
+              aria-labelledby="v-pills-rate-tab"
+              tabindex="0"
+            >
+              <!--tabel-->
+
+              <!--tabel-->
+              <div class="container-tabel p-3 py-4">
+                <div class="container">
+                  <div class="table-responsive mb-3">
+                    <div class="p-3 my-2">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>الشعار</th>
+                            <th>اسم الماركة</th>
+                            <th>عدد المنتجات المدرجة</th>
+                            <th>عدد الخدمات المدرجة</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <img
+                                src="../assets/images/mercedes logo.svg"
+                                class="rounded-circle"
+                                width="40"
+                                height="40"
+                              />
+                            </td>
+                            <td>Mercedes</td>
+                            <td>20</td>
+                            <td>10</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example   ">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">القادم</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- وصف المنتج -->
+          <!-- images sildes -->
+          <!-- rates -->
+        </main>
+      </div>
+    </div>
+
+    <!--NOTE: user's Rate details -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="userRatedis"
+      aria-labelledby="userRatedisLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center">عرض تقييم</h2>
+        <div class="d-flex flex-column align-items-center px-3 gap-4 mt-3">
+          <img
+            src="../assets/images/userRate.png"
+            width="120"
+            height="120"
+            alt="userphoto"
+          />
+          <p class="fs-5">Mostafa Mohamed</p>
+          <div class="fa-border rounded-3">
+            <div
+              class="d-flex flex-column align-items-center"
+              style="padding: 0.5rem 3rem"
+            >
+              <span style="color: #64748b">رقم الموبايل</span>
+              <span style="font-size: 1.2rem">0101234567</span>
+            </div>
+          </div>
+          <div>
+            <i
+              class="fa-solid fa-star fa-2xl"
+              style="color: #ffd43b; height: 2rem"
+            ></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star fa-2xl" style="color: #ffd43b"></i>
+            <i class="fa-regular fa-star fa-2xl" style="color: #ffd43b"></i>
+            <i class="fa-regular fa-star fa-2xl" style="color: #ffd43b"></i>
+          </div>
+
+          <p>لوريم لوريم لوريم لوريم</p>
+        </div>
+      </div>
+    </div>
+
+    <!--edit  section-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edite-section"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center">
+          تعديل القسم الرئيسي
+        </h2>
+        <form class="d-flex flex-column px-3">
+          <div class="input-custom">
+            <div class="input-wrapper">
+              <label> اسم القسم </label>
+              <input class="w-100" type="text" />
+            </div>
+            <div class="valid-error">هذا الحقل مطلوب</div>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+      const ratingStars = [...document.getElementsByClassName('rating__star')];
+      function executeRating(stars) {
+        const starClassActive = 'rating__star fas fa-star';
+        const starClassInactive = 'rating__star far fa-star';
+        const starsLength = stars.length;
+        let i;
+      }
+      stars.map((star) => {
+        star.onclick = () => {
+          i = stars.indexOf(star);
+
+          if (star.className === starClassInactive) {
+            for (i; i >= 0; --i) stars[i].className = starClassActive;
+          } else {
+            for (i; i < starsLength; ++i)
+              stars[i].className = starClassInactive;
+          }
+        };
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: ' MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: false,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+      $(document).ready(function () {
+        $('.toggle-password').on('click', function () {
+          const target = $(this).data('target');
+          const input = $(target);
+          const type = input.attr('type') === 'password' ? 'text' : 'password';
+          input.attr('type', type);
+          $(this).toggleClass('fa-eye fa-eye-slash');
+        });
+      });
+
+      //     remove images
+      $(document).ready(function () {
+        $('#upploadImg').change(function (e) {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $('#preview-img').attr('src', e.target.result);
+              $('#preview-container').removeClass('d-none');
+              $('#remove-img').show();
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        $('#remove-img').click(function () {
+          $('#preview-img').attr('src', '../assets/images/icon/img.gif');
+          $('#preview-container').addClass('d-none');
+          $('#remove-img').hide();
+          $('#upploadImg').val('');
+        });
+      });
+      $(document).ready(function () {
+        $('#toggleSidebar').on('click', function () {
+          $('#sidebar').toggleClass('show');
+          $('#overlay').toggleClass('show');
+        });
+        $('#overlay').on('click', function () {
+          $('#sidebar').removeClass('show');
+          $('#overlay').removeClass('show');
+        });
+      });
+    </script>
+  </body>
+</html>
