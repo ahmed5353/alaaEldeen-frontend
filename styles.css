@@ -598,6 +598,20 @@ div#preview-container {
   font-size: 1rem;
   color: #2c3e50; /* Customize the text color */
 }
+.radio-group-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #dbdee1;
+  padding: 10px 14px;
+  border-radius: 5px;
+  height: 2.8rem;
+  max-width: 49%;
+}
+.radio-group-vertical label {
+  font-size: 0.9rem;
+  color: #2c3e50; /* Customize the text color */
+}
 
 input[type='radio'] {
   -webkit-appearance: none;
@@ -1162,4 +1176,32 @@ input[type='radio']:checked:before {
 
 .table-head {
   width: 1rem;
+}
+
+.add-img {
+  border: 1px dashed #bfa274;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sizes_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Adjust spacing between lines */
+}
+
+.subcategory-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.new-product-img {
+  display: flex;
+  justify-content: center;
+  width: 15rem;
+  padding: 0.45rem 0 !important;
 }
