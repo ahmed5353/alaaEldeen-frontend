@@ -18,6 +18,8 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -363,7 +365,7 @@
           </div>
 
           <!-- Main page -->
-          <div class="container">
+          <div>
             <div class="container d-flex jus gap-2">
               <img
                 src="../assets/images/icon/back.svg"
@@ -373,7 +375,7 @@
               <h2 class="title-page mb-0 fw-bold">تفاصيل المتجر</h2>
             </div>
             <!-- PRODUCT Rate -->
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between container">
               <div class="d-flex gap-3 mb-3">
                 <img
                   src="../assets/images/market-logo.png"
@@ -520,8 +522,8 @@
               </div>
             </div>
             <div>
-              <div class="d-flex gap-2 my-4 id="v-pills-tab" role="tablist"
-              aria-orientation="vertical" >
+              <div class="container d-flex gap-2 my-4 id="v-pills-tab"
+              role="tablist" aria-orientation="vertical" >
               <button
                 class="btn tab-btn active"
                 id="v-pills-home-tab"
@@ -595,307 +597,24 @@
                 التقييمات
               </button>
             </div>
-            <!-- products -->
-            <div class="tab-content" id="v-pills-tabContent">
-              <!--NOTE: First Slider  -->
-              <div
-                class="tab-pane fade show active"
-                id="v-pills-home"
-                role="tabpanel"
-                aria-labelledby="v-pills-home-tab"
-                tabindex="0"
-              >
-                <!--tabel-->
-                <div class="container-tabel p-3 py-4">
-                  <div class="container">
-                    <div class="table-responsive mb-3 rounded-3">
-                      <div class="p-3 my-2">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>الصورة</th>
-                              <th>اسم المنتج</th>
-                              <th>القسم الرئيسي</th>
-                              <th>القسم الفرعي</th>
-                              <th>التقييم الاجمالي</th>
-                              <th>السعر الافتراضي</th>
-                              <th>الكمية المتاحة</th>
-                              <th>يحتوي على الوان</th>
-                              <th>يحتوي على مقاسات</th>
-                              <th>الخصم</th>
-                              <th>تاريخ انتهاء الخصم</th>
-                              <th>تاريخ ووقت الاضافة</th>
-                              <th>عدد مرات الشراء</th>
-                              <th>عدد مرات الاضافة للمفضلة</th>
-                              <th>عدد مرات المشاركة</th>
-                              <th>مدة الفلاش سيل</th>
-                              <th>الحالة</th>
-
-                              <th></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>
-                                <img
-                                  src="../assets/images/jacket.png"
-                                  class="rounded"
-                                  width="60"
-                                  height="49"
-                                />
-                              </td>
-                              <td>جاكيت جلد بسوستة</td>
-                              <td>ملابس رجالي</td>
-                              <td>جواكت رجالي</td>
-                              <td>
-                                <span>4.5</span>
-                                <img
-                                  src="../assets/images/icon/Star 1.svg"
-                                  alt="icon"
-                                  class="mb-1"
-                                />
-                              </td>
-                              <td>100 ريال يمني</td>
-                              <td>40</td>
-                              <td>نعم</td>
-                              <td>نعم</td>
-                              <td>يوجد</td>
-                              <td>20/02/2024</td>
-                              <td>
-                                20/02/2024-8:30<span style="float: right"
-                                  >PM</span
-                                >
-                              </td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>نعم</td>
-
-                              <td class="text-start">
-                                <div
-                                  class="form-switch ms-2 d-flex justify-content-center"
-                                >
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckChecked"
-                                    checked
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="d-flex gap-1 justify-content-end">
-                                  <a
-                                    class="btn text-info action-btn"
-                                    href="/markets/markets-product-details.html"
-                                  >
-                                    <i class="fa-regular fa-eye"></i>
-                                  </a>
-
-                                  <!-- trash -->
-                                  <button
-                                    class="btn trash-color action-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal"
-                                  >
-                                    <i class="fa-regular fa-trash-can"></i>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>
-                                <img
-                                  src="../assets/images/jacket.png"
-                                  class="rounded"
-                                  width="60"
-                                  height="49"
-                                />
-                              </td>
-                              <td>
-                                <div
-                                  class="d-flex align-items-center gap-2"
-                                  style="color: #bfa274"
-                                >
-                                  <span>جاكيت جلد بسوستة</span>
-                                  <span>
-                                    <img
-                                      src="/assets/images/icon/alert.svg"
-                                      alt="alert"
-                                    />
-                                  </span>
-                                </div>
-                              </td>
-                              <td>ملابس رجالي</td>
-                              <td>جواكت رجالي</td>
-                              <td>
-                                <span>4.5</span>
-                                <img
-                                  src="../assets/images/icon/Star 1.svg"
-                                  alt="icon"
-                                  class="mb-1"
-                                />
-                              </td>
-                              <td>100 ريال يمني</td>
-                              <td>40</td>
-                              <td>نعم</td>
-                              <td>نعم</td>
-                              <td>يوجد</td>
-                              <td>20/02/2024</td>
-                              <td>
-                                20/02/2024-8:30<span style="float: right"
-                                  >PM</span
-                                >
-                              </td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>نعم</td>
-
-                              <td class="text-start">
-                                <div
-                                  class="form-switch ms-2 d-flex justify-content-center"
-                                >
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckChecked"
-                                    checked
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="d-flex gap-1 justify-content-end">
-                                  <a
-                                    class="btn text-info action-btn"
-                                    href="/markets/markets-product-details.html"
-                                  >
-                                    <i class="fa-regular fa-eye"></i>
-                                  </a>
-
-                                  <!-- trash -->
-                                  <button
-                                    class="btn trash-color action-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal"
-                                  >
-                                    <i class="fa-regular fa-trash-can"></i>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>
-                                <img
-                                  src="../assets/images/jacket.png"
-                                  class="rounded"
-                                  width="60"
-                                  height="49"
-                                />
-                              </td>
-                              <td>
-                                <span class="no-time">جاكيت جلد بسوستة</span>
-                              </td>
-                              <td>ملابس رجالي</td>
-                              <td>جواكت رجالي</td>
-                              <td>
-                                <span>4.5</span>
-                                <img
-                                  src="../assets/images/icon/Star 1.svg"
-                                  alt="icon"
-                                  class="mb-1"
-                                />
-                              </td>
-                              <td>100 ريال يمني</td>
-                              <td>40</td>
-                              <td>نعم</td>
-                              <td>نعم</td>
-                              <td>يوجد</td>
-                              <td>20/02/2024</td>
-                              <td>
-                                20/02/2024-8:30<span style="float: right"
-                                  >PM</span
-                                >
-                              </td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>20</td>
-                              <td>نعم</td>
-
-                              <td class="text-start">
-                                <div
-                                  class="form-switch ms-2 d-flex justify-content-center"
-                                >
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    role="switch"
-                                    id="flexSwitchCheckChecked"
-                                    checked
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="d-flex gap-1 justify-content-end">
-                                  <a
-                                    class="btn text-info action-btn"
-                                    href="/markets/markets-product-details.html"
-                                  >
-                                    <i class="fa-regular fa-eye"></i>
-                                  </a>
-
-                                  <!-- trash -->
-                                  <button
-                                    class="btn trash-color action-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal"
-                                  >
-                                    <i class="fa-regular fa-trash-can"></i>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1">السابق</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link active" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">القادم</a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="tab-pane fade slider"
-                id="v-pills-profile"
-                role="tabpanel"
-                aria-labelledby="v-pills-profile-tab"
-                tabindex="0"
-              >
-                <!--tabel-->
-                <div class="container-tabel">
+          </div>
+          <!-- products -->
+          <div
+            class="tab-content"
+            id="v-pills-tabContent"
+            style="background-color: #f7f9fb; height: 100vh"
+          >
+            <!--NOTE: First Slider  -->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+              tabindex="0"
+            >
+              <!--tabel-->
+              <div class="container-tabel p-3 py-4">
+                <div class="container">
                   <div class="table-responsive mb-3 rounded-3">
                     <div class="p-3 my-2">
                       <table class="table">
@@ -903,20 +622,23 @@
                           <tr>
                             <th>#</th>
                             <th>الصورة</th>
-                            <th>الاسم</th>
+                            <th>اسم المنتج</th>
                             <th>القسم الرئيسي</th>
-                            <th>اسم التاجر</th>
-                            <th>الرقم التعريفي للتاجر</th>
-                            <th>عدد طلب الخدمة</th>
+                            <th>القسم الفرعي</th>
                             <th>التقييم الاجمالي</th>
-                            <th>عدد المقيمين</th>
-                            <th>السعر</th>
-                            <th>الماركة</th>
-                            <th>الضمان</th>
-                            <th>مدة الضمان</th>
+                            <th>السعر الافتراضي</th>
+                            <th>الكمية المتاحة</th>
+                            <th>يحتوي على الوان</th>
+                            <th>يحتوي على مقاسات</th>
                             <th>الخصم</th>
-                            <th>تاريخ بدء الخصم</th>
                             <th>تاريخ انتهاء الخصم</th>
+                            <th>تاريخ ووقت الاضافة</th>
+                            <th>عدد مرات الشراء</th>
+                            <th>عدد مرات الاضافة للمفضلة</th>
+                            <th>عدد مرات المشاركة</th>
+                            <th>مدة الفلاش سيل</th>
+                            <th>الحالة</th>
+
                             <th></th>
                           </tr>
                         </thead>
@@ -925,15 +647,15 @@
                             <td>1</td>
                             <td>
                               <img
-                                src="../assets/images/service.png"
-                                alt="service"
+                                src="../assets/images/jacket.png"
+                                class="rounded"
+                                width="60"
+                                height="49"
                               />
                             </td>
-                            <td>غسيل سيارات</td>
-                            <td>غسيل سيارات</td>
-                            <td>مصطفى خالد</td>
-                            <td>123456</td>
-                            <td>22</td>
+                            <td>جاكيت جلد بسوستة</td>
+                            <td>ملابس رجالي</td>
+                            <td>جواكت رجالي</td>
                             <td>
                               <span>4.5</span>
                               <img
@@ -942,26 +664,382 @@
                                 class="mb-1"
                               />
                             </td>
-                            <td>22</td>
-                            <td>100 جنيه</td>
-                            <td>BMW</td>
+                            <td>100 ريال يمني</td>
+                            <td>40</td>
+                            <td>نعم</td>
+                            <td>نعم</td>
                             <td>يوجد</td>
-                            <td>30 يوم</td>
-                            <td>يوجد</td>
-                            <td>2022-10-10</td>
-                            <td>2022-11-10</td>
-
-                            <td class="d-flex gap-1 justify-content-end me-4">
-                              <a
-                                class="btn text-info action-btn"
-                                href="/traders/serviceDetailsTrader.html"
+                            <td>20/02/2024</td>
+                            <td>
+                              20/02/2024-8:30<span style="float: right"
+                                >PM</span
                               >
-                                <i class="fa-regular fa-eye"></i>
-                              </a>
+                            </td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>نعم</td>
 
+                            <td class="text-start">
+                              <div
+                                class="form-switch ms-2 d-flex justify-content-center"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-1 justify-content-end">
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/markets/markets-product-details.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+
+                                <!-- trash -->
+                                <button
+                                  class="btn trash-color action-btn"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                >
+                                  <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                              <img
+                                src="../assets/images/jacket.png"
+                                class="rounded"
+                                width="60"
+                                height="49"
+                              />
+                            </td>
+                            <td>
+                              <div
+                                class="d-flex align-items-center gap-2"
+                                style="color: #bfa274"
+                              >
+                                <span>جاكيت جلد بسوستة</span>
+                                <span>
+                                  <img
+                                    src="/assets/images/icon/alert.svg"
+                                    alt="alert"
+                                  />
+                                </span>
+                              </div>
+                            </td>
+                            <td>ملابس رجالي</td>
+                            <td>جواكت رجالي</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
+                            <td>100 ريال يمني</td>
+                            <td>40</td>
+                            <td>نعم</td>
+                            <td>نعم</td>
+                            <td>يوجد</td>
+                            <td>20/02/2024</td>
+                            <td>
+                              20/02/2024-8:30<span style="float: right"
+                                >PM</span
+                              >
+                            </td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>نعم</td>
+
+                            <td class="text-start">
+                              <div
+                                class="form-switch ms-2 d-flex justify-content-center"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-1 justify-content-end">
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/markets/markets-product-details.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+
+                                <!-- trash -->
+                                <button
+                                  class="btn trash-color action-btn"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                >
+                                  <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                              <img
+                                src="../assets/images/jacket.png"
+                                class="rounded"
+                                width="60"
+                                height="49"
+                              />
+                            </td>
+                            <td>
+                              <span class="no-time">جاكيت جلد بسوستة</span>
+                            </td>
+                            <td>ملابس رجالي</td>
+                            <td>جواكت رجالي</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
+                            <td>100 ريال يمني</td>
+                            <td>40</td>
+                            <td>نعم</td>
+                            <td>نعم</td>
+                            <td>يوجد</td>
+                            <td>20/02/2024</td>
+                            <td>
+                              20/02/2024-8:30<span style="float: right"
+                                >PM</span
+                              >
+                            </td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>نعم</td>
+
+                            <td class="text-start">
+                              <div
+                                class="form-switch ms-2 d-flex justify-content-center"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex gap-1 justify-content-end">
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/markets/markets-product-details.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+
+                                <!-- trash -->
+                                <button
+                                  class="btn trash-color action-btn"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                >
+                                  <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">القادم</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade slider py-2 px-4"
+              id="v-pills-profile"
+              role="tabpanel"
+              aria-labelledby="v-pills-profile-tab"
+              tabindex="0"
+            >
+              <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                <p>السجل التجاري</p>
+                <img
+                  src="/assets/images/certificate.png"
+                  alt="certificate"
+                  width="111"
+                  height="79"
+                />
+              </div>
+              <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                <p>التأمين</p>
+                <img
+                  src="/assets/images/certificate.png"
+                  alt="certificate"
+                  width="111"
+                  height="79"
+                />
+              </div>
+              <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                <p>بطاقة الهوية - الوجه / الظهر</p>
+                <div class="d-flex gap-3">
+                  <img
+                    src="/assets/images/personalID.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                  <img
+                    src="/assets/images/personalID.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- categories -->
+            <div
+              class="tab-pane fade slider py-2 px-4"
+              id="v-pills-categories"
+              role="tabpanel"
+              aria-labelledby="v-pills-categories-tab"
+              tabindex="0"
+            >
+              <div class="container-tabel p-3 py-4">
+                <div class="container">
+                  <div class="table-responsive mb-3">
+                    <div class="p-3 my-2">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th style="width: 1rem">#</th>
+                            <th style="width: 1rem">القسم الرئيسي</th>
+                            <th style="width: 1rem">
+                              عدد الاقسام الفرعية المندرجة
+                            </th>
+                            <th style="width: 1rem">عدد المنتجات المندرجة</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>ملابس رجالي</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">القادم</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- workplaces -->
+            <div
+              class="tab-pane fade slider py-2 px-4"
+              id="v-pills-workplaces"
+              role="tabpanel"
+              aria-labelledby="v-pills-workplaces-tab"
+              tabindex="0"
+            >
+              <div class="container-tabel p-3 py-4">
+                <div class="container">
+                  <div class="table-responsive mb-3">
+                    <div class="p-3 my-2">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th class="table-head">#</th>
+                            <th class="table-head">البلد</th>
+                            <th class="table-head">المحافظة</th>
+                            <th class="table-head">المدينة</th>
+                            <th class="table-head">الشارع</th>
+                            <th class="table-head">تاريخ ووقت الاضافة</th>
+
+                            <th></th>
+                            <th class="table-head"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>اليمن</td>
+                            <td>صنعاء</td>
+                            <td>ارحب</td>
+                            <td>شارع لوريم ,لوريم</td>
+                            <td>
+                              <div class="me-2">
+                                20/02/2024-8:30<span style="float: right"
+                                  >PM</span
+                                >
+                              </div>
+                            </td>
+                            <td></td>
+                            <td>
                               <!-- trash -->
                               <button
-                                class="btn active-color action-btn"
+                                class="btn trash-color action-btn"
                                 data-bs-toggle="modal"
                                 data-bs-target="#deleteModal"
                               >
@@ -995,8 +1073,38 @@
                 </div>
               </div>
             </div>
+            <!-- address -->
+            <div
+              class="tab-pane fade slider py-2 px-4"
+              id="v-pills-address"
+              role="tabpanel"
+              aria-labelledby="v-pills-address-tab"
+              tabindex="0"
+            >
+              <div
+                class="container d-flex flex-column gap-3 bg-white p-3 rounded-3 mt-3"
+              >
+                <div class="search-input">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="ابحث ..."
+                  />
+                </div>
+                <div id="map2"></div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-add w-auto m-auto px-5 mt-3"
+                >
+                  حفظ
+                </button>
+              </div>
+            </div>
 
-            <!-- /Table here -->
+            <!--  Rate-->
             <div
               class="tab-pane fade"
               id="v-pills-rate"
@@ -1004,8 +1112,6 @@
               aria-labelledby="v-pills-rate-tab"
               tabindex="0"
             >
-              <!--tabel-->
-
               <!--tabel-->
               <div class="container-tabel p-3 py-4">
                 <div class="container">
@@ -1015,10 +1121,11 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>الشعار</th>
-                            <th>اسم الماركة</th>
-                            <th>عدد المنتجات المدرجة</th>
-                            <th>عدد الخدمات المدرجة</th>
+                            <th>الصورة</th>
+                            <th>الاسم</th>
+                            <th>التقييم</th>
+                            <th>النص</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -1026,15 +1133,59 @@
                             <td>1</td>
                             <td>
                               <img
-                                src="../assets/images/mercedes logo.svg"
+                                src="../assets/images/avatar.png"
                                 class="rounded-circle"
                                 width="40"
                                 height="40"
                               />
                             </td>
-                            <td>Mercedes</td>
-                            <td>20</td>
-                            <td>10</td>
+                            <td>Mostafa Ahmed</td>
+                            <td>
+                              <div>
+                                <i
+                                  class="fa-solid fa-star"
+                                  style="color: #ffd43b"
+                                ></i>
+                                <i
+                                  class="fa-solid fa-star"
+                                  style="color: #ffd43b"
+                                ></i>
+                                <i
+                                  class="fa-solid fa-star"
+                                  style="color: #ffd43b"
+                                ></i>
+                                <i
+                                  class="fa-regular fa-star"
+                                  style="color: #ffd43b"
+                                ></i>
+                                <i
+                                  class="fa-regular fa-star"
+                                  style="color: #ffd43b"
+                                ></i>
+                              </div>
+                            </td>
+                            <td>لوريم لوريم بريم</td>
+
+                            <td class="d-flex gap-1 justify-content-end">
+                              <button
+                                class="btn text-info action-btn"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#userRatedis"
+                                aria-controls="userRatedis"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </button>
+
+                              <!-- trash -->
+                              <button
+                                class="btn trash-color action-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                              >
+                                <i class="fa-regular fa-trash-can"></i>
+                              </button>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -1063,9 +1214,6 @@
               </div>
             </div>
           </div>
-          <!-- وصف المنتج -->
-          <!-- images sildes -->
-          <!-- rates -->
         </main>
       </div>
     </div>
@@ -1079,10 +1227,12 @@
       aria-labelledby="userRatedisLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">عرض تقييم</h2>
-        <div class="d-flex flex-column align-items-center px-3 gap-4 mt-3">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          عرض التقييم
+        </h2>
+        <div class="d-flex flex-column align-items-center px-3 gap-3 mt-3">
           <img
-            src="../assets/images/userRate.png"
+            src="../assets/images/avatar.png"
             width="120"
             height="120"
             alt="userphoto"
@@ -1094,7 +1244,7 @@
               style="padding: 0.5rem 3rem"
             >
               <span style="color: #64748b">رقم الموبايل</span>
-              <span style="font-size: 1.2rem">0101234567</span>
+              <span style="font-size: 1.2rem">20101234567+</span>
             </div>
           </div>
           <div>
@@ -1143,6 +1293,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script>
       const ratingStars = [...document.getElementsByClassName('rating__star')];
@@ -1163,6 +1314,29 @@
               stars[i].className = starClassInactive;
           }
         };
+      });
+    </script>
+    <script>
+      $('#v-pills-address-tab').on('shown.bs.tab', function (e) {
+        var map2 = L.map('map2').setView([29.8206, 30.8025], 10);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+        }).addTo(map2);
+
+        var marker2 = null;
+
+        map2.on('click', function (e) {
+          var lat = e.latlng.lat;
+          var lng = e.latlng.lng;
+
+          if (marker2) {
+            map2.removeLayer(marker2);
+          }
+
+          marker2 = L.marker([lat, lng]).addTo(map2);
+          console.log('Map 2 - Latitude: ' + lat + ', Longitude: ' + lng);
+        });
       });
     </script>
 
@@ -1227,28 +1401,6 @@
         });
       });
 
-      //     remove images
-      $(document).ready(function () {
-        $('#upploadImg').change(function (e) {
-          const file = e.target.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              $('#preview-img').attr('src', e.target.result);
-              $('#preview-container').removeClass('d-none');
-              $('#remove-img').show();
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-
-        $('#remove-img').click(function () {
-          $('#preview-img').attr('src', '../assets/images/icon/img.gif');
-          $('#preview-container').addClass('d-none');
-          $('#remove-img').hide();
-          $('#upploadImg').val('');
-        });
-      });
       $(document).ready(function () {
         $('#toggleSidebar').on('click', function () {
           $('#sidebar').toggleClass('show');
