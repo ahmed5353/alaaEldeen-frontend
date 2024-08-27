@@ -936,12 +936,12 @@ input[type='radio']:checked:before {
   border-radius: 50%;
   background-color: #ccc;
   margin: 0 auto;
-  z-index: 999;
+  z-index: 2;
+  position: relative;
 }
 
 .completed .circle {
   background-color: #28b446;
-  z-index: 999;
 }
 
 .line {
@@ -949,14 +949,14 @@ input[type='radio']:checked:before {
   background-color: #ccc;
   position: absolute;
   top: 8px;
-  width: 106%;
-  /* z-index:1; */
-  transform: translateX(-50%);
-}
+  width: 115%;
+  margin-right: -12px;
+  transform: translateX(50%);
 
+  z-index: 1;
+}
 .completed .line {
-  z-index: 2;
-  background-color: #28b446;
+  background-color: #28b446; /* Only the line before the completed step is green */
 }
 
 .label {
@@ -1204,4 +1204,27 @@ input[type='radio']:checked:before {
   justify-content: center;
   width: 15rem;
   padding: 0.45rem 0 !important;
+}
+
+.custom-dropdown-toggle {
+  background-color: white !important;
+  color: var(--gray-font) !important;
+  font-size: 16px !important;
+
+  border: 1px solid #ced4da !important;
+  text-align: right !important;
+}
+
+.custom-dropdown-toggle::after {
+  display: none !important;
+}
+
+.search-input {
+  background-color: #f3f6f9;
+}
+.icon-rtl {
+  padding-right: 2rem !important;
+  background: url('https://static.thenounproject.com/png/101791-200.png')
+    no-repeat right;
+  background-size: 20px;
 }

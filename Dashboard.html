@@ -540,7 +540,10 @@
                       />
                     </div>
                   </div>
-                  <strong class="fs-4" style="color: #0f172a">20</strong>
+                  <div class="d-flex gap-1 align-items-center">
+                    <strong class="fs-4" style="color: #0f172a">444</strong>
+                    <span style="color: #24d164; font-weight: 600">10%+</span>
+                  </div>
                   <p class="fs-6" style="color: #64748b">عدد الطلبات الحالية</p>
                 </div>
               </div>
@@ -889,6 +892,16 @@
           $(this)
             .css('width', progresses[index] + '%')
             .attr('aria-valuenow', progresses[index]);
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $('#searchInput').on('keyup', function () {
+          var value = $(this).val().toLowerCase();
+          $('#dropdownItems a').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
         });
       });
     </script>

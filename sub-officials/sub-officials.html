@@ -18,14 +18,19 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
 
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -743,134 +748,62 @@
               <input class="w-100" type="text" value="لوريم" />
             </div>
 
-            <div class="input-wrapper select flex-grow-1">
+            <div class="flex-grow-1 input-wrapper select">
               <label>الصلاحيات</label>
-              <select class="">
-                <option value="">لوريم</option>
-                <option value="1">لوريم</option>
-                <option value="2">لزريم</option>
-                <option value="3">لوريم</option>
-              </select>
-            </div>
-            <div class="radio-group-sub-officcials">
-              <label for="option1-1">مندوب علاء الدين</label>
-              <div class="d-flex gap-4">
-                <div class="d-flex align-items-center gap-1">
-                  <input
-                    type="radio"
-                    id="option1-2"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label for="option1-2">نعم</label>
-                </div>
-                <div class="d-flex align-items-center gap-1">
-                  <input
-                    type="radio"
-                    id="option1-2"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label for="option1-2">لا</label>
-                </div>
-              </div>
-            </div>
 
-            <div class="input-wrapper select flex-grow-1">
-              <label>المخزن</label>
-              <select class="">
-                <option value="">لوريم</option>
-                <option value="1">لوريم</option>
-                <option value="2">لزريم</option>
-                <option value="3">لوريم</option>
-              </select>
-            </div>
-          </div>
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
-              اضافة
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!--edit  section-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="edite-section"
-      aria-labelledby="offcanvasWithBothOptionsLabel"
-    >
-      <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center fw-bold">
-          تعديل المسؤول الفرعي
-        </h2>
-        <form class="d-flex flex-column px-3">
-          <!-- Second Label -->
-          <label
-            class="select-img select-user-img m-auto text-center position-relative"
-          >
-            <div class="img-container position-relative">
-              <img class="preview-img" src="../assets/images/avatar.png" />
-              <span class="remove-img position-absolute">
-                <svg
-                  width="31"
-                  height="31"
-                  viewBox="0 0 31 31"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div class="dropdown select custom-dropdown">
+                <button
+                  class="btn custom-dropdown-toggle w-100 text-end"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  <circle
-                    cx="15.4284"
-                    cy="15.1905"
-                    r="14.2071"
-                    fill="#E63050"
-                    stroke="white"
-                    stroke-width="1.3"
-                  />
-                  <path
-                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-            <input type="file" class="upploadImg d-none" />
-            <h5 class="active-color text-decoration-underline mt-2">
-              تعديل الصورة الشخصية
-            </h5>
-            <div class="preview-container text-center mt-2 d-none"></div>
-          </label>
-
-          <div class="d-flex flex-column gap-3 mt-3">
-            <div class="input-wrapper">
-              <label> الاسم </label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="input-wrapper">
-              <label> رقم الموبايل</label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="input-wrapper">
-              <label> البريد الالكتروني</label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="input-wrapper select flex-grow-1">
-              <label>الصلاحيات</label>
-              <select class="">
-                <option value="">لوريم</option>
-                <option value="1">لوريم</option>
-                <option value="2">لزريم</option>
-                <option value="3">لوريم</option>
-              </select>
+                  اختر الصلاحية ...
+                </button>
+                <ul
+                  class="dropdown-menu w-100"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <li class="p-2">
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control search-input icon-rtl"
+                        id="searchInput"
+                        placeholder="ابحث..."
+                        onkeyup="filterItems()"
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
+                      >مدير</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
+                      >سكرتيرة</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
+                      >عامل</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
+                      >مسؤول</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
+                      >لوريم</a
+                    >
+                  </li>
+                  <!-- Add more items as needed -->
+                </ul>
+              </div>
             </div>
             <div class="radio-group-sub-officcials">
               <label for="option1-1">مندوب علاء الدين</label>
@@ -895,117 +828,312 @@
                 </div>
               </div>
             </div>
+            <!--Search dropDown list  -->
 
-            <div class="input-wrapper select flex-grow-1">
+            <div class="flex-grow-1 input-wrapper select">
               <label>المخزن</label>
-              <select class="">
-                <option value="">لوريم</option>
-                <option value="1">لوريم</option>
-                <option value="2">لزريم</option>
-                <option value="3">لوريم</option>
-              </select>
+              <div class="dropdown select custom-dropdown">
+                <button
+                  class="btn custom-dropdown-toggle w-100 text-end"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  اختر...
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li class="p-2">
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control search-input icon-rtl"
+                        placeholder="ابحث باسم المخزن..."
+                      />
+                    </div>
+                  </li>
+                  <li><a class="dropdown-item" href="#">مخزن المنتج</a></li>
+                  <li><a class="dropdown-item" href="#">شركة داجن</a></li>
+                  <li><a class="dropdown-item" href="#">مخزن النور</a></li>
+                  <!-- Add more items as needed -->
+                </ul>
+              </div>
+            </div>
+            <div class="w-100 text-center">
+              <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
+                اضافة
+              </button>
             </div>
           </div>
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
-              حفظ
-            </button>
+
+          <!--edit  section-->
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="edite-section"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-body">
+              <h2 class="title-page border-bottom text-center fw-bold">
+                تعديل المسؤول الفرعي
+              </h2>
+              <form class="d-flex flex-column px-3">
+                <!-- Second Label -->
+                <label
+                  class="select-img select-user-img m-auto text-center position-relative"
+                >
+                  <div class="img-container position-relative">
+                    <img
+                      class="preview-img"
+                      src="../assets/images/avatar.png"
+                    />
+                    <span class="remove-img position-absolute">
+                      <svg
+                        width="31"
+                        height="31"
+                        viewBox="0 0 31 31"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="15.4284"
+                          cy="15.1905"
+                          r="14.2071"
+                          fill="#E63050"
+                          stroke="white"
+                          stroke-width="1.3"
+                        />
+                        <path
+                          d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <input type="file" class="upploadImg d-none" />
+                  <h5 class="active-color text-decoration-underline mt-2">
+                    تعديل الصورة الشخصية
+                  </h5>
+                  <div class="preview-container text-center mt-2 d-none"></div>
+                </label>
+
+                <div class="d-flex flex-column gap-3 mt-3">
+                  <div class="input-wrapper">
+                    <label> الاسم </label>
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label> رقم الموبايل</label>
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label> البريد الالكتروني</label>
+                    <input class="w-100" type="text" value="لوريم" />
+                  </div>
+
+                  <div class="input-wrapper select flex-grow-1">
+                    <label>الصلاحيات</label>
+                    <select class="">
+                      <option value="">لوريم</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="radio-group-sub-officcials">
+                    <label for="option1-1">مندوب علاء الدين</label>
+                    <div class="d-flex gap-4">
+                      <div class="d-flex align-items-center gap-1">
+                        <input
+                          type="radio"
+                          id="option1-2"
+                          name="customRadio1"
+                          class="custom-control-input"
+                        />
+                        <label for="option1-2">نعم</label>
+                      </div>
+                      <div class="d-flex align-items-center gap-1">
+                        <input
+                          type="radio"
+                          id="option1-2"
+                          name="customRadio1"
+                          class="custom-control-input"
+                        />
+                        <label for="option1-2">لا</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper select flex-grow-1">
+                    <label>المخزن</label>
+                    <select class="">
+                      <option value="">لوريم</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="w-100 text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-add w-auto m-auto px-5 mt-3"
+                  >
+                    حفظ
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+          <script>
+            $(function () {
+              $('input[name="daterange"]').daterangepicker(
+                {
+                  opens: 'left',
+                  locale: {
+                    format: ' MMM DD',
+                    applyLabel: 'Apply',
+                    cancelLabel: 'Cancel',
+                    fromLabel: 'From',
+                    toLabel: 'To',
+                    customRangeLabel: 'Custom',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                    monthNames: [
+                      'January',
+                      'February',
+                      'March',
+                      'April',
+                      'May',
+                      'June',
+                      'July',
+                      'August',
+                      'September',
+                      'October',
+                      'November',
+                      'December',
+                    ],
+                    firstDay: 1,
+                  },
+                  singleDatePicker: false,
+                  showDropdowns: true,
+                  minYear: 1901,
+                  maxYear: parseInt(moment().format('YYYY'), 10),
+                  linkedCalendars: false,
+                  autoApply: true,
+                  alwaysShowCalendars: false,
+                  showCustomRangeLabel: false,
+                  maxSpan: {
+                    days: 60,
+                  },
+                },
+                function (start, end, label) {
+                  console.log(
+                    'A new date selection was made: ' +
+                      start.format('YYYY-MM-DD') +
+                      ' to ' +
+                      end.format('YYYY-MM-DD')
+                  );
+                }
+              );
+            });
+
+            $(document).ready(function () {
+              ذ;
+              $('#toggleSidebar').on('click', function () {
+                $('#sidebar').toggleClass('show');
+                $('#overlay').toggleClass('show');
+              });
+              $('#overlay').on('click', function () {
+                $('#sidebar').removeClass('show');
+                $('#overlay').removeClass('show');
+              });
+            });
+
+            $(document).ready(function () {
+              $('.upploadImg').change(function (e) {
+                const file = e.target.files[0];
+                const label = $(this).closest('label');
+                if (file) {
+                  const reader = new FileReader();
+                  reader.onload = function (e) {
+                    label.find('.preview-img').attr('src', e.target.result);
+                    label.find('.preview-container').removeClass('d-none');
+                    label.find('.remove-img').show();
+                  };
+                  reader.readAsDataURL(file);
+                }
+              });
+
+              $('.remove-img').click(function () {
+                const label = $(this).closest('label');
+                label
+                  .find('.preview-img')
+                  .attr('src', '../assets/images/icon/img.gif');
+                label.find('.preview-container').addClass('d-none');
+                label.find('.remove-img').hide();
+                label.find('.upploadImg').val('');
+              });
+            });
+            $(document).ready(function () {
+              // Search functionality
+              $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#dropdownItems a').filter(function () {
+                  $(this).toggle(
+                    $(this).text().toLowerCase().indexOf(value) > -1
+                  );
+                });
+              });
+
+              // Change placeholder of the button when an item is selected
+              $('#dropdownItems a').on('click', function () {
+                var selectedText = $(this).text();
+                $('#dropdownMenuButton').text(selectedText);
+              });
+            });
+          </script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const dropdowns = document.querySelectorAll('.custom-dropdown');
+
+              dropdowns.forEach((dropdown) => {
+                const searchInput = dropdown.querySelector('.search-input');
+                const items = dropdown.querySelectorAll('.dropdown-item');
+                const button = dropdown.querySelector(
+                  '.custom-dropdown-toggle'
+                );
+
+                searchInput.addEventListener('keyup', function () {
+                  const filter = this.value.toUpperCase();
+                  items.forEach((item) => {
+                    const txtValue = item.textContent || item.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      item.style.display = '';
+                    } else {
+                      item.style.display = 'none';
+                    }
+                  });
+                });
+
+                items.forEach((item) => {
+                  item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    button.textContent = this.textContent;
+                  });
+                });
+              });
+            });
+          </script>
         </form>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
-    <script>
-      $(function () {
-        $('input[name="daterange"]').daterangepicker(
-          {
-            opens: 'left',
-            locale: {
-              format: ' MMM DD',
-              applyLabel: 'Apply',
-              cancelLabel: 'Cancel',
-              fromLabel: 'From',
-              toLabel: 'To',
-              customRangeLabel: 'Custom',
-              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-              monthNames: [
-                'January',
-                'February',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'December',
-              ],
-              firstDay: 1,
-            },
-            singleDatePicker: false,
-            showDropdowns: true,
-            minYear: 1901,
-            maxYear: parseInt(moment().format('YYYY'), 10),
-            linkedCalendars: false,
-            autoApply: true,
-            alwaysShowCalendars: false,
-            showCustomRangeLabel: false,
-            maxSpan: {
-              days: 60,
-            },
-          },
-          function (start, end, label) {
-            console.log(
-              'A new date selection was made: ' +
-                start.format('YYYY-MM-DD') +
-                ' to ' +
-                end.format('YYYY-MM-DD')
-            );
-          }
-        );
-      });
-
-      $(document).ready(function () {
-        ذ;
-        $('#toggleSidebar').on('click', function () {
-          $('#sidebar').toggleClass('show');
-          $('#overlay').toggleClass('show');
-        });
-        $('#overlay').on('click', function () {
-          $('#sidebar').removeClass('show');
-          $('#overlay').removeClass('show');
-        });
-      });
-
-      $(document).ready(function () {
-        $('.upploadImg').change(function (e) {
-          const file = e.target.files[0];
-          const label = $(this).closest('label');
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              label.find('.preview-img').attr('src', e.target.result);
-              label.find('.preview-container').removeClass('d-none');
-              label.find('.remove-img').show();
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-
-        $('.remove-img').click(function () {
-          const label = $(this).closest('label');
-          label
-            .find('.preview-img')
-            .attr('src', '../assets/images/icon/img.gif');
-          label.find('.preview-container').addClass('d-none');
-          label.find('.remove-img').hide();
-          label.find('.upploadImg').val('');
-        });
-      });
-    </script>
   </body>
 </html>

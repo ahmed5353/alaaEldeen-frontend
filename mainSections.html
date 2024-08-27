@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                 <a class="nav-link" href="/users/users.html">
+                <a class="nav-link" href="/users/users.html">
                   <img src="./assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -78,21 +78,24 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="/countries.html">
+                <a class="nav-link" href="/countries.html">
                   <img src="./assets/images/icon/marker 1.svg" alt="" />
 
                   البلاد
                 </a>
               </li>
               <li class="nav-item">
-               <a class="nav-link" href="/markets/markets.html">
+                <a class="nav-link" href="/markets/markets.html">
                   <img src="./assets/images/icon/shop 1.svg" alt="" />
 
                   المتاجر
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/distribution-points/distribution-points.html">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
                   <img src="./assets/images/icon/bag-map-pin 1.svg" alt="" />
 
                   نقاط التوزيع
@@ -106,7 +109,7 @@
                 </a>
               </li>
               <li class="nav-item">
-               <a class="nav-link" href="/storeHouses/storeHouses.html">
+                <a class="nav-link" href="/storeHouses/storeHouses.html">
                   <img src="./assets/images/icon/shop 1.svg" alt="" />
 
                   المخازن
@@ -292,11 +295,7 @@
             >
               <a href="#">لوحة التحكم </a>
               /
-              <span
-                class="breadcrumb-item active"
-                aria-current="page"
-                
-              >
+              <span class="breadcrumb-item active" aria-current="page">
                 الاقسام الرئيسية
               </span>
             </nav>
@@ -305,126 +304,114 @@
           <div class="container">
             <h2 class="title-page mb-0">الاقسام الرئيسية</h2>
           </div>
-          <div class="tab-content" id="v-pills-tabContent">
+
+          <div class="container">
             <div
-              class="tab-pane fade show active"
-              id="v-pills-home"
-              role="tabpanel"
-              aria-labelledby="v-pills-home-tab"
-              tabindex="0"
+              class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
             >
-              <div class="container">
-                <div
-                  class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
-                >
-                  <div class="d-flex align-items-center gap-2 flex-wrap">
-                    <div class="search-input">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="ابحث...  "
-                      />
-                    </div>
-
-                    <span class="daterange-input">
-                      <img src="assets/images/icon/calander.svg" />
-                      <input
-                        type="text"
-                        name="daterange"
-                        class="custom-daterangepicker border-0 text-center"
-                      />
-                      <i class="fa-solid fa-chevron-left" style="color: #bfa274;"></i>
-                    </span>
-                  </div>
-
-                  <button
-                    class="btn btn-add"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions"
-                  >
-                    <img
-                      width="23"
-                      height="23"
-                      src="assets/images/Add.gif"
-                    />
-                   اضافة قسم رئيسي
-                  </button>
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <div class="search-input">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="ابحث...  "
+                  />
                 </div>
+
+                <span class="daterange-input">
+                  <img src="assets/images/icon/calander.svg" />
+                  <input
+                    type="text"
+                    name="daterange"
+                    class="custom-daterangepicker border-0 text-center"
+                  />
+                  <i
+                    class="fa-solid fa-chevron-left"
+                    style="color: #bfa274"
+                  ></i>
+                </span>
               </div>
-              
-            <!--tabel-->
+
+              <button
+                class="btn btn-add"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <img width="23" height="23" src="assets/images/Add.gif" />
+                اضافة قسم رئيسي
+              </button>
+            </div>
+          </div>
+
+          <!--tabel-->
           <div class="container-tabel p-3 py-4">
             <div class="container">
               <div class="table-responsive mb-3">
                 <div class="p-3 my-2">
                   <table class="table">
                     <thead>
-                       <tr>
+                      <tr>
                         <th>#</th>
                         <th>اسم القسم الرئيسي</th>
-                        <th>عدد الاقسام الفرعية المسجلة</th>
-                        <th >السمات المتاحة</th>
+                        <th>عدد الاقسام الفرعية المنسدلة</th>
+                        <th>السمات المتاحة</th>
                         <th>الحالة</th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
-                     <tr>
-                            <td>1</td>
-                            <td>ملابس رجالي</td>
-                            <td>22</td>
-                            <td>اللون</td>
-                            <td>
-                              <div class="form-switch ms-2">
-                                <input
-                                  class="form-check-input"
-                                  type="checkbox"
-                                  role="switch"
-                                  id="flexSwitchCheckChecked"
-                                  checked
-                                />
-                              </div>
-                            </td>
+                      <tr>
+                        <td>1</td>
+                        <td>ملابس رجالي</td>
+                        <td>22</td>
+                        <td>اللون</td>
+                        <td>
+                          <div class="form-switch ms-2">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="flexSwitchCheckChecked"
+                              checked
+                            />
+                          </div>
+                        </td>
 
-                           
-                            <td class="d-flex gap-2 justify-content-end">
-                              
-                              <button
-                                class="add-feature-btn"
-                                type="button"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#addFeatures"
-                                aria-controls="addFeatures"
-                              >
-                                
-                              اضافة خصائص
-                              </button>
-                             
-                              <button
-                                class="btn text-success action-btn"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#edite-section"
-                                aria-controls="edite-section"
-                              >
-                                <img src="/assets/images/icon/pencil 1.svg" alt="">
-                              </button>
-                              
-                              <button
-                                
-                                class="btn action-btn trash-color"
-                                data-bs-toggle="modal"
-                                data-bs-target="#deleteModal"
-                              >
-                                <i class="fa-regular fa-trash-can"></i>
-                              </button>
-                            </td>
-                          </tr>
-                    
-                     
-                     
+                        <td class="d-flex gap-2 justify-content-end">
+                          <button
+                            class="add-feature-btn"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithFeatures"
+                            aria-controls="offcanvasWithFeatures"
+                          >
+                            اضافة خصائص
+                          </button>
+
+                          <button
+                            class="btn text-success action-btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#edite-section"
+                            aria-controls="edite-section"
+                          >
+                            <img
+                              src="/assets/images/icon/pencil 1.svg"
+                              alt=""
+                            />
+                          </button>
+
+                          <button
+                            class="btn action-btn trash-color"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal"
+                          >
+                            <i class="fa-regular fa-trash-can"></i>
+                          </button>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -437,17 +424,18 @@
                   <li class="page-item">
                     <a class="page-link active" href="#">1</a>
                   </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
                   <li class="page-item">
                     <a class="page-link" href="#">القادم</a>
                   </li>
                 </ul>
               </nav>
             </div>
-          </div>
-            </div>
-            <!--tabel-->
           </div>
         </main>
       </div>
@@ -470,7 +458,7 @@
           <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
           <div class="input-wrapper">
             <label>السمات المتاحة</label>
-            <select class="w-100" position: relative">
+            <select class="w-100">
               <option value="">اللون</option>
               <option value="1">لوريم</option>
               <option value="2">اللون</option>
@@ -482,7 +470,7 @@
                 width: 10px;
                 color: #bfa274;
                 position: absolute;
-                left:1.5rem;
+                left: 1.5rem;
                 top: 18px;
                 z-index: 999;
               "
@@ -498,79 +486,124 @@
       </div>
     </div>
 
-   
+    <!-- New-features -->
 
-    <!-- add-New-features -->
-    
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
-      id="addFeatures"
-      aria-labelledby="addFeatures"
+      id="offcanvasWithFeatures"
+      aria-labelledby="offcanvasWithFeaturesLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة خصائص</h2>
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة خصائص
+        </h2>
         <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
-          
-        <div class="d-flex flex-column gap-2">
-          <button class="add-new-feature d-flex gap-2 justify-content-center align-items-center">
-            <img src="/assets/images/icon/add.svg" alt="">
-            اضافة خصائص جديدية
-          </button>
-          <div class="radio-group">
-            <label for="option1-1">البوليستر</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option1-2" name="customRadio1" class="custom-control-input" >
-                <label for="option1-2">نعم</label>
+          <div class="d-flex flex-column gap-2">
+            <button
+              class="add-new-feature d-flex gap-2 justify-content-center align-items-center"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithFeature"
+              aria-controls="offcanvasWithFeature"
+            >
+              <img src="/assets/images/icon/add.svg" alt="" />
+              اضافة خصائص جديدة
+            </button>
+            <div class="radio-group">
+              <label for="option1-1">البوليستر</label>
+              <div class="d-flex gap-4">
+                <div>
+                  <input
+                    type="radio"
+                    id="option1-2"
+                    name="customRadio1"
+                    class="custom-control-input"
+                  />
+                  <label for="option1-2">نعم</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="option1-1"
+                    name="customRadio1"
+                    class="custom-control-input"
+                  />
+                  <label for="option1-1">لا</label>
+                </div>
               </div>
-              <div>
-                <input type="radio" id="option1-1" name="customRadio1" class="custom-control-input">
-                <label for="option1-1">لا</label>
+            </div>
+            <div class="radio-group">
+              <label for="option2-1">سوستة</label>
+              <div class="d-flex gap-4">
+                <div>
+                  <input
+                    type="radio"
+                    id="option2-2"
+                    name="customRadio2"
+                    class="custom-control-input"
+                  />
+                  <label for="option2-2">نعم</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="option2-1"
+                    name="customRadio2"
+                    class="custom-control-input"
+                  />
+                  <label for="option2-1">لا</label>
+                </div>
+              </div>
+            </div>
+            <div class="radio-group">
+              <label for="option3-1">نوع العنصر</label>
+              <div class="d-flex gap-4">
+                <div>
+                  <input
+                    type="radio"
+                    id="option3-2"
+                    name="customRadio3"
+                    class="custom-control-input"
+                  />
+                  <label for="option3-2">ملابس خارجية</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="option3-1"
+                    name="customRadio3"
+                    class="custom-control-input"
+                  />
+                  <label for="option3-1">ازياء خاصة</label>
+                </div>
+              </div>
+            </div>
+            <div class="radio-group">
+              <label for="option4-1">الاسلوب</label>
+              <div class="d-flex gap-4">
+                <div>
+                  <input
+                    type="radio"
+                    id="option4-2"
+                    name="customRadio4"
+                    class="custom-control-input"
+                  />
+                  <label for="option4-2">سترة صغيرة</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="option4-1"
+                    name="customRadio4"
+                    class="custom-control-input"
+                  />
+                  <label for="option4-1">سترة كبيرة</label>
+                </div>
               </div>
             </div>
           </div>
-          <div class="radio-group">
-            <label for="option2-1">سوستة</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option2-2" name="customRadio2" class="custom-control-input" >
-                <label for="option2-2">نعم</label>
-              </div>
-              <div>
-                <input type="radio" id="option2-1" name="customRadio2" class="custom-control-input">
-                <label for="option2-1">لا</label>
-              </div>
-            </div>
-          </div>
-          <div class="radio-group">
-            <label for="option3-1">نوع العنصر</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option3-2" name="customRadio3" class="custom-control-input" >
-                <label for="option3-2">ملابس خارجية</label>
-              </div>
-              <div>
-                <input type="radio" id="option3-1" name="customRadio3" class="custom-control-input">
-                <label for="option3-1">ازياء خاصة</label>
-              </div>
-            </div>
-          </div>
-          <div class="radio-group">
-            <label for="option4-1">الاسلوب</label>
-            <div class="d-flex gap-4">
-              <div>
-                <input type="radio" id="option4-2" name="customRadio4" class="custom-control-input" >
-                <label for="option4-2">سترة صغيرة</label>
-              </div>
-              <div>
-                <input type="radio" id="option4-1" name="customRadio4" class="custom-control-input">
-                <label for="option4-1">سترة كبيرة</label>
-              </div>
-            </div>
-          </div>
-        </div>
 
           <div class="= text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
@@ -581,9 +614,47 @@
       </div>
     </div>
 
+    <!-- NOTE:BUG HERE -->
+    <!-- add-new-feature -->
 
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithFeature"
+      aria-labelledby="offcanvasWithFeatureLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة خصائص جديدة
+        </h2>
+        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+          <div class="input-wrapper">
+            <label>الاسم</label>
+            <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+          </div>
+          <div class="subcategories-container">
+            <div class="input-wrapper">
+              <label>الاختيارات</label>
+              <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+            </div>
+          </div>
+
+          <button type="button" class="add-new-feature add-new-subcategory">
+            <img src="/assets/images/icon/add.svg" alt="" />
+            اضافة قسم فرعي جديد
+          </button>
+
+          <div class="= text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Edit main section -->
-    
+
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
@@ -591,44 +662,42 @@
       id="edite-section"
       aria-labelledby="edite-section"
     >
-        <h2 class="title-page border-bottom text-center">تعديل القسم الرئيسي</h2>
-        <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
-          <div class="input-wrapper">
-            <label> اسم القسم </label>
-            <input class="w-100 p-2" type="text" value="ملابس رجالي" />
-          </div>
-          <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
-          <div class="input-wrapper">
-            <label>السمات المتاحة</label>
-            <select class="w-100" position: relative">
-              <option value="">اللون</option>
-              <option value="1">لوريم</option>
-              <option value="2">اللون</option>
-              <option value="3">لوريم</option>
-            </select>
-            <i
-              class="fa-solid fa-chevron-down"
-              style="
-                width: 10px;
-                color: #bfa274;
-                position: absolute;
-                left:1.5rem;
-                top: 18px;
-                z-index: 999;
-              "
-            ></i>
-          </div>
+      <h2 class="title-page border-bottom text-center">تعديل القسم الرئيسي</h2>
+      <form class="input-custom px-3 mt-4 d-flex flex-column gap-3">
+        <div class="input-wrapper">
+          <label> اسم القسم </label>
+          <input class="w-100 p-2" type="text" value="ملابس رجالي" />
+        </div>
+        <!-- <div class="valid-error">هذا الحقل مطلوب</div> -->
+        <div class="input-wrapper">
+          <label>السمات المتاحة</label>
+          <select class="w-100">
+            <option value="">اللون</option>
+            <option value="1">لوريم</option>
+            <option value="2">اللون</option>
+            <option value="3">لوريم</option>
+          </select>
+          <i
+            class="fa-solid fa-chevron-down"
+            style="
+              width: 10px;
+              color: #bfa274;
+              position: absolute;
+              left: 1.5rem;
+              top: 18px;
+              z-index: 999;
+            "
+          ></i>
+        </div>
 
-          <div class="text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              حفظ
-            </button>
-          </div>
-
-
-        </form>
-      </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            حفظ
+          </button>
+        </div>
+      </form>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
@@ -723,6 +792,33 @@
         $('#overlay').on('click', function () {
           $('#sidebar').removeClass('show');
           $('#overlay').removeClass('show');
+        });
+      });
+
+      $(document).ready(function () {
+        let subcategoryCount = 1;
+
+        // Add new subcategory input fields
+        $('.add-new-subcategory').on('click', function () {
+          subcategoryCount++;
+          const newSubcategory = `
+       
+        <div class="input-wrapper subcategory-wrapper mt-3">
+          <label>الاختيارات-${subcategoryCount} </label>
+          <div class="d-flex gap-2">
+            <input class="w-100 pt-3 p-2" type="text" name="sub-category-en-${subcategoryCount}" />
+            <button type="button" class="btn p-0 action-btn active-color align-self-center remove-subcategory">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      `;
+          $('.subcategories-container').append(newSubcategory);
+        });
+
+        // Remove subcategory input fields
+        $(document).on('click', '.remove-subcategory', function () {
+          $(this).closest('.subcategory-wrapper').remove();
         });
       });
     </script>
