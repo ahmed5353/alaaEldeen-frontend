@@ -316,7 +316,7 @@
                   aria-controls="offcanvasWithBothOptions"
                 >
                   <img width="22" height="22" src="../assets/images/Add.gif" />
-                  اضافة متجر جديد
+                  اضافة نقطة توزيع جديدة
                 </button>
               </div>
               <div class="d-flex mt-3 gap-2">
@@ -373,73 +373,293 @@
             aria-labelledby="offcanvasWithBothOptionsLabel"
           >
             <div class="offcanvas-body">
-              <h2 class="title-page border-bottom text-center">تعديل المتجر</h2>
+              <h2 class="title-page border-bottom text-center fw-bold">
+                تعديل نقطة التوزيع
+              </h2>
               <form class="d-flex flex-column px-3">
                 <label
-                  class="select-user-img m-auto text-center position-relative"
-                  for="upploadImg"
+                  class="select-user-img m-auto text-center position-relative upload-user"
                 >
                   <img
                     src="../assets/images/biggerLogo.png"
-                    alt="User Avatar"
-                    class="rounded-circle position-relative ms-2"
+                    class="preview-img rounded-circle position-relative ms-2"
                     width="40"
                     height="40"
                   />
-
                   <div class="p-2 position-absolute start-0 end-50 top-0">
                     <i
                       class="fa-solid fa-circle-xmark fa-xl"
                       style="color: #e63050; cursor: pointer"
                     ></i>
                   </div>
-
                   <h5
                     class="active-color text-decoration-underline mt-2"
                     style="cursor: pointer; font-size: 17px"
                   >
                     تعديل صورة الشعار
                   </h5>
+                  <input type="file" class="upload-img-input d-none" />
+                  <div class="preview-container text-center mt-2 d-none"></div>
                 </label>
 
                 <div class="d-flex flex-column gap-3 mt-3">
-                  <div class="input-wrapper">
-                    <label> اسم المتجر</label>
-                    <input class="w-100" type="text" value="لوريم" />
+                  <div class="input-custom error">
+                    <div class="input-wrapper">
+                      <label> اسم نقطة التوزيع</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <div class="valid-error">هذا الحقل مطلوب</div>
                   </div>
 
                   <div class="input-wrapper">
                     <label> اسم المسؤول</label>
-                    <input class="w-100" type="text" value="لوريم" />
+                    <input class="w-100" type="text" />
                   </div>
+                  <div class="valid-error">هذا الحقل مطلوب</div>
 
                   <div class="input-wrapper">
                     <label> رقم الموبايل</label>
-                    <input class="w-100" type="text" value="لوريم" />
+                    <input class="w-100" type="text" />
                   </div>
+                  <div class="valid-error">هذا الحقل مطلوب</div>
 
                   <div class="input-wrapper">
                     <label> البريد الالكتروني</label>
-                    <input class="w-100" type="text" value="لوريم" />
+                    <input class="w-100" type="text" />
                   </div>
-
-                  <div class="input-wrapper select">
+                  <div class="valid-error">هذا الحقل مطلوب</div>
+                  <div class="input-wrapper select flex-grow-1">
                     <label>البلد</label>
                     <select class="position-relative">
-                      <option value="">اليمن</option>
+                      <option value="">-اختر-</option>
                       <option value="1">لوريم</option>
                       <option value="2">لوريم</option>
                       <option value="3">لوريم</option>
                     </select>
                   </div>
-                  <div class="input-wrapper select flex-grow-1">
+                  <div class="d-flex gap-3">
+                    <div class="input-wrapper select flex-grow-1">
+                      <label>المحافظة</label>
+                      <select class="position-relative">
+                        <option value="">-اختر-</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لوريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper select">
+                      <label>المدينة</label>
+                      <select class="position-relative">
+                        <option value="">اليمن</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لوريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper select">
                     <label>العملة</label>
                     <select class="position-relative">
-                      <option value="">ريال يمني</option>
+                      <option value="">الريال اليمني</option>
                       <option value="1">لوريم</option>
-                      <option value="2">لزريم</option>
+                      <option value="2">لوريم</option>
                       <option value="3">لوريم</option>
                     </select>
+                  </div>
+                  <div class="input-custom position-relative">
+                    <div class="input-wrapper">
+                      <label> الحد الائتماني</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span style="position: absolute; left: 12px; top: 0.6rem"
+                      >ريال يمني</span
+                    >
+                  </div>
+                  <div class="input-custom position-relative">
+                    <div class="input-wrapper">
+                      <label> الحد الاقصى للمستحقات</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span style="position: absolute; left: 12px; top: 0.6rem"
+                      >ريال يمني</span
+                    >
+                  </div>
+                  <!-- select Time -->
+                  <div class="position-relative d-flex align-items-center">
+                    <div class="input-wrapper flex-grow-1">
+                      <label>وقت انتظار الطلب</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <div class="pointer-event time-select">
+                      <div class="dropdown">
+                        <div class="dropdownIcon" style="cursor: pointer">
+                          <span class="selectedValue">اختر</span>
+                          <i class="fa-solid fa-chevron-down active-color"></i>
+                        </div>
+                        <ul class="dropdown-menu customDropdown">
+                          <li>
+                            <a class="dropdown-item" href="#" data-value="يوم"
+                              >يوم</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#" data-value="شهر"
+                              >شهر</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#" data-value="سنة"
+                              >سنة</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-custom error">
+                    <div class="input-wrapper">
+                      <label> كلمة المرور</label>
+                      <div class="form-group position-relative">
+                        <input
+                          type="password"
+                          id="passwordnew"
+                          class="form-control w-100"
+                        />
+                        <span
+                          class="position-absolute top-50 translate-middle-y"
+                          style="left: 1rem"
+                        >
+                          <i
+                            class="fas fa-eye toggle-password w-100"
+                            data-target="#passwordnew"
+                            style="cursor: pointer"
+                          ></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="valid-error">هذا الحقل مطلوب</div>
+                  </div>
+                  <div class="input-custom error">
+                    <div class="input-wrapper">
+                      <label> تأكيد كلمة المرور</label>
+                      <div class="form-group position-relative">
+                        <input
+                          type="password"
+                          id="confirmPasswordnew"
+                          class="form-control w-100"
+                        />
+                        <span
+                          class="position-absolute translate-middle-y"
+                          style="left: 1rem; top: 29%"
+                        >
+                          <i
+                            class="fas fa-eye toggle-password w-100"
+                            data-target="#confirmPasswordnew"
+                            style="cursor: pointer"
+                          ></i>
+                        </span>
+                        <div class="valid-error">هذا الحقل مطلوب</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- upload -->
+                  <div class="upload-container">
+                    <input
+                      type="file"
+                      id="file-upload-first"
+                      class="file-upload"
+                    />
+                    <label
+                      for="file-upload-first"
+                      class="upload-label d-flex justify-content-between"
+                    >
+                      <!-- <span class="upload-icon">&#x2B06;</span> -->
+                      <span class="upload-text">ارفاق السجل التجاري</span>
+                      <img
+                        class="upload-icon"
+                        src="../assets/images/icon/upload.svg"
+                      />
+                    </label>
+                  </div>
+                  <div class="upload-container">
+                    <input
+                      type="file"
+                      id="file-upload-second"
+                      class="file-upload"
+                    />
+                    <label
+                      for="file-upload-second"
+                      class="upload-label d-flex justify-content-between"
+                    >
+                      <!-- <span class="upload-icon">&#x2B06;</span> -->
+                      <span class="upload-text">ارفاق التأمين</span>
+                      <img
+                        class="upload-icon"
+                        src="../assets/images/icon/upload.svg"
+                      />
+                    </label>
+                  </div>
+                  <div class="upload-container">
+                    <input
+                      type="file"
+                      id="file-upload-third"
+                      class="file-upload"
+                    />
+                    <label
+                      for="file-upload-third"
+                      class="upload-label d-flex justify-content-between"
+                    >
+                      <!-- <span class="upload-icon">&#x2B06;</span> -->
+                      <span class="upload-text"
+                        >ارفاق بطاقة الهوية-الوجه/الظهر</span
+                      >
+                      <img
+                        class="upload-icon"
+                        src="../assets/images/icon/upload.svg"
+                      />
+                    </label>
+                  </div>
+                  <div id="file-details-first" class="file-details d-none">
+                    <h5>تفاصيل ملف السجل التجاري</h5>
+                    <ul>
+                      <li>
+                        <strong>Name:</strong>
+                        <span id="file-name-first"></span>
+                      </li>
+                      <li>
+                        <strong>Size:</strong>
+                        <span id="file-size-first"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="file-details-second" class="file-details d-none">
+                    <h5>تفاصيل ملف التأمين</h5>
+                    <ul>
+                      <li>
+                        <strong>Name:</strong>
+                        <span id="file-name-second"></span>
+                      </li>
+                      <li>
+                        <strong>Size:</strong>
+                        <span id="file-size-second"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="file-details-third" class="file-details d-none">
+                    <h5>تفاصيل ملف بطاقة الهوية</h5>
+                    <ul>
+                      <li>
+                        <strong>Name:</strong>
+                        <span id="file-name-third"></span>
+                      </li>
+                      <li>
+                        <strong>Size:</strong>
+                        <span id="file-size-third"></span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="w-100 text-center">
@@ -571,24 +791,24 @@
                       <tr>
                         <th>#</th>
                         <th>الشعار</th>
-                        <th>اسم المتجر</th>
+                        <th>اسم نقطة التوزيع</th>
                         <th>اسم المسؤول</th>
                         <th>رقم الموبايل</th>
                         <th>البريد الالكتروني</th>
                         <th>البلد</th>
+                        <th>المحافظة</th>
+                        <th>المدينة</th>
                         <th>العملة</th>
+                        <th>الحد الائتماني</th>
                         <th>التقييم الاجمالي</th>
                         <th>طريقة التسجيل</th>
                         <th>تاريخ ووقت التسجيل</th>
                         <th>عدد الطلبات</th>
-                        <th>عدد المرتجعات</th>
-                        <th>عدد الطلبات الملغية</th>
-                        <th>عدد المنتجات</th>
                         <th>عدد مرات الاضافة للمفضلة</th>
-                        <th>عدد مرات المشاركة</th>
+                        <th>اجمالي المستحقات المطلوبة</th>
+                        <th>الحد الاقصى للمستحقات</th>
+
                         <th>الحالة</th>
-                        <th></th>
-                        <th></th>
                         <th></th>
                       </tr>
                     </thead>
@@ -604,12 +824,15 @@
                             height="50px"
                           />
                         </td>
-                        <td>النور للملابس</td>
+                        <td>الصفا للتوزيع</td>
                         <td>Mostafa Ahmed</td>
                         <td>+2010123455</td>
                         <td>test@test.com</td>
-                        <td>مصر</td>
+                        <td>اليمن</td>
+                        <td>صنعاء</td>
+                        <td>أرحب</td>
                         <td>ريال يمني</td>
+                        <td>500 ريال يمني</td>
                         <td>
                           <span>4.5</span>
                           <img
@@ -619,13 +842,11 @@
                           />
                         </td>
                         <td>ادمن</td>
-                        <td>22/03/2024-8:30pm</td>
+                        <td dir="ltr">22/03/2024-8:30pm</td>
                         <td>31</td>
                         <td>21</td>
-                        <td>22</td>
-                        <td>31</td>
-                        <td>21</td>
-                        <td>22</td>
+                        <td>5000 ريال يمني</td>
+                        <td>10000 ريال يمني</td>
 
                         <td class="text-start">
                           <div
@@ -639,33 +860,6 @@
                               checked
                             />
                           </div>
-                        </td>
-                        <td>
-                          <a
-                            class="icon-button add-product d-flex align-items-center gap-2"
-                            href="#"
-                          >
-                            <span>
-                              <img
-                                src="/assets/images/icon/shopping-bag.svg"
-                                alt="shopping bag"
-                              />
-                            </span>
-                            <span> اضافة منتج </span>
-                          </a>
-                        </td>
-                        <td>
-                          <button
-                            class="icon-button add-work-space d-flex align-items-center gap-2"
-                          >
-                            <span>
-                              <img
-                                src="/assets/images/icon/add-work-place.svg"
-                                alt="add"
-                              />
-                            </span>
-                            <span>اضافة نطاق عمل</span>
-                          </button>
                         </td>
 
                         <td>
@@ -744,11 +938,12 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة متجر جديد</h2>
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة نقطة توزيع جديدة
+        </h2>
         <form class="d-flex flex-column px-3">
           <label
-            class="select-img m-auto text-center position-relative"
-            for="upploadImg"
+            class="select-img m-auto text-center position-relative upload-logo"
           >
             <div
               style="
@@ -758,19 +953,22 @@
               "
             >
               <img
-                id="preview-img"
+                class="preview-img"
                 src="../assets/images/icon-park-outline_add-four.svg"
                 width="20"
                 height="20"
               />
             </div>
-            <input type="file" id="upploadImg" class="d-none" />
+            <input type="file" class="upload-img-input d-none" />
             <h5 class="active-color text-decoration-underline mt-2">
               اضافة صورة الشعار
             </h5>
-            <div id="preview-container" class="text-center mt-2 d-none">
-              <span id="remove-img"
-                ><svg
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
                   width="31"
                   height="31"
                   viewBox="0 0 31 31"
@@ -800,33 +998,28 @@
           <div class="d-flex flex-column gap-3 mt-3">
             <div class="input-custom error">
               <div class="input-wrapper">
-                <label> الاسم المتجر</label>
-                <input class="w-100" type="text" />
-              </div>
-              <div class="valid-error">هذا الحقل مطلوب</div>
-            </div>
-            <div class="input-custom error">
-              <div class="input-wrapper">
-                <label> اسم المسؤول</label>
-                <input class="w-100" type="text" />
-              </div>
-              <div class="valid-error">هذا الحقل مطلوب</div>
-            </div>
-            <div class="input-custom error">
-              <div class="input-wrapper">
-                <label> رقم الموبايل</label>
-                <input class="w-100" type="text" />
-              </div>
-              <div class="valid-error">هذا الحقل مطلوب</div>
-            </div>
-            <div class="input-custom error">
-              <div class="input-wrapper">
-                <label> البريد الالكتروني</label>
+                <label> اسم نقطة التوزيع</label>
                 <input class="w-100" type="text" />
               </div>
               <div class="valid-error">هذا الحقل مطلوب</div>
             </div>
 
+            <div class="input-wrapper">
+              <label> اسم المسؤول</label>
+              <input class="w-100" type="text" />
+            </div>
+            <div class="valid-error">هذا الحقل مطلوب</div>
+
+            <div class="input-wrapper">
+              <label> رقم الموبايل</label>
+              <input class="w-100" type="text" />
+            </div>
+            <div class="valid-error">هذا الحقل مطلوب</div>
+
+            <div class="input-wrapper">
+              <label> البريد الالكتروني</label>
+              <input class="w-100" type="text" />
+            </div>
             <div class="input-wrapper select">
               <label>البلد</label>
               <select class="position-relative">
@@ -836,15 +1029,79 @@
                 <option value="3">لوريم</option>
               </select>
             </div>
+            <div class="d-flex gap-3">
+              <div class="input-wrapper select flex-grow-1">
+                <label>المحافظة</label>
+                <select class="position-relative">
+                  <option value="">-اختر-</option>
+                  <option value="1">لوريم</option>
+                  <option value="2">لوريم</option>
+                  <option value="3">لوريم</option>
+                </select>
+              </div>
+              <div class="input-wrapper select flex-grow-1">
+                <label>المدينة</label>
+                <select class="position-relative">
+                  <option value="">-اختر-</option>
+                  <option value="1">لوريم</option>
+                  <option value="2">لوريم</option>
+                  <option value="3">لوريم</option>
+                </select>
+              </div>
+            </div>
 
             <div class="input-wrapper select">
               <label>العملة</label>
               <select class="position-relative">
-                <option value="">اليمن</option>
+                <option value="">الريال اليمني</option>
                 <option value="1">لوريم</option>
                 <option value="2">لوريم</option>
                 <option value="3">لوريم</option>
               </select>
+            </div>
+            <div class="input-custom position-relative">
+              <div class="input-wrapper">
+                <label> الحد الائتماني</label>
+                <input class="w-100" type="text" />
+              </div>
+              <span style="position: absolute; left: 12px; top: 0.6rem"
+                >ريال يمني</span
+              >
+            </div>
+            <div class="input-custom position-relative">
+              <div class="input-wrapper">
+                <label> الحد الاقصى للمستحقات</label>
+                <input class="w-100" type="text" />
+              </div>
+              <span style="position: absolute; left: 12px; top: 0.6rem"
+                >ريال يمني</span
+              >
+            </div>
+            <!-- select Time -->
+            <div class="position-relative d-flex align-items-center">
+              <div class="input-wrapper flex-grow-1">
+                <label>وقت انتظار الطلب</label>
+                <input class="w-100" type="text" />
+              </div>
+              <div class="pointer-event time-select">
+                <div class="dropdown">
+                  <div class="dropdownIcon" style="cursor: pointer">
+                    <span class="selectedValue">اختر</span>
+                    <i class="fa-solid fa-chevron-down active-color"></i>
+                  </div>
+                  <ul class="dropdown-menu customDropdown">
+                    <li>
+                      <a class="dropdown-item" href="#" data-value="يوم">يوم</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-value="شهر">شهر</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" data-value="سنة">سنة</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div class="input-custom error">
@@ -896,9 +1153,13 @@
 
             <!-- upload -->
             <div class="upload-container">
-              <input type="file" id="file-upload-first" class="file-upload" />
+              <input
+                type="file"
+                id="file-upload-firstadd"
+                class="file-upload"
+              />
               <label
-                for="file-upload-first"
+                for="file-upload-firstadd"
                 class="upload-label d-flex justify-content-between"
               >
                 <!-- <span class="upload-icon">&#x2B06;</span> -->
@@ -910,9 +1171,13 @@
               </label>
             </div>
             <div class="upload-container">
-              <input type="file" id="file-upload-second" class="file-upload" />
+              <input
+                type="file"
+                id="file-upload-secondadd"
+                class="file-upload"
+              />
               <label
-                for="file-upload-second"
+                for="file-upload-secondadd"
                 class="upload-label d-flex justify-content-between"
               >
                 <!-- <span class="upload-icon">&#x2B06;</span> -->
@@ -924,9 +1189,13 @@
               </label>
             </div>
             <div class="upload-container">
-              <input type="file" id="file-upload-third" class="file-upload" />
+              <input
+                type="file"
+                id="file-upload-thirdadd"
+                class="file-upload"
+              />
               <label
-                for="file-upload-third"
+                for="file-upload-thirdadd"
                 class="upload-label d-flex justify-content-between"
               >
                 <!-- <span class="upload-icon">&#x2B06;</span> -->
@@ -937,36 +1206,36 @@
                 />
               </label>
             </div>
-            <div id="file-details-first" class="file-details d-none">
+            <div id="file-details-firstadd" class="file-details d-none">
               <h5>تفاصيل ملف السجل التجاري</h5>
               <ul>
                 <li>
-                  <strong>Name:</strong> <span id="file-name-first"></span>
+                  <strong>Name:</strong> <span id="file-name-firstadd"></span>
                 </li>
                 <li>
-                  <strong>Size:</strong> <span id="file-size-first"></span>
+                  <strong>Size:</strong> <span id="file-size-firstadd"></span>
                 </li>
               </ul>
             </div>
-            <div id="file-details-second" class="file-details d-none">
+            <div id="file-details-secondadd" class="file-details d-none">
               <h5>تفاصيل ملف التأمين</h5>
               <ul>
                 <li>
-                  <strong>Name:</strong> <span id="file-name-second"></span>
+                  <strong>Name:</strong> <span id="file-name-secondadd"></span>
                 </li>
                 <li>
-                  <strong>Size:</strong> <span id="file-size-second"></span>
+                  <strong>Size:</strong> <span id="file-size-secondadd"></span>
                 </li>
               </ul>
             </div>
-            <div id="file-details-third" class="file-details d-none">
+            <div id="file-details-thirdadd" class="file-details d-none">
               <h5>تفاصيل ملف بطاقة الهوية</h5>
               <ul>
                 <li>
-                  <strong>Name:</strong> <span id="file-name-third"></span>
+                  <strong>Name:</strong> <span id="file-name-thirdadd"></span>
                 </li>
                 <li>
-                  <strong>Size:</strong> <span id="file-size-third"></span>
+                  <strong>Size:</strong> <span id="file-size-thirdadd"></span>
                 </li>
               </ul>
             </div>
@@ -985,30 +1254,32 @@
 
     <script>
       $(document).ready(function () {
-        $('.file-upload').change(function () {
-          // Get the ID of the file input
-          const fileInputId = $(this).attr('id');
-
-          // Determine the index from the ID
-          const index = fileInputId.split('-').pop(); // This gets 'first', 'second', or 'third'
-
-          // Construct the IDs for the file details and its elements
-          const fileDetailsId = `#file-details-${index}`;
-          const fileNameId = `#file-name-${index}`;
-          const fileSizeId = `#file-size-${index}`;
-
-          const file = this.files[0];
+        // Generalized handling for any image upload
+        $('.upload-img-input').change(function (e) {
+          const file = e.target.files[0];
+          const $label = $(this).closest('label');
           if (file) {
-            const fileName = file.name;
-            const fileSize = (file.size / 1024).toFixed(2) + ' KB';
-
-            $(fileNameId).text(fileName);
-            $(fileSizeId).text(fileSize);
-
-            $(fileDetailsId).removeClass('d-none');
-          } else {
-            $(fileDetailsId).addClass('d-none');
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $label.find('.preview-img').attr('src', e.target.result);
+              $label.find('.preview-container').removeClass('d-none');
+              $label.find('.remove-img').show();
+            };
+            reader.readAsDataURL(file);
           }
+        });
+
+        // Generalized handling for removing the image
+        $('.remove-img').click(function () {
+          const $label = $(this).closest('label');
+          const defaultImgSrc = $label.hasClass('upload-logo')
+            ? '../assets/images/icon/img.gif'
+            : '../assets/images/biggerLogo.png';
+
+          $label.find('.preview-img').attr('src', defaultImgSrc);
+          $label.find('.preview-container').addClass('d-none');
+          $(this).hide();
+          $label.find('.upload-img-input').val('');
         });
       });
 
@@ -1103,6 +1374,58 @@
         $('#overlay').on('click', function () {
           $('#sidebar').removeClass('show');
           $('#overlay').removeClass('show');
+        });
+      });
+
+      $(document).ready(function () {
+        $('.dropdownIcon').on('click', function () {
+          var $dropdownMenu = $(this).siblings('.customDropdown');
+          $('.customDropdown').not($dropdownMenu).hide(); // Hide other dropdowns
+          $dropdownMenu.toggle(); // Toggle the clicked dropdown
+        });
+      });
+      // Close the dropdown if clicked outside
+      $(document).on('click', function (event) {
+        if (!$(event.target).closest('.dropdown').length) {
+          $('.customDropdown').hide();
+        }
+      });
+      // Handle item selection
+      $('.dropdown-item').on('click', function (e) {
+        e.preventDefault();
+        var selectedValue = $(this).data('value');
+        var $dropdown = $(this).closest('.dropdown');
+        $dropdown.find('.selectedValue').text(selectedValue); // Update the displayed value
+        $dropdown.find('.customDropdown').hide(); // Hide the dropdown
+      });
+
+      // uplaoding files
+
+      $(document).ready(function () {
+        $('.file-upload').change(function () {
+          // Get the ID of the file input
+          const fileInputId = $(this).attr('id');
+
+          // Determine the index from the ID
+          const index = fileInputId.split('-').pop(); // This gets 'first', 'second', or 'third'
+
+          // Construct the IDs for the file details and its elements
+          const fileDetailsId = `#file-details-${index}`;
+          const fileNameId = `#file-name-${index}`;
+          const fileSizeId = `#file-size-${index}`;
+
+          const file = this.files[0];
+          if (file) {
+            const fileName = file.name;
+            const fileSize = (file.size / 1024).toFixed(2) + ' KB';
+
+            $(fileNameId).text(fileName);
+            $(fileSizeId).text(fileSize);
+
+            $(fileDetailsId).removeClass('d-none');
+          } else {
+            $(fileDetailsId).addClass('d-none');
+          }
         });
       });
     </script>

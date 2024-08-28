@@ -354,30 +354,28 @@
               <h2 class="title-page border-bottom text-center">تعديل المتجر</h2>
               <form class="d-flex flex-column px-3">
                 <label
-                  class="select-user-img m-auto text-center position-relative"
-                  for="upploadImg"
+                  class="select-user-img m-auto text-center position-relative upload-user"
                 >
                   <img
                     src="../assets/images/biggerLogo.png"
-                    alt="User Avatar"
-                    class="rounded-circle position-relative ms-2"
+                    class="preview-img rounded-circle position-relative ms-2"
                     width="40"
                     height="40"
                   />
-
                   <div class="p-2 position-absolute start-0 end-50 top-0">
                     <i
                       class="fa-solid fa-circle-xmark fa-xl"
                       style="color: #e63050; cursor: pointer"
                     ></i>
                   </div>
-
                   <h5
                     class="active-color text-decoration-underline mt-2"
                     style="cursor: pointer; font-size: 17px"
                   >
                     تعديل صورة الشعار
                   </h5>
+                  <input type="file" class="upload-img-input d-none" />
+                  <div class="preview-container text-center mt-2 d-none"></div>
                 </label>
 
                 <div class="d-flex flex-column gap-3 mt-3">
@@ -730,8 +728,7 @@
         </h2>
         <form class="d-flex flex-column px-3">
           <label
-            class="select-img m-auto text-center position-relative"
-            for="upploadImg"
+            class="select-img m-auto text-center position-relative upload-logo"
           >
             <div
               style="
@@ -741,19 +738,22 @@
               "
             >
               <img
-                id="preview-img"
+                class="preview-img"
                 src="../assets/images/icon-park-outline_add-four.svg"
                 width="20"
                 height="20"
               />
             </div>
-            <input type="file" id="upploadImg" class="d-none" />
+            <input type="file" class="upload-img-input d-none" />
             <h5 class="active-color text-decoration-underline mt-2">
               اضافة صورة الشعار
             </h5>
-            <div id="preview-container" class="text-center mt-2 d-none">
-              <span id="remove-img"
-                ><svg
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
                   width="31"
                   height="31"
                   viewBox="0 0 31 31"
@@ -1131,28 +1131,6 @@
         });
       });
 
-      //     remove images
-      $(document).ready(function () {
-        $('#upploadImg').change(function (e) {
-          const file = e.target.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              $('#preview-img').attr('src', e.target.result);
-              $('#preview-container').removeClass('d-none');
-              $('#remove-img').show();
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-
-        $('#remove-img').click(function () {
-          $('#preview-img').attr('src', '../assets/images/icon/img.gif');
-          $('#preview-container').addClass('d-none');
-          $('#remove-img').hide();
-          $('#upploadImg').val('');
-        });
-      });
       $(document).ready(function () {
         $('#toggleSidebar').on('click', function () {
           $('#sidebar').toggleClass('show');
@@ -1161,6 +1139,37 @@
         $('#overlay').on('click', function () {
           $('#sidebar').removeClass('show');
           $('#overlay').removeClass('show');
+        });
+      });
+
+      // upload image
+      $(document).ready(function () {
+        // Generalized handling for any image upload
+        $('.upload-img-input').change(function (e) {
+          const file = e.target.files[0];
+          const $label = $(this).closest('label');
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $label.find('.preview-img').attr('src', e.target.result);
+              $label.find('.preview-container').removeClass('d-none');
+              $label.find('.remove-img').show();
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        // Generalized handling for removing the image
+        $('.remove-img').click(function () {
+          const $label = $(this).closest('label');
+          const defaultImgSrc = $label.hasClass('upload-logo')
+            ? '../assets/images/icon/img.gif'
+            : '../assets/images/biggerLogo.png';
+
+          $label.find('.preview-img').attr('src', defaultImgSrc);
+          $label.find('.preview-container').addClass('d-none');
+          $(this).hide();
+          $label.find('.upload-img-input').val('');
         });
       });
     </script>

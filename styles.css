@@ -1228,3 +1228,30 @@ input[type='radio']:checked:before {
     no-repeat right;
   background-size: 20px;
 }
+
+/* DropDown */
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add space between the text and the icon */
+}
+
+#selectedValue {
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the icon */
+  left: 0;
+  z-index: 1000;
+  width: max-content;
+}
+.time-select {
+  position: absolute;
+  left: 14px;
+  top: 25%;
+  color: #606c7e;
+}
