@@ -939,11 +939,6 @@ input[type='radio']:checked:before {
   z-index: 2;
   position: relative;
 }
-
-.completed .circle {
-  background-color: #28b446;
-}
-
 .line {
   height: 2px;
   background-color: #ccc;
@@ -955,6 +950,15 @@ input[type='radio']:checked:before {
 
   z-index: 1;
 }
+.line-long {
+  width: 110%;
+  margin-right: -20px;
+}
+
+.completed .circle {
+  background-color: #28b446;
+}
+
 .completed .line {
   background-color: #28b446; /* Only the line before the completed step is green */
 }
@@ -1121,7 +1125,7 @@ input[type='radio']:checked:before {
   color: #f9a130 !important;
 }
 .cancelled {
-  color: var(--active-font) !important;
+  color: red !important;
 }
 .no-time {
   color: #868d98 !important;
