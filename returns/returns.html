@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    /> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+
+    <div>
+      <div class="row m-0">
+        <!--   aside section-->
+        <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
+              <a class="  " aria-current="page" href="#">
+                <img src="../assets/images/logo.svg" />
+              </a>
+            </div>
+            <ul class="nav flex-column p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/Dashboard.html">
+                  <img src="../assets/images/icon/grid.svg" alt="" />
+                  لوحة التحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sub-officials/sub-officials.html">
+                  <img src="../assets/images/icon/users 1.svg" alt="" />
+
+                  المسؤولين الفرعيين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/users.html">
+                  <img src="../assets/images/icon/chart-user 1.svg" alt="" />
+
+                  المستخدمين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mainSections.html    ">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  الاقسام الرئيسية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subCategories.html">
+                  <img src="../assets/images/icon/folder 1.svg" alt="" />
+
+                  الاقسام الفرعية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productAttributes.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  سمات المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countries.html">
+                  <img src="../assets/images/icon/marker 1.svg" alt="" />
+
+                  البلاد
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/markets/markets.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المتاجر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
+                  <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
+
+                  نقاط التوزيع
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/delivery-desks/delivery-desks.html">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مناديب التوصيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/storeHouses/storeHouses.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المخازن
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/products/products.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+                  المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
+
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/returns/returns.html">
+                  <img src="../assets/images/icon/restock 1.svg" alt="" />
+
+                  المرتجعات<span class="badge bg-danger rounded-circle">3</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  طلبات التعديل على الاوراق<span
+                    class="badge bg-danger rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  المتاجر المعلفة
+                  <span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  نقاط التوزيع المعلفة<span
+                    class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مندوبين التوصيل المعلقين<span
+                    class="badge bg-danger rounded-circle"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/messages-question 1.svg"
+                    alt=""
+                  />
+
+                  الاستفسارات على المنتجات
+                  <span class="badge bg-danger rounded-circle">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
+
+                  اكواد الخصم<span class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/settings 1.svg" alt="" />
+
+                  اعدادات النظام
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--  end aside section-->
+        <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
+          <!--header navbar-->
+          <header class="navbar">
+            <div class="container d-flex justify-content-between">
+              <button class="btn btn-logout d-flex d-none d-md-block">
+                <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
+              </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="d-flex">
+                <a class="mx-3">
+                  <img src="../assets/images/icon/notific.svg" />
+                </a>
+                <a class="d-flex">
+                  <img
+                    src="../assets/images/avatar.png"
+                    alt="User Avatar"
+                    class="rounded-circle ms-2"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <h5 class="navbar-text text-white">
+                      Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
+                    </h5>
+                    <span> اخر ظهور - <span>22/03/2024 -08:30 PM</span> </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!--            breadcrumb -->
+          <div class="border-bottom">
+            <nav
+              dir="rtl"
+              class="breadcrumb-nav container"
+              aria-label="breadcrumb"
+            >
+              <a href="#">لوحة التحكم </a>
+              /
+              <span class="breadcrumb-item active" aria-current="page">
+                المرتجعات
+              </span>
+            </nav>
+          </div>
+
+          <div class="container pb-3">
+            <div class="">
+              <h2 class="title-page mb-0 fw-bold">المرتجعات</h2>
+
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <div class="search-input">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    class="form-control"
+                    style="width: 35rem"
+                    placeholder="ابحث برقم الطلب او اسم ورقم المستخدم او اسم ورقم المتجر او اسم ورقم نقطة التوزيع ... "
+                  />
+                </div>
+
+                <span class="daterange-input">
+                  <img src="../assets/images/icon/calander.svg" />
+                  <input
+                    type="text"
+                    name="daterange"
+                    class="custom-daterangepicker border-0 text-center"
+                  />
+                  <i
+                    class="fa-solid fa-chevron-left"
+                    style="width: 10px; color: #bfa274"
+                  ></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!--tabel-->
+          <div class="container-tabel p-3 py-4">
+            <div class="container">
+              <div class="table-responsive mb-3 rounded-3">
+                <div class="p-3 my-2">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>رقم الطلب</th>
+                        <th>اسم المستخدم</th>
+                        <th>رقم موبايل المستخدم</th>
+                        <th>اسم المتجر</th>
+                        <th>تاريخ ووقت الاسترجاع</th>
+                        <th>اسم نقطة التوزيع</th>
+                        <th>رقم موبايل نقطة التوزيع</th>
+                        <th>بيانات تخزين نقطة البيع</th>
+                        <th>حالة الاسترجاع الاخيرة</th>
+
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>123456</td>
+                        <td><u>Mostafa Ahmed</u></td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>النور للملابس</td>
+                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                        <td>الصفا للتوزيع</td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
+                        <td>
+                          <span class="no-time">في انتظار موافقة المتجر</span>
+                        </td>
+
+                        <td>
+                          <button class="btn-status btn-success">
+                            الموافقة على الطلب
+                          </button>
+                        </td>
+                        <td>
+                          <button class="btn-status btn-cancell">
+                            الغاء الطلب بالكامل
+                          </button>
+                        </td>
+
+                        <td class="d-flex gap-1 justify-content-end">
+                          <a
+                            class="btn text-info action-btn"
+                            href="/returns/returns-order-details.html"
+                          >
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>123456</td>
+                        <td><u>Mostafa Ahmed</u></td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>النور للملابس</td>
+                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                        <td>الصفا للتوزيع</td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
+                        <td>
+                          <span class="done">تم الموافقة</span>
+                        </td>
+
+                        <td></td>
+                        <td>
+                          <button class="btn-status btn-cancell">
+                            الغاء الطلب بالكامل
+                          </button>
+                        </td>
+
+                        <td class="d-flex gap-1 justify-content-end">
+                          <a
+                            class="btn text-info action-btn"
+                            href="/returns/returns-order-details.html"
+                          >
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>123456</td>
+                        <td><u>Mostafa Ahmed</u></td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>النور للملابس</td>
+                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                        <td>الصفا للتوزيع</td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
+                        <td>
+                          <span class="cancelled">تم الرفض</span>
+                        </td>
+
+                        <td></td>
+                        <td>
+                          <button class="btn-status btn-cancell">
+                            الغاء الطلب بالكامل
+                          </button>
+                        </td>
+
+                        <td class="d-flex gap-1 justify-content-end">
+                          <a
+                            class="btn text-info action-btn"
+                            href="/returns/returns-order-details.html"
+                          >
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">السابق</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link active" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">القادم</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/script.js"></script>
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: ' MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: false,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
