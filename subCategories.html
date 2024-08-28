@@ -476,21 +476,25 @@
               "
             ></i>
           </div>
-
-          <div class="subcategories-container d-flex flex-column gap-3">
-            <div class="input-wrapper">
-              <label>اسم القسم الفرعي-1 بالعربية</label>
-              <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+          <div class="subcategories-section">
+            <div class="subcategories-container d-flex flex-column gap-3">
+              <div class="input-wrapper">
+                <label>اسم القسم الفرعي-1 بالعربية</label>
+                <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+              </div>
+              <div class="input-wrapper">
+                <label>اسم القسم الفرعي-1 بالانجليزية</label>
+                <input class="w-100 p-2" type="text" name="sub-category-en-1" />
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label>اسم القسم الفرعي-1 بالانجليزية</label>
-              <input class="w-100 p-2" type="text" name="sub-category-en-1" />
-            </div>
+            <button
+              type="button"
+              class="add-new-feature add-new-subcategory mt-3 w-100"
+            >
+              <img src="/assets/images/icon/add.svg" alt="" />
+              اضافة قسم فرعي جديد
+            </button>
           </div>
-          <button type="button" class="add-new-feature add-new-subcategory">
-            <img src="/assets/images/icon/add.svg" alt="" />
-            اضافة قسم فرعي جديد
-          </button>
 
           <div class="w-100 text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
@@ -509,7 +513,9 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">تعديل القسم الفرعي</h2>
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل القسم الفرعي
+        </h2>
         <form class="d-flex flex-column px-4 gap-4">
           <div class="input-wrapper">
             <label>القسم الرئيسي</label>
@@ -532,20 +538,25 @@
             ></i>
           </div>
 
-          <div class="subcategories-container d-flex flex-column gap-3">
-            <div class="input-wrapper">
-              <label>اسم القسم الفرعي-1 بالعربية</label>
-              <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+          <div class="subcategories-section">
+            <div class="subcategories-container d-flex flex-column gap-3">
+              <div class="input-wrapper">
+                <label>اسم القسم الفرعي-1 بالعربية</label>
+                <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
+              </div>
+              <div class="input-wrapper">
+                <label>اسم القسم الفرعي-1 بالانجليزية</label>
+                <input class="w-100 p-2" type="text" name="sub-category-en-1" />
+              </div>
             </div>
-            <div class="input-wrapper">
-              <label>اسم القسم الفرعي-1 بالانجليزية</label>
-              <input class="w-100 p-2" type="text" name="sub-category-en-1" />
-            </div>
+            <button
+              type="button"
+              class="add-new-feature add-new-subcategory w-100 mt-3"
+            >
+              <img src="/assets/images/icon/add.svg" alt="" />
+              اضافة قسم فرعي جديد
+            </button>
           </div>
-          <button type="button" class="add-new-feature add-new-subcategory">
-            <img src="/assets/images/icon/add.svg" alt="" />
-            اضافة قسم فرعي جديد
-          </button>
 
           <div class="w-100 text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
@@ -654,32 +665,37 @@
       });
 
       $(document).ready(function () {
-        let subcategoryCount = 1;
-
-        // Add new subcategory input fields
-        $('.add-new-subcategory').on('click', function () {
-          subcategoryCount++;
-          const newSubcategory = `
-        <div class="input-wrapper subcategory-wrapper">
-          <label>اسم القسم الفرعي-${subcategoryCount} بالعربية</label>
-          <input class="w-100 p-2" type="text" name="sub-category-ar-${subcategoryCount}" />
-        </div>
-        <div class="input-wrapper subcategory-wrapper">
-          <label>اسم القسم الفرعي-${subcategoryCount} بالانجليزية</label>
-          <div class="d-flex gap-2">
-            <input class="w-100 pt-3 p-2" type="text" name="sub-category-en-${subcategoryCount}" />
-            <button type="button" class="btn p-0 action-btn active-color align-self-center remove-subcategory">
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
+        $('.subcategories-section').each(function (index, section) {
+          let subcategoryCount = $(section).find('.input-wrapper').length / 2;
+          $(section)
+            .find('.add-new-subcategory')
+            .on('click', function () {
+              subcategoryCount++;
+              const newSubcategory = `
+        <div class="subcategory-wrapper d-flex flex-column gap-3 ">
+          <div class="input-wrapper w-100">
+            <label>اسم القسم الفرعي-${subcategoryCount} بالعربية</label>
+            <input class="w-100 p-2" type="text" name="sub-category-ar-${subcategoryCount}" />
+          </div>
+          <div class="input-wrapper w-100">
+            <label>اسم القسم الفرعي-${subcategoryCount} بالانجليزية</label>
+            <div class="d-flex gap-2">
+              <input class="w-100 pt-3 p-2" type="text" name="sub-category-en-${subcategoryCount}" />
+              <button type="button" class="btn p-0 action-btn active-color align-self-center remove-subcategory">
+                <i class="fa-regular fa-trash-can"></i>
+              </button>
+            </div>
           </div>
         </div>
       `;
-          $('.subcategories-container').append(newSubcategory);
+              $(section)
+                .find('.subcategories-container')
+                .append(newSubcategory);
+            });
         });
 
         // Remove subcategory input fields
         $(document).on('click', '.remove-subcategory', function () {
-          $(this).closest('.subcategory-wrapper').prev().remove();
           $(this).closest('.subcategory-wrapper').remove();
         });
       });

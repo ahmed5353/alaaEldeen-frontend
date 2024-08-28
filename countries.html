@@ -730,12 +730,17 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة بلد جديدة</h2>
-        <form class="d-flex flex-column px-3 gap-4">
-          <div class="input-wrapper mt-4">
-            <label> البلد</label>
-
-            <input class="w-100" type="text" />
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة بلد جديدة
+        </h2>
+        <form class="d-flex flex-column px-3">
+          <div class="input-wrapper p-2">
+            <label dir="ltr">(باللغة العربية) البلد</label>
+            <input class="w-100 p-2" type="text" value="السمات" />
+          </div>
+          <div class="input-wrapper p-2 mt-3">
+            <label dir="ltr">(باللغة الانجليزية) البلد</label>
+            <input class="w-100 p-2" type="text" value="السمات" />
           </div>
 
           <div class="w-100 text-center">
@@ -758,12 +763,13 @@
       <div class="offcanvas-body">
         <h2 class="title-page border-bottom text-center">تعديل البلد</h2>
         <form class="d-flex flex-column px-3">
-          <div class="input-custom mt-4">
-            <div class="input-wrapper">
-              <label>البلد</label>
-              <input class="w-100" type="text" />
-            </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
+          <div class="input-wrapper p-2">
+            <label dir="ltr">(باللغة العربية) البلد</label>
+            <input class="w-100 p-2" type="text" value="السمات" />
+          </div>
+          <div class="input-wrapper p-2 mt-3">
+            <label dir="ltr">(باللغة الانجليزية) البلد</label>
+            <input class="w-100 p-2" type="text" value="السمات" />
           </div>
 
           <div class="w-100 text-center">
@@ -784,28 +790,28 @@
       aria-labelledby="offcanvasAddProvinceLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة محافظة جديدة</h2>
-        <form class="d-flex flex-column px-3">
-          <div class="d-flex flex-column gap-3">
-            <div class="input-custom mt-4">
-              <div class="input-wrapper">
-                <label>المحافظة</label>
-                <input class="w-100" type="text" />
-              </div>
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة محافظة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 mt-3">
+          <div class="d-flex flex-column gap-4">
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة العربية) المحافظة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
             </div>
-            <div class="position-relative">
-              <div class="input-wrapper select flex-grow-1">
-                <label>اختر البلد </label>
-                <select class="">
-                  <option value="">اليمن</option>
-                  <option value="1">لوريم</option>
-                  <option value="2">لزريم</option>
-                  <option value="3">لوريم</option>
-                </select>
-              </div>
-              <span style="position: absolute; left: 1rem; top: 1rem">
-                <img src="/assets/images/icon/dropDown.svg" alt="icon" />
-              </span>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة الانجليزية) المحافظة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
+            </div>
+
+            <div class="input-wrapper select">
+              <label>اختر البلد </label>
+              <select class="">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لزريم</option>
+                <option value="3">لوريم</option>
+              </select>
             </div>
           </div>
 
@@ -827,28 +833,28 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">تعديل المحافظة</h2>
-        <form class="d-flex flex-column px-3">
-          <div class="d-flex flex-column gap-3">
-            <div class="input-custom mt-4">
-              <div class="input-wrapper">
-                <label>المحافظة</label>
-                <input class="w-100" type="text" />
-              </div>
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل المحافظة
+        </h2>
+        <form class="d-flex flex-column px-3 mt-3">
+          <div class="d-flex flex-column gap-4">
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة العربية) المحافظة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
             </div>
-            <div class="position-relative">
-              <div class="input-wrapper select flex-grow-1">
-                <label>اختر البلد </label>
-                <select class="">
-                  <option value="">اليمن</option>
-                  <option value="1">لوريم</option>
-                  <option value="2">لزريم</option>
-                  <option value="3">لوريم</option>
-                </select>
-              </div>
-              <span style="position: absolute; left: 1rem; top: 1rem">
-                <img src="/assets/images/icon/dropDown.svg" alt="icon" />
-              </span>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة الانجليزية) المحافظة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
+            </div>
+
+            <div class="input-wrapper select">
+              <label>اختر البلد </label>
+              <select class="">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لزريم</option>
+                <option value="3">لوريم</option>
+              </select>
             </div>
           </div>
 
@@ -927,28 +933,25 @@
     >
       <div class="offcanvas-body">
         <h2 class="title-page border-bottom text-center">اضافة مدينة جديدة</h2>
-        <form class="d-flex flex-column px-3">
+        <form class="d-flex flex-column px-3 mt-3">
           <div class="d-flex flex-column gap-3">
-            <div class="input-custom mt-4">
-              <div class="input-wrapper">
-                <label>المدينة</label>
-                <input class="w-100" type="text" />
-              </div>
-              <div class="valid-error">هذا الحقل مطلوب</div>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة العربية) المدينة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
             </div>
-            <div class="position-relative">
-              <div class="input-wrapper select flex-grow-1">
-                <label>اختر البلد </label>
-                <select class="">
-                  <option value="">اليمن</option>
-                  <option value="1">لوريم</option>
-                  <option value="2">لزريم</option>
-                  <option value="3">لوريم</option>
-                </select>
-              </div>
-              <span style="position: absolute; left: 1rem; top: 1rem">
-                <img src="/assets/images/icon/dropDown.svg" alt="icon" />
-              </span>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة الانجليزية) المدينة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
+            </div>
+
+            <div class="input-wrapper select flex-grow-1">
+              <label>اختر البلد </label>
+              <select class="">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لزريم</option>
+                <option value="3">لوريم</option>
+              </select>
             </div>
           </div>
 
@@ -970,28 +973,25 @@
     >
       <div class="offcanvas-body">
         <h2 class="title-page border-bottom text-center">تعديل المدينة</h2>
-        <form class="d-flex flex-column px-3">
+        <form class="d-flex flex-column px-3 mt-3">
           <div class="d-flex flex-column gap-3">
-            <div class="input-custom mt-4">
-              <div class="input-wrapper">
-                <label>المدينة</label>
-                <input class="w-100" type="text" />
-              </div>
-              <div class="valid-error">هذا الحقل مطلوب</div>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة العربية) المدينة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
             </div>
-            <div class="position-relative">
-              <div class="input-wrapper select flex-grow-1">
-                <label>المحافظة</label>
-                <select class="">
-                  <option value="">اليمن</option>
-                  <option value="1">لوريم</option>
-                  <option value="2">لزريم</option>
-                  <option value="3">لوريم</option>
-                </select>
-              </div>
-              <span style="position: absolute; left: 1rem; top: 1rem">
-                <img src="/assets/images/icon/dropDown.svg" alt="icon" />
-              </span>
+            <div class="input-wrapper">
+              <label dir="ltr">(باللغة الانجليزية) المدينة</label>
+              <input class="w-100 p-2" type="text" value="السمات" />
+            </div>
+
+            <div class="input-wrapper select flex-grow-1">
+              <label>اختر البلد </label>
+              <select class="">
+                <option value="">اليمن</option>
+                <option value="1">لوريم</option>
+                <option value="2">لزريم</option>
+                <option value="3">لوريم</option>
+              </select>
             </div>
           </div>
 
