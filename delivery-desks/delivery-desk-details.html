@@ -98,7 +98,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   href="/distribution-points/distribution-points.html"
                 >
                   <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
@@ -107,7 +107,10 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/delivery-desks/delivery-desks.html">
+                <a
+                  class="nav-link active"
+                  href="/delivery-desks/delivery-desks.html"
+                >
                   <img src="../assets/images/icon/truck-box 1.svg" alt="" />
 
                   مناديب التوصيل
@@ -404,13 +407,13 @@
               class="breadcrumb-nav container"
               aria-label="breadcrumb"
             >
-              <a href="#">لوحة التحكم </a>
+              <a href="/Dashboard.html">لوحة التحكم </a>
               /
-              <a href="#">نقاط التوزيع</a>
+              <a href="/delivery-desks/delivery-desks.html">مناديب التوصيل</a>
 
               /
               <span class="breadcrumb-item active" aria-current="page">
-                تفاصيل نقطة التوزيع</span
+                تفاصيل مندوب التوصيل</span
               >
             </nav>
           </div>
@@ -423,21 +426,21 @@
                 alt="back icon"
                 style="cursor: pointer"
               />
-              <h2 class="title-page mb-0 fw-bold">تفاصيل نقطة التوزيع</h2>
+              <h2 class="title-page mb-0 fw-bold">تفاصيل مندوب التوصيل</h2>
             </div>
             <!-- PRODUCT Rate -->
             <div class="d-flex justify-content-between container">
               <div class="d-flex gap-3 mb-3">
                 <img
-                  src="../assets/images/S.png"
+                  src="../assets/images/avatar.png"
                   alt="product"
-                  width="77px"
-                  height="75px"
+                  width="65"
+                  height="63"
                 />
                 <div class="d-flex flex-column text-nowrap">
-                  <p class="m-0" style="font-size: 18px">الصفا للتوزيع</p>
-                  <span style="color: #606c7e"
-                    >اسم المسؤول : Mostafa Ahmed</span
+                  <p class="m-0" style="font-size: 18px">Khaled Mohamed</p>
+                  <span style="color: #606c7e; text-align: right" dir="ltr"
+                    >+2010023213</span
                   >
 
                   <div class="d-flex gap-1 align-items-center">
@@ -451,16 +454,6 @@
               </div>
               <!-- Statistics -->
               <div class="d-flex gap-2">
-                <div
-                  class="trader-statistics p-2 d-flex justify-content-center align-items-center d-none"
-                  id="order-waiting-time"
-                >
-                  <div class="d-flex flex-column align-items-center gap-2">
-                    <strong class="fs-4" style="color: #0f172a">20 يوم</strong>
-                    <p class="fs-6" style="color: #64748b">وقت انتظار الطلب</p>
-                  </div>
-                </div>
-
                 <div class="trader-statistics p-2">
                   <div class="d-flex flex-column">
                     <div class="icon-trader" style="background-color: #f1fae6">
@@ -475,75 +468,6 @@
                     </div>
                     <strong class="fs-4" style="color: #0f172a">20</strong>
                     <p class="fs-6" style="color: #64748b">الطلبات المكتملة</p>
-                  </div>
-                </div>
-
-                <div class="trader-statistics p-2">
-                  <div class="d-flex flex-column">
-                    <div class="icon-trader" style="background-color: #feeef6">
-                      <div class="d-flex justify-content-center mt-1">
-                        <img
-                          src="../assets/images/gifs/setting.gif"
-                          alt="box icon"
-                          width="33px"
-                          height="33px"
-                        />
-                      </div>
-                    </div>
-                    <strong class="fs-4" style="color: #0f172a">13</strong>
-                    <p class="fs-6" style="color: #64748b">المسترجعات</p>
-                  </div>
-                </div>
-                <div class="d-flex flex-column gap-2">
-                  <div class="trader-statistics-money p-2">
-                    <div class="d-flex gap-2">
-                      <div
-                        class="icon-trader"
-                        style="background-color: #f1fae6"
-                      >
-                        <div class="d-flex justify-content-center mt-1">
-                          <img
-                            src="../assets/images/gifs/money.gif"
-                            alt="box icon"
-                            width="33px"
-                            height="33px"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <strong style="color: #0f172a; font-size: 14px">
-                          800 ريال يمني</strong
-                        >
-                        <p style="color: #64748b; font-size: 13px">
-                          صافي الربح
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="trader-statistics-money p-2">
-                    <div class="d-flex gap-2">
-                      <div
-                        class="icon-trader"
-                        style="background-color: #f1fae6"
-                      >
-                        <div class="d-flex justify-content-center mt-1">
-                          <img
-                            src="../assets/images/gifs/money.gif"
-                            alt="box icon"
-                            width="33px"
-                            height="33px"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <strong style="color: #0f172a; font-size: 14px">
-                          800 ريال يمني</strong
-                        >
-                        <p style="color: #64748b; font-size: 13px">
-                          صافي ربح الادمن
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -600,18 +524,6 @@
               >
                 الاوراق
               </button>
-              <button
-                class="btn tab-btn"
-                id="v-pills-returns-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-returns"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-returns"
-                aria-selected="false"
-              >
-                المرتجعات
-              </button>
 
               <button
                 class="btn tab-btn"
@@ -635,27 +547,15 @@
                 aria-controls="v-pills-address"
                 aria-selected="false"
               >
-                العنوان على الخريطة
-              </button>
-              <button
-                class="btn tab-btn"
-                id="v-pills-workplaces-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-workplaces"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-workplaces"
-                aria-selected="false"
-              >
-                مواعيد العمل وكيفية الوصول
+                نطاق العمل
               </button>
             </div>
           </div>
-          <!-- products -->
+          <!-- tab content -->
           <div
             class="tab-content"
             id="v-pills-tabContent"
-            style="background-color: #f7f9fb; height: 100vh"
+            style="background-color: #f7f9fb"
           >
             <!--NOTE: First Slider  -->
             <div
@@ -763,7 +663,7 @@
                             <td class="d-flex gap-1 justify-content-end">
                               <a
                                 class="btn text-info action-btn"
-                                href="/distribution-points/dist-points-order-details.html"
+                                href="/delivery-desks/delivery-desks-order-details.html"
                               >
                                 <i class="fa-regular fa-eye"></i>
                               </a>
@@ -803,13 +703,21 @@
                             </td>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                              <button class="btn-status btn-gray-scale">
+                                نقل الطلب للمعلقة
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn-status btn-cancell">
+                                الغاء الطلب بالكامل
+                              </button>
+                            </td>
 
                             <td class="d-flex gap-1 justify-content-end">
                               <a
                                 class="btn text-info action-btn"
-                                href="/distribution-points/dist-points-order-details.html"
+                                href="/delivery-desks/delivery-desks-order-details.html"
                               >
                                 <i class="fa-regular fa-eye"></i>
                               </a>
@@ -849,13 +757,21 @@
               tabindex="0"
             >
               <div class="bg-white py-3 px-4 mt-4 trader-papers">
-                <p>السجل التجاري</p>
-                <img
-                  src="/assets/images/certificate.png"
-                  alt="certificate"
-                  width="111"
-                  height="79"
-                />
+                <p>رخصة القيادة - الوجه / الظهر</p>
+                <div class="d-flex gap-3">
+                  <img
+                    src="/assets/images/driver-license.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                  <img
+                    src="/assets/images/driver-license.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                </div>
               </div>
               <div class="bg-white py-3 px-4 mt-4 trader-papers">
                 <p>التأمين</p>
@@ -866,6 +782,7 @@
                   height="79"
                 />
               </div>
+
               <div class="bg-white py-3 px-4 mt-4 trader-papers">
                 <p>بطاقة الهوية - الوجه / الظهر</p>
                 <div class="d-flex gap-3">
@@ -883,224 +800,26 @@
                   />
                 </div>
               </div>
-            </div>
-            <!-- returns -->
-            <div
-              class="tab-pane fade slider py-2 px-4"
-              id="v-pills-returns"
-              role="tabpanel"
-              aria-labelledby="v-pills-returns-tab"
-              tabindex="0"
-            >
-              <div class="container-tabel p-3 py-4">
-                <div class="container">
-                  <div class="table-responsive mb-3">
-                    <div class="p-3 my-2">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>رقم الطلب</th>
-                            <th>اسم المستخدم</th>
-                            <th>رقم موبايل المستخدم</th>
-                            <th>اسم المتجر</th>
-                            <th>تاريخ ووقت الاسترجاع</th>
-                            <th>اسم نقطقة التوزيع</th>
-                            <th>رقم موبايل نقطة التوزيع</th>
-                            <th>بيانات تخزين نقطة البيع</th>
-                            <th>حالة الاسترجاع الاخيرة</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>1234345</td>
-                            <td><u>Mostafa Ahmed</u></td>
-                            <td dir="ltr">+20012234</td>
-                            <td>النور للملابس</td>
-                            <td dir="ltr">20/02/2024-8:30 PM</td>
-                            <td>الصفا للتوزيع</td>
-                            <td dir="ltr">+20012234</td>
-                            <td>بيانات تخزين نقطة البيع</td>
-                            <td>
-                              <span class="no-time"
-                                >في انتظار موافقة المتجر</span
-                              >
-                            </td>
-                            <td>
-                              <button class="btn-status btn-success">
-                                الموافقة على الطلب
-                              </button>
-                            </td>
-                            <td>
-                              <button class="btn-status btn-cancell">
-                                الغاء الطلب بالكامل
-                              </button>
-                            </td>
-
-                            <td class="d-flex gap-1 justify-content-end">
-                              <a
-                                class="btn text-info action-btn"
-                                href="/distribution-points/return-order-details.html"
-                              >
-                                <i class="fa-regular fa-eye"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>1234345</td>
-                            <td><u>Mostafa Ahmed</u></td>
-                            <td dir="ltr">+20012234</td>
-                            <td>النور للملابس</td>
-                            <td dir="ltr">20/02/2024-8:30 PM</td>
-                            <td>الصفا للتوزيع</td>
-                            <td dir="ltr">+20012234</td>
-                            <td>بيانات تخزين نقطة البيع</td>
-                            <td>
-                              <span class="done">تم الموافقة</span>
-                            </td>
-                            <td></td>
-                            <td>
-                              <button class="btn-status btn-cancell">
-                                الغاء الطلب بالكامل
-                              </button>
-                            </td>
-
-                            <td class="d-flex gap-1 justify-content-end">
-                              <a
-                                class="btn text-info action-btn"
-                                href="/distribution-points/return-order-details.html"
-                              >
-                                <i class="fa-regular fa-eye"></i>
-                              </a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>1234345</td>
-                            <td><u>Mostafa Ahmed</u></td>
-                            <td dir="ltr">+20012234</td>
-                            <td>النور للملابس</td>
-                            <td dir="ltr">20/02/2024-8:30 PM</td>
-                            <td>الصفا للتوزيع</td>
-                            <td dir="ltr">+20012234</td>
-                            <td>بيانات تخزين نقطة البيع</td>
-                            <td>
-                              <span class="cancelled">تم الرفض</span>
-                            </td>
-                            <td></td>
-                            <td>
-                              <button class="btn-status btn-cancell">
-                                الغاء الطلب بالكامل
-                              </button>
-                            </td>
-
-                            <td class="d-flex gap-1 justify-content-end">
-                              <a
-                                class="btn text-info action-btn"
-                                href="/distribution-points/return-order-details.html"
-                              >
-                                <i class="fa-regular fa-eye"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">القادم</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
+              <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                <p>رقم لوحة المركبة</p>
+                <img
+                  src="/assets/images/car-number.png"
+                  alt="certificate"
+                  width="111"
+                  height="79"
+                />
+              </div>
+              <div class="bg-white py-3 px-4 mt-4 trader-papers mb-3">
+                <p>اوراق الملكية</p>
+                <img
+                  src="/assets/images/certificate.png"
+                  alt="certificate"
+                  width="111"
+                  height="79"
+                />
               </div>
             </div>
-            <!-- workplaces -->
-            <div
-              class="tab-pane fade slider py-2 px-4"
-              id="v-pills-workplaces"
-              role="tabpanel"
-              aria-labelledby="v-pills-workplaces-tab"
-              tabindex="0"
-            >
-              <div class="container-tabel p-3 py-4">
-                <div class="container">
-                  <div class="table-responsive mb-3">
-                    <div class="p-3 my-2">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th class="table-head">#</th>
-                            <th class="table-head">اليوم</th>
-                            <th class="table-head">الوقت من</th>
-                            <th class="table-head">الوقت الى</th>
 
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>الاحد</td>
-                            <td dir="ltr">10:00 AM</td>
-                            <td dir="ltr">10:00 AM</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">القادم</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div>
-                  <h5 class="fw-bold mb-2">كيفية الوصول</h5>
-                  <p style="color: #606c7e">
-                    أوربم إيبسوم طريقة لكتابة النصوص في النشر والنصميم الجرافيكي
-                    تستخدم بشكل شائم لنوضيح الشكل المرئي للمستند أو الخط دون
-                    الاعتماد علي محنوى ذي معني. يمكن استخدام لوريم إيبسوم فبل
-                    نشر النسخة النهائية لوريم إيبسوم طريقة لكتابة النصوص في
-                    النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل
-                    المرئي للمستند أو الخط دون الاعتماد علي محتوى ذي معني. بمكن
-                  </p>
-                </div>
-              </div>
-            </div>
             <!-- address -->
             <div
               class="tab-pane fade slider py-2 px-4"
@@ -1112,13 +831,28 @@
               <div
                 class="container d-flex flex-column gap-3 bg-white p-3 rounded-3 mt-3"
               >
-                <div class="search-input">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="ابحث ..."
-                  />
+                <div class="d-flex justify-content-between">
+                  <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="ابحث ..."
+                    />
+                  </div>
+                  <div class="form-group d-flex align-items-center gap-2">
+                    <label for="radiusRange">نطاق العمل بالكيلو متر</label>
+                    <input
+                      type="range"
+                      id="radiusRange"
+                      min="1"
+                      max="20"
+                      value="2"
+                      step="1"
+                      class="form-control-range"
+                    />
+                    <span id="radiusValue">2 KM</span>
+                  </div>
                 </div>
                 <div id="map2"></div>
               </div>
@@ -1140,104 +874,257 @@
               aria-labelledby="v-pills-rate-tab"
               tabindex="0"
             >
-              <!--tabel-->
-              <div class="container-tabel p-3 py-4">
-                <div class="container">
-                  <div class="table-responsive mb-3">
-                    <div class="p-3 my-2">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>الصورة</th>
-                            <th>الاسم</th>
-                            <th>التقييم</th>
-                            <th>النص</th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>
-                              <img
-                                src="../assets/images/avatar.png"
-                                class="rounded-circle"
-                                width="40"
-                                height="40"
-                              />
-                            </td>
-                            <td>Mostafa Ahmed</td>
-                            <td>
-                              <div>
-                                <i
-                                  class="fa-solid fa-star"
-                                  style="color: #ffd43b"
-                                ></i>
-                                <i
-                                  class="fa-solid fa-star"
-                                  style="color: #ffd43b"
-                                ></i>
-                                <i
-                                  class="fa-solid fa-star"
-                                  style="color: #ffd43b"
-                                ></i>
-                                <i
-                                  class="fa-regular fa-star"
-                                  style="color: #ffd43b"
-                                ></i>
-                                <i
-                                  class="fa-regular fa-star"
-                                  style="color: #ffd43b"
-                                ></i>
-                              </div>
-                            </td>
-                            <td>لوريم لوريم بريم</td>
+              <!-- rates -->
+              <div>
+                <div class="container d-flex gap-2 pt-4 mt-4 id="v-pills-tab"
+                role="tablist" aria-orientation="vertical" >
+                <button
+                  class="btn tab-btn active"
+                  id="v-pills-users-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-users"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-users"
+                  aria-selected="true"
+                >
+                  المستخدمين
+                </button>
+                <button
+                  class="btn tab-btn"
+                  id="v-pills-traders-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-pills-traders"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-pills-traders"
+                  aria-selected="false"
+                >
+                  المتاجر
+                </button>
+              </div>
+            </div>
+            <!-- tab content -->
+            <div
+              class="tab-content"
+              id="v-pills-tabContent"
+              style="background-color: #f7f9fb"
+            >
+              <!--NOTE: First Slider  -->
+              <div
+                class="tab-pane fade show active"
+                id="v-pills-users"
+                role="tabpanel"
+                aria-labelledby="v-pills-users-tab"
+                tabindex="0"
+              >
+                <!--tabel-->
+                <div class="container-tabel p-3 py-4">
+                  <div class="container">
+                    <div class="table-responsive mb-3">
+                      <div class="p-3 my-2">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>الصورة</th>
+                              <th>الاسم</th>
+                              <th>التقييم</th>
+                              <th>النص</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>
+                                <img
+                                  src="../assets/images/avatar.png"
+                                  class="rounded-circle"
+                                  width="40"
+                                  height="40"
+                                />
+                              </td>
+                              <td>Mostafa Ahmed</td>
+                              <td>
+                                <div>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-regular fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-regular fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                </div>
+                              </td>
+                              <td>لوريم لوريم بريم</td>
 
-                            <td class="d-flex gap-1 justify-content-end">
-                              <button
-                                class="btn text-info action-btn"
-                                type="button"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#userRatedis"
-                                aria-controls="userRatedis"
-                              >
-                                <i class="fa-regular fa-eye"></i>
-                              </button>
+                              <td class="d-flex gap-1 justify-content-end">
+                                <button
+                                  class="btn text-info action-btn"
+                                  type="button"
+                                  data-bs-toggle="offcanvas"
+                                  data-bs-target="#userRatedis"
+                                  aria-controls="userRatedis"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </button>
 
-                              <!-- trash -->
-                              <button
-                                class="btn trash-color action-btn"
-                                data-bs-toggle="modal"
-                                data-bs-target="#deleteModal"
-                              >
-                                <i class="fa-regular fa-trash-can"></i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                                <!-- trash -->
+                                <button
+                                  class="btn trash-color action-btn"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                >
+                                  <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
+                    <nav aria-label="Page navigation example   ">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">السابق</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link active" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">القادم</a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
-                  <nav aria-label="Page navigation example   ">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">القادم</a>
-                      </li>
-                    </ul>
-                  </nav>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade slider py-2 px-4"
+                id="v-pills-traders"
+                role="tabpanel"
+                aria-labelledby="v-pills-traders-tab"
+                tabindex="0"
+              >
+                <!--tabel-->
+                <div class="container-tabel p-3 py-4">
+                  <div class="container">
+                    <div class="table-responsive mb-3">
+                      <div class="p-3 my-2">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>الصورة</th>
+                              <th>الاسم</th>
+                              <th>التقييم</th>
+                              <th>النص</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>
+                                <img
+                                  src="../assets/images/avatar.png"
+                                  class="rounded-circle"
+                                  width="40"
+                                  height="40"
+                                />
+                              </td>
+                              <td>Mostafa Ahmed</td>
+                              <td>
+                                <div>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-solid fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-regular fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                  <i
+                                    class="fa-regular fa-star"
+                                    style="color: #ffd43b"
+                                  ></i>
+                                </div>
+                              </td>
+                              <td>لوريم لوريم بريم</td>
+
+                              <td class="d-flex gap-1 justify-content-end">
+                                <button
+                                  class="btn text-info action-btn"
+                                  type="button"
+                                  data-bs-toggle="offcanvas"
+                                  data-bs-target="#userRatedis"
+                                  aria-controls="userRatedis"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </button>
+
+                                <!-- trash -->
+                                <button
+                                  class="btn trash-color action-btn"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#deleteModal"
+                                >
+                                  <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <nav aria-label="Page navigation example   ">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                          <a class="page-link" href="#" tabindex="-1">السابق</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link active" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">القادم</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1353,6 +1240,22 @@
         }).addTo(map2);
 
         var marker2 = null;
+        var circle = null; // To hold the circle object
+
+        // Function to get the current radius from the slider and convert it to meters
+        function getRadiusFromSlider() {
+          return $('#radiusRange').val() * 1000; // Convert km to meters
+        }
+
+        // Initialize circle with a default position and radius
+        var initialLatLng = [29.8206, 30.8025];
+        var defaultRadius = getRadiusFromSlider(); // Get initial radius from the slider
+        circle = L.circle(initialLatLng, {
+          radius: defaultRadius,
+          color: '#4CAF50',
+          fillColor: '#4CAF50',
+          fillOpacity: 0.2,
+        }).addTo(map2);
 
         map2.on('click', function (e) {
           var lat = e.latlng.lat;
@@ -1361,13 +1264,36 @@
           if (marker2) {
             map2.removeLayer(marker2);
           }
-
           marker2 = L.marker([lat, lng]).addTo(map2);
+
+          var currentRadius = getRadiusFromSlider(); // Get current radius from slider
+
+          if (circle) {
+            map2.removeLayer(circle);
+          }
+          circle = L.circle([lat, lng], {
+            radius: currentRadius,
+            color: '#4CAF50',
+            fillColor: '#4CAF50',
+            fillOpacity: 0.2,
+          }).addTo(map2);
+
           console.log('Map 2 - Latitude: ' + lat + ', Longitude: ' + lng);
+        });
+
+        // Event listener for the radius slider
+        $('#radiusRange').on('input', function () {
+          var radiusKm = $(this).val();
+          $('#radiusValue').text(radiusKm + ' KM');
+
+          var radiusMeters = getRadiusFromSlider(); // Get the new radius in meters
+
+          if (circle) {
+            circle.setRadius(radiusMeters);
+          }
         });
       });
     </script>
-
     <script>
       $(function () {
         $('input[name="daterange"]').daterangepicker(
@@ -1438,20 +1364,6 @@
           $('#sidebar').removeClass('show');
           $('#overlay').removeClass('show');
         });
-      });
-      $(document).ready(function () {
-        // Listen for tab changes
-        $('button[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
-          var target = $(e.target).data('bs-target');
-
-          if (target === '#v-pills-workplaces') {
-            $('#order-waiting-time').removeClass('d-none'); // Show the div
-          } else {
-            $('#order-waiting-time').addClass('d-none'); // Hide the div
-          }
-        });
-
-        $('#order-waiting-time').addClass('d-none');
       });
     </script>
   </body>
