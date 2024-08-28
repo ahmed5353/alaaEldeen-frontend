@@ -1259,3 +1259,19 @@ input[type='radio']:checked:before {
   top: 25%;
   color: #606c7e;
 }
+
+/* Excel */
+.export-sheet {
+  padding: 6px 27px;
+  color: #28b446;
+  background-color: #dff4e3;
+  border: none;
+  border-radius: 6px;
+}
+.import-sheet {
+  padding: 6px 27px;
+  color: #f9a130;
+  background-color: #fef1e0;
+  border: none;
+  border-radius: 6px;
+}

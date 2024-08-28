@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="../assets/images/logo.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
+
     <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -18,20 +23,9 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/slim-select@latest/dist/slimselect.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"
-    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
-    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
-
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
@@ -54,10 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="/sub-officials/sub-officials.html"
-                >
+                <a class="nav-link" href="/sub-officials/sub-officials.html">
                   <img src="../assets/images/icon/users 1.svg" alt="" />
 
                   المسؤولين الفرعيين
@@ -133,9 +124,8 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link active" href="/products/products.html">
                   <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
-
                   المنتجات
                 </a>
               </li>
@@ -247,11 +237,11 @@
               </button>
               <div class="d-flex">
                 <a class="mx-3" href="/notifications/notifications.html">
-                  <img src="../assets/images/icon/notific.svg" />
+                  <img src="assets/images/icon/notific.svg" />
                 </a>
                 <a class="d-flex" href="/personal-file/personal-file.html">
                   <img
-                    src="../assets/images/avatar.png"
+                    src="assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -261,7 +251,7 @@
                     <h5 class="navbar-text text-white">
                       Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
                     </h5>
-                    <span> اخر ظهور - <span>22/03/2024 -08:30 PM</span> </span>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
                   </div>
                 </a>
               </div>
@@ -319,14 +309,14 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                المسؤولين الفرعيين
+                المنتجات
               </span>
             </nav>
           </div>
 
           <!-- Main page -->
           <div class="container">
-            <h2 class="title-page mb-0 fw-bold">المسؤولين الفرعيين</h2>
+            <h2 class="title-page mb-0 fw-bold">المنتجات</h2>
             <div
               class="d-flex gap-2 mb-4"
               id="v-pills-tab"
@@ -343,7 +333,7 @@
                 aria-controls="v-pills-home"
                 aria-selected="true"
               >
-                المسؤوليين الفرعيين
+                منتجات المتاجر و المنتجات المنتهية
               </button>
               <button
                 class="btn tab-btn"
@@ -355,7 +345,7 @@
                 aria-controls="v-pills-profile"
                 aria-selected="false"
               >
-                الصلاحيات
+                طلبات اضافة او تعديل المنتجات
               </button>
             </div>
           </div>
@@ -373,12 +363,12 @@
                   class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
                 >
                   <div class="d-flex align-items-center gap-2 flex-wrap">
-                    <div class="search-input" style="width: 24rem">
+                    <div class="search-input">
                       <i class="fa-solid fa-magnifying-glass"></i>
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="ابحث باسم المسؤول / البريد الالكتروني او رقم الموبايل"
+                        placeholder="ابحث بأسم المنتج"
                       />
                     </div>
 
@@ -392,67 +382,96 @@
                       <i class="fa-solid fa-chevron-left active-color"></i>
                     </span>
                   </div>
-
-                  <button
-                    class="btn btn-add"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions"
-                  >
-                    <img
-                      width="30"
-                      height="30"
-                      src="../assets/images/Add.gif"
-                    />
-                    اضافة مسؤول
-                  </button>
                 </div>
-                <div class="d-flex gap-3 mt-4">
-                  <div class="input-wrapper select">
-                    <label>المحافظة</label>
-                    <select class="">
-                      <option value="">اختر</option>
-                      <option value="1">مطبع</option>
-                      <option value="2">تجار</option>
-                      <option value="3">مس��ول</option>
-                    </select>
+                <!-- sheet here -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <div class="mt-4 d-flex gap-2">
+                      <!-- DropDowm Lists -->
+                      <div class="input-wrapper select">
+                        <label>القسم الرئيسي </label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>القسم الفرعي</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      class="form-check form-check-custom mt-2 d-flex align-items-end justify-content-end gap-3"
+                    >
+                      <div>
+                        <label for="flexCheckDefault">المنتجات المنتهية</label>
+                        <input type="checkbox" value="" id="flexCheckDefault" />
+                      </div>
+                      <div>
+                        <label for="flexCheckDefault">منتجات الفلاش سيل</label>
+                        <input type="checkbox" value="" id="flexCheckDefault" />
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    class="form-check form-check-custom d-flex align-items-center justify-content-end gap-1"
-                  >
-                    <label for="flexCheckDefault">مندوب علاء الدين فقط</label>
-                    <input
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
-                      style="width: 1rem; height: 1rem"
-                    />
+                  <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-add" href="/AddNewProduct.html">
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة منتج جديد
+                    </a>
+                    <button class="export-sheet">
+                      <img src="../assets/images/icon/ExcelExport.svg" alt="" />
+                      تصدير شيت اكسيل
+                    </button>
+                    <button class="import-sheet">
+                      <img src="../assets/images/icon/ExcelImport.svg" alt="" />
+                      ارفاق شيت اكسيل
+                    </button>
                   </div>
                 </div>
               </div>
-
               <!--tabel-->
               <div class="container-tabel p-3 py-4">
                 <div class="container">
-                  <div class="table-responsive mb-3">
+                  <div class="table-responsive mb-3 rounded-3">
                     <div class="p-3 my-2">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>#</th>
                             <th>الصورة</th>
-                            <th>الاسم</th>
-                            <th>رقم الموبايل</th>
-                            <th>البريد الالكتروني</th>
-                            <th>تاريخ ووقت الانشاء</th>
-                            <th>مندوب علاء الدين</th>
-                            <th>الصلاحية</th>
-                            <th>اسم المخزن</th>
-                            <th>المحافظة</th>
-                            <th>اخر تسجيل دخول</th>
-
+                            <th>اسم المنتج</th>
+                            <th>شعار التاجر</th>
+                            <th>اسم التاجر</th>
+                            <th>القسم الرئيسي</th>
+                            <th>القسم الفرعي -1</th>
+                            <th>القسم الفرعي -2</th>
+                            <th>التقييم الاجمالي</th>
+                            <th>السعر الافتراضي</th>
+                            <th>الكمية المتاحة</th>
+                            <th>يحتوي على الوان</th>
+                            <th>يحتوي على مقاسات</th>
+                            <th>الخصم</th>
+                            <th>تاريخ انتهاء الخصم</th>
+                            <th>تاريخ ووقت الاضافة</th>
+                            <th>عدد الطلبات عليه</th>
+                            <th>عدد مرات الشراء</th>
+                            <th>عدد مرات الاضافة للمفضلة</th>
+                            <th>عدد مرات المشاركة</th>
+                            <th>فلاش سيل</th>
                             <th>الحالة</th>
+                            <th>فلاش سيل</th>
+                            <th></th>
                             <th></th>
                           </tr>
                         </thead>
@@ -461,29 +480,56 @@
                             <td>1</td>
                             <td>
                               <img
-                                src="/assets/images/avatar.png"
-                                alt="avatar"
+                                src="../assets/images/jacket.png"
+                                class="rounded"
+                                width="60"
+                                height="49"
                               />
                             </td>
-
-                            <td>محمد احمد</td>
-                            <td>01000000000</td>
-                            <td>user@user.com</td>
                             <td>
-                              20/02/2024-8:30<span style="float: right"
-                                >PM</span
+                              <div
+                                class="d-flex align-items-center gap-2"
+                                style="color: #bfa274"
                               >
+                                <span>جاكيت جلد بسوستة</span>
+                                <span>
+                                  <img
+                                    src="/assets/images/icon/alert.svg"
+                                    alt="alert"
+                                  />
+                                </span>
+                              </div>
                             </td>
+                            <td>
+                              <img
+                                src="/assets/images/market-logo.png"
+                                alt="logo"
+                              />
+                            </td>
+                            <td>النور للملابس</td>
+                            <td>ملابس</td>
+                            <td>ملابس رجالي</td>
+                            <td>جواكت رجالي</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
+                            <td>100 ريال يمني</td>
+                            <td>100</td>
                             <td>نعم</td>
-                            <td>مدير</td>
-                            <td>مخزن الفتح</td>
-                            <td>صنعاء</td>
-                            <td>
-                              20/02/2024-8:30<span style="float: right"
-                                >PM</span
-                              >
-                            </td>
-
+                            <td>نعم</td>
+                            <td>20%</td>
+                            <td dir="ltr">20/02/2024</td>
+                            <td dir="ltr">22/03/2024 - 8:30 PM</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>40</td>
+                            <td>نعم</td>
                             <td class="text-start">
                               <div
                                 class="form-switch ms-2 d-flex justify-content-center"
@@ -497,27 +543,57 @@
                                 />
                               </div>
                             </td>
+                            <td class="text-start">
+                              <div
+                                class="form-switch ms-2 d-flex justify-content-center"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                              </div>
+                            </td>
+
+                            <td>
+                              <button
+                                class="discount btn"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions"
+                                aria-controls="offcanvasWithBothOptions"
+                              >
+                                اضافة خصم
+                              </button>
+                            </td>
+
                             <td>
                               <div class="d-flex gap-1 justify-content-end">
-                                <button
+                                <a
+                                  class="btn text-info action-btn"
+                                  href="/productDetails.html"
+                                >
+                                  <i class="fa-regular fa-eye"></i>
+                                </a>
+                                <a
                                   class="btn text-success action-btn"
-                                  data-bs-toggle="offcanvas"
-                                  data-bs-target="#edite-section"
-                                  aria-controls="edite-section"
+                                  href="/editProduct.html"
                                 >
                                   <img
                                     src="../assets/images/icon/pencil 1.svg"
                                     alt=""
                                   />
-                                </button>
+                                </a>
                                 <!-- trash -->
-                                <button
+                                <a
                                   class="btn trash-color action-btn"
                                   data-bs-toggle="modal"
                                   data-bs-target="#deleteModal"
                                 >
                                   <i class="fa-regular fa-trash-can"></i>
-                                </button>
+                                </a>
                               </div>
                             </td>
                           </tr>
@@ -548,6 +624,7 @@
               </div>
             </div>
 
+            <!--  traders' products -->
             <div
               class="tab-pane fade"
               id="v-pills-profile"
@@ -565,7 +642,7 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="بحث..."
+                        placeholder="ابحث بأسم المنتج / اسم التاجر / الرقم التعريفي"
                       />
                     </div>
 
@@ -579,41 +656,160 @@
                       <i class="fa-solid fa-chevron-left active-color"></i>
                     </span>
                   </div>
-
-                  <a
-                    class="btn btn-add"
-                    type="button"
-                    href="/Sub-officials/permissions.html"
-                  >
-                    <img
-                      width="30"
-                      height="30"
-                      src="../assets/images/Add.gif"
-                    />
-                    اضافة صلاحية جديدة
-                  </a>
+                </div>
+                <!-- sheet here -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <div class="mt-4 d-flex gap-2">
+                      <!-- DropDowm Lists -->
+                      <div class="input-wrapper select">
+                        <label>القسم الرئيسي </label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>القسم الفرعي </label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      class="form-check form-check-custom mt-2 d-flex align-items-center justify-content-end gap-1"
+                    >
+                      <label for="flexCheckDefault"
+                        >المنتجات التي تحتوي على خصم</label
+                      >
+                      <input type="checkbox" value="" id="flexCheckDefault" />
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column gap-2">
+                    <a class="btn btn-add" href="/AddNewProduct.html">
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/icon/Add.gif"
+                      />
+                      اضافة منتج جديد
+                    </a>
+                    <button class="export-sheet">
+                      <img src="../assets/images/icon/ExcelExport.svg" alt="" />
+                      تصدير شيت اكسيل
+                    </button>
+                    <button class="import-sheet">
+                      <img src="../assets/images/icon/ExcelImport.svg" alt="" />
+                      ارفاق شيت اكسيل
+                    </button>
+                  </div>
                 </div>
               </div>
               <!--tabel-->
               <div class="container-tabel p-3 py-4">
                 <div class="container">
-                  <div class="table-responsive mb-3">
+                  <div class="table-responsive mb-3 rounded-3">
                     <div class="p-3 my-2">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>#</th>
+                            <th>الصورة</th>
                             <th>الاسم</th>
-                            <th>عدد المسؤولين</th>
+                            <th>الرقم التعريفي</th>
+                            <th>رقم المنتج</th>
+                            <th>القسم الرئيسي</th>
+                            <th>التقييم الاجمالي</th>
+                            <th>عدد المقيمين</th>
+                            <th>السعر</th>
+                            <th>ماركة المنتج</th>
+                            <th>الماركة</th>
+                            <th>الموديل</th>
+                            <th>سنة الصنع</th>
+                            <th>نوع المحرك</th>
+                            <th>حالة المنتج</th>
+                            <th>الضمان</th>
+                            <th>مدة الضمان</th>
+                            <th>عدد الطلبات</th>
+                            <th>عدد مرات الالغاء</th>
+                            <th>الخصم</th>
+                            <th>تاريخ بدء الخصم</th>
+                            <th>تاريخ انتهاء الخصم</th>
+                            <th>حالة الخصم</th>
+                            <th>مدة ظهور العرض</th>
+                            <th>عدد مرات الشراء</th>
+                            <th>عدد مرات الاضفة للمفضلة</th>
+                            <th>عدد مرات المشاركة</th>
+                            <th>الكمية المتاحة</th>
                             <th>الحالة</th>
+                            <th>مدة الايقاف</th>
+                            <th></th>
+                            <th>تاريخ ووقت الاضافة</th>
                             <th></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
-                            <td>مدير</td>
+                            <td>
+                              <img
+                                src="../assets/images/prodImage1.png"
+                                class="rounded-circle"
+                                width="42"
+                                height="42"
+                              />
+                            </td>
+                            <td>فلتر زيت</td>
+                            <td>123456</td>
+                            <td>123456</td>
+                            <td>الزيوت والتشحيم</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
                             <td>22</td>
+                            <td>100 جنيه</td>
+                            <td>موبيل</td>
+                            <td>BMW</td>
+                            <td>X5</td>
+                            <td>2022</td>
+                            <td>5.5 VB</td>
+                            <td>جديد</td>
+                            <td>متاح</td>
+                            <td>30 يوم</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td>متاح</td>
+                            <td>2022-10-10</td>
+                            <td>2022-11-10</td>
+
+                            <td class="text-start">
+                              <div
+                                class="form-switch ms-2 d-flex justify-content-center"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="flexSwitchCheckChecked"
+                                  checked
+                                />
+                              </div>
+                            </td>
+                            <td>30 يوم</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>100</td>
                             <td class="text-start">
                               <div
                                 class="form-switch ms-2 d-flex justify-content-center"
@@ -628,25 +824,55 @@
                               </div>
                             </td>
                             <td>
-                              <div class="d-flex gap-1 justify-content-end">
-                                <a
-                                  class="btn text-success action-btn"
-                                  href="/Sub-officials/edit-permissions.html"
-                                >
-                                  <img
-                                    src="../assets/images/icon/pencil 1.svg"
-                                    alt=""
-                                  />
-                                </a>
-                                <!-- trash -->
-                                <button
-                                  class="btn trash-color action-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#deleteModal"
-                                >
-                                  <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                              </div>
+                              <span class="daterange-input">
+                                <img src="../assets/images/icon/calander.svg" />
+                                <input
+                                  type="text"
+                                  name="daterange"
+                                  class="custom-daterangepicker border-0 text-center"
+                                />
+                                <i
+                                  class="fa-solid fa-chevron-down active-color"
+                                ></i>
+                              </span>
+                            </td>
+                            <td>
+                              <button
+                                class="btn btn-add"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions"
+                                aria-controls="offcanvasWithBothOptions"
+                              >
+                                اضافة خصم
+                              </button>
+                            </td>
+                            <td dir="ltr">22/01/2024 - 1:30 pm</td>
+
+                            <td class="d-flex gap-1 justify-content-end">
+                              <a
+                                class="btn text-info action-btn"
+                                href="/subCategoriesForCategory.html"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
+                              <a
+                                class="btn text-success action-btn"
+                                href="/editProduct.html"
+                              >
+                                <img
+                                  src="../assets/images/icon/pencil 1.svg"
+                                  alt=""
+                                />
+                              </a>
+                              <!-- trash -->
+                              <button
+                                class="btn active-color action-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                              >
+                                <i class="fa-regular fa-trash-can"></i>
+                              </button>
                             </td>
                           </tr>
                         </tbody>
@@ -688,452 +914,157 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center fw-bold">
-          اضافة مسؤول فرعي
-        </h2>
-        <form class="d-flex flex-column px-3">
-          <!-- First Label -->
-          <label class="select-img m-auto text-center position-relative">
-            <div class="img-container position-relative">
-              <img
-                class="preview-img"
-                src="../assets/images/icon-park-outline_add-four.svg"
+        <h2 class="title-page border-bottom text-center fw-bold">اضافة خصم</h2>
+        <form class="d-flex flex-column px-3 gap-3 mt-4">
+          <div class="input-custom position-relative">
+            <div class="input-wrapper">
+              <label> نسبة الخصم</label>
+              <input class="w-100" type="text" />
+            </div>
+            <span style="position: absolute; left: 10px; top: 0.75rem">%</span>
+          </div>
+          <div class="d-flex flex-column gap-1 flex-grow-1">
+            <span style="font-size: small" ;color:#8d929a>التاريخ من </span>
+            <span class="daterange-input">
+              <img src="../assets/images/icon/calander.svg" />
+              <input
+                type="text"
+                name="daterangesingle"
+                class="custom-daterangepicker border-0 text-center"
               />
-              <span class="remove-img position-absolute">
-                <svg
-                  width="31"
-                  height="31"
-                  viewBox="0 0 31 31"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="15.4284"
-                    cy="15.1905"
-                    r="14.2071"
-                    fill="#E63050"
-                    stroke="white"
-                    stroke-width="1.3"
-                  />
-                  <path
-                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </div>
-            <input type="file" class="upploadImg d-none" />
-            <h5 class="active-color text-decoration-underline mt-2">
-              اضافة صورة شخصية
-            </h5>
-            <div class="preview-container text-center mt-2 d-none"></div>
-          </label>
-
-          <div class="d-flex flex-column gap-3 mt-3">
-            <div class="input-wrapper">
-              <label> الاسم </label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="input-wrapper">
-              <label> رقم الموبايل</label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="input-wrapper">
-              <label> البريد الالكتروني</label>
-              <input class="w-100" type="text" value="لوريم" />
-            </div>
-
-            <div class="flex-grow-1 input-wrapper select">
-              <label>الصلاحيات</label>
-
-              <div class="dropdown select custom-dropdown">
-                <button
-                  class="btn custom-dropdown-toggle w-100 text-end"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  اختر الصلاحية ...
-                </button>
-                <ul
-                  class="dropdown-menu w-100"
-                  aria-labelledby="dropdownMenuButton"
-                >
-                  <li class="p-2">
-                    <div>
-                      <input
-                        type="text"
-                        class="form-control search-input icon-rtl"
-                        id="searchInput"
-                        placeholder="ابحث..."
-                        onkeyup="filterItems()"
-                      />
-                    </div>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
-                      >مدير</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
-                      >سكرتيرة</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
-                      >عامل</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
-                      >مسؤول</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#" onclick="selectItem(this)"
-                      >لوريم</a
-                    >
-                  </li>
-                  <!-- Add more items as needed -->
-                </ul>
-              </div>
-            </div>
-            <div class="radio-group-sub-officcials">
-              <label for="option1-1">مندوب علاء الدين</label>
-              <div class="d-flex gap-4">
-                <div class="d-flex align-items-center gap-1">
-                  <input
-                    type="radio"
-                    id="option1-2"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label for="option1-2">نعم</label>
-                </div>
-                <div class="d-flex align-items-center gap-1">
-                  <input
-                    type="radio"
-                    id="option1-2"
-                    name="customRadio1"
-                    class="custom-control-input"
-                  />
-                  <label for="option1-2">لا</label>
-                </div>
-              </div>
-            </div>
-            <!--Search dropDown list  -->
-
-            <div class="flex-grow-1 input-wrapper select">
-              <label>المخزن</label>
-              <div class="dropdown select custom-dropdown">
-                <button
-                  class="btn custom-dropdown-toggle w-100 text-end"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  اختر...
-                </button>
-                <ul class="dropdown-menu w-100">
-                  <li class="p-2">
-                    <div>
-                      <input
-                        type="text"
-                        class="form-control search-input icon-rtl"
-                        placeholder="ابحث باسم المخزن..."
-                      />
-                    </div>
-                  </li>
-                  <li><a class="dropdown-item" href="#">مخزن المنتج</a></li>
-                  <li><a class="dropdown-item" href="#">شركة داجن</a></li>
-                  <li><a class="dropdown-item" href="#">مخزن النور</a></li>
-                  <!-- Add more items as needed -->
-                </ul>
-              </div>
-            </div>
-            <div class="w-100 text-center">
-              <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-3">
-                اضافة
-              </button>
-            </div>
+              <i class="fa-solid fa-chevron-down active-color"></i>
+            </span>
           </div>
 
-          <!--edit  section-->
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-scroll="true"
-            tabindex="-1"
-            id="edite-section"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
-          >
-            <div class="offcanvas-body">
-              <h2 class="title-page border-bottom text-center fw-bold">
-                تعديل المسؤول الفرعي
-              </h2>
-              <form class="d-flex flex-column px-3">
-                <!-- Second Label -->
-                <label
-                  class="select-img select-user-img m-auto text-center position-relative"
-                >
-                  <div class="img-container position-relative">
-                    <img
-                      class="preview-img"
-                      src="../assets/images/avatar.png"
-                    />
-                    <span class="remove-img position-absolute">
-                      <svg
-                        width="31"
-                        height="31"
-                        viewBox="0 0 31 31"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle
-                          cx="15.4284"
-                          cy="15.1905"
-                          r="14.2071"
-                          fill="#E63050"
-                          stroke="white"
-                          stroke-width="1.3"
-                        />
-                        <path
-                          d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                  <input type="file" class="upploadImg d-none" />
-                  <h5 class="active-color text-decoration-underline mt-2">
-                    تعديل الصورة الشخصية
-                  </h5>
-                  <div class="preview-container text-center mt-2 d-none"></div>
-                </label>
-
-                <div class="d-flex flex-column gap-3 mt-3">
-                  <div class="input-wrapper">
-                    <label> الاسم </label>
-                    <input class="w-100" type="text" value="لوريم" />
-                  </div>
-
-                  <div class="input-wrapper">
-                    <label> رقم الموبايل</label>
-                    <input class="w-100" type="text" value="لوريم" />
-                  </div>
-
-                  <div class="input-wrapper">
-                    <label> البريد الالكتروني</label>
-                    <input class="w-100" type="text" value="لوريم" />
-                  </div>
-
-                  <div class="input-wrapper select flex-grow-1">
-                    <label>الصلاحيات</label>
-                    <select class="">
-                      <option value="">لوريم</option>
-                      <option value="1">لوريم</option>
-                      <option value="2">لزريم</option>
-                      <option value="3">لوريم</option>
-                    </select>
-                  </div>
-                  <div class="radio-group-sub-officcials">
-                    <label for="option1-1">مندوب علاء الدين</label>
-                    <div class="d-flex gap-4">
-                      <div class="d-flex align-items-center gap-1">
-                        <input
-                          type="radio"
-                          id="option1-2"
-                          name="customRadio1"
-                          class="custom-control-input"
-                        />
-                        <label for="option1-2">نعم</label>
-                      </div>
-                      <div class="d-flex align-items-center gap-1">
-                        <input
-                          type="radio"
-                          id="option1-2"
-                          name="customRadio1"
-                          class="custom-control-input"
-                        />
-                        <label for="option1-2">لا</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="input-wrapper select flex-grow-1">
-                    <label>المخزن</label>
-                    <select class="">
-                      <option value="">لوريم</option>
-                      <option value="1">لوريم</option>
-                      <option value="2">لزريم</option>
-                      <option value="3">لوريم</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="w-100 text-center">
-                  <button
-                    type="submit"
-                    class="btn btn-add w-auto m-auto px-5 mt-3"
-                  >
-                    حفظ
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div class="d-flex flex-column gap-1 flex-grow-1 mb-4">
+            <span style="font-size: small" ;color:#8d929a>التاريخ الى </span>
+            <span class="daterange-input">
+              <img src="../assets/images/icon/calander.svg" />
+              <input
+                type="text"
+                name="daterangesingle"
+                class="custom-daterangepicker border-0 text-center"
+              />
+              <i class="fa-solid fa-chevron-down active-color"></i>
+            </span>
           </div>
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
-          <script>
-            $(function () {
-              $('input[name="daterange"]').daterangepicker(
-                {
-                  opens: 'left',
-                  locale: {
-                    format: ' MMM DD',
-                    applyLabel: 'Apply',
-                    cancelLabel: 'Cancel',
-                    fromLabel: 'From',
-                    toLabel: 'To',
-                    customRangeLabel: 'Custom',
-                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                    monthNames: [
-                      'January',
-                      'February',
-                      'March',
-                      'April',
-                      'May',
-                      'June',
-                      'July',
-                      'August',
-                      'September',
-                      'October',
-                      'November',
-                      'December',
-                    ],
-                    firstDay: 1,
-                  },
-                  singleDatePicker: false,
-                  showDropdowns: true,
-                  minYear: 1901,
-                  maxYear: parseInt(moment().format('YYYY'), 10),
-                  linkedCalendars: false,
-                  autoApply: true,
-                  alwaysShowCalendars: false,
-                  showCustomRangeLabel: false,
-                  maxSpan: {
-                    days: 60,
-                  },
-                },
-                function (start, end, label) {
-                  console.log(
-                    'A new date selection was made: ' +
-                      start.format('YYYY-MM-DD') +
-                      ' to ' +
-                      end.format('YYYY-MM-DD')
-                  );
-                }
-              );
-            });
-
-            $(document).ready(function () {
-              ذ;
-              $('#toggleSidebar').on('click', function () {
-                $('#sidebar').toggleClass('show');
-                $('#overlay').toggleClass('show');
-              });
-              $('#overlay').on('click', function () {
-                $('#sidebar').removeClass('show');
-                $('#overlay').removeClass('show');
-              });
-            });
-
-            $(document).ready(function () {
-              $('.upploadImg').change(function (e) {
-                const file = e.target.files[0];
-                const label = $(this).closest('label');
-                if (file) {
-                  const reader = new FileReader();
-                  reader.onload = function (e) {
-                    label.find('.preview-img').attr('src', e.target.result);
-                    label.find('.preview-container').removeClass('d-none');
-                    label.find('.remove-img').show();
-                  };
-                  reader.readAsDataURL(file);
-                }
-              });
-
-              $('.remove-img').click(function () {
-                const label = $(this).closest('label');
-                label
-                  .find('.preview-img')
-                  .attr('src', '../assets/images/icon/img.gif');
-                label.find('.preview-container').addClass('d-none');
-                label.find('.remove-img').hide();
-                label.find('.upploadImg').val('');
-              });
-            });
-            $(document).ready(function () {
-              // Search functionality
-              $('#searchInput').on('keyup', function () {
-                var value = $(this).val().toLowerCase();
-                $('#dropdownItems a').filter(function () {
-                  $(this).toggle(
-                    $(this).text().toLowerCase().indexOf(value) > -1
-                  );
-                });
-              });
-
-              // Change placeholder of the button when an item is selected
-              $('#dropdownItems a').on('click', function () {
-                var selectedText = $(this).text();
-                $('#dropdownMenuButton').text(selectedText);
-              });
-            });
-          </script>
-          <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const dropdowns = document.querySelectorAll('.custom-dropdown');
-
-              dropdowns.forEach((dropdown) => {
-                const searchInput = dropdown.querySelector('.search-input');
-                const items = dropdown.querySelectorAll('.dropdown-item');
-                const button = dropdown.querySelector(
-                  '.custom-dropdown-toggle'
-                );
-
-                searchInput.addEventListener('keyup', function () {
-                  const filter = this.value.toUpperCase();
-                  items.forEach((item) => {
-                    const txtValue = item.textContent || item.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      item.style.display = '';
-                    } else {
-                      item.style.display = 'none';
-                    }
-                  });
-                });
-
-                items.forEach((item) => {
-                  item.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    button.textContent = this.textContent;
-                  });
-                });
-              });
-            });
-          </script>
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              تأكيد
+            </button>
+          </div>
         </form>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: ' MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: false,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $('input[name="daterangesingle"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: 'DD/MM/YYYY',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+    </script>
   </body>
 </html>
