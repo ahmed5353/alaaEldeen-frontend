@@ -1275,3 +1275,30 @@ input[type='radio']:checked:before {
   border: none;
   border-radius: 6px;
 }
+
+/* Actions buttons */
+
+.refuse,
+.accept {
+  border: none;
+  border-radius: 5px;
+  padding: 4px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.refuse {
+  background-color: #e63050;
+}
+
+.refuse:hover {
+  background-color: #d63b57;
+}
+
+.accept {
+  background-color: #48b446;
+}
+
+.accept:hover {
+  background-color: #3ca639;
+}
