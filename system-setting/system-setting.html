@@ -341,15 +341,15 @@
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
-                id="v-pills-rules-tab"
+                id="v-pills-userapp-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-rules"
+                data-bs-target="#v-pills-userapp"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-rules"
+                aria-controls="v-pills-userapp"
                 aria-selected="false"
               >
-                الشروط والاحكام
+                اعدادات تطبيق المستخدم
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
@@ -1464,56 +1464,116 @@
                 </div>
               </div>
             </div>
-            <!--  Rules -->
+            <!--  userapp -->
             <div
               class="tab-pane fade"
-              id="v-pills-rules"
+              id="v-pills-userapp"
               role="tabpanel"
-              aria-labelledby="v-pills-rules-tab"
+              aria-labelledby="v-pills-userapp-tab"
               tabindex="0"
             >
               <!-- Main page -->
-              <div class="container">
-                <div
-                  class="d-flex gap-2 my-4"
-                  id="v-pills-tab"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <button
-                    class="btn tab-btn active"
-                    id="v-pills-user-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-user"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-user"
-                    aria-selected="true"
-                  >
-                    المستخدم
-                  </button>
-                  <button
-                    class="btn tab-btn"
-                    id="v-pills-profile-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-profile"
-                    aria-selected="false"
-                  >
-                    المتجر
-                  </button>
-                </div>
-              </div>
-              <!-- products -->
               <div class="tab-content" id="v-pills-tabContent">
-                <!-- Countries -->
+                <div class="container">
+                  <div
+                    class="d-flex gap-2 my-4"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="btn tab-btn active"
+                      id="v-pills-childrules-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-childrules"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-childrules"
+                      aria-selected="true"
+                    >
+                      الشروط والاحكام
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-help-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-help"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-help"
+                      aria-selected="false"
+                    >
+                      المساعده
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-techsupport-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-techsupport"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-techsupport"
+                      aria-selected="false"
+                    >
+                      اسئلة الدعم الفني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-introducePages-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-introducePages"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-introducePages"
+                      aria-selected="false"
+                    >
+                      اعدادات الصفحات التعريفية
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-adslider-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-adslider"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-adslider"
+                      aria-selected="false"
+                    >
+                      السلايدر الاعلاني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-certificatephotos-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-certificatephotos"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-certificatephotos"
+                      aria-selected="false"
+                    >
+                      صور الشهادات
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-cetificatevalue-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-cetificatevalue"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-cetificatevalue"
+                      aria-selected="false"
+                    >
+                      قيم الشهادات
+                    </button>
+                  </div>
+                </div>
+                <!-- products -->
+                <!-- Rules-Child-Tab -->
                 <div
                   class="tab-pane fade show active"
-                  id="v-pills-user"
+                  id="v-pills-childrules"
                   role="tabpanel"
-                  aria-labelledby="v-pills-user-tab"
+                  aria-labelledby="v-pills-childrules-tab"
                   tabindex="0"
                 >
                   <div class="container" style="text-align: end">
@@ -1521,13 +1581,13 @@
                       class="btn btn-add"
                       type="button"
                       data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasWithBothOptions"
-                      aria-controls="offcanvasWithBothOptions"
+                      data-bs-target="#add-new-rule"
+                      aria-controls="add-new-rule"
                     >
                       <img
                         width="30"
                         height="30"
-                        src="../assets/images/icon/Add.gif"
+                        src="../assets/images/Add.gif"
                       />
                       اضافة شرط جديد
                     </button>
@@ -1540,25 +1600,29 @@
                           <table class="table">
                             <thead>
                               <tr>
-                                <th>#</th>
-                                <th>عنوان النص</th>
-                                <th>النص</th>
+                                <th class="table-head">#</th>
+                                <th class="table-head">عنوان النص بالعربي</th>
+                                <th class="table-head">
+                                  عنوان النص بالانجليزية
+                                </th>
+
                                 <th></th>
+                                <th class="table-head"></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>1</td>
                                 <td>حماية البيانات</td>
-                                <td>لوريم لوريم لوريم</td>
-
+                                <td>Data protection</td>
+                                <td></td>
                                 <td class="d-flex gap-1 justify-content-end">
                                   <!-- NOTE: i am here -->
                                   <button
                                     class="btn text-success action-btn"
                                     data-bs-toggle="offcanvas"
-                                    data-bs-target="#edite-section"
-                                    aria-controls="edite-section"
+                                    data-bs-target="#edit-rule"
+                                    aria-controls="edit-rule"
                                   >
                                     <img
                                       src="../assets/images/icon/pencil 1.svg"
@@ -1567,7 +1631,7 @@
                                   </button>
                                   <!-- trash -->
                                   <button
-                                    class="btn active-color action-btn"
+                                    class="btn trash-color action-btn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"
                                   >
@@ -1603,156 +1667,12 @@
                     </div>
                   </div>
                 </div>
-                <!-- provinces -->
+                <!-- help-Child-Tab -->
                 <div
-                  class="tab-pane fade"
-                  id="v-pills-profile"
+                  class="tab-pane fade show"
+                  id="v-pills-help"
                   role="tabpanel"
-                  aria-labelledby="v-pills-profile-tab"
-                  tabindex="0"
-                >
-                  <div class="container">
-                    <div style="text-align: left">
-                      <button
-                        class="btn btn-add"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasAddProvince"
-                        aria-controls="offcanvasAddProvince"
-                      >
-                        <img
-                          width="30"
-                          height="30"
-                          src="../assets/images/icon/Add.gif"
-                        />
-                        اضافة شرط جديد
-                      </button>
-                    </div>
-                  </div>
-                  <!--tabel-->
-                  <div class="container-tabel p-3 py-4">
-                    <div class="container">
-                      <div class="table-responsive mb-3">
-                        <div class="p-3 my-2">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>عنوان النص</th>
-                                <th>النص</th>
-                                <th></th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>حماية البيانات</td>
-                                <td>لوريم لوريم لوريم</td>
-
-                                <td class="d-flex gap-1 justify-content-end">
-                                  <!-- NOTE: i am here -->
-                                  <button
-                                    class="btn text-success action-btn"
-                                    data-bs-toggle="offcanvas"
-                                    data-bs-target="#edit-province"
-                                    aria-controls="edit-province"
-                                  >
-                                    <img
-                                      src="../assets/images/icon/pencil 1.svg"
-                                      alt=""
-                                    />
-                                  </button>
-                                  <!-- trash -->
-                                  <button
-                                    class="btn active-color action-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal"
-                                  >
-                                    <i class="fa-regular fa-trash-can"></i>
-                                  </button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1"
-                              >السابق</a
-                            >
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link active" href="#">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">القادم</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- introduce pages page -->
-            <div
-              class="tab-pane fade"
-              id="v-pills-introduce"
-              role="tabpanel"
-              aria-labelledby="v-pills-introduce-tab"
-              tabindex="0"
-            >
-              <!-- Main page -->
-              <div class="container">
-                <div
-                  class="d-flex gap-2 my-4"
-                  id="v-pills-tab2"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <button
-                    class="btn tab-btn active"
-                    id="v-pills-userIntroduce-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-userIntroduce"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-userIntroduce"
-                    aria-selected="true"
-                  >
-                    المستخدم
-                  </button>
-                  <button
-                    class="btn tab-btn"
-                    id="v-pills-market-introduce-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-market-introduce"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-market-introduce"
-                    aria-selected="false"
-                  >
-                    المتجر
-                  </button>
-                </div>
-              </div>
-
-              <div class="tab-content" id="v-pills-tabContent">
-                <!-- *\user  -->
-                <div
-                  class="tab-pane fade show active"
-                  id="v-pills-userIntroduce"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-userIntroduce-tab"
+                  aria-labelledby="v-pills-help-tab"
                   tabindex="0"
                 >
                   <div class="container" style="text-align: end">
@@ -1760,15 +1680,15 @@
                       class="btn btn-add"
                       type="button"
                       data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasAddNewPage"
-                      aria-controls="offcanvasAddNewPage"
+                      data-bs-target="#add-new-question"
+                      aria-controls="add-new-question"
                     >
                       <img
                         width="30"
                         height="30"
-                        src="../assets/images/icon/Add.gif"
+                        src="../assets/images/Add.gif"
                       />
-                      اضافة صفحة جديدة
+                      اضافة سؤال جديد
                     </button>
                   </div>
                   <!--tabel-->
@@ -1780,32 +1700,44 @@
                             <thead>
                               <tr>
                                 <th>#</th>
-                                <th>الصورة</th>
-                                <th>عنوان النص</th>
-                                <th>النص</th>
+                                <th>السؤال</th>
+                                <th>الاجابة</th>
+
+                                <th>تاريخ ووقت الانشاء</th>
+                                <th>عدد المحبين</th>
+                                <th>عدد الغير محبين</th>
+                                <th>الحالة</th>
                                 <th></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>1</td>
-                                <td>
-                                  <img
-                                    src="/assets/images/prodImage1.png"
-                                    alt="photo"
-                                    width="42"
-                                    height="42"
-                                  />
+                                <td>طريقة اضافة منتج جديد</td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td dir="ltr">22/03/2024 - 08:30 PM</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
                                 </td>
-                                <td>لوريم لوريم لوريم</td>
-                                <td>لوريم لوريم لوريم</td>
 
                                 <td class="d-flex gap-1 justify-content-end">
                                   <button
                                     class="btn text-success action-btn"
                                     data-bs-toggle="offcanvas"
-                                    data-bs-target="#edite-introduce-user"
-                                    aria-controls="edite-introduce-user"
+                                    data-bs-target="#edit-question"
+                                    aria-controls="edit-question"
                                   >
                                     <img
                                       src="../assets/images/icon/pencil 1.svg"
@@ -1814,7 +1746,7 @@
                                   </button>
                                   <!-- trash -->
                                   <button
-                                    class="btn active-color action-btn"
+                                    class="btn trash-color action-btn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"
                                   >
@@ -1849,33 +1781,30 @@
                       </nav>
                     </div>
                   </div>
-                  <!-- user -->
                 </div>
-                <!-- *\\\\\\\\\\\\\\\\\\\\\ MARKET*/////////////////////////////////////////////// -->
+                <!-- Support question-Child-Tab -->
                 <div
-                  class="tab-pane fade"
-                  id="v-pills-market-introduce"
+                  class="tab-pane fade show"
+                  id="v-pills-techsupport"
                   role="tabpanel"
-                  aria-labelledby="v-pills-market-introduce-tab"
+                  aria-labelledby="v-pills-techsupport-tab"
                   tabindex="0"
                 >
-                  <div class="container">
-                    <div style="text-align: left">
-                      <button
-                        class="btn btn-add"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasAddNewPageTrader"
-                        aria-controls="offcanvasAddNewPageTrader"
-                      >
-                        <img
-                          width="30"
-                          height="30"
-                          src="../assets/images/icon/Add.gif"
-                        />
-                        اضافة صفحة جديدة
-                      </button>
-                    </div>
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-support-question"
+                      aria-controls="add-support-question"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
                   </div>
                   <!--tabel-->
                   <div class="container-tabel p-3 py-4">
@@ -1885,33 +1814,49 @@
                           <table class="table">
                             <thead>
                               <tr>
-                                <th>#</th>
-                                <th>الصورة</th>
-                                <th>عنوان النص</th>
-                                <th>النص</th>
+                                <th class="table-head">#</th>
+                                <th class="table-head">السؤال</th>
+                                <th class="table-head" style="width: 16rem">
+                                  تاريخ ووقت الانشاء
+                                </th>
+                                <th class="table-head">
+                                  عدد رسائل الدعم المتعلقة بالسؤال
+                                </th>
                                 <th></th>
+                                <th class="table-head">الحالة</th>
+                                <th class="table-head"></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>1</td>
-                                <td>
-                                  <img
-                                    src="/assets/images/blue-print-car.png"
-                                    alt="car photo"
-                                    width="42"
-                                    height="42"
-                                  />
+                                <td>طريقة اضافة منتج جديد</td>
+
+                                <td style="margin-right: 1rem" dir="ltr">
+                                  22/03/2024 - 08:30 PM
                                 </td>
-                                <td>لوريم لوريم لوريم</td>
-                                <td>لوريم لوريم لوريم</td>
+                                <td>20</td>
+                                <td></td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
 
                                 <td class="d-flex gap-1 justify-content-end">
                                   <button
                                     class="btn text-success action-btn"
                                     data-bs-toggle="offcanvas"
-                                    data-bs-target="#edite-introduce-trader"
-                                    aria-controls="edite-introduce-trader"
+                                    data-bs-target="#edit-support-question"
+                                    aria-controls="edit-support-question"
                                   >
                                     <img
                                       src="../assets/images/icon/pencil 1.svg"
@@ -1920,7 +1865,7 @@
                                   </button>
                                   <!-- trash -->
                                   <button
-                                    class="btn active-color action-btn"
+                                    class="btn trash-color action-btn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"
                                   >
@@ -1953,167 +1898,6 @@
                           </li>
                         </ul>
                       </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--  *Apps Links -->
-            <div
-              class="tab-pane fade"
-              id="v-pills-links"
-              role="tabpanel"
-              aria-labelledby="v-pills-links-tab"
-              tabindex="0"
-            >
-              <!-- Main page -->
-              <div class="container">
-                <div
-                  class="d-flex gap-2 my-4"
-                  id="v-pills-tab"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <button
-                    class="btn tab-btn active"
-                    id="v-pills-userApps-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-userApps"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-userApps"
-                    aria-selected="true"
-                  >
-                    المستخدم
-                  </button>
-                  <button
-                    class="btn tab-btn"
-                    id="v-pills-marketApps-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-marketApps"
-                    type="button"
-                    role="tab"
-                    aria-controls="v-pills-marketApps"
-                    aria-selected="false"
-                  >
-                    المتجر
-                  </button>
-                </div>
-              </div>
-
-              <div class="tab-content" id="v-pills-tabContent">
-                <!-- user text -->
-                <div
-                  class="tab-pane fade show active"
-                  id="v-pills-userApps"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-userApps-tab"
-                  tabindex="0"
-                >
-                  <div class="container">
-                    <div
-                      class="bg-white py-4 px-5 rounded-3 d-flex flex-column gap-3"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <div>
-                          <img
-                            src="/assets/images/icon/play-store.svg"
-                            alt="facebook"
-                          />
-                        </div>
-
-                        <div class="input-wrapper w-50">
-                          <label>رابط الاندوريد</label>
-                          <input
-                            class="w-100"
-                            type="text"
-                            style="height: 3rem"
-                          />
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div>
-                          <img
-                            src="/assets/images/icon/app-store.svg"
-                            alt="facebook"
-                          />
-                        </div>
-
-                        <div class="input-wrapper w-50">
-                          <label>رابط الايفون</label>
-                          <input
-                            class="w-100"
-                            type="text"
-                            style="height: 3rem"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-100 mt-3">
-                      <button
-                        type="submit"
-                        class="btn btn-add w-auto m-auto px-5 mt-2"
-                      >
-                        حفظ
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- market text -->
-                <div
-                  class="tab-pane fade"
-                  id="v-pills-marketApps"
-                  role="tabpanel"
-                  aria-labelledby="v-pills-marketApps-tab"
-                  tabindex="0"
-                >
-                  <div class="container">
-                    <div
-                      class="bg-white py-4 px-5 rounded-3 d-flex flex-column gap-3"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <div>
-                          <img
-                            src="/assets/images/icon/play-store.svg"
-                            alt="facebook"
-                          />
-                        </div>
-
-                        <div class="input-wrapper w-50">
-                          <label>رابط الاندوريد</label>
-                          <input
-                            class="w-100"
-                            type="text"
-                            style="height: 3rem"
-                          />
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <div>
-                          <img
-                            src="/assets/images/icon/app-store.svg"
-                            alt="facebook"
-                          />
-                        </div>
-
-                        <div class="input-wrapper w-50">
-                          <label>رابط الايفون</label>
-                          <input
-                            class="w-100"
-                            type="text"
-                            style="height: 3rem"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-100 mt-3">
-                      <button
-                        type="submit"
-                        class="btn btn-add w-auto m-auto px-5 mt-2"
-                      >
-                        حفظ
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -2278,278 +2062,224 @@
         </form>
       </div>
     </div>
-    <!-- *Introduction Pages -->
-    <!--Add New page user-->
+
+    <!-- *Child Rules -->
+    <!--add new Rule-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
-      id="offcanvasAddNewPage"
-      aria-labelledby="offcanvasAddNewPageLabel"
-    >
-      <form class="d-flex flex-column gap-4 justify-content-center p-4">
-        <div class="p-2 border-bottom d-flex justify-content-center">
-          <h4 class="fw-bold">اضافة صفحة جديدة</h4>
-        </div>
-        <label
-          class="select-img m-auto text-center position-relative"
-          for="upploadImg"
-        >
-          <img id="preview-img" src="../assets/images/icon/img.gif" />
-          <input type="file" id="upploadImg" class="d-none" />
-          <h5 class="active-color text-decoration-underline mt-2">
-            اضافة صورة
-          </h5>
-          <div id="preview-container" class="text-center mt-2 d-none">
-            <span id="remove-img"
-              ><svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="15.4284"
-                  cy="15.1905"
-                  r="14.2071"
-                  fill="#E63050"
-                  stroke="white"
-                  stroke-width="1.3"
-                />
-                <path
-                  d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </div>
-        </label>
-
-        <div class="input-custom">
-          <div class="input-wrapper">
-            <label>عنوان النص</label>
-            <input class="w-100" type="text" />
-          </div>
-        </div>
-        <div class="input-wrapper p-1">
-          <label> النص</label>
-          <textarea
-            class="w-100 p-2"
-            type="text"
-            placeholder="اكتب هنا"
-            style="height: 8rem"
-          ></textarea>
-        </div>
-
-        <div class="w-100 text-center">
-          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
-            اضافة
-          </button>
-        </div>
-      </form>
-    </div>
-    <!--Add New page Market-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="offcanvasAddNewPageTrader"
-      aria-labelledby="offcanvasAddNewPageTraderLabel"
-    >
-      <form class="d-flex flex-column gap-4 justify-content-center p-4">
-        <div class="p-2 border-bottom d-flex justify-content-center">
-          <h4 class="fw-bold">اضافة صفحة جديدة</h4>
-        </div>
-        <label
-          class="select-img m-auto text-center position-relative"
-          for="upploadImg"
-        >
-          <img id="preview-img" src="../assets/images/icon/img.gif" />
-          <input type="file" id="upploadImg" class="d-none" />
-          <h5 class="active-color text-decoration-underline mt-2">
-            اضافة صورة
-          </h5>
-          <div id="preview-container" class="text-center mt-2 d-none">
-            <span id="remove-img"
-              ><svg
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="15.4284"
-                  cy="15.1905"
-                  r="14.2071"
-                  fill="#E63050"
-                  stroke="white"
-                  stroke-width="1.3"
-                />
-                <path
-                  d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </div>
-        </label>
-
-        <div class="input-custom">
-          <div class="input-wrapper">
-            <label>عنوان النص</label>
-            <input class="w-100" type="text" />
-          </div>
-        </div>
-        <div class="input-wrapper p-1">
-          <label> النص</label>
-          <textarea
-            class="w-100 p-2"
-            type="text"
-            placeholder="اكتب هنا"
-            style="height: 8rem"
-          ></textarea>
-        </div>
-
-        <div class="w-100 text-center">
-          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
-            اضافة
-          </button>
-        </div>
-      </form>
-    </div>
-    <!--edit  introduce user-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="edite-introduce-user"
+      id="add-new-rule"
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
-      <form class="d-flex flex-column gap-4 justify-content-center p-4">
-        <div class="p-2 border-bottom d-flex justify-content-center">
-          <h4 class="fw-bold">تعديل الصفحة</h4>
-        </div>
-        <label
-          class="select-user-img m-auto text-center position-relative"
-          for="upploadImg"
-        >
-          <img
-            src="../assets/images/blue-print-car.png"
-            alt="car bue pring"
-            class="rounded-circle position-relative ms-2"
-            width="40"
-            height="40"
-          />
-
-          <div class="p-2 position-absolute start-0 end-50 top-0">
-            <i
-              class="fa-solid fa-circle-xmark fa-xl"
-              style="color: #e63050; cursor: pointer"
-            ></i>
-          </div>
-
-          <h5
-            class="active-color text-decoration-underline mt-2"
-            style="cursor: pointer; font-size: 17px"
-          >
-            تعديل الصورة
-          </h5>
-        </label>
-
-        <div class="input-custom">
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة شرط جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
           <div class="input-wrapper">
-            <label>عنوان النص</label>
+            <label>عنوان النص بالعربي</label>
             <input class="w-100" type="text" />
           </div>
-        </div>
-        <div class="input-wrapper p-1">
-          <label> النص</label>
-          <textarea
-            class="w-100 p-2"
-            type="text"
-            placeholder="اكتب هنا"
-            style="height: 8rem"
-          ></textarea>
-        </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
 
-        <div class="w-100 text-center">
-          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
-            حفظ
-          </button>
-        </div>
-      </form>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-    <!--edit  introduce Market-->
+    <!--Edit Rule-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
-      id="edite-introduce-trader"
+      id="edit-rule"
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
-      <form class="d-flex flex-column gap-4 justify-content-center p-4">
-        <div class="p-2 border-bottom d-flex justify-content-center">
-          <h4 class="fw-bold">تعديل الصفحة</h4>
-        </div>
-        <label
-          class="select-user-img m-auto text-center position-relative"
-          for="upploadImg"
-        >
-          <img
-            src="../assets/images/blue-print-car.png"
-            alt="car bue pring"
-            class="rounded-circle position-relative ms-2"
-            width="40"
-            height="40"
-          />
-
-          <div class="p-2 position-absolute start-0 end-50 top-0">
-            <i
-              class="fa-solid fa-circle-xmark fa-xl"
-              style="color: #e63050; cursor: pointer"
-            ></i>
-          </div>
-
-          <h5
-            class="active-color text-decoration-underline mt-2"
-            style="cursor: pointer; font-size: 17px"
-          >
-            تعديل الصورة
-          </h5>
-        </label>
-
-        <div class="input-custom">
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الشرط
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
           <div class="input-wrapper">
-            <label>عنوان النص</label>
+            <label>عنوان النص بالعربي</label>
             <input class="w-100" type="text" />
           </div>
-        </div>
-        <div class="input-wrapper p-1">
-          <label> النص</label>
-          <textarea
-            class="w-100 p-2"
-            type="text"
-            placeholder="اكتب هنا"
-            style="height: 8rem"
-          ></textarea>
-        </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
 
-        <div class="w-100 text-center">
-          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
-            حفظ
-          </button>
-        </div>
-      </form>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
+    <!-- *Help userApp Tab |Parent Tab 2|-->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-question"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">اضافة سؤال</h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
 
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-question"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Support Questions=>child tab 3 -> |Parent Tab 2|-->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-support-question"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة سؤال جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit support question -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-support-question"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
