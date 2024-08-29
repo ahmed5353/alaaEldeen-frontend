@@ -1302,3 +1302,9 @@ input[type='radio']:checked:before {
 .accept:hover {
   background-color: #3ca639;
 }
+
+.header {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}

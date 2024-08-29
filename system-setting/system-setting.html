@@ -1,0 +1,2665 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
+
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div>
+      <div class="row m-0">
+        <!--   aside section-->
+        <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
+              <a class="  " aria-current="page" href="#">
+                <img src="../assets/images/logo.svg" />
+              </a>
+            </div>
+            <ul class="nav flex-column p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/Dashboard.html">
+                  <img src="../assets/images/icon/grid.svg" alt="" />
+                  لوحة التحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sub-officials/sub-officials.html">
+                  <img src="../assets/images/icon/users 1.svg" alt="" />
+
+                  المسؤولين الفرعيين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Users.html">
+                  <img src="../assets/images/icon/chart-user 1.svg" alt="" />
+
+                  المستخدمين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mainSections.html    ">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  الاقسام الرئيسية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subCategories.html">
+                  <img src="../assets/images/icon/folder 1.svg" alt="" />
+
+                  الاقسام الفرعية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productAttributes.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  سمات المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countries.html">
+                  <img src="../assets/images/icon/marker 1.svg" alt="" />
+
+                  البلاد
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/markets/markets.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المتاجر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
+                  <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
+
+                  نقاط التوزيع
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/delivery-desks/delivery-desks.html">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مناديب التوصيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/storeHouses/storeHouses.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المخازن
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/products/products.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+                  المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
+
+                  الطلبات<span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/returns/returns.html">
+                  <img src="../assets/images/icon/restock 1.svg" alt="" />
+
+                  المرتجعات<span class="badge bg-danger rounded-circle">3</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  طلبات التعديل على الاوراق<span
+                    class="badge bg-danger rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  المتاجر المعلفة
+                  <span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  نقاط التوزيع المعلفة<span
+                    class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مندوبين التوصيل المعلقين<span
+                    class="badge bg-danger rounded-circle"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/messages-question 1.svg"
+                    alt=""
+                  />
+
+                  الاستفسارات على المنتجات
+                  <span class="badge bg-danger rounded-circle">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
+
+                  اكواد الخصم<span class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="/system-setting/system-setting.html"
+                >
+                  <img src="../assets/images/icon/settings 1.svg" alt="" />
+
+                  اعدادات النظام
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--  end aside section-->
+        <main
+          class="col-md-9 ms-sm-auto col-lg-10 p-0"
+          style="background-color: #f7f9fb"
+        >
+          <!--header navbar-->
+          <header class="navbar">
+            <div class="container justify-content-between">
+              <button class="btn btn-logout d-flex d-none d-md-block">
+                <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
+              </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="d-flex">
+                <a class="mx-3" href="/notifications/notifications.html">
+                  <img src="../assets/images/icon/notific.svg" />
+                </a>
+                <a class="d-flex" href="/personal-file/personal-file.html">
+                  <img
+                    src="../assets/images/avatar.png"
+                    alt="User Avatar"
+                    class="rounded-circle ms-2"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <h5 class="navbar-text text-white">
+                      Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
+                    </h5>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!-- confirm delete -->
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="deleteModal"
+            tabindex="-1"
+            aria-labelledby="deleteModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="max-width: 24rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 20rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img
+                    src="../assets/images/icon/Delete gif.gif"
+                    width="120"
+                    height="120"
+                    alt=""
+                  />
+                  <div class="message">هل أنت متأكد من الحذف</div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn-delete">حذف</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--            breadcrumb -->
+          <div class="border-bottom bg-white">
+            <nav
+              dir="rtl"
+              class="breadcrumb-nav container"
+              aria-label="breadcrumb"
+            >
+              <a href="#">لوحة التحكم </a>
+              /
+              <span class="breadcrumb-item active" aria-current="page">
+                اعدادات النظام
+              </span>
+            </nav>
+          </div>
+
+          <!-- Main page -->
+          <div class="container bg-white pb-1">
+            <h2 class="title-page mb-0 fw-bold">اعدادات النظام</h2>
+            <div
+              class="d-flex gap-2 mb-4 text-nowrap"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <button
+                class="btn tab-btn tab-btn-small active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                اعدادات عامة
+              </button>
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-rules-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-rules"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-rules"
+                aria-selected="false"
+              >
+                الشروط والاحكام
+              </button>
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-contact"
+                aria-selected="false"
+              >
+                روابط التواصل
+              </button>
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-introduce-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-introduce"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-introduce"
+                aria-selected="false"
+              >
+                الصفحات التعريفية
+              </button>
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-slides-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-slides"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-slides"
+                aria-selected="false"
+              >
+                صورة السلايدر
+              </button>
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-ads-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-ads"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-ads"
+                aria-selected="false"
+              >
+                الصورة الاعلانية
+              </button>
+
+              <button
+                class="btn tab-btn tab-btn-small"
+                id="v-pills-links-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-links"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-links"
+                aria-selected="false"
+              >
+                روابط التطبيقات
+              </button>
+            </div>
+          </div>
+
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- public settings -->
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-home"
+              role="tabpanel"
+              aria-labelledby="v-pills-home-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="container">
+                <div
+                  class="d-flex gap-2 my-4"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    class="btn tab-btn active"
+                    id="v-pills-publicsetting-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-publicsetting"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-publicsetting"
+                    aria-selected="true"
+                  >
+                    اعدادات عامة
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profile"
+                    aria-selected="false"
+                  >
+                    روابط التواصل
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-banks-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-banks"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-banks"
+                    aria-selected="false"
+                  >
+                    اعدادات الحسابات البنكية
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-wallets-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-wallets"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-wallets"
+                    aria-selected="false"
+                  >
+                    اعدادات المحافظ الالكترونية
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-coins-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-coins"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-coins"
+                    aria-selected="false"
+                  >
+                    اعدادات العملات وسعر الصرف
+                  </button>
+                </div>
+              </div>
+              <!-- tab content public setting -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-publicsetting"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-publicsetting-tab"
+                  tabindex="0"
+                >
+                  <div>
+                    <div class="container pt-3 pe-4">
+                      <div class="d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-3">
+                          <div
+                            class="bg-white p-4 rounded-3"
+                            style="width: 33%"
+                          >
+                            <p class="fs-6 fw-bold">
+                              الحد الادنى لقيمة الطلب في الشحن المجاني
+                            </p>
+                            <div class="input-custom position-relative">
+                              <div class="input-wrapper">
+                                <label> القيمة</label>
+                                <input class="w-100" type="text" />
+                              </div>
+                              <span
+                                style="
+                                  position: absolute;
+                                  left: 12px;
+                                  top: 0.6rem;
+                                "
+                                >ريال يمني</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="bg-white p-4 rounded-3"
+                            style="width: 33%"
+                          >
+                            <p class="fs-6 fw-bold">
+                              العنوان الافتراضي للمستخدم
+                            </p>
+                            <div class="input-custom position-relative">
+                              <div class="input-wrapper">
+                                <label> اكتب العنوان</label>
+                                <input class="w-100" type="text" />
+                              </div>
+                              <span
+                                style="
+                                  position: absolute;
+                                  left: 12px;
+                                  top: 0.6rem;
+                                "
+                                ><img
+                                  src="/assets/images/icon/map-icon.svg"
+                                  alt="map"
+                              /></span>
+                            </div>
+                          </div>
+                          <div
+                            class="bg-white p-4 rounded-3"
+                            style="width: 33%"
+                          >
+                            <div class="position-relative flex-grow-1">
+                              <p class="fs-6 fw-bold">مدة الفلاش سيل</p>
+                              <div
+                                class="position-relative d-flex align-items-center"
+                              >
+                                <div class="input-wrapper flex-grow-1">
+                                  <label>حدد المدة</label>
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <div class="pointer-event time-select">
+                                  <div class="dropdown">
+                                    <div
+                                      class="dropdownIcon"
+                                      style="cursor: pointer"
+                                    >
+                                      <span class="selectedValue">اختر</span>
+                                      <i
+                                        class="fa-solid fa-chevron-down active-color"
+                                      ></i>
+                                    </div>
+                                    <ul class="dropdown-menu customDropdown">
+                                      <li>
+                                        <a
+                                          class="dropdown-item"
+                                          href="#"
+                                          data-value="يوم"
+                                          >يوم</a
+                                        >
+                                      </li>
+                                      <li>
+                                        <a
+                                          class="dropdown-item"
+                                          href="#"
+                                          data-value="شهر"
+                                          >شهر</a
+                                        >
+                                      </li>
+                                      <li>
+                                        <a
+                                          class="dropdown-item"
+                                          href="#"
+                                          data-value="سنة"
+                                          >سنة</a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white p-4 rounded-3"
+                          style="width: 66.4%"
+                        >
+                          <p class="fs-6 fw-bold">
+                            عدد القطع للمنتجات التي عند الوصول اليها يتم تحويل
+                            المنتج الى المنتهية
+                          </p>
+                          <div class="input-custom">
+                            <div class="input-wrapper">
+                              <label> عدد القطع</label>
+                              <input class="w-100" type="text" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-3">
+                          <h5 class="header">مدة انتظار الطلبات</h5>
+
+                          <div class="d-flex gap-2">
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="position-relative flex-grow-1">
+                                <p class="fs-6 fw-bold">
+                                  وقت انتظار الطلب لدى مندوب التوصيل
+                                </p>
+                                <div
+                                  class="position-relative d-flex align-items-center"
+                                >
+                                  <div class="input-wrapper flex-grow-1">
+                                    <label>حدد المدة</label>
+                                    <input class="w-100" type="text" />
+                                  </div>
+                                  <div class="pointer-event time-select">
+                                    <div class="dropdown">
+                                      <div
+                                        class="dropdownIcon"
+                                        style="cursor: pointer"
+                                      >
+                                        <span class="selectedValue">اختر</span>
+                                        <i
+                                          class="fa-solid fa-chevron-down active-color"
+                                        ></i>
+                                      </div>
+                                      <ul class="dropdown-menu customDropdown">
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="يوم"
+                                            >يوم</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="شهر"
+                                            >شهر</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="سنة"
+                                            >سنة</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="position-relative flex-grow-1">
+                                <p class="fs-6 fw-bold">
+                                  وقت انتظار الطلب لدى المتجر
+                                </p>
+                                <div
+                                  class="position-relative d-flex align-items-center"
+                                >
+                                  <div class="input-wrapper flex-grow-1">
+                                    <label>حدد المدة</label>
+                                    <input class="w-100" type="text" />
+                                  </div>
+                                  <div class="pointer-event time-select">
+                                    <div class="dropdown">
+                                      <div
+                                        class="dropdownIcon"
+                                        style="cursor: pointer"
+                                      >
+                                        <span class="selectedValue">اختر</span>
+                                        <i
+                                          class="fa-solid fa-chevron-down active-color"
+                                        ></i>
+                                      </div>
+                                      <ul class="dropdown-menu customDropdown">
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="يوم"
+                                            >يوم</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="شهر"
+                                            >شهر</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="سنة"
+                                            >سنة</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="position-relative flex-grow-1">
+                                <p class="fs-6 fw-bold">
+                                  وقت انتظار الطلب لدى نقطة التوزيع
+                                </p>
+                                <div
+                                  class="position-relative d-flex align-items-center"
+                                >
+                                  <div class="input-wrapper flex-grow-1">
+                                    <label>حدد المدة</label>
+                                    <input class="w-100" type="text" />
+                                  </div>
+                                  <div class="pointer-event time-select">
+                                    <div class="dropdown">
+                                      <div
+                                        class="dropdownIcon"
+                                        style="cursor: pointer"
+                                      >
+                                        <span class="selectedValue">اختر</span>
+                                        <i
+                                          class="fa-solid fa-chevron-down active-color"
+                                        ></i>
+                                      </div>
+                                      <ul class="dropdown-menu customDropdown">
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="يوم"
+                                            >يوم</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="شهر"
+                                            >شهر</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            data-value="سنة"
+                                            >سنة</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex gap-2 mt-1">
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <p class="fs-6 fw-bold">سعر الكيلو متر</p>
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label> حدد السعر</label>
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >ريال يمني</span
+                                >
+                              </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-3 flex-grow-1">
+                              <p class="fs-6 fw-bold">
+                                نطاق البحث عن كباتن قريبة
+                              </p>
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label> حدد النطاق</label>
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >KM</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-3">
+                          <h5 class="header">نسب التوصيل - الطريقة 1</h5>
+
+                          <div class="d-flex gap-2">
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label>
+                                    نسبة التوصيل للكابتن في قيمة التوصيل</label
+                                  >
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >%</span
+                                >
+                              </div>
+                            </div>
+
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label>
+                                    نسبة علاء الدين في قيمة التوصيل</label
+                                  >
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >%</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-3">
+                          <h5 class="header">نسب التوصيل - الطريقة 2</h5>
+
+                          <div class="d-flex gap-2">
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label>
+                                    نسبة التوصيل للكابتن في قيمة التوصيل</label
+                                  >
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >%</span
+                                >
+                              </div>
+                            </div>
+
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label>
+                                    نسبة علاء الدين في قيمة التوصيل</label
+                                  >
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >%</span
+                                >
+                              </div>
+                            </div>
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label>
+                                    نسبة نقطة التوزيع في قيمة التوصيل</label
+                                  >
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >%</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-3">
+                          <h5 class="header">اعدادات النقاط</h5>
+
+                          <div class="d-flex gap-2">
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom position-relative">
+                                <div class="input-wrapper">
+                                  <label> قيمة مبلغ الشراء</label>
+                                  <input class="w-100" type="text" />
+                                </div>
+                                <span
+                                  style="
+                                    position: absolute;
+                                    left: 12px;
+                                    top: 0.6rem;
+                                  "
+                                  >ريال يمني</span
+                                >
+                              </div>
+                            </div>
+
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom input-wrapper">
+                                <label> عدد النقاط</label>
+                                <input class="w-100" type="text" />
+                              </div>
+                            </div>
+                            <div
+                              class="bg-white p-4 rounded-3"
+                              style="width: 33%"
+                            >
+                              <div class="input-custom input-wrapper">
+                                <label>
+                                  الحد الادنى للنقاط لتحويلها للمحفظة</label
+                                >
+                                <input class="w-100" type="text" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="w-100 text-right my-3">
+                        <button
+                          type="submit"
+                          class="btn btn-add w-auto m-auto px-5 mt-2"
+                        >
+                          حفظ
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Social Links -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-profile"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                  tabindex="0"
+                >
+                  <div class="container">
+                    <div
+                      class="bg-white py-4 px-5 rounded-3 d-flex flex-column gap-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/facebook.png"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الفيسبوك</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/instalgram.svg"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الانستجرام</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img src="/assets/images/icon/X-icon.svg" alt="X" />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط اكس</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/youtube.svg"
+                            alt="youtube"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط اليوتيوب</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/whatapp.svg"
+                            alt="whatsapp"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الواتساب</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/telegram.svg"
+                            alt="whatsapp"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط تليجرام</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 mt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-add w-auto m-auto px-5 mt-2"
+                      >
+                        حفظ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!--Bank setting -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-banks"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-banks-tab"
+                  tabindex="0"
+                >
+                  <!-- banks account -->
+                  <div class="container">
+                    <div
+                      class="d-flex justify-content-between align-content-center"
+                    >
+                      <div class="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="ابحث باسم العملة او اسم الحساب ..."
+                        />
+                      </div>
+                      <button
+                        class="btn btn-add"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasAddProvince"
+                        aria-controls="offcanvasAddProvince"
+                      >
+                        <img
+                          width="30"
+                          height="30"
+                          src="../assets/images/Add.gif"
+                        />
+                        اضافة حساب جديد
+                      </button>
+                    </div>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">اسم العملة بالعربي</th>
+                                <th class="table-head">الحساب البنكي</th>
+                                <th class="table-head">رقم الحساب</th>
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>ريال يمني جديد</td>
+                                <td>البنك التجاري اليمني</td>
+                                <td>2343452</td>
+                                <td></td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <!-- NOTE: i am here -->
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-province"
+                                    aria-controls="edit-province"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!--Wallets setting -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-wallets"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-wallets-tab"
+                  tabindex="0"
+                >
+                  <!-- banks account -->
+                  <div class="container text-end">
+                    <div class="search-input" style="width: 33.3%">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="ابحث باسم المحفظة ...."
+                      />
+                    </div>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">اسم المحافظة</th>
+                                <th class="table-head">رقم المحفظة</th>
+
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>فلوسك</td>
+                                <td>2343452</td>
+                                <td></td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <!-- NOTE: i am here -->
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-wallet"
+                                    aria-controls="edit-wallet"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!--Coins setting -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-coins"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-coins-tab"
+                  tabindex="0"
+                >
+                  <!-- coins account -->
+                  <div class="container">
+                    <div
+                      class="d-flex justify-content-between align-content-center"
+                    >
+                      <div class="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="ابحث باسم العملة ..."
+                        />
+                      </div>
+                      <button
+                        class="btn btn-add"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasAddNewCoin"
+                        aria-controls="offcanvasAddNewCoin"
+                      >
+                        <img
+                          width="30"
+                          height="30"
+                          src="../assets/images/Add.gif"
+                        />
+                        اضافة عملة جديدة
+                      </button>
+                    </div>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">اسم العملة</th>
+                                <th class="table-head">سعر الصرف</th>
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>ريال يمني جديد</td>
+                                <td>20 ريال يمني قديم</td>
+
+                                <td></td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <!-- NOTE: i am here -->
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-coins"
+                                    aria-controls="edit-coins"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  Rules -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-rules"
+              role="tabpanel"
+              aria-labelledby="v-pills-rules-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="container">
+                <div
+                  class="d-flex gap-2 my-4"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    class="btn tab-btn active"
+                    id="v-pills-user-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-user"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-user"
+                    aria-selected="true"
+                  >
+                    المستخدم
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profile"
+                    aria-selected="false"
+                  >
+                    المتجر
+                  </button>
+                </div>
+              </div>
+              <!-- products -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- Countries -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-user"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-user-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasWithBothOptions"
+                      aria-controls="offcanvasWithBothOptions"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/icon/Add.gif"
+                      />
+                      اضافة شرط جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>عنوان النص</th>
+                                <th>النص</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>حماية البيانات</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <!-- NOTE: i am here -->
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edite-section"
+                                    aria-controls="edite-section"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn active-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- provinces -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-profile"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-profile-tab"
+                  tabindex="0"
+                >
+                  <div class="container">
+                    <div style="text-align: left">
+                      <button
+                        class="btn btn-add"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasAddProvince"
+                        aria-controls="offcanvasAddProvince"
+                      >
+                        <img
+                          width="30"
+                          height="30"
+                          src="../assets/images/icon/Add.gif"
+                        />
+                        اضافة شرط جديد
+                      </button>
+                    </div>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>عنوان النص</th>
+                                <th>النص</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>حماية البيانات</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <!-- NOTE: i am here -->
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-province"
+                                    aria-controls="edit-province"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn active-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- introduce pages page -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-introduce"
+              role="tabpanel"
+              aria-labelledby="v-pills-introduce-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="container">
+                <div
+                  class="d-flex gap-2 my-4"
+                  id="v-pills-tab2"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    class="btn tab-btn active"
+                    id="v-pills-userIntroduce-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-userIntroduce"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-userIntroduce"
+                    aria-selected="true"
+                  >
+                    المستخدم
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-market-introduce-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-market-introduce"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-market-introduce"
+                    aria-selected="false"
+                  >
+                    المتجر
+                  </button>
+                </div>
+              </div>
+
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- *\user  -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-userIntroduce"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-userIntroduce-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasAddNewPage"
+                      aria-controls="offcanvasAddNewPage"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/icon/Add.gif"
+                      />
+                      اضافة صفحة جديدة
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>الصورة</th>
+                                <th>عنوان النص</th>
+                                <th>النص</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <img
+                                    src="/assets/images/prodImage1.png"
+                                    alt="photo"
+                                    width="42"
+                                    height="42"
+                                  />
+                                </td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edite-introduce-user"
+                                    aria-controls="edite-introduce-user"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn active-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                  <!-- user -->
+                </div>
+                <!-- *\\\\\\\\\\\\\\\\\\\\\ MARKET*/////////////////////////////////////////////// -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-market-introduce"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-market-introduce-tab"
+                  tabindex="0"
+                >
+                  <div class="container">
+                    <div style="text-align: left">
+                      <button
+                        class="btn btn-add"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasAddNewPageTrader"
+                        aria-controls="offcanvasAddNewPageTrader"
+                      >
+                        <img
+                          width="30"
+                          height="30"
+                          src="../assets/images/icon/Add.gif"
+                        />
+                        اضافة صفحة جديدة
+                      </button>
+                    </div>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>الصورة</th>
+                                <th>عنوان النص</th>
+                                <th>النص</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <img
+                                    src="/assets/images/blue-print-car.png"
+                                    alt="car photo"
+                                    width="42"
+                                    height="42"
+                                  />
+                                </td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edite-introduce-trader"
+                                    aria-controls="edite-introduce-trader"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn active-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  *Apps Links -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-links"
+              role="tabpanel"
+              aria-labelledby="v-pills-links-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="container">
+                <div
+                  class="d-flex gap-2 my-4"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <button
+                    class="btn tab-btn active"
+                    id="v-pills-userApps-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-userApps"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-userApps"
+                    aria-selected="true"
+                  >
+                    المستخدم
+                  </button>
+                  <button
+                    class="btn tab-btn"
+                    id="v-pills-marketApps-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-marketApps"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-marketApps"
+                    aria-selected="false"
+                  >
+                    المتجر
+                  </button>
+                </div>
+              </div>
+
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- user text -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-userApps"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-userApps-tab"
+                  tabindex="0"
+                >
+                  <div class="container">
+                    <div
+                      class="bg-white py-4 px-5 rounded-3 d-flex flex-column gap-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/play-store.svg"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الاندوريد</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/app-store.svg"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الايفون</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 mt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-add w-auto m-auto px-5 mt-2"
+                      >
+                        حفظ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- market text -->
+                <div
+                  class="tab-pane fade"
+                  id="v-pills-marketApps"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-marketApps-tab"
+                  tabindex="0"
+                >
+                  <div class="container">
+                    <div
+                      class="bg-white py-4 px-5 rounded-3 d-flex flex-column gap-3"
+                    >
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/play-store.svg"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الاندوريد</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-2">
+                        <div>
+                          <img
+                            src="/assets/images/icon/app-store.svg"
+                            alt="facebook"
+                          />
+                        </div>
+
+                        <div class="input-wrapper w-50">
+                          <label>رابط الايفون</label>
+                          <input
+                            class="w-100"
+                            type="text"
+                            style="height: 3rem"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 mt-3">
+                      <button
+                        type="submit"
+                        class="btn btn-add w-auto m-auto px-5 mt-2"
+                      >
+                        حفظ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- *Public Setting -->
+    <!--edit  banvk account-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-province"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الحساب
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper select">
+            <label>اسم العملة بالعربي</label>
+            <select style="position: relative">
+              <option value="">الجميع</option>
+              <option value="1">مطبع</option>
+              <option value="2">تجار</option>
+              <option value="3">مس��ول</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label>الحساب البنكي بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>الحساب البنكي بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>رقم الحساب</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--edit wallet-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-wallet"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل رقم المحفظة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <input class="w-100" type="text" value="فلوسك" disabled />
+          </div>
+
+          <div class="input-wrapper">
+            <label>رقم الحساب</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--edit coins-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-coins"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل العملة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>اسم العملة بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>اسم العملة بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-custom position-relative">
+            <div class="input-wrapper">
+              <label> سعر الصرف</label>
+              <input class="w-100" type="text" />
+            </div>
+            <span style="position: absolute; left: 12px; top: 0.6rem"
+              >ريال يمني قديم</span
+            >
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--add coins-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasAddNewCoin"
+      aria-labelledby="offcanvasAddNewCoinLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة عملة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>اسم العملة بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>اسم العملة بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-custom position-relative">
+            <div class="input-wrapper">
+              <label> سعر الصرف</label>
+              <input class="w-100" type="text" />
+            </div>
+            <span style="position: absolute; left: 12px; top: 0.6rem"
+              >ريال يمني قديم</span
+            >
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Introduction Pages -->
+    <!--Add New page user-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasAddNewPage"
+      aria-labelledby="offcanvasAddNewPageLabel"
+    >
+      <form class="d-flex flex-column gap-4 justify-content-center p-4">
+        <div class="p-2 border-bottom d-flex justify-content-center">
+          <h4 class="fw-bold">اضافة صفحة جديدة</h4>
+        </div>
+        <label
+          class="select-img m-auto text-center position-relative"
+          for="upploadImg"
+        >
+          <img id="preview-img" src="../assets/images/icon/img.gif" />
+          <input type="file" id="upploadImg" class="d-none" />
+          <h5 class="active-color text-decoration-underline mt-2">
+            اضافة صورة
+          </h5>
+          <div id="preview-container" class="text-center mt-2 d-none">
+            <span id="remove-img"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="15.4284"
+                  cy="15.1905"
+                  r="14.2071"
+                  fill="#E63050"
+                  stroke="white"
+                  stroke-width="1.3"
+                />
+                <path
+                  d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </label>
+
+        <div class="input-custom">
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+        </div>
+        <div class="input-wrapper p-1">
+          <label> النص</label>
+          <textarea
+            class="w-100 p-2"
+            type="text"
+            placeholder="اكتب هنا"
+            style="height: 8rem"
+          ></textarea>
+        </div>
+
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
+            اضافة
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--Add New page Market-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasAddNewPageTrader"
+      aria-labelledby="offcanvasAddNewPageTraderLabel"
+    >
+      <form class="d-flex flex-column gap-4 justify-content-center p-4">
+        <div class="p-2 border-bottom d-flex justify-content-center">
+          <h4 class="fw-bold">اضافة صفحة جديدة</h4>
+        </div>
+        <label
+          class="select-img m-auto text-center position-relative"
+          for="upploadImg"
+        >
+          <img id="preview-img" src="../assets/images/icon/img.gif" />
+          <input type="file" id="upploadImg" class="d-none" />
+          <h5 class="active-color text-decoration-underline mt-2">
+            اضافة صورة
+          </h5>
+          <div id="preview-container" class="text-center mt-2 d-none">
+            <span id="remove-img"
+              ><svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="15.4284"
+                  cy="15.1905"
+                  r="14.2071"
+                  fill="#E63050"
+                  stroke="white"
+                  stroke-width="1.3"
+                />
+                <path
+                  d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </div>
+        </label>
+
+        <div class="input-custom">
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+        </div>
+        <div class="input-wrapper p-1">
+          <label> النص</label>
+          <textarea
+            class="w-100 p-2"
+            type="text"
+            placeholder="اكتب هنا"
+            style="height: 8rem"
+          ></textarea>
+        </div>
+
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
+            اضافة
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--edit  introduce user-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edite-introduce-user"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <form class="d-flex flex-column gap-4 justify-content-center p-4">
+        <div class="p-2 border-bottom d-flex justify-content-center">
+          <h4 class="fw-bold">تعديل الصفحة</h4>
+        </div>
+        <label
+          class="select-user-img m-auto text-center position-relative"
+          for="upploadImg"
+        >
+          <img
+            src="../assets/images/blue-print-car.png"
+            alt="car bue pring"
+            class="rounded-circle position-relative ms-2"
+            width="40"
+            height="40"
+          />
+
+          <div class="p-2 position-absolute start-0 end-50 top-0">
+            <i
+              class="fa-solid fa-circle-xmark fa-xl"
+              style="color: #e63050; cursor: pointer"
+            ></i>
+          </div>
+
+          <h5
+            class="active-color text-decoration-underline mt-2"
+            style="cursor: pointer; font-size: 17px"
+          >
+            تعديل الصورة
+          </h5>
+        </label>
+
+        <div class="input-custom">
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+        </div>
+        <div class="input-wrapper p-1">
+          <label> النص</label>
+          <textarea
+            class="w-100 p-2"
+            type="text"
+            placeholder="اكتب هنا"
+            style="height: 8rem"
+          ></textarea>
+        </div>
+
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
+            حفظ
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--edit  introduce Market-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edite-introduce-trader"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <form class="d-flex flex-column gap-4 justify-content-center p-4">
+        <div class="p-2 border-bottom d-flex justify-content-center">
+          <h4 class="fw-bold">تعديل الصفحة</h4>
+        </div>
+        <label
+          class="select-user-img m-auto text-center position-relative"
+          for="upploadImg"
+        >
+          <img
+            src="../assets/images/blue-print-car.png"
+            alt="car bue pring"
+            class="rounded-circle position-relative ms-2"
+            width="40"
+            height="40"
+          />
+
+          <div class="p-2 position-absolute start-0 end-50 top-0">
+            <i
+              class="fa-solid fa-circle-xmark fa-xl"
+              style="color: #e63050; cursor: pointer"
+            ></i>
+          </div>
+
+          <h5
+            class="active-color text-decoration-underline mt-2"
+            style="cursor: pointer; font-size: 17px"
+          >
+            تعديل الصورة
+          </h5>
+        </label>
+
+        <div class="input-custom">
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+        </div>
+        <div class="input-wrapper p-1">
+          <label> النص</label>
+          <textarea
+            class="w-100 p-2"
+            type="text"
+            placeholder="اكتب هنا"
+            style="height: 8rem"
+          ></textarea>
+        </div>
+
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto mt-2 px-5">
+            حفظ
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: ' MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: false,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+
+      //     remove images
+      $(document).ready(function () {
+        $('#upploadImg').change(function (e) {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $('#preview-img').attr('src', e.target.result);
+              $('#preview-container').removeClass('d-none');
+              $('#remove-img').show();
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        $('#remove-img').click(function () {
+          $('#preview-img').attr('src', '../assets/images/icon/img.gif');
+          $('#preview-container').addClass('d-none');
+          $('#remove-img').hide();
+          $('#upploadImg').val('');
+        });
+      });
+      $(document).ready(function () {
+        $('#toggleSidebar').on('click', function () {
+          $('#sidebar').toggleClass('show');
+          $('#overlay').toggleClass('show');
+        });
+        $('#overlay').on('click', function () {
+          $('#sidebar').removeClass('show');
+          $('#overlay').removeClass('show');
+        });
+      });
+      $(document).ready(function () {
+        $('.dropdownIcon').on('click', function () {
+          var $dropdownMenu = $(this).siblings('.customDropdown');
+          $('.customDropdown').not($dropdownMenu).hide(); // Hide other dropdowns
+          $dropdownMenu.toggle(); // Toggle the clicked dropdown
+        });
+
+        // Close the dropdown if clicked outside
+        $(document).on('click', function (event) {
+          if (!$(event.target).closest('.dropdown').length) {
+            $('.customDropdown').hide();
+          }
+        });
+
+        // Handle item selection
+        $('.dropdown-item').on('click', function (e) {
+          e.preventDefault();
+          var selectedValue = $(this).data('value');
+          var $dropdown = $(this).closest('.dropdown');
+          $dropdown.find('.selectedValue').text(selectedValue); // Update the displayed value
+          $dropdown.find('.customDropdown').hide(); // Hide the dropdown
+        });
+      });
+    </script>
+  </body>
+</html>
