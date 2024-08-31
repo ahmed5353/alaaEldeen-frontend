@@ -240,11 +240,11 @@
               </button>
               <div class="d-flex">
                 <a class="mx-3" href="/notifications/notifications.html">
-                  <img src="assets/images/icon/notific.svg" />
+                  <img src="../assets/images/icon/notific.svg" />
                 </a>
                 <a class="d-flex" href="/personal-file/personal-file.html">
                   <img
-                    src="assets/images/avatar.png"
+                    src="../assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -474,7 +474,7 @@
                             <th>اسم المتجر</th>
                             <th>اسم المسئول</th>
                             <th>رقم الموبايل</th>
-                            <th>البريد الاكتروني</th>
+                            <th>البريد الالكتروني</th>
                             <th>البلد</th>
                             <th>العملة</th>
                             <th>التقييم الاجمالي</th>
@@ -565,10 +565,8 @@
                 </div>
               </div>
             </div>
-
-            <!--  traders' products -->
             <div
-              class="tab-pane fade"
+              class="tab-pane fade show"
               id="v-pills-profile"
               role="tabpanel"
               aria-labelledby="v-pills-profile-tab"
@@ -584,8 +582,27 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="ابحث بأسم المنتج او اسم التاجر"
+                        placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
                       />
+                    </div>
+                    <!-- DropDowm Lists -->
+                    <div class="input-wrapper select">
+                      <label>البلد</label>
+                      <select class="">
+                        <option value="">اختر</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لزريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper select">
+                      <label>العملة</label>
+                      <select class="">
+                        <option value="">اختر</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لزريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
                     </div>
 
                     <span class="daterange-input">
@@ -599,30 +616,162 @@
                     </span>
                   </div>
                 </div>
-                <!-- sheet here -->
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex flex-column">
-                    <div class="mt-4 d-flex gap-2">
-                      <!-- DropDowm Lists -->
-                      <div class="input-wrapper select">
-                        <label>القسم الرئيسي </label>
-                        <select class="">
-                          <option value="">اختر</option>
-                          <option value="1">لوريم</option>
-                          <option value="2">لزريم</option>
-                          <option value="3">لوريم</option>
-                        </select>
-                      </div>
-                      <div class="input-wrapper select">
-                        <label>القسم الفرعي </label>
-                        <select class="">
-                          <option value="">اختر</option>
-                          <option value="1">لوريم</option>
-                          <option value="2">لزريم</option>
-                          <option value="3">لوريم</option>
-                        </select>
-                      </div>
+              </div>
+              <!--tabel-->
+              <div class="container-tabel p-3 py-4">
+                <div class="container">
+                  <div class="table-responsive mb-3">
+                    <div class="p-3 my-2">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>الشعار</th>
+                            <th>اسم نقطة التوزيع</th>
+                            <th>اسم المسئول</th>
+                            <th>رقم الموبايل</th>
+                            <th>البريد الالكتروني</th>
+                            <th>الحد الائتماني</th>
+                            <th>البلد</th>
+                            <th>العملة</th>
+                            <th>التقييم الاجمالي</th>
+                            <th>تاريخ ووقت التعديل</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+
+                            <td>
+                              <img
+                                src="/assets/images/market-logo.png"
+                                alt="market-logo"
+                                width="50"
+                                height="50"
+                                class="rounded"
+                              />
+                            </td>
+                            <td>النور للملابس</td>
+                            <td>Mostafa Mostafa</td>
+                            <td dir="ltr">+201231234213</td>
+                            <td>test@test.com</td>
+                            <td>5000 ريال</td>
+                            <td>اليمن</td>
+                            <td>ريال يمني</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
+                            <td dir="ltr">22/03/2024-8:30 PM</td>
+
+                            <td>
+                              <div class="d-flex gap-2 justify-content-end">
+                                <button
+                                  class="refuse align-self-center"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#alertModal"
+                                >
+                                  X
+                                </button>
+                                <button
+                                  class="accept align-self-center"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#acceptModal"
+                                >
+                                  &#10003;
+                                </button>
+                              </div>
+                            </td>
+                            <td>
+                              <a
+                                class="btn text-info action-btn"
+                                href="/paper-requests/distribution-papers.html"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
+                  </div>
+                  <nav aria-label="Page navigation example   ">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link active" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">القادم</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show"
+              id="v-pills-delegate"
+              role="tabpanel"
+              aria-labelledby="v-pills-delegate-tab"
+              tabindex="0"
+            >
+              <div class="container">
+                <div
+                  class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
+                >
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <div class="search-input">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
+                      />
+                    </div>
+                    <!-- DropDowm Lists -->
+                    <div class="input-wrapper select">
+                      <label>البلد</label>
+                      <select class="">
+                        <option value="">اختر</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لزريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
+                    </div>
+                    <div class="input-wrapper select">
+                      <label>العملة</label>
+                      <select class="">
+                        <option value="">اختر</option>
+                        <option value="1">لوريم</option>
+                        <option value="2">لزريم</option>
+                        <option value="3">لوريم</option>
+                      </select>
+                    </div>
+
+                    <span class="daterange-input">
+                      <img src="../assets/images/icon/calander.svg" />
+                      <input
+                        type="text"
+                        name="daterange"
+                        class="custom-daterangepicker border-0 text-center"
+                      />
+                      <i class="fa-solid fa-chevron-left active-color"></i>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -636,61 +785,73 @@
                           <tr>
                             <th>#</th>
                             <th>الصورة</th>
-                            <th>اسم المنتج</th>
-                            <th>شعار التاجر</th>
-                            <th>اسم التاجر</th>
-                            <th>نوع المعاملة</th>
-                            <th>القسم الرئيسي</th>
-                            <th>القسم الفرعي-1</th>
-                            <th>القسم الفرعي-2</th>
-                            <th>الكمية المتاحة</th>
-                            <th>الخصم</th>
-                            <th>تاريخ انتهاء الخصم</th>
-                            <th>تاريخ ووقت الاضافة</th>
+                            <th>اسم المندوب</th>
+                            <th>رقم الموبايل</th>
+                            <th>البريد الالكتروني</th>
+                            <th>البلد</th>
+                            <th>العملة</th>
+                            <th>الحد الائتماني</th>
+                            <th>التقييم الاجمالي</th>
+                            <th>تاريخ ووقت التعديل</th>
+                            <th></th>
                             <th></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
+
                             <td>
                               <img
-                                src="../assets/images/jacket.png"
-                                class="rounded"
-                                width="65"
-                                height="49"
-                              />
-                            </td>
-                            <td>جاكيت جلد بسوستة</td>
-                            <td>
-                              <img
-                                src="/assets/images/market-logo.png"
+                                src="/assets/images/avatar.png"
                                 alt="market-logo"
                                 width="50"
                                 height="50"
                                 class="rounded"
                               />
                             </td>
-                            <td>النور للملابس</td>
-                            <td>اضافة</td>
-                            <td>ملابس</td>
-                            <td>ملابس رجالي</td>
-                            <td>جواكت رجالي</td>
 
-                            <td>40</td>
-                            <td>يوجد</td>
-                            <td>22/02/2024</td>
+                            <td>Mostafa Mostafa</td>
+                            <td dir="ltr">+201231234213</td>
+                            <td>test@test.com</td>
+                            <td>اليمن</td>
+                            <td>ريال يمني</td>
+                            <td>5000 ريال</td>
+                            <td>
+                              <span>4.5</span>
+                              <img
+                                src="../assets/images/icon/Star 1.svg"
+                                alt="icon"
+                                class="mb-1"
+                              />
+                            </td>
                             <td dir="ltr">22/03/2024-8:30 PM</td>
 
                             <td>
                               <div class="d-flex gap-2 justify-content-end">
-                                <button class="refuse align-self-center">
+                                <button
+                                  class="refuse align-self-center"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#alertModal"
+                                >
                                   X
                                 </button>
-                                <button class="accept align-self-center">
+                                <button
+                                  class="accept align-self-center"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#acceptModal"
+                                >
                                   &#10003;
                                 </button>
                               </div>
+                            </td>
+                            <td>
+                              <a
+                                class="btn text-info action-btn"
+                                href="/paper-requests/delivery-papers.html"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
                             </td>
                           </tr>
                         </tbody>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
+
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
+    <div>
+      <div class="row m-0">
+        <!--   aside section-->
+        <aside id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <div class="nav-item border-bottom pb-3 pt-1 text-center mb-2">
+              <a class="  " aria-current="page" href="#">
+                <img src="../assets/images/logo.svg" />
+              </a>
+            </div>
+            <ul class="nav flex-column p-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/Dashboard.html">
+                  <img src="../assets/images/icon/grid.svg" alt="" />
+                  لوحة التحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sub-officials/sub-officials.html">
+                  <img src="../assets/images/icon/users 1.svg" alt="" />
+
+                  المسؤولين الفرعيين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users/users.html">
+                  <img src="../assets/images/icon/chart-user 1.svg" alt="" />
+
+                  المستخدمين
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mainSections.html    ">
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  الاقسام الرئيسية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/subCategories.html">
+                  <img src="../assets/images/icon/folder 1.svg" alt="" />
+
+                  الاقسام الفرعية
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productAttributes.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+
+                  سمات المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/countries.html">
+                  <img src="../assets/images/icon/marker 1.svg" alt="" />
+
+                  البلاد
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/markets/markets.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المتاجر
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/distribution-points/distribution-points.html"
+                >
+                  <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
+
+                  نقاط التوزيع
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/delivery-desks/delivery-desks.html">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مناديب التوصيل
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/storeHouses/storeHouses.html">
+                  <img src="../assets/images/icon/shop 1.svg" alt="" />
+
+                  المخازن
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/products/products.html">
+                  <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
+                  المنتجات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
+
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/returns/returns.html">
+                  <img src="../assets/images/icon/restock 1.svg" alt="" />
+
+                  المرتجعات<span class="badge bg-danger rounded-circle">3</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="/paper-requests/paper-requests.html"
+                >
+                  <img
+                    src="../assets/images/icon/list-check 1 (1).svg"
+                    alt=""
+                  />
+
+                  طلبات التعديل على الاوراق<span
+                    class="badge bg-danger rounded-circle"
+                    >1</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  المتاجر المعلفة
+                  <span class="badge bg-danger rounded-circle">1</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/clock-time-tracking 1.svg"
+                    alt=""
+                  />
+
+                  نقاط التوزيع المعلفة<span
+                    class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/truck-box 1.svg" alt="" />
+
+                  مندوبين التوصيل المعلقين<span
+                    class="badge bg-danger rounded-circle"
+                    >3</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../assets/images/icon/messages-question 1.svg"
+                    alt=""
+                  />
+
+                  الاستفسارات على المنتجات
+                  <span class="badge bg-danger rounded-circle">2</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
+
+                  اكواد الخصم<span class="badge bg-danger rounded-circle"
+                    >2</span
+                  >
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/system-setting/system-setting.html">
+                  <img src="../assets/images/icon/settings 1.svg" alt="" />
+
+                  اعدادات النظام
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!--  end aside section-->
+        <main
+          class="col-md-9 ms-sm-auto col-lg-10 p-0"
+          style="background-color: #f7f9fb"
+        >
+          <!--header navbar-->
+          <header class="navbar">
+            <div class="container justify-content-between">
+              <button class="btn btn-logout d-flex d-none d-md-block">
+                <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
+              </button>
+              <button class="btn btn-logout d-md-none" id="toggleSidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="d-flex">
+                <a class="mx-3" href="/notifications/notifications.html">
+                  <img src="../assets/images/icon/notific.svg" />
+                </a>
+                <a class="d-flex" href="/personal-file/personal-file.html">
+                  <img
+                    src="../assets/images/avatar.png"
+                    alt="User Avatar"
+                    class="rounded-circle ms-2"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <h5 class="navbar-text text-white">
+                      Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
+                    </h5>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!--            breadcrumb -->
+          <div class="border-bottom bg-white">
+            <nav
+              dir="rtl"
+              class="breadcrumb-nav container"
+              aria-label="breadcrumb"
+            >
+              <a href="#">لوحة التحكم </a>
+              /
+              <a href="#">طلب التعديل على الاوراق</a>
+
+              /
+              <span class="breadcrumb-item active" aria-current="page">
+                تفاصيل اوراق مندوب التوصيل
+              </span>
+            </nav>
+          </div>
+
+          <div class="container bg-white pb-3">
+            <div class="container d-flex jus gap-2">
+              <img
+                src="../assets/images/icon/back.svg"
+                alt="back icon"
+                style="cursor: pointer"
+              />
+              <h2 class="title-page mb-0 fw-bold">
+                تفاصيل اوراق مندوب التوصيل
+              </h2>
+            </div>
+
+            <div class="d-flex gap-3 mb-3 align-items-center">
+              <img
+                src="../assets/images/avatar.png"
+                class="rounded-circle"
+                alt="product"
+                width="77px"
+                height="75px"
+              />
+              <div class="d-flex flex-column text-nowrap">
+                <p class="m-0" style="font-size: 18px">kahled Mkoahmed</p>
+                <span dir="ltr" style="color: #606c7e; text-align: right"
+                  >+2013213131
+                </span>
+              </div>
+            </div>
+
+            <!--NOTE: First Slider  -->
+          </div>
+          <div class="container p-4">
+            <div>
+              <h5 class="fw-bold">رخصة القيادة - الوجه/الظهر</h5>
+
+              <div class="d-flex gap-3">
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <p>الصورة الحالية</p>
+                  <div class="d-flex gap-3">
+                    <img
+                      src="/assets/images/driver-license.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                    <img
+                      src="/assets/images/driver-license.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                  </div>
+                </div>
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <div>
+                    <p>الصورة الجديدة</p>
+                    <div class="d-flex gap-3">
+                      <img
+                        src="/assets/images/driver-license.png"
+                        alt="certificate"
+                        width="111"
+                        height="79"
+                      />
+                      <img
+                        src="/assets/images/driver-license.png"
+                        alt="certificate"
+                        width="111"
+                        height="79"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <h5 class="fw-bold">التأمين</h5>
+
+              <div class="d-flex gap-3">
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <p>الصورة الحالية</p>
+                  <img
+                    src="/assets/images/certificate.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                </div>
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <div>
+                    <p>الصورة الجديدة</p>
+                    <img
+                      src="/assets/images/certificate.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <h5 class="fw-bold">بطاقة الهوية - الوجه/الظهر</h5>
+
+              <div class="d-flex gap-3">
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <p>الصورة الحالية</p>
+                  <div class="d-flex gap-3">
+                    <img
+                      src="/assets/images/personalID.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                    <img
+                      src="/assets/images/personalID.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                  </div>
+                </div>
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <div>
+                    <p>الصورة الجديدة</p>
+                    <div class="d-flex gap-3">
+                      <img
+                        src="/assets/images/personalID.png"
+                        alt="certificate"
+                        width="111"
+                        height="79"
+                      />
+                      <img
+                        src="/assets/images/personalID.png"
+                        alt="certificate"
+                        width="111"
+                        height="79"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <h5 class="fw-bold">رقم لوحة المركبة</h5>
+
+              <div class="d-flex gap-3">
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <p>الصورة الحالية</p>
+                  <img
+                    src="/assets/images/car-number.png"
+                    alt="car-number"
+                    width="111"
+                    height="79"
+                  />
+                </div>
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <div>
+                    <p>الصورة الجديدة</p>
+                    <img
+                      src="/assets/images/car-number.png"
+                      alt="car-number"
+                      width="111"
+                      height="79"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5">
+              <h5 class="fw-bold">اوراق الملكية</h5>
+
+              <div class="d-flex gap-3">
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <p>الصورة الحالية</p>
+                  <img
+                    src="/assets/images/certificate.png"
+                    alt="certificate"
+                    width="111"
+                    height="79"
+                  />
+                </div>
+                <div class="bg-white py-3 px-4 mt-4 trader-papers">
+                  <div>
+                    <p>الصورة الجديدة</p>
+                    <img
+                      src="/assets/images/certificate.png"
+                      alt="certificate"
+                      width="111"
+                      height="79"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
