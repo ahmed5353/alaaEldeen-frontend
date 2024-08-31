@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
+
     <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -14,26 +19,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    /> -->
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <div class="overlay" id="overlay"></div>
-
     <div>
       <div class="row m-0">
         <!--   aside section-->
@@ -144,7 +140,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/returns/returns.html">
+                <a class="nav-link" href="/returns/returns.html">
                   <img src="../assets/images/icon/restock 1.svg" alt="" />
 
                   المرتجعات<span class="badge bg-danger rounded-circle">3</span>
@@ -165,7 +161,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link active"
                   href="/pending markets/pending-markets.html"
                 >
                   <img
@@ -234,22 +230,18 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
           <!--header navbar-->
           <header class="navbar">
-            <div class="container d-flex justify-content-between">
+            <div class="container justify-content-between">
               <button class="btn btn-logout d-flex d-none d-md-block">
                 <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
               </button>
               <button class="btn btn-logout d-md-none" id="toggleSidebar">
                 <i class="fa-solid fa-bars"></i>
               </button>
-
-              <button class="btn btn-logout d-md-none" id="toggleSidebar">
-                <i class="fa-solid fa-bars"></i>
-              </button>
               <div class="d-flex">
-                <a class="mx-3">
+                <a class="mx-3" href="/notifications/notifications.html">
                   <img src="../assets/images/icon/notific.svg" />
                 </a>
-                <a class="d-flex">
+                <a class="d-flex" href="/personal-file/personal-file.html">
                   <img
                     src="../assets/images/avatar.png"
                     alt="User Avatar"
@@ -261,12 +253,162 @@
                     <h5 class="navbar-text text-white">
                       Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
                     </h5>
-                    <span> اخر ظهور - <span>22/03/2024 -08:30 PM</span> </span>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
                   </div>
                 </a>
               </div>
             </div>
           </header>
+
+          <!-- edit password -->
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="edit-password"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <form class="d-flex flex-column gap-4 justify-content-center p-4">
+              <div class="p-2 border-bottom d-flex justify-content-center">
+                <h4 class="fw-bold">تعديل كلمة المرور</h4>
+              </div>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="input-wrapper">
+                  <label>كلمة المرور الجديدة</label>
+                  <div class="form-group position-relative">
+                    <input
+                      type="password"
+                      id="newUserpassword"
+                      class="form-control w-100"
+                    />
+                    <span
+                      class="position-absolute top-50 translate-middle-y me-3"
+                      style="left: 12px"
+                    >
+                      <i
+                        class="fas fa-eye toggle-password w-100"
+                        data-target="#newUserpassword"
+                        style="cursor: pointer"
+                      ></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <label>تأكيد كلمة المرور الجديدة</label>
+                  <div class="form-group position-relative">
+                    <input
+                      type="password"
+                      id="confirmNewUserPassword"
+                      class="form-control w-100"
+                    />
+                    <span
+                      class="position-absolute top-50 translate-middle-y me-3"
+                      style="left: 12px"
+                    >
+                      <i
+                        class="fas fa-eye toggle-password w-100"
+                        data-target="#confirmNewUserPassword"
+                        style="cursor: pointer"
+                      ></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-100 text-center">
+                <button
+                  type="submit"
+                  class="btn btn-add w-auto m-auto mt-2 px-5"
+                >
+                  تأكيد
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="alertModal"
+            tabindex="-1"
+            aria-labelledby="alertModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="max-width: 24rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 20rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img
+                    src="../assets/images/gifs/cancell.gif"
+                    width="120"
+                    height="120"
+                    alt=""
+                  />
+                  <div class="message fw-bold">هل أنت متأكد من الرفض</div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-add px-5 w-75">
+                    تأكيد
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Accept Modal -->
+          <div
+            class="modal fade"
+            id="acceptModal"
+            tabindex="-1"
+            aria-labelledby="acceptModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="max-width: 24rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 20rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img
+                    src="../assets/images/gifs/accept.gif"
+                    width="120"
+                    height="120"
+                    alt=""
+                  />
+                  <div class="message fw-bold">هل أنت متأكد من الموافقة</div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-add px-5 w-75">
+                    تأكيد
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!--            breadcrumb -->
           <div class="border-bottom">
@@ -278,24 +420,43 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                المرتجعات
+                المتاجر المعلقة
               </span>
             </nav>
           </div>
 
-          <div class="container pb-3">
-            <div class="">
-              <h2 class="title-page mb-0 fw-bold">المرتجعات</h2>
-
-              <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="container">
+            <h2 class="title-page mb-0 fw-bold">المتاجر المعلقة</h2>
+            <div
+              class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
+            >
+              <div class="d-flex align-items-center gap-2 flex-wrap">
                 <div class="search-input">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   <input
                     type="text"
                     class="form-control"
-                    style="width: 35rem"
-                    placeholder="ابحث برقم الطلب او اسم ورقم المستخدم او اسم ورقم المتجر او اسم ورقم نقطة التوزيع ... "
+                    placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
                   />
+                </div>
+                <!-- DropDowm Lists -->
+                <div class="input-wrapper select">
+                  <label>البلد</label>
+                  <select class="">
+                    <option value="">اختر</option>
+                    <option value="1">لوريم</option>
+                    <option value="2">لزريم</option>
+                    <option value="3">لوريم</option>
+                  </select>
+                </div>
+                <div class="input-wrapper select">
+                  <label>العملة</label>
+                  <select class="">
+                    <option value="">اختر</option>
+                    <option value="1">لوريم</option>
+                    <option value="2">لزريم</option>
+                    <option value="3">لوريم</option>
+                  </select>
                 </div>
 
                 <span class="daterange-input">
@@ -305,35 +466,28 @@
                     name="daterange"
                     class="custom-daterangepicker border-0 text-center"
                   />
-                  <i
-                    class="fa-solid fa-chevron-left"
-                    style="width: 10px; color: #bfa274"
-                  ></i>
+                  <i class="fa-solid fa-chevron-left active-color"></i>
                 </span>
               </div>
             </div>
           </div>
-
           <!--tabel-->
           <div class="container-tabel p-3 py-4">
             <div class="container">
-              <div class="table-responsive mb-3 rounded-3">
+              <div class="table-responsive mb-3">
                 <div class="p-3 my-2">
                   <table class="table">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>رقم الطلب</th>
-                        <th>اسم المستخدم</th>
-                        <th>رقم موبايل المستخدم</th>
+                        <th>الشعار</th>
                         <th>اسم المتجر</th>
-                        <th>تاريخ ووقت الاسترجاع</th>
-                        <th>اسم نقطة التوزيع</th>
-                        <th>رقم موبايل نقطة التوزيع</th>
-                        <th>بيانات تخزين نقطة البيع</th>
-                        <th>حالة الاسترجاع الاخيرة</th>
-
-                        <th></th>
+                        <th>اسم المسئول</th>
+                        <th>رقم الموبايل</th>
+                        <th>البريد الالكتروني</th>
+                        <th>البلد</th>
+                        <th>العملة</th>
+                        <th>تاريخ ووقت التسجيل</th>
                         <th></th>
                         <th></th>
                       </tr>
@@ -341,103 +495,72 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>123456</td>
-                        <td><u>Mostafa Ahmed</u></td>
-                        <td dir="ltr">+0123456789</td>
+
+                        <td>
+                          <img
+                            src="/assets/images/market-logo.png"
+                            alt="market-logo"
+                            width="50"
+                            height="50"
+                            class="rounded"
+                          />
+                        </td>
                         <td>النور للملابس</td>
-                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
-                        <td>الصفا للتوزيع</td>
-                        <td dir="ltr">+0123456789</td>
-                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
+                        <td>Mostafa Mostafa</td>
+                        <td dir="ltr">+201231234213</td>
+                        <td>test@test.com</td>
+                        <td>اليمن</td>
+                        <td>ريال يمني</td>
+
+                        <td dir="ltr">22/03/2024-8:30 PM</td>
+
                         <td>
-                          <span class="no-time">في انتظار موافقة المتجر</span>
+                          <div class="d-flex gap-2 justify-content-end">
+                            <button
+                              class="refuse align-self-center"
+                              data-bs-toggle="modal"
+                              data-bs-target="#alertModal"
+                            >
+                              X
+                            </button>
+                            <button
+                              class="accept align-self-center"
+                              data-bs-toggle="modal"
+                              data-bs-target="#acceptModal"
+                            >
+                              &#10003;
+                            </button>
+                          </div>
                         </td>
 
                         <td>
-                          <button class="btn-status btn-success">
-                            الموافقة على الطلب
-                          </button>
-                        </td>
-                        <td>
-                          <button class="btn-status btn-cancell">
-                            الغاء الطلب بالكامل
-                          </button>
-                        </td>
+                          <div class="d-flex gap-1 justify-content-end">
+                            <button
+                              class="btn text-success action-btn"
+                              data-bs-toggle="offcanvas"
+                              data-bs-target="#edit-password"
+                              aria-controls="edit-password"
+                            >
+                              <i
+                                class="fa-solid fa-user-lock"
+                                style="color: #9469b2"
+                              ></i>
+                            </button>
 
-                        <td class="d-flex gap-1 justify-content-end">
-                          <a
-                            class="btn text-info action-btn"
-                            href="/returns/returns-order-details.html"
-                          >
-                            <i class="fa-regular fa-eye"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>123456</td>
-                        <td><u>Mostafa Ahmed</u></td>
-                        <td dir="ltr">+0123456789</td>
-                        <td>النور للملابس</td>
-                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
-                        <td>الصفا للتوزيع</td>
-                        <td dir="ltr">+0123456789</td>
-                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
-                        <td>
-                          <span class="done">تم الموافقة</span>
-                        </td>
-
-                        <td></td>
-                        <td>
-                          <button class="btn-status btn-cancell">
-                            الغاء الطلب بالكامل
-                          </button>
-                        </td>
-
-                        <td class="d-flex gap-1 justify-content-end">
-                          <a
-                            class="btn text-info action-btn"
-                            href="/returns/returns-order-details.html"
-                          >
-                            <i class="fa-regular fa-eye"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>123456</td>
-                        <td><u>Mostafa Ahmed</u></td>
-                        <td dir="ltr">+0123456789</td>
-                        <td>النور للملابس</td>
-                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
-                        <td>الصفا للتوزيع</td>
-                        <td dir="ltr">+0123456789</td>
-                        <td>الصف رقم 15 - الدرج 10 - الصندوق رقم 20</td>
-                        <td>
-                          <span class="cancelled">تم الرفض</span>
-                        </td>
-
-                        <td></td>
-                        <td>
-                          <button class="btn-status btn-cancell">
-                            الغاء الطلب بالكامل
-                          </button>
-                        </td>
-
-                        <td class="d-flex gap-1 justify-content-end">
-                          <a
-                            class="btn text-info action-btn"
-                            href="/returns/returns-order-details.html"
-                          >
-                            <i class="fa-regular fa-eye"></i>
-                          </a>
+                            <a
+                              class="btn text-info action-btn"
+                              href="/pending markets/market-papers.html"
+                            >
+                              <i class="fa-regular fa-eye"></i>
+                            </a>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-              <nav aria-label="Page navigation example">
+              <nav aria-label="Page navigation example   ">
                 <ul class="pagination justify-content-center">
                   <li class="page-item disabled">
                     <a class="page-link" href="#" tabindex="-1">السابق</a>
@@ -462,10 +585,9 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/script.js"></script>
+
     <script>
       $(function () {
         $('input[name="daterange"]').daterangepicker(
@@ -516,6 +638,69 @@
             );
           }
         );
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $('input[name="daterangesingle"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: 'DD/MM/YYYY',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
+
+      $(document).ready(function () {
+        $('.toggle-password').on('click', function () {
+          const target = $(this).data('target');
+          const input = $(target);
+          const type = input.attr('type') === 'password' ? 'text' : 'password';
+          input.attr('type', type);
+          $(this).toggleClass('fa-eye fa-eye-slash');
+        });
       });
     </script>
   </body>
