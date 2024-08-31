@@ -1417,3 +1417,19 @@ input[type='radio']:checked:before {
     background-color: #d4f0da;
   }
 }
+
+/* coupons */
+.radio-group-coupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  /* width: 20rem; */
+  /* margin-right: 9px; */
+  border-radius: 8px;
+  border: 1px solid #dbdee1;
+}
+.radio-group-coupon label {
+  font-size: 1rem;
+  color: #2c3e50; /* Customize the text color */
+}

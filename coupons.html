@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="../assets/images/logo.png" />
+    <link rel="icon" type="image/png" href="assets/images/spareX-favicon.png" />
     <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="overlay" id="overlay"></div>
@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/users/Users.html">
+                <a class="nav-link" href="/users/Users.html">
                   <img src="../assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -213,7 +213,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/coupons.html">
+                <a class="nav-link active" href="/coupons.html">
                   <img src="../assets/images/icon/badge-percent 1.svg" alt="" />
 
                   اكواد الخصم<span class="badge bg-danger rounded-circle"
@@ -236,24 +236,20 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
           <!--header navbar-->
           <header class="navbar">
-            <div class="container d-flex justify-content-between">
+            <div class="container justify-content-between">
               <button class="btn btn-logout d-flex d-none d-md-block">
                 <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
               </button>
               <button class="btn btn-logout d-md-none" id="toggleSidebar">
                 <i class="fa-solid fa-bars"></i>
               </button>
-
-              <button class="btn btn-logout d-md-none" id="toggleSidebar">
-                <i class="fa-solid fa-bars"></i>
-              </button>
               <div class="d-flex">
-                <a class="mx-3">
-                  <img src="../assets/images/icon/notific.svg" />
+                <a class="mx-3" href="/notifications/notifications.html">
+                  <img src="assets/images/icon/notific.svg" />
                 </a>
-                <a class="d-flex">
+                <a class="d-flex" href="/personal-file/personal-file.html">
                   <img
-                    src="../assets/images/avatar.png"
+                    src="assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -263,7 +259,7 @@
                     <h5 class="navbar-text text-white">
                       Mohmed Ahmed <i class="fa-solid fa-chevron-left icon"></i>
                     </h5>
-                    <span> اخر ظهور - <span>22/03/2024 -08:30 PM</span> </span>
+                    <span>اخر ظهور 22/03/2024- 08:30 PM</span>
                   </div>
                 </a>
               </div>
@@ -280,67 +276,65 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                المستخدمين
+                اكواد الخصم
               </span>
             </nav>
           </div>
 
-          <div class="container pb-3">
-            <div class="">
-              <h2 class="title-page mb-0">المستخدمين</h2>
+          <div class="container">
+            <div>
+              <h2 class="title-page mb-0 fw-bold">اكواد الخصم</h2>
 
-              <div
-                class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
-              >
-                <div class="d-flex align-items-center gap-3 flex-wrap">
-                  <div class="search-input">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="ابحث باسم المستخدم أو رقم الموبايل..."
-                    />
-                  </div>
-                  <div class="input-wrapper select">
-                    <label>طريقة التسجيل</label>
-                    <select style="position: relative">
-                      <option value="">الكل</option>
-                      <option value="1">مطبع</option>
-                      <option value="2">تجار</option>
-                      <option value="3">مس��ول</option>
-                    </select>
-                  </div>
-
-                  <span class="daterange-input">
-                    <img src="../assets/images/icon/calander.svg" />
-                    <input
-                      type="text"
-                      name="daterange"
-                      class="custom-daterangepicker border-0 text-center"
-                    />
-                    <i
-                      class="fa-solid fa-chevron-left"
-                      style="width: 10px; color: #bfa274"
-                    ></i>
-                  </span>
-                </div>
-
-                <button
-                  class="btn btn-add"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
+              <div class="d-flex flex-column gap-3">
+                <div
+                  class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
                 >
-                  <img width="22" height="22" src="../assets/images/Add.gif" />
-                  اضافة مستخدم
-                </button>
+                  <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <div class="search-input">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="بحث ..."
+                      />
+                    </div>
+
+                    <span class="daterange-input">
+                      <img src="assets/images/icon/calander.svg" />
+                      <input
+                        type="text"
+                        name="daterange"
+                        class="custom-daterangepicker border-0 text-center"
+                      />
+                      <i class="fa-solid fa-chevron-left active-color"></i>
+                    </span>
+                  </div>
+
+                  <button
+                    class="btn btn-add"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"
+                  >
+                    <img width="30" height="30" src="assets/images/Add.gif" />
+                    اضافة كود خصم
+                  </button>
+                </div>
+                <div class="input-wrapper select align-self-start">
+                  <label>نوع الكود</label>
+                  <select class="">
+                    <option value="">الجميع</option>
+                    <option value="1">لوريم</option>
+                    <option value="2">لزريم</option>
+                    <option value="3">لوريم</option>
+                  </select>
+                </div>
               </div>
-              <div class="d-flex"></div>
             </div>
           </div>
 
-          <!-- edit user data -->
+          <!-- editcoupon -->
           <div
             class="offcanvas offcanvas-start"
             data-bs-scroll="true"
@@ -348,108 +342,132 @@
             id="edite-section"
             aria-labelledby="offcanvasWithBothOptionsLabel"
           >
-            <form class="d-flex flex-column gap-4 justify-content-center p-4">
-              <div class="p-2 border-bottom d-flex justify-content-center">
-                <h4 class="fw-bold">تعديل المستخدم</h4>
-              </div>
-              <!-- NOTE:if you wanted to put edit user imaga put it here -->
-
-              <div class="d-flex flex-column gap-3">
-                <div class="input-custom">
-                  <div class="input-wrapper">
-                    <label> الاسم</label>
-                    <input class="w-100" type="text" />
-                  </div>
-                </div>
-                <div class="input-custom">
-                  <div class="input-wrapper">
-                    <label> رقم الموبايل</label>
-                    <input class="w-100" type="text" />
-                  </div>
-                </div>
-                <div class="input-custom">
-                  <div class="input-wrapper">
-                    <label> البريد الالكتروني</label>
-                    <input class="w-100" type="text" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-100 text-center">
-                <button
-                  type="submit"
-                  class="btn btn-add w-auto m-auto mt-2 px-5"
-                >
-                  حفظ
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- edit password -->
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-scroll="true"
-            tabindex="-1"
-            id="edit-password"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
-          >
-            <form class="d-flex flex-column gap-4 justify-content-center p-4">
-              <div class="p-2 border-bottom d-flex justify-content-center">
-                <h4 class="fw-bold">تعديل كلمة المرور</h4>
-              </div>
-
-              <div class="d-flex flex-column gap-3">
-                <div class="input-wrapper">
-                  <label>كلمة المرور الجديدة</label>
-                  <div class="form-group position-relative">
+            <div class="offcanvas-body">
+              <h2 class="title-page border-bottom text-center fw-bold">
+                تعديل كود الخصم
+              </h2>
+              <form class="d-flex flex-column px-3 mt-4">
+                <div class="d-flex flex-column gap-2">
+                  <div class="input-wrapper p-2">
+                    <label> رمز كود الخصم</label>
                     <input
-                      type="password"
-                      id="newUserpassword"
-                      class="form-control w-100"
+                      class="w-100"
+                      type="text"
+                      placeholder="مثال : SpareX10"
                     />
-                    <span
-                      class="position-absolute top-50 translate-middle-y me-3"
-                      style="left: 12px"
-                    >
-                      <i
-                        class="fas fa-eye toggle-password w-100"
-                        data-target="#newUserpassword"
-                        style="cursor: pointer"
-                      ></i>
-                    </span>
                   </div>
-                </div>
-                <div class="input-wrapper">
-                  <label>تأكيد كلمة المرور الجديدة</label>
-                  <div class="form-group position-relative">
-                    <input
-                      type="password"
-                      id="confirmNewUserPassword"
-                      class="form-control w-100"
-                    />
-                    <span
-                      class="position-absolute top-50 translate-middle-y me-3"
-                      style="left: 12px"
-                    >
-                      <i
-                        class="fas fa-eye toggle-password w-100"
-                        data-target="#confirmNewUserPassword"
-                        style="cursor: pointer"
-                      ></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
 
-              <div class="w-100 text-center">
-                <button
-                  type="submit"
-                  class="btn btn-add w-auto m-auto mt-2 px-5"
-                >
-                  تأكيد
-                </button>
-              </div>
-            </form>
+                  <div class="p-2">
+                    <div class="radio-group-coupon">
+                      <label for="option1-1">نوع الكود</label>
+                      <div class="d-flex gap-4">
+                        <div class="d-flex align-items-center gap-1">
+                          <input
+                            type="radio"
+                            id="option1-2"
+                            name="customRadio1"
+                            class="custom-control-input"
+                          />
+                          <label for="option1-2">نسبة</label>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                          <input
+                            type="radio"
+                            id="option1-2"
+                            name="customRadio1"
+                            class="custom-control-input"
+                          />
+                          <label for="option1-2">قيمة</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="position-relative flex-grow-1">
+                    <div class="input-wrapper p-2">
+                      <label>نسبة الخصم</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span
+                      style="
+                        position: absolute;
+                        left: 1.2rem;
+                        top: 1rem;
+                        color: #606c7e;
+                      "
+                      >%</span
+                    >
+                  </div>
+                  <div class="position-relative flex-grow-1">
+                    <div class="input-wrapper p-2">
+                      <label>الحد الاقصى لمبلغ الخصم</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span
+                      style="
+                        position: absolute;
+                        left: 1.2rem;
+                        top: 1rem;
+                        color: #606c7e;
+                      "
+                      >ريال يمني</span
+                    >
+                  </div>
+
+                  <div class="input-wrapper select-discount p-2">
+                    <label>عدد مرات الاستخدام</label>
+                    <select class="">
+                      <option value="">لوريم</option>
+                      <option value="1">مطبع</option>
+                      <option value="2">تجار</option>
+                      <option value="3">مس��ول</option>
+                    </select>
+                  </div>
+
+                  <div class="d-flex gap-1">
+                    <div class="p-2 input-wrapper-calender">
+                      <label style="font-size: 14px; color: #8d929a"
+                        >تاريخ الانشاء</label
+                      >
+                      <span class="daterange-input">
+                        <img src="assets/images/icon/calander.svg" />
+                        <input
+                          type="text"
+                          id="daterange1"
+                          name="daterange1"
+                          class="custom-daterangepicker border-0 text-center"
+                        />
+                        <i class="fa-solid fa-chevron-down active-color"></i>
+                      </span>
+                    </div>
+
+                    <div class="p-2 input-wrapper-calender">
+                      <label style="font-size: 14px; color: #8d929a"
+                        >تاريخ الانتهاء</label
+                      >
+                      <span class="daterange-input">
+                        <img src="assets/images/icon/calander.svg" />
+                        <input
+                          type="text"
+                          id="daterange2"
+                          name="daterange2"
+                          class="custom-daterangepicker border-0 text-center"
+                        />
+                        <i class="fa-solid fa-chevron-down active-color"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="w-100 text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-add w-auto m-auto px-5 mt-2"
+                    >
+                      حفظ
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
 
           <!-- confirm delete -->
@@ -479,7 +497,7 @@
                 </div>
                 <div class="modal-body text-center">
                   <img
-                    src="../assets/images/icon/Delete gif.gif"
+                    src="./assets/images/icon/Delete gif.gif"
                     width="120"
                     height="120"
                     alt=""
@@ -502,33 +520,31 @@
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>الاسم</th>
-                        <th>رقم الموبايل</th>
-                        <th>البريد الالكتروني</th>
-                        <th>تاريخ ووقت التسجيل</th>
-                        <th>طريقة التسجيل</th>
-                        <th>عدد الطلبات</th>
-                        <th>اخر تسجيل</th>
-                        <th>عدد مرات الدخول على التطبيق</th>
-                        <th>عدد مرات الدخول على الموقع</th>
-                        <th>الحالة</th>
+                        <th>رمز كود الخصم</th>
+                        <th>نوع الكود</th>
+                        <th>الخصم</th>
+                        <th>الحد الاقصى للخصم</th>
+                        <th>عدد مرات الاستخدام</th>
+                        <th>تاريخ الانتهاء</th>
+                        <th>عدد من استخدمه</th>
+                        <th>تاريخ الانشاء</th>
 
+                        <th>الحالة</th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <td>1</td>
+                        <td>alaadin10</td>
+                        <td>نسبة</td>
+                        <td>20%</td>
+                        <td>5 ريال</td>
                         <td>2</td>
+                        <td>22/01/2024</td>
+                        <td>2</td>
+                        <td>22/01/2024</td>
 
-                        <td>Mostafa Ahmed</td>
-                        <td dir="ltr">+2010123455</td>
-                        <td>example@test.com</td>
-                        <td>22/03/2024-8:30pm</td>
-                        <td>جيميل</td>
-                        <td>45</td>
-                        <td>22/03/2024-8:30pm</td>
-                        <td>31</td>
-                        <td>21</td>
                         <td class="text-start">
                           <div
                             class="form-switch ms-2 d-flex justify-content-center"
@@ -547,30 +563,11 @@
                           <button
                             class="btn text-success action-btn"
                             data-bs-toggle="offcanvas"
-                            data-bs-target="#edit-password"
-                            aria-controls="edit-password"
-                          >
-                            <i
-                              class="fa-solid fa-user-lock"
-                              style="color: #9469b2"
-                            ></i>
-                          </button>
-
-                          <a
-                            class="btn text-info action-btn"
-                            href="/users/user-details.html"
-                          >
-                            <i class="fa-regular fa-eye"></i>
-                          </a>
-
-                          <button
-                            class="btn text-success action-btn"
-                            data-bs-toggle="offcanvas"
                             data-bs-target="#edite-section"
                             aria-controls="edite-section"
                           >
                             <img
-                              src="../assets/images/icon/pencil 1.svg"
+                              src="./assets/images/icon/pencil 1.svg"
                               alt=""
                             />
                           </button>
@@ -608,7 +605,7 @@
         </main>
       </div>
     </div>
-    <!--add user-->
+    <!--add coupon-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
@@ -617,86 +614,129 @@
       aria-labelledby="offcanvasWithBothOptionsLabel"
     >
       <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة مستخدم جديد</h2>
-        <form class="d-flex flex-column px-3 gap-3">
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> الاسم</label>
-              <input class="w-100" type="text" />
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة كود خصم
+        </h2>
+        <form class="d-flex flex-column px-3 mt-4">
+          <div class="d-flex flex-column gap-2">
+            <div class="input-wrapper p-2">
+              <label> رمز كود الخصم</label>
+              <input class="w-100" type="text" placeholder="مثال : SpareX10" />
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom">
-            <div class="input-wrapper mb-1">
-              <label> رقم الموبايل</label>
-              <input class="w-100" type="text" />
+
+            <div class="p-2">
+              <div class="radio-group-coupon">
+                <label for="option1-1">نوع الكود</label>
+                <div class="d-flex gap-4">
+                  <div class="d-flex align-items-center gap-1">
+                    <input
+                      type="radio"
+                      id="option1-2"
+                      name="customRadio1"
+                      class="custom-control-input"
+                    />
+                    <label for="option1-2">نسبة</label>
+                  </div>
+                  <div class="d-flex align-items-center gap-1">
+                    <input
+                      type="radio"
+                      id="option1-2"
+                      name="customRadio1"
+                      class="custom-control-input"
+                    />
+                    <label for="option1-2">قيمة</label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="valid-error">هذا الحقل مطلوب</p>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> البريد الالكتروني</label>
-              <input class="w-100" type="text" />
+            <div class="position-relative flex-grow-1">
+              <div class="input-wrapper p-2">
+                <label>نسبة الخصم</label>
+                <input class="w-100" type="text" />
+              </div>
+              <span
+                style="
+                  position: absolute;
+                  left: 1.2rem;
+                  top: 1rem;
+                  color: #606c7e;
+                "
+                >%</span
+              >
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> كلمة المرور</label>
-              <div class="form-group position-relative">
-                <input
-                  type="password"
-                  id="confirmPassword"
-                  class="form-control w-100"
-                />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
+            <div class="position-relative flex-grow-1">
+              <div class="input-wrapper p-2">
+                <label>الحد الاقصى لمبلغ الخصم</label>
+                <input class="w-100" type="text" />
+              </div>
+              <span
+                style="
+                  position: absolute;
+                  left: 1.2rem;
+                  top: 1rem;
+                  color: #606c7e;
+                "
+                >ريال يمني</span
+              >
+            </div>
+
+            <div class="input-wrapper select-discount p-2">
+              <label>عدد مرات الاستخدام</label>
+              <select class="">
+                <option value="">لوريم</option>
+                <option value="1">مطبع</option>
+                <option value="2">تجار</option>
+                <option value="3">مس��ول</option>
+              </select>
+            </div>
+
+            <div class="d-flex gap-1">
+              <div class="p-2 input-wrapper-calender">
+                <label style="font-size: 14px; color: #8d929a"
+                  >تاريخ الانشاء</label
                 >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#confirmPassword"
-                    style="cursor: pointer"
-                  ></i>
+                <span class="daterange-input">
+                  <img src="assets/images/icon/calander.svg" />
+                  <input
+                    type="text"
+                    id="daterange1"
+                    name="daterange1"
+                    class="custom-daterangepicker border-0 text-center"
+                  />
+                  <i class="fa-solid fa-chevron-down active-color"></i>
+                </span>
+              </div>
+
+              <div class="p-2 input-wrapper-calender">
+                <label style="font-size: 14px; color: #8d929a"
+                  >تاريخ الانتهاء</label
+                >
+                <span class="daterange-input">
+                  <img src="assets/images/icon/calander.svg" />
+                  <input
+                    type="text"
+                    id="daterange2"
+                    name="daterange2"
+                    class="custom-daterangepicker border-0 text-center"
+                  />
+                  <i class="fa-solid fa-chevron-down active-color"></i>
                 </span>
               </div>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="input-custom error">
-            <div class="input-wrapper">
-              <label> تأكيد كلمة المرور</label>
-              <div class="form-group position-relative mb-3">
-                <input
-                  type="password"
-                  id="password"
-                  class="form-control w-100"
-                />
-                <span
-                  class="position-absolute top-50 translate-middle-y me-3"
-                  style="left: 1rem"
-                >
-                  <i
-                    class="fas fa-eye toggle-password w-100"
-                    data-target="#password"
-                    style="cursor: pointer"
-                  ></i>
-                </span>
-              </div>
+
+            <div class="w-100 text-center">
+              <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+                اضافة
+              </button>
             </div>
-            <div class="valid-error">هذا الحقل مطلوب</div>
-          </div>
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              اضافة
-            </button>
           </div>
         </form>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/script.js"></script>
+    <script src="/assets/script.js"></script>
+
     <script>
       $(function () {
         $('input[name="daterange"]').daterangepicker(
@@ -748,39 +788,95 @@
           }
         );
       });
-
-      $(document).ready(function () {
-        $('.toggle-password').on('click', function () {
-          const target = $(this).data('target');
-          const input = $(target);
-          const type = input.attr('type') === 'password' ? 'text' : 'password';
-          input.attr('type', type);
-          $(this).toggleClass('fa-eye fa-eye-slash');
-        });
-      });
-
-      //     remove images
-      $(document).ready(function () {
-        $('#upploadImg').change(function (e) {
-          const file = e.target.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              $('#preview-img').attr('src', e.target.result);
-              $('#preview-container').removeClass('d-none');
-              $('#remove-img').show();
-            };
-            reader.readAsDataURL(file);
+      // Single Calender
+      $(function () {
+        $('input[name="daterange1"]').daterangepicker(
+          {
+            singleDatePicker: true,
+            opens: 'left',
+            locale: {
+              format: 'MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' + start.format('YYYY-MM-DD')
+            );
           }
-        });
+        );
 
-        $('#remove-img').click(function () {
-          $('#preview-img').attr('src', '../assets/images/icon/img.gif');
-          $('#preview-container').addClass('d-none');
-          $('#remove-img').hide();
-          $('#upploadImg').val('');
-        });
+        $('input[name="daterange2"]').daterangepicker(
+          {
+            singleDatePicker: true,
+            opens: 'left',
+            locale: {
+              format: 'MMM DD',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' + start.format('YYYY-MM-DD')
+            );
+          }
+        );
       });
+
       $(document).ready(function () {
         $('#toggleSidebar').on('click', function () {
           $('#sidebar').toggleClass('show');
