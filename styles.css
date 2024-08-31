@@ -1391,3 +1391,29 @@ input[type='radio']:checked:before {
   border-radius: 50%;
   cursor: pointer;
 }
+
+.support-btn {
+  border: none;
+  padding: 0.25em 1rem;
+  border-radius: 5px;
+  border: 1px solid #dbdee1;
+  color: #606c7e;
+  background-color: white;
+}
+.ended-btn {
+  background-color: #fdebee;
+  color: #e63050;
+  border: 2px solid #e63050;
+  &:hover {
+    background-color: #f8d7da;
+  }
+}
+
+.working-btn {
+  background-color: #e3f5e7;
+  color: #28b446;
+  border: 2px solid #28b446;
+  &:hover {
+    background-color: #d4f0da;
+  }
+}
