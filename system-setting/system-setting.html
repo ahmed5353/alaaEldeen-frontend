@@ -25,7 +25,13 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -353,51 +359,51 @@
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
-                id="v-pills-contact-tab"
+                id="v-pills-marketapp-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-contact"
+                data-bs-target="#v-pills-marketapp"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-contact"
+                aria-controls="v-pills-marketapp"
                 aria-selected="false"
               >
-                روابط التواصل
+                اعدادات تطبيق المتجر
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
-                id="v-pills-introduce-tab"
+                id="v-pills-pointapp-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-introduce"
+                data-bs-target="#v-pills-pointapp"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-introduce"
+                aria-controls="v-pills-pointapp"
                 aria-selected="false"
               >
-                الصفحات التعريفية
+                اعدادات تطبيق نقطة التوزيع
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
-                id="v-pills-slides-tab"
+                id="v-pills-delegate-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-slides"
+                data-bs-target="#v-pills-delegate"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-slides"
+                aria-controls="v-pills-delegate"
                 aria-selected="false"
               >
-                صورة السلايدر
+                اعدادات تطبيق المندوب
               </button>
               <button
                 class="btn tab-btn tab-btn-small"
-                id="v-pills-ads-tab"
+                id="v-pills-website-tab"
                 data-bs-toggle="pill"
-                data-bs-target="#v-pills-ads"
+                data-bs-target="#v-pills-website"
                 type="button"
                 role="tab"
-                aria-controls="v-pills-ads"
+                aria-controls="v-pills-website"
                 aria-selected="false"
               >
-                الصورة الاعلانية
+                اعدادات الموقع الالكتروني
               </button>
 
               <button
@@ -1616,27 +1622,38 @@
                                 <td>حماية البيانات</td>
                                 <td>Data protection</td>
                                 <td></td>
-                                <td class="d-flex gap-1 justify-content-end">
-                                  <!-- NOTE: i am here -->
-                                  <button
-                                    class="btn text-success action-btn"
-                                    data-bs-toggle="offcanvas"
-                                    data-bs-target="#edit-rule"
-                                    aria-controls="edit-rule"
-                                  >
-                                    <img
-                                      src="../assets/images/icon/pencil 1.svg"
-                                      alt=""
-                                    />
-                                  </button>
-                                  <!-- trash -->
-                                  <button
-                                    class="btn trash-color action-btn"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal"
-                                  >
-                                    <i class="fa-regular fa-trash-can"></i>
-                                  </button>
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#rule-userapp-details"
+                                      aria-controls="rule-userapp-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+                                    <!-- NOTE: i am here -->
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-rule"
+                                      aria-controls="edit-rule"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
                                 </td>
                               </tr>
                             </tbody>
@@ -2398,6 +2415,1916 @@
                 </div>
               </div>
             </div>
+
+            <!--  marketapp -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-marketapp"
+              role="tabpanel"
+              aria-labelledby="v-pills-marketapp-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="container">
+                  <div
+                    class="d-flex gap-2 my-4"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="btn tab-btn active"
+                      id="v-pills-childrulesmarket-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-childrulesmarket"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-childrulesmarket"
+                      aria-selected="true"
+                    >
+                      الشروط والاحكام
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-help-market-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-help-market"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-help-market"
+                      aria-selected="false"
+                    >
+                      المساعده
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-techsupport-market-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-techsupport-market"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-techsupport-market"
+                      aria-selected="false"
+                    >
+                      اسئلة الدعم الفني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-introducePages-market-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-introducePages-market"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-introducePages-market"
+                      aria-selected="false"
+                    >
+                      اعدادات الصفحات التعريفية
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rules Market-Child-Tab -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-childrulesmarket"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-childrulesmarket-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-rule-market"
+                      aria-controls="add-new-rule-market"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة شرط جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">عنوان النص بالعربي</th>
+                                <th class="table-head">
+                                  عنوان النص بالانجليزية
+                                </th>
+
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>حماية البيانات</td>
+                                <td>Data protection</td>
+                                <td></td>
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#rule-marketapp-details"
+                                      aria-controls="rule-marketapp-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-rule-market"
+                                      aria-controls="edit-rule-market"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- help (Market)-Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-help-market"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-help-market-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-question-market"
+                      aria-controls="add-new-question-market"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>السؤال</th>
+                                <th>الاجابة</th>
+
+                                <th>تاريخ ووقت الانشاء</th>
+                                <th>عدد المحبين</th>
+                                <th>عدد الغير محبين</th>
+                                <th>الحالة</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td dir="ltr">22/03/2024 - 08:30 PM</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-question-market"
+                                    aria-controls="edit-question-market"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Support question Market Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-techsupport-market"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-techsupport-market-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-support-question-market"
+                      aria-controls="add-support-question-market"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">السؤال</th>
+                                <th class="table-head" style="width: 16rem">
+                                  تاريخ ووقت الانشاء
+                                </th>
+                                <th class="table-head">
+                                  عدد رسائل الدعم المتعلقة بالسؤال
+                                </th>
+                                <th></th>
+                                <th class="table-head">الحالة</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+
+                                <td style="margin-right: 1rem" dir="ltr">
+                                  22/03/2024 - 08:30 PM
+                                </td>
+                                <td>20</td>
+                                <td></td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-support-question-market"
+                                    aria-controls="edit-support-question-market"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Introduce pages Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-introducePages-market"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-introducePages-market-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-inroduce-page-market"
+                      aria-controls="add-inroduce-page-market"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة صفحة جديدة
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">الصورة</th>
+                                <th class="table-head">عنوان النص</th>
+                                <th>النص</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <img
+                                    src="/assets/images/jacket.png"
+                                    alt="product"
+                                    width="65"
+                                    height="49"
+                                  />
+                                </td>
+
+                                <td>تطبيق علاء الدين</td>
+                                <td>لوريم تطبيق المتجر لوريم لوريم</td>
+
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#introduce-page-market-details"
+                                      aria-controls="introduce-page-market-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-introduce-market"
+                                      aria-controls="edit-introduce-market"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  pointapp -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-pointapp"
+              role="tabpanel"
+              aria-labelledby="v-pills-pointapp-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="container">
+                  <div
+                    class="d-flex gap-2 my-4"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="btn tab-btn active"
+                      id="v-pills-childrulespoint-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-childrulespoint"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-childrulespoint"
+                      aria-selected="true"
+                    >
+                      الشروط والاحكام
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-help-point-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-help-point"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-help-point"
+                      aria-selected="false"
+                    >
+                      المساعده
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-techsupport-point-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-techsupport-point"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-techsupport-point"
+                      aria-selected="false"
+                    >
+                      اسئلة الدعم الفني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-introducePages-point-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-introducePages-point"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-introducePages-point"
+                      aria-selected="false"
+                    >
+                      اعدادات الصفحات التعريفية
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rules POint-Child-Tab -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-childrulespoint"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-childrulespoint-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-rule-point"
+                      aria-controls="add-new-rule-point"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة شرط جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">عنوان النص بالعربي</th>
+                                <th class="table-head">
+                                  عنوان النص بالانجليزية
+                                </th>
+
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>حماية البيانات</td>
+                                <td>Data protection</td>
+                                <td></td>
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#rule-pointapp-details"
+                                      aria-controls="rule-pointapp-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-rule-point"
+                                      aria-controls="edit-rule-point"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- help (point)-Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-help-point"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-help-point-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-question-point"
+                      aria-controls="add-new-question-point"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>السؤال</th>
+                                <th>الاجابة</th>
+
+                                <th>تاريخ ووقت الانشاء</th>
+                                <th>عدد المحبين</th>
+                                <th>عدد الغير محبين</th>
+                                <th>الحالة</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td dir="ltr">22/03/2024 - 08:30 PM</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-question-point"
+                                    aria-controls="edit-question-point"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Support question point Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-techsupport-point"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-techsupport-point-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-support-question-point"
+                      aria-controls="add-support-question-point"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">السؤال</th>
+                                <th class="table-head" style="width: 16rem">
+                                  تاريخ ووقت الانشاء
+                                </th>
+                                <th class="table-head">
+                                  عدد رسائل الدعم المتعلقة بالسؤال
+                                </th>
+                                <th></th>
+                                <th class="table-head">الحالة</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+
+                                <td style="margin-right: 1rem" dir="ltr">
+                                  22/03/2024 - 08:30 PM
+                                </td>
+                                <td>20</td>
+                                <td></td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-support-question-point"
+                                    aria-controls="edit-support-question-point"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Introduce pages Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-introducePages-point"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-introducePages-point-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-inroduce-page-point"
+                      aria-controls="add-inroduce-page-point"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة صفحة جديدة
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">الصورة</th>
+                                <th class="table-head">عنوان النص</th>
+                                <th>النص</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <img
+                                    src="/assets/images/jacket.png"
+                                    alt="product"
+                                    width="65"
+                                    height="49"
+                                  />
+                                </td>
+
+                                <td>تطبيق علاء الدين</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#introduce-page-point-details"
+                                      aria-controls="introduce-page-point-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-introduce-point"
+                                      aria-controls="edit-introduce-point"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  delegate -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-delegate"
+              role="tabpanel"
+              aria-labelledby="v-pills-delegate-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="container">
+                  <div
+                    class="d-flex gap-2 my-4"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="btn tab-btn active"
+                      id="v-pills-childrulesdelegate-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-childrulesdelegate"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-childrulesdelegate"
+                      aria-selected="true"
+                    >
+                      الشروط والاحكام
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-help-delegate-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-help-delegate"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-help-delegate"
+                      aria-selected="false"
+                    >
+                      المساعده
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-techsupport-delegate-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-techsupport-delegate"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-techsupport-delegate"
+                      aria-selected="false"
+                    >
+                      اسئلة الدعم الفني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-introducePages-delegate-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-introducePages-delegate"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-introducePages-delegate"
+                      aria-selected="false"
+                    >
+                      اعدادات الصفحات التعريفية
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rules delegate-Child-Tab -->
+                <div
+                  class="tab-pane fade show active"
+                  id="v-pills-childrulesdelegate"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-childrulesdelegate-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-rule-delegate"
+                      aria-controls="add-new-rule-delegate"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة شرط جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">عنوان النص بالعربي</th>
+                                <th class="table-head">
+                                  عنوان النص بالانجليزية
+                                </th>
+
+                                <th></th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>حماية البيانات</td>
+                                <td>Data protection</td>
+                                <td></td>
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#rule-delegateapp-details"
+                                      aria-controls="rule-delegateapp-details"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-rule-delegate"
+                                      aria-controls="edit-rule-delegate"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- help (delegate)-Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-help-delegate"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-help-delegate-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-new-question-delegate"
+                      aria-controls="add-new-question-delegate"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>السؤال</th>
+                                <th>الاجابة</th>
+
+                                <th>تاريخ ووقت الانشاء</th>
+                                <th>عدد المحبين</th>
+                                <th>عدد الغير محبين</th>
+                                <th>الحالة</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+                                <td>لوريم لوريم لوريم</td>
+                                <td dir="ltr">22/03/2024 - 08:30 PM</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-question-delegate"
+                                    aria-controls="edit-question-delegate"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Support question delegate Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-techsupport-delegate"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-techsupport-delegate-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-support-question-delegate"
+                      aria-controls="add-support-question-delegate"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة سؤال جديد
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">السؤال</th>
+                                <th class="table-head" style="width: 16rem">
+                                  تاريخ ووقت الانشاء
+                                </th>
+                                <th class="table-head">
+                                  عدد رسائل الدعم المتعلقة بالسؤال
+                                </th>
+                                <th></th>
+                                <th class="table-head">الحالة</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>طريقة اضافة منتج جديد</td>
+
+                                <td style="margin-right: 1rem" dir="ltr">
+                                  22/03/2024 - 08:30 PM
+                                </td>
+                                <td>20</td>
+                                <td></td>
+                                <td class="text-start">
+                                  <div
+                                    class="form-switch ms-2 d-flex justify-content-center"
+                                  >
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      role="switch"
+                                      id="flexSwitchCheckChecked"
+                                      checked
+                                    />
+                                  </div>
+                                </td>
+
+                                <td class="d-flex gap-1 justify-content-end">
+                                  <button
+                                    class="btn text-success action-btn"
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#edit-support-question-delegate"
+                                    aria-controls="edit-support-question-delegate"
+                                  >
+                                    <img
+                                      src="../assets/images/icon/pencil 1.svg"
+                                      alt=""
+                                    />
+                                  </button>
+                                  <!-- trash -->
+                                  <button
+                                    class="btn trash-color action-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                  >
+                                    <i class="fa-regular fa-trash-can"></i>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- Introduce pages Child-Tab -->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-introducePages-delegate"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-introducePages-delegate-tab"
+                  tabindex="0"
+                >
+                  <div class="container" style="text-align: end">
+                    <button
+                      class="btn btn-add"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#add-inroduce-page-delegate"
+                      aria-controls="add-inroduce-page-delegate"
+                    >
+                      <img
+                        width="30"
+                        height="30"
+                        src="../assets/images/Add.gif"
+                      />
+                      اضافة صفحة جديدة
+                    </button>
+                  </div>
+                  <!--tabel-->
+                  <div class="container-tabel p-3 py-4">
+                    <div class="container">
+                      <div class="table-responsive mb-3">
+                        <div class="p-3 my-2">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="table-head">#</th>
+                                <th class="table-head">الصورة</th>
+                                <th class="table-head">عنوان النص</th>
+                                <th>النص</th>
+                                <th class="table-head"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <img
+                                    src="/assets/images/jacket.png"
+                                    alt="product"
+                                    width="65"
+                                    height="49"
+                                  />
+                                </td>
+
+                                <td>تطبيق علاء الدين</td>
+                                <td>لوريم لوريم لوريم</td>
+
+                                <td>
+                                  <div class="d-flex gap-1 justify-content-end">
+                                    <button
+                                      class="btn text-info action-btn"
+                                      type="button"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#introduce-delegate-detials"
+                                      aria-controls="introduce-delegate-detials"
+                                    >
+                                      <i class="fa-regular fa-eye"></i>
+                                    </button>
+
+                                    <button
+                                      class="btn text-success action-btn"
+                                      data-bs-toggle="offcanvas"
+                                      data-bs-target="#edit-introduce-delegate"
+                                      aria-controls="edit-introduce-delegate"
+                                    >
+                                      <img
+                                        src="../assets/images/icon/pencil 1.svg"
+                                        alt=""
+                                      />
+                                    </button>
+                                    <!-- trash -->
+                                    <button
+                                      class="btn trash-color action-btn"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#deleteModal"
+                                    >
+                                      <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1"
+                              >السابق</a
+                            >
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">القادم</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  Website -->
+            <div
+              class="tab-pane fade"
+              id="v-pills-website"
+              role="tabpanel"
+              aria-labelledby="v-pills-website-tab"
+              tabindex="0"
+            >
+              <!-- Main page -->
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="container">
+                  <div
+                    class="d-flex gap-2 my-4"
+                    id="v-pills-tab"
+                    role="tablist"
+                    aria-orientation="vertical"
+                  >
+                    <button
+                      class="btn tab-btn active"
+                      id="v-pills-website-setting-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-website-setting"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-website-setting"
+                      aria-selected="true"
+                    >
+                      اعدادات الموقع الاكتروني
+                    </button>
+                    <button
+                      class="btn tab-btn"
+                      id="v-pills-header-slider-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#v-pills-header-slider"
+                      type="button"
+                      role="tab"
+                      aria-controls="v-pills-header-slider"
+                      aria-selected="false"
+                    >
+                      سلايدر الهيدر
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Rules delegate-Child-Tab -->
+                <div
+                  class="tab-pane fade show active container"
+                  id="v-pills-website-setting"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-website-setting-tab"
+                  tabindex="0"
+                >
+                  <form>
+                    <div class="bg-white p-3 rounded-3">
+                      <p class="fw-bold fs-5">من نحن</p>
+                      <div class="d-flex gap-3">
+                        <div>
+                          <p>النص بالعربي</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                        <div>
+                          <p>النص بالانجليزية</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-3 mt-3">
+                      <p class="fw-bold fs-5">الشروط والاحكام</p>
+                      <div class="d-flex gap-3">
+                        <div>
+                          <p>النص بالعربي</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                        <div>
+                          <p>النص بالانجليزية</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-3 mt-3">
+                      <p class="fw-bold fs-5">سياسة الخصوصية</p>
+                      <div class="d-flex gap-3">
+                        <div>
+                          <p>النص بالعربي</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                        <div>
+                          <p>النص بالانجليزية</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-3 mt-3">
+                      <p class="fw-bold fs-5">نص الفوتر</p>
+                      <div class="d-flex gap-3">
+                        <div>
+                          <p>النص بالعربي</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                        <div>
+                          <p>النص بالانجليزية</p>
+                          <div
+                            class="editor-container"
+                            style="height: 200px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 text-right my-3">
+                      <button
+                        type="submit"
+                        class="btn btn-add w-auto m-auto px-5 mt-2"
+                      >
+                        حفظ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!--Header slider-->
+                <div
+                  class="tab-pane fade show"
+                  id="v-pills-header-slider"
+                  role="tabpanel"
+                  aria-labelledby="v-pills-header-slider-tab"
+                  tabindex="0"
+                >
+                  <div class="d-flex gap-3">
+                    <div style="width: 70%">
+                      <div class="container" style="text-align: end">
+                        <button
+                          class="btn btn-add"
+                          type="button"
+                          data-bs-toggle="offcanvas"
+                          data-bs-target="#add-page-website"
+                          aria-controls="add-page-website"
+                        >
+                          <img
+                            width="30"
+                            height="30"
+                            src="../assets/images/Add.gif"
+                          />
+                          اضافة صفحة جديدة
+                        </button>
+                      </div>
+                      <!--tabel-->
+                      <div class="container-tabel p-3 py-4">
+                        <div class="container">
+                          <div class="table-responsive mb-3">
+                            <div class="p-3 my-2">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>#</th>
+                                    <th>السؤال</th>
+                                    <th>الاجابة</th>
+
+                                    <th>تاريخ ووقت الانشاء</th>
+                                    <th>عدد المحبين</th>
+                                    <th>عدد الغير محبين</th>
+                                    <th>الحالة</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>طريقة اضافة منتج جديد</td>
+                                    <td>لوريم لوريم لوريم</td>
+                                    <td dir="ltr">22/03/2024 - 08:30 PM</td>
+                                    <td>20</td>
+                                    <td>5</td>
+                                    <td class="text-start">
+                                      <div
+                                        class="form-switch ms-2 d-flex justify-content-center"
+                                      >
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          role="switch"
+                                          id="flexSwitchCheckChecked"
+                                          checked
+                                        />
+                                      </div>
+                                    </td>
+
+                                    <td>
+                                      <div
+                                        class="d-flex gap-1 justify-content-end"
+                                      >
+                                        <button
+                                          class="btn text-info action-btn"
+                                          type="button"
+                                          data-bs-toggle="offcanvas"
+                                          data-bs-target="#website-details"
+                                          aria-controls="website-details"
+                                        >
+                                          <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button
+                                          class="btn text-success action-btn"
+                                          data-bs-toggle="offcanvas"
+                                          data-bs-target="#edit-page-website"
+                                          aria-controls="edit-page-website"
+                                        >
+                                          <img
+                                            src="../assets/images/icon/pencil 1.svg"
+                                            alt=""
+                                          />
+                                        </button>
+                                        <!-- trash -->
+                                        <button
+                                          class="btn trash-color action-btn"
+                                          data-bs-toggle="modal"
+                                          data-bs-target="#deleteModal"
+                                        >
+                                          <i
+                                            class="fa-regular fa-trash-can"
+                                          ></i>
+                                        </button>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1"
+                                  >السابق</a
+                                >
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link active" href="#">1</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                              </li>
+                              <li class="page-item">
+                                <a class="page-link" href="#">القادم</a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column gap-3 flex-grow-1">
+                      <div class="p-3 bg-white rounded-3">
+                        <p class="fs-6 fw-bold">صورة الصفحة الرئيسية</p>
+                        <div class="riu-container">
+                          <label class="riu-upload-wrapper">
+                            <div class="riu-upload-icon">
+                              <img
+                                class="preview-img"
+                                src="../assets/images/icon-park-outline_add-four.svg"
+                                width="50"
+                                height="50"
+                              />
+                            </div>
+                            <input
+                              type="file"
+                              class="riu-upload-input d-none"
+                            />
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="p-3 bg-white rounded-3">
+                        <p class="fs-6 fw-bold">صورة الهيدر</p>
+                        <div class="riu-container">
+                          <label
+                            class="riu-upload-wrapper riu-upload-wrapper-header"
+                          >
+                            <div class="riu-upload-icon">
+                              <img
+                                class="preview-img"
+                                src="../assets/images/icon-park-outline_add-four.svg"
+                                width="50"
+                                height="50"
+                              />
+                            </div>
+                            <input
+                              type="file"
+                              class="riu-upload-input-header d-none"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
       </div>
@@ -2557,7 +4484,7 @@
         </form>
       </div>
     </div>
-
+    <!-- -------------------------------- Tab 2 -------------------------------- -->
     <!-- *Child Rules -->
     <!--add new Rule-->
     <div
@@ -2637,6 +4564,38 @@
         </form>
       </div>
     </div>
+    <!--Rule detials  -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="rule-userapp-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          الشروط والاحكام
+        </h2>
+        <div class="px-3 mt-4">
+          <div style="color: #071739">
+            <h5 class="fw-bold">حماية البيانات</h5>
+            <p class="lh-lg">
+              اي معلومات شخصية لوريم لوريم لوريم لوريم لوريم لوريم لوريم
+            </p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Data protection</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- *Help userApp Tab |Parent Tab 2|-->
     <!--add new Question-->
     <div
@@ -2922,7 +4881,7 @@
 
           <div class="w-100 text-center">
             <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              اضافة
+              حفظ
             </button>
           </div>
         </form>
@@ -3341,6 +5300,1467 @@
       </div>
     </div>
     <!-- ------------------------------ Tab 3 ------------------------------ -->
+    <!-- *Child Rules -->
+    <!--add new Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-rule-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة شرط جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-rule-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الشرط
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Rule detials  -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="rule-marketapp-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          الشروط والاحكام
+        </h2>
+        <div class="px-3 mt-4">
+          <div style="color: #071739">
+            <h5 class="fw-bold">حماية البيانات</h5>
+            <p class="lh-lg">
+              اي معلومات شخصية لوريم لوريم لوريم لوريم لوريم لوريم لوريم
+            </p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Data protection</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *Help userApp Tab -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-question-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">اضافة سؤال</h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-question-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Support Questions=>child tab 3 -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-support-question-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة سؤال جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit support question -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-support-question-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Introduce Pages =>child tab 4 -> |Parent Tab 2|-->
+    <!--add New Page-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-inroduce-page-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة صفحة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-img m-auto text-center position-relative upload-logo"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                class="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
+            </div>
+            <input type="file" class="upload-img-input d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة
+            </h5>
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit introduce page -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-introduce-market"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الصفحة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-user-img m-auto text-center position-relative upload-user"
+          >
+            <img
+              src="../assets/images/jacket.png"
+              class="preview-img rounded-circle position-relative ms-2"
+              width="40"
+              height="40"
+            />
+            <div class="p-2 position-absolute start-0 end-50 top-0">
+              <i
+                class="fa-solid fa-circle-xmark fa-xl"
+                style="color: #e63050; cursor: pointer"
+              ></i>
+            </div>
+            <h5
+              class="active-color text-decoration-underline mt-2"
+              style="cursor: pointer; font-size: 17px"
+            >
+              تعديل الصورة
+            </h5>
+            <input type="file" class="upload-img-input d-none" />
+            <div class="preview-container text-center mt-2 d-none"></div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--introduce page details-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="introduce-page-market-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">التفاصيل</h2>
+        <div class="px-3 mt-4">
+          <img
+            src="/assets/images/jacket-cover.png"
+            alt="jacket"
+            width="434"
+            height="290"
+          />
+          <div class="mt-3" style="color: #071739">
+            <h5 class="fw-bold">تطبيق علاء الدين</h5>
+            <p class="lh-lg">لوريم لوريم لوريم</p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Aladdin App</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------- Tab 4 -------------------------------- -->
+    <!-- *Child Rules -->
+    <!--add new Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-rule-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة شرط جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-rule-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الشرط
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Rule detials  -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="rule-pointapp-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          الشروط والاحكام
+        </h2>
+        <div class="px-3 mt-4">
+          <div style="color: #071739">
+            <h5 class="fw-bold">حماية البيانات</h5>
+            <p class="lh-lg">
+              اي معلومات شخصية لوريم لوريم لوريم لوريم لوريم لوريم لوريم
+            </p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Data protection</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *Help pointApp Tab -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-question-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">اضافة سؤال</h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-question-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Support Questions=>child tab 3 -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-support-question-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة سؤال جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit support question -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-support-question-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Introduce Pages =>child tab 4 -->
+    <!--add New Page-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-inroduce-page-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة صفحة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-img m-auto text-center position-relative upload-logo"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                class="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
+            </div>
+            <input type="file" class="upload-img-input d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة
+            </h5>
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit introduce page -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-introduce-point"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الصفحة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-user-img m-auto text-center position-relative upload-user"
+          >
+            <img
+              src="../assets/images/jacket.png"
+              class="preview-img rounded-circle position-relative ms-2"
+              width="40"
+              height="40"
+            />
+            <div class="p-2 position-absolute start-0 end-50 top-0">
+              <i
+                class="fa-solid fa-circle-xmark fa-xl"
+                style="color: #e63050; cursor: pointer"
+              ></i>
+            </div>
+            <h5
+              class="active-color text-decoration-underline mt-2"
+              style="cursor: pointer; font-size: 17px"
+            >
+              تعديل الصورة
+            </h5>
+            <input type="file" class="upload-img-input d-none" />
+            <div class="preview-container text-center mt-2 d-none"></div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--introduce page details-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="introduce-page-point-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">التفاصيل</h2>
+        <div class="px-3 mt-4">
+          <img
+            src="/assets/images/jacket-cover.png"
+            alt="jacket"
+            width="434"
+            height="290"
+          />
+          <div class="mt-3" style="color: #071739">
+            <h5 class="fw-bold">تطبيق علاء الدين</h5>
+            <p class="lh-lg">لوريم لوريم لوريم</p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Aladdin App</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------- Tab 5-------------------------------- -->
+    <!-- *Child Rules -->
+    <!--add new Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-rule-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة شرط جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit Rule-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-rule-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الشرط
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>عنوان النص بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>عنوان النص بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Rule detials  -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="rule-delegateapp-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          الشروط والاحكام
+        </h2>
+        <div class="px-3 mt-4">
+          <div style="color: #071739">
+            <h5 class="fw-bold">حماية البيانات</h5>
+            <p class="lh-lg">
+              اي معلومات شخصية لوريم لوريم لوريم لوريم لوريم لوريم لوريم
+            </p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Data protection</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *Help delegateApp Tab -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-new-question-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">اضافة سؤال</h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-question-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>الاجابة بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>الاجابة بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Support Questions=>child tab 3 -->
+    <!--add new Question-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-support-question-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة سؤال جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit support question -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-support-question-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل السؤال
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper">
+            <label>السؤال بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- *Introduce Pages =>child tab 4 -->
+    <!--add New Page-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-inroduce-page-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة صفحة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-img m-auto text-center position-relative upload-logo"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                class="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
+            </div>
+            <input type="file" class="upload-img-input d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة
+            </h5>
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit introduce page -->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-introduce-delegate"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الصفحة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-user-img m-auto text-center position-relative upload-user"
+          >
+            <img
+              src="../assets/images/jacket.png"
+              class="preview-img rounded-circle position-relative ms-2"
+              width="40"
+              height="40"
+            />
+            <div class="p-2 position-absolute start-0 end-50 top-0">
+              <i
+                class="fa-solid fa-circle-xmark fa-xl"
+                style="color: #e63050; cursor: delegateer"
+              ></i>
+            </div>
+            <h5
+              class="active-color text-decoration-underline mt-2"
+              style="cursor: delegateer; font-size: 17px"
+            >
+              تعديل الصورة
+            </h5>
+            <input type="file" class="upload-img-input d-none" />
+            <div class="preview-container text-center mt-2 d-none"></div>
+          </label>
+          <div class="input-wrapper">
+            <label>عنوان النص</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>السؤال بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالعربي</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+          <div class="input-wrapper">
+            <label>النص بالانجليزية</label>
+            <textarea class="w-100" type="text" style="height: 8rem"></textarea>
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--introduce page details-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="introduce-delegate-detials"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">التفاصيل</h2>
+        <div class="px-3 mt-4">
+          <img
+            src="/assets/images/jacket-cover.png"
+            alt="jacket"
+            width="434"
+            height="290"
+          />
+          <div class="mt-3" style="color: #071739">
+            <h5 class="fw-bold">تطبيق علاء الدين</h5>
+            <p class="lh-lg">لوريم لوريم لوريم</p>
+          </div>
+          <hr />
+          <div class="mt-3" style="color: #071739" dir="ltr">
+            <h5 class="fw-bold">Aladdin App</h5>
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------- Tab 6 -------------------------------- -->
+    <!--add New Page-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-page-website"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة صفحة جديدة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-img m-auto text-center position-relative upload-logo"
+          >
+            <div
+              style="
+                border: 1px dashed #bfa274;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+              "
+            >
+              <img
+                class="preview-img"
+                src="../assets/images/icon-park-outline_add-four.svg"
+                width="20"
+                height="20"
+              />
+            </div>
+            <input type="file" class="upload-img-input d-none" />
+            <h5 class="active-color text-decoration-underline mt-2">
+              اضافة صورة
+            </h5>
+            <div
+              class="preview-container text-center mt-2 d-none"
+              style="position: absolute; top: -1rem; left: 0"
+            >
+              <span class="remove-img">
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="15.4284"
+                    cy="15.1905"
+                    r="14.2071"
+                    fill="#E63050"
+                    stroke="white"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+          </label>
+          <div class="input-wrapper">
+            <label>الرابط</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Edit Page-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="edit-page-website"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعديل الصفحة
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <label
+            class="select-user-img m-auto text-center position-relative upload-user"
+          >
+            <img
+              src="../assets/images/jacket.png"
+              class="preview-img rounded-circle position-relative ms-2"
+              width="40"
+              height="40"
+            />
+            <div class="p-2 position-absolute start-0 end-50 top-0">
+              <i
+                class="fa-solid fa-circle-xmark fa-xl"
+                style="color: #e63050; cursor: pointer"
+              ></i>
+            </div>
+            <h5
+              class="active-color text-decoration-underline mt-2"
+              style="cursor: pointer; font-size: 17px"
+            >
+              تعديل الصورة
+            </h5>
+            <input type="file" class="upload-img-input d-none" />
+            <div class="preview-container text-center mt-2 d-none"></div>
+          </label>
+          <div class="input-wrapper">
+            <label>الرابط</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              اضافة
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--website details-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="website-details"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">التفاصيل</h2>
+        <div class="px-3 mt-4">
+          <img
+            src="/assets/images/jacket-cover.png"
+            alt="jacket"
+            width="434"
+            height="290"
+          />
+          <div class="mt-3" style="color: #071739">
+            <h6 class="fw-bold">الرابط</h6>
+            <a href="#"><u>test.com</u></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
@@ -3458,6 +6878,97 @@
           $label.find('.preview-container').addClass('d-none');
           $(this).hide();
           $label.find('.upload-img-input').val('');
+        });
+      });
+    </script>
+    <script>
+      // TEXT EDITOR
+      $(document).ready(function () {
+        $('.editor-container').each(function () {
+          new Quill(this, {
+            theme: 'snow', // or 'bubble'
+            modules: {
+              toolbar: [
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
+
+                [{ header: 1 }, { header: 2 }],
+                [{ list: 'ordered' }, { list: 'bullet' }],
+                [{ script: 'sub' }, { script: 'super' }],
+                [{ indent: '-1' }, { indent: '+1' }],
+                [{ direction: 'rtl' }],
+
+                [{ size: ['small', false, 'large', 'huge'] }],
+                [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+                [{ color: [] }, { background: [] }],
+                [{ font: [] }],
+                [{ align: [] }],
+
+                ['clean'],
+              ],
+            },
+          });
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(document).on('change', '.riu-upload-input', function (e) {
+          const file = e.target.files[0];
+          const container = $(this).closest('.riu-container');
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const newImageHtml = `
+                            <div class="riu-uploaded-image">
+                                <img src="${e.target.result}" alt="Uploaded Image" />
+                                <span class="riu-remove-img">
+                                    <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.4284" cy="15.1905" r="14.2071" fill="#E63050" stroke="white" stroke-width="1.3" />
+                                        <path d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>`;
+              container.prepend(newImageHtml);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        $(document).on('click', '.riu-remove-img', function () {
+          $(this).closest('.riu-uploaded-image').remove();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(document).on('change', '.riu-upload-input-header', function (e) {
+          const file = e.target.files[0];
+          const container = $(this).closest('.riu-container');
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const newImageHtml = `
+                            <div class="riu-uploaded-image-header">
+                                <img src="${e.target.result}" alt="Uploaded Image" />
+                                <span class="riu-remove-img-header">
+                                    <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="15.4284" cy="15.1905" r="14.2071" fill="#E63050" stroke="white" stroke-width="1.3" />
+                                        <path d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>`;
+              container.prepend(newImageHtml);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+        $(document).on('click', '.riu-remove-img-header', function () {
+          $(this).closest('.riu-uploaded-image-header').remove();
         });
       });
     </script>

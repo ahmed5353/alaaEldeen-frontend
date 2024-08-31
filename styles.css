@@ -457,7 +457,7 @@ div#preview-container {
   border: 1.3px solid #dbdee1;
   font-size: 14px;
   min-height: 40px;
-  padding: 0px 30px;
+  min-width: 8rem;
 }
 .tab-btn.active,
 .tab-btn.active:hover {
@@ -465,7 +465,7 @@ div#preview-container {
   border: 1.3px solid var(--primary-color);
   font-size: 14px;
   min-height: 40px;
-  padding: 0px 30px;
+  min-width: 8rem;
   background: var(--primary-color-light);
 }
 .action-btn {
@@ -1307,4 +1307,87 @@ input[type='radio']:checked:before {
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 1rem;
+}
+
+/* text editor */
+#editor-container {
+  height: 300px; /* You can adjust the height */
+  background-color: #f8f9fa; /* Optional: background color */
+}
+
+/* imagw container */
+
+.riu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+}
+.riu-upload-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 1px dashed #bfa274;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  position: relative;
+}
+.riu-upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.riu-uploaded-image {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.riu-uploaded-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.riu-remove-img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #e63050;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ?Header */
+.riu-upload-wrapper-header {
+  width: 21rem !important;
+}
+
+.riu-container-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+}
+.riu-uploaded-image-header {
+  position: relative;
+  width: 18rem !important;
+}
+.riu-uploaded-image-header img {
+  width: 21rem;
+  height: 6.25rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.riu-remove-img-header {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background: #e63050;
+  border-radius: 50%;
+  cursor: pointer;
 }
