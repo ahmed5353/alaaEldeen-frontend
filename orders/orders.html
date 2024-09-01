@@ -130,7 +130,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/orders/orders.html">
+                <a class="nav-link active" href="/orders/orders.html">
                   <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
 
                   الطلبات<span
@@ -147,10 +147,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  href="/paper-requests/paper-requests.html"
-                >
+                <a class="nav-link" href="/paper-requests/paper-requests.html">
                   <img
                     src="../assets/images/icon/list-check 1 (1).svg"
                     alt=""
@@ -329,7 +326,9 @@
                     height="120"
                     alt=""
                   />
-                  <div class="message fw-bold">هل أنت متأكد من الرفض</div>
+                  <div class="message fw-bold">
+                    هل أنت متأكد من تغيير حالة الطلب
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-add px-5 w-75">
@@ -339,48 +338,6 @@
               </div>
             </div>
           </div>
-          <!-- Accept Modal -->
-          <div
-            class="modal fade"
-            id="acceptModal"
-            tabindex="-1"
-            aria-labelledby="acceptModalLabel"
-            aria-hidden="true"
-          >
-            <div
-              class="modal-dialog modal-dialog-centered"
-              style="max-width: 24rem"
-            >
-              <div
-                class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
-              >
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="../assets/images/gifs/accept.gif"
-                    width="120"
-                    height="120"
-                    alt=""
-                  />
-                  <div class="message fw-bold">هل أنت متأكد من الموافقة</div>
-                </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-add px-5 w-75">
-                    تأكيد
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!--            breadcrumb -->
           <div class="border-bottom">
             <nav
@@ -391,14 +348,14 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                طلبات التعديل على الاوراق
+                الطلبات
               </span>
             </nav>
           </div>
 
           <!-- Main page -->
           <div class="container">
-            <h2 class="title-page mb-0 fw-bold">طلبات التعديل على الاوراق</h2>
+            <h2 class="title-page mb-0 fw-bold">الطلبات</h2>
             <div
               class="d-flex gap-2 mb-4"
               id="v-pills-tab"
@@ -415,7 +372,7 @@
                 aria-controls="v-pills-home"
                 aria-selected="true"
               >
-                طلبات التعديل على اوراق التاجر
+                الطلبات
               </button>
               <button
                 class="btn tab-btn"
@@ -427,19 +384,7 @@
                 aria-controls="v-pills-profile"
                 aria-selected="false"
               >
-                طلبات التعديل على اوراق نقطة التوزيع
-              </button>
-              <button
-                class="btn tab-btn"
-                id="v-pills-delegate-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#v-pills-delegate"
-                type="button"
-                role="tab"
-                aria-controls="v-pills-delegate"
-                aria-selected="false"
-              >
-                طلبات التعديل على مندوب التوصيل
+                الطلبات المعلقة
               </button>
             </div>
           </div>
@@ -462,27 +407,9 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
+                        style="width: 35rem"
+                        placeholder="ابحث برقم الطلب او رقم موبايل المستخدم او اسم ورقم المندوب او اسم ورقم نقطة التوزيع ...."
                       />
-                    </div>
-                    <!-- DropDowm Lists -->
-                    <div class="input-wrapper select">
-                      <label>البلد</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
-                    </div>
-                    <div class="input-wrapper select">
-                      <label>العملة</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
                     </div>
 
                     <span class="daterange-input">
@@ -496,25 +423,106 @@
                     </span>
                   </div>
                 </div>
+                <!-- sheet here -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <div class="mt-4 d-flex gap-2">
+                      <!-- DropDowm Lists -->
+                      <div class="input-wrapper select">
+                        <label>نوع المنتجات</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>نوع الطلب</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>حالة الطلب الاخيرة</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>محافظة المتجر</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>محافظة العميل</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>طريقة الدفع</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!--tabel-->
               <div class="container-tabel p-3 py-4">
                 <div class="container">
-                  <div class="table-responsive mb-3">
+                  <div class="table-responsive mb-3 rounded-3">
                     <div class="p-3 my-2">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>الشعار</th>
-                            <th>اسم المتجر</th>
-                            <th>اسم المسئول</th>
-                            <th>رقم الموبايل</th>
-                            <th>البريد الالكتروني</th>
-                            <th>البلد</th>
-                            <th>العملة</th>
-                            <th>التقييم الاجمالي</th>
-                            <th>تاريخ ووقت التعديل</th>
+                            <th>رقم الطلب</th>
+                            <th>اسم المستخدم</th>
+                            <th>رقم موبايل المستخدم</th>
+                            <th>عدد المتاجر داخل الطلب</th>
+                            <th>محافظة العميل</th>
+                            <th>محافظة المتجر</th>
+                            <th>اسم المخزن في محافظة العميل</th>
+                            <th>تاريخ ووقت الطلب</th>
+                            <th>نوع المنتجات</th>
+                            <th>نوع التوصيل</th>
+                            <th>اسم مندوب التوصيل</th>
+                            <th>رقم موبايل المندوب</th>
+                            <th>اسم نقطة التوزيع</th>
+                            <th>رقم موبايل نقطة التوزيع</th>
+                            <th>اجمالي تكلفة الطلب</th>
+                            <th>المبلغ المستحق لعلاء الدين</th>
+                            <th>قيمة التوصيل الاجمالية</th>
+                            <th>نسبة المندوب من قيمة التوصيل</th>
+                            <th>المبلغ المستحق للمندوب</th>
+                            <th>نسبة علاء الدين من قيمة التوصيل</th>
+                            <th>المبلغ المستحق لعلاء الدين</th>
+                            <th>نسبة نقطة التوزيع من قيمة التوصيل</th>
+                            <th>المبلغ المستحق لنقطة التوزيع</th>
+                            <th>قيمة الخصم</th>
+                            <th>نوع الطلب</th>
+                            <th>طريقة الدفع</th>
+                            <th></th>
+                            <th></th>
                             <th></th>
                             <th></th>
                           </tr>
@@ -522,54 +530,131 @@
                         <tbody>
                           <tr>
                             <td>1</td>
+                            <td>123456</td>
+                            <td><u>Mostafa Ahmed</u></td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>5</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                            <td>قابلة للتخزين</td>
+                            <td>توصيل</td>
+                            <td>مصطفى خالد</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>الصفا للتوزيع</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>10%</td>
+                            <td>حالي</td>
+                            <td>نقدي</td>
 
                             <td>
-                              <img
-                                src="/assets/images/market-logo.png"
-                                alt="market-logo"
-                                width="50"
-                                height="50"
-                                class="rounded"
-                              />
-                            </td>
-                            <td>النور للملابس</td>
-                            <td>Mostafa Mostafa</td>
-                            <td dir="ltr">+201231234213</td>
-                            <td>test@test.com</td>
-                            <td>اليمن</td>
-                            <td>ريال يمني</td>
-                            <td>
-                              <span>4.5</span>
-                              <img
-                                src="../assets/images/icon/Star 1.svg"
-                                alt="icon"
-                                class="mb-1"
-                              />
-                            </td>
-                            <td dir="ltr">22/03/2024-8:30 PM</td>
-
-                            <td>
-                              <div class="d-flex gap-2 justify-content-end">
+                              <div class="d-flex gap-1">
                                 <button
-                                  class="refuse align-self-center"
+                                  class="btn-status-orders"
                                   data-bs-toggle="modal"
                                   data-bs-target="#alertModal"
                                 >
-                                  X
+                                  في الطريق لاستلام الطلب
                                 </button>
                                 <button
-                                  class="accept align-self-center"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#acceptModal"
+                                  class="btn-status-orders btn-status-active"
                                 >
-                                  &#10003;
+                                  جاري تجهيز الطلب في المخزن
+                                </button>
+                                <button
+                                  class="btn-status-orders"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#alertModal"
+                                >
+                                  تم الانتهاء من تجهيز الطلب
                                 </button>
                               </div>
                             </td>
+
+                            <!-- <td>
+                              <button class="btn-status btn-success">
+                                الموافقة على الطلب
+                              </button>
+                            </td> -->
                             <td>
+                              <button class="btn-status-orders pending-btn">
+                                نقل الطلب للمعلقة
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn-status-orders btn-cancell">
+                                الغاء الطلب بالكامل
+                              </button>
+                            </td>
+
+                            <td class="d-flex gap-1 justify-content-end">
                               <a
                                 class="btn text-info action-btn"
-                                href="/paper-requests/traders-paper.html"
+                                href="/orders/order-details.html"
+                              >
+                                <i class="fa-regular fa-eye"></i>
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>123456</td>
+                            <td><u>Mostafa Ahmed</u></td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>5</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                            <td>قابلة للتخزين</td>
+                            <td>توصيل</td>
+                            <td>مصطفى خالد</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>الصفا للتوزيع</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>10%</td>
+                            <td>حالي</td>
+                            <td>نقدي</td>
+                            <td>
+                              <button class="btn-status btn-success">
+                                الموافقة على الطلب
+                              </button>
+                            </td>
+
+                            <td>
+                              <button class="btn-status-orders pending-btn">
+                                نقل الطلب للمعلقة
+                              </button>
+                            </td>
+                            <td>
+                              <button class="btn-status-orders btn-cancell">
+                                الغاء الطلب بالكامل
+                              </button>
+                            </td>
+
+                            <td class="d-flex gap-1 justify-content-end">
+                              <a
+                                class="btn text-info action-btn"
+                                href="/returns/returns-order-details.html"
                               >
                                 <i class="fa-regular fa-eye"></i>
                               </a>
@@ -579,7 +664,7 @@
                       </table>
                     </div>
                   </div>
-                  <nav aria-label="Page navigation example   ">
+                  <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                       <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1">السابق</a>
@@ -601,8 +686,10 @@
                 </div>
               </div>
             </div>
+
+            <!--  traders' products -->
             <div
-              class="tab-pane fade show"
+              class="tab-pane fade"
               id="v-pills-profile"
               role="tabpanel"
               aria-labelledby="v-pills-profile-tab"
@@ -618,27 +705,9 @@
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
+                        style="width: 35rem"
+                        placeholder="ابحث برقم الطلب او رقم موبايل المستخدم او اسم ورقم المندوب او اسم ورقم نقطة التوزيع ...."
                       />
-                    </div>
-                    <!-- DropDowm Lists -->
-                    <div class="input-wrapper select">
-                      <label>البلد</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
-                    </div>
-                    <div class="input-wrapper select">
-                      <label>العملة</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
                     </div>
 
                     <span class="daterange-input">
@@ -652,82 +721,168 @@
                     </span>
                   </div>
                 </div>
+                <!-- sheet here -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <div class="mt-4 d-flex gap-2">
+                      <!-- DropDowm Lists -->
+                      <div class="input-wrapper select">
+                        <label>نوع المنتجات</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>نوع الطلب</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>حالة الطلب الاخيرة</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>محافظة المتجر</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>محافظة العميل</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                      <div class="input-wrapper select">
+                        <label>طريقة الدفع</label>
+                        <select class="">
+                          <option value="">اختر</option>
+                          <option value="1">لوريم</option>
+                          <option value="2">لزريم</option>
+                          <option value="3">لوريم</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!--tabel-->
               <!--tabel-->
               <div class="container-tabel p-3 py-4">
                 <div class="container">
-                  <div class="table-responsive mb-3">
+                  <div class="table-responsive mb-3 rounded-3">
                     <div class="p-3 my-2">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>الشعار</th>
+                            <th>رقم الطلب</th>
+                            <th>اسم المستخدم</th>
+                            <th>رقم موبايل المستخدم</th>
+                            <th>عدد المتاجر داخل الطلب</th>
+                            <th>محافظة العميل</th>
+                            <th>محافظة المتجر</th>
+                            <th>اسم المخزن في محافظة العميل</th>
+                            <th>تاريخ ووقت الطلب</th>
+                            <th>نوع المنتجات</th>
+                            <th>نوع التوصيل</th>
+                            <th>اسم مندوب التوصيل</th>
+                            <th>رقم موبايل المندوب</th>
                             <th>اسم نقطة التوزيع</th>
-                            <th>اسم المسئول</th>
-                            <th>رقم الموبايل</th>
-                            <th>البريد الالكتروني</th>
-                            <th>الحد الائتماني</th>
-                            <th>البلد</th>
-                            <th>العملة</th>
-                            <th>التقييم الاجمالي</th>
-                            <th>تاريخ ووقت التعديل</th>
+                            <th>رقم موبايل نقطة التوزيع</th>
+                            <th>اجمالي تكلفة الطلب</th>
+                            <th>المبلغ المستحق لعلاء الدين</th>
+                            <th>قيمة التوصيل الاجمالية</th>
+                            <th>نسبة المندوب من قيمة التوصيل</th>
+                            <th>المبلغ المستحق للمندوب</th>
+                            <th>نسبة نقطة التوزيع من قيمة التوصيل</th>
+                            <th>المبلغ المستحق لنقطة التوزيع</th>
+
+                            <th>قيمة الخصم</th>
+                            <th>نوع الطلب</th>
+                            <th>طريقة الدفع</th>
                             <th></th>
+                            <th></th>
+
                             <th></th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td>1</td>
+                            <td>123456</td>
+                            <td><u>Mostafa Ahmed</u></td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>5</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td>صنعاء</td>
+                            <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                            <td>قابلة للتخزين</td>
+                            <td>توصيل</td>
+                            <td>مصطفى خالد</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>الصفا للتوزيع</td>
+                            <td dir="ltr">+0123456789</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
+                            <td>10%</td>
+                            <td>ريال يمني1000</td>
 
-                            <td>
-                              <img
-                                src="/assets/images/market-logo.png"
-                                alt="market-logo"
-                                width="50"
-                                height="50"
-                                class="rounded"
-                              />
-                            </td>
-                            <td>النور للملابس</td>
-                            <td>Mostafa Mostafa</td>
-                            <td dir="ltr">+201231234213</td>
-                            <td>test@test.com</td>
-                            <td>5000 ريال</td>
-                            <td>اليمن</td>
-                            <td>ريال يمني</td>
-                            <td>
-                              <span>4.5</span>
-                              <img
-                                src="../assets/images/icon/Star 1.svg"
-                                alt="icon"
-                                class="mb-1"
-                              />
-                            </td>
-                            <td dir="ltr">22/03/2024-8:30 PM</td>
+                            <td>10%</td>
+                            <td>حالي</td>
+                            <td>نقدي</td>
 
+                            <!-- <td>
+                              <button class="btn-status btn-success">
+                                الموافقة على الطلب
+                              </button>
+                            </td> -->
                             <td>
-                              <div class="d-flex gap-2 justify-content-end">
-                                <button
-                                  class="refuse align-self-center"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#alertModal"
-                                >
-                                  X
-                                </button>
-                                <button
-                                  class="accept align-self-center"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#acceptModal"
-                                >
-                                  &#10003;
-                                </button>
-                              </div>
+                              <button
+                                class="btn-status-orders pending-btn border-0"
+                                style="background-color: #dedede !important"
+                              >
+                                اعادة ارسال للمتجر
+                              </button>
                             </td>
                             <td>
+                              <button
+                                class="btn-status-orders bg-white select-delivery"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions"
+                                aria-controls="offcanvasWithBothOptions"
+                              >
+                                تعيين مندوب توصيل
+                              </button>
+                            </td>
+
+                            <td class="d-flex gap-1 justify-content-end">
                               <a
                                 class="btn text-info action-btn"
-                                href="/paper-requests/distribution-papers.html"
+                                href="/orders/pending-order-details.html"
                               >
                                 <i class="fa-regular fa-eye"></i>
                               </a>
@@ -737,164 +892,7 @@
                       </table>
                     </div>
                   </div>
-                  <nav aria-label="Page navigation example   ">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">السابق</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link active" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">القادم</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane fade show"
-              id="v-pills-delegate"
-              role="tabpanel"
-              aria-labelledby="v-pills-delegate-tab"
-              tabindex="0"
-            >
-              <div class="container">
-                <div
-                  class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
-                >
-                  <div class="d-flex align-items-center gap-2 flex-wrap">
-                    <div class="search-input">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="ابحث بالاسم او رقم الموبايل او البريد الاكتروني ..."
-                      />
-                    </div>
-                    <!-- DropDowm Lists -->
-                    <div class="input-wrapper select">
-                      <label>البلد</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
-                    </div>
-                    <div class="input-wrapper select">
-                      <label>العملة</label>
-                      <select class="">
-                        <option value="">اختر</option>
-                        <option value="1">لوريم</option>
-                        <option value="2">لزريم</option>
-                        <option value="3">لوريم</option>
-                      </select>
-                    </div>
-
-                    <span class="daterange-input">
-                      <img src="../assets/images/icon/calander.svg" />
-                      <input
-                        type="text"
-                        name="daterange"
-                        class="custom-daterangepicker border-0 text-center"
-                      />
-                      <i class="fa-solid fa-chevron-left active-color"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!--tabel-->
-              <div class="container-tabel p-3 py-4">
-                <div class="container">
-                  <div class="table-responsive mb-3">
-                    <div class="p-3 my-2">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>الصورة</th>
-                            <th>اسم المندوب</th>
-                            <th>رقم الموبايل</th>
-                            <th>البريد الالكتروني</th>
-                            <th>البلد</th>
-                            <th>العملة</th>
-                            <th>الحد الائتماني</th>
-                            <th>التقييم الاجمالي</th>
-                            <th>تاريخ ووقت التعديل</th>
-                            <th></th>
-                            <th></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-
-                            <td>
-                              <img
-                                src="/assets/images/avatar.png"
-                                alt="market-logo"
-                                width="50"
-                                height="50"
-                                class="rounded"
-                              />
-                            </td>
-
-                            <td>Mostafa Mostafa</td>
-                            <td dir="ltr">+201231234213</td>
-                            <td>test@test.com</td>
-                            <td>اليمن</td>
-                            <td>ريال يمني</td>
-                            <td>5000 ريال</td>
-                            <td>
-                              <span>4.5</span>
-                              <img
-                                src="../assets/images/icon/Star 1.svg"
-                                alt="icon"
-                                class="mb-1"
-                              />
-                            </td>
-                            <td dir="ltr">22/03/2024-8:30 PM</td>
-
-                            <td>
-                              <div class="d-flex gap-2 justify-content-end">
-                                <button
-                                  class="refuse align-self-center"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#alertModal"
-                                >
-                                  X
-                                </button>
-                                <button
-                                  class="accept align-self-center"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#acceptModal"
-                                >
-                                  &#10003;
-                                </button>
-                              </div>
-                            </td>
-                            <td>
-                              <a
-                                class="btn text-info action-btn"
-                                href="/paper-requests/delivery-papers.html"
-                              >
-                                <i class="fa-regular fa-eye"></i>
-                              </a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <nav aria-label="Page navigation example   ">
+                  <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                       <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1">السابق</a>
@@ -918,6 +916,87 @@
             </div>
           </div>
         </main>
+      </div>
+    </div>
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعيين مندوب توصيل
+        </h2>
+        <div class="search-input my-3">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="form-control" placeholder="ابحث ..." />
+        </div>
+        <div class="d-flex flex-column mt-3">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact1" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact2" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/person-2.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact3" />
+          </div>
+          <hr />
+        </div>
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            تأكيد
+          </button>
+        </div>
       </div>
     </div>
 

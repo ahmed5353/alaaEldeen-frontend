@@ -92,7 +92,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   href="/distribution-points/distribution-points.html"
                 >
                   <img src="../assets/images/icon/bag-map-pin 1.svg" alt="" />
@@ -121,7 +121,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/orders/orders.html">
+                <a class="nav-link active" href="#">
                   <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
 
                   الطلبات<span class="badge bg-danger rounded-circle">1</span>
@@ -293,7 +293,7 @@
               aria-label="breadcrumb"
             >
               <a href="/Dashboard.html">لوحة التحكم </a>
-              / نقاط التوزيع /
+              / الطلبات /
               <span class="breadcrumb-item active" aria-current="page">
                 تفاصيل الطلب</span
               >
@@ -303,8 +303,8 @@
           <!-- Main page -->
           <div class="bg-white">
             <div class="d-flex justify-content-between container py-2">
-              <div class="d-flex gap-4">
-                <div class="container d-flex gap-2" style="width: fit-content">
+              <div class="d-flex justify-content-between w-100">
+                <div class="container d-flex gap-2">
                   <img
                     src="../assets/images/icon/back.svg"
                     alt="back icon"
@@ -319,91 +319,37 @@
                     </h2>
                     <span>22/01/2024-01:30 PM</span>
                     <span>طريقة الدفع : نقدي</span>
+
+                    <div class="tiny-btn align-self-start mt-2">
+                      <span>
+                        <img
+                          src="/assets/images/icon/check-green.svg"
+                          alt="icon"
+                        />
+                      </span>
+                      <span> قابل للتخزين</span>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <div class="total total-alaaEldin">
+                      <span>المبلغ المستحق لعلاء الدين</span>
+                      <strong>120 ريال يمني</strong>
+                    </div>
+                    <div class="total total-order-cost">
+                      <span>اجمالي تكلفة الطلب</span>
+                      <strong>120 ريال يمني</strong>
+                    </div>
                   </div>
                 </div>
-                <div class="d-flex gap-2">
-                  <div class="total total-alaaEldin">
-                    <span>المبلغ المستحق لعلاء الدين</span>
-                    <strong>120 ريال يمني</strong>
-                  </div>
-                  <div class="total total-order-cost">
-                    <span>اجمالي تكلفة الطلب</span>
-                    <strong>120 ريال يمني</strong>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex gap-2 ps-3 align-items-center">
-                <div class="tiny-btn">
-                  <span>
-                    <img src="/assets/images/icon/check-green.svg" alt="icon" />
-                  </span>
-                  <span> قابل للتخزين</span>
-                </div>
-                <button class="btn-status btn-cancell">
-                  الغاء الطلب بالكامل
+                <button
+                  class="btn-status-orders select-delivery align-self-center bg-white"
+                  style="width: 12rem; height: fit-content"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  تغيير مندوب التوصيل
                 </button>
-              </div>
-            </div>
-
-            <!-- stepper -->
-            <div class="container mt-2 pb-3">
-              <div class="row justify-content-between text-nowrap">
-                <div class="col position-relative">
-                  <div class="step completed">
-                    <div class="circle"></div>
-                    <div class="label">الموافقة على الطلب</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step completed">
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="label">جاري البحث عن مندوب توصيل</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step completed">
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="label">تم تعيين مندوب توصيل</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step completed">
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="label">في الطريق الى الاستلام من المتجر</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="label">تم التسليم الى مندوب التوصيل</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step">
-                    <div class="line"></div>
-                    <div class="circle"></div>
-                    <div class="label">الطلب مع مندوب التوصيل</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
-                <div class="col position-relative">
-                  <div class="step">
-                    <div class="line"></div>
-
-                    <div class="circle"></div>
-                    <div class="label">تم التوصيل</div>
-                    <div class="date">22/01/2024 - 01:30 PM</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -511,162 +457,12 @@
                     </div>
                   </div>
                 </div>
-                <hr />
-                <div class="p-3 py-4">
-                  <div class="container d-flex gap-2">
-                    <span>2</span>
-                    <div class="bg-white w-100 p-3 rounded-4">
-                      <div class="d-flex gap-2">
-                        <img
-                          src="/assets/images/S.png"
-                          alt="logo"
-                          height="48"
-                          width="49"
-                        />
-                        <div class="d-flex flex-column">
-                          <span>المتجر: النور للملابس</span>
-                          <span style="font-size: #64748b"
-                            >تاريخ ووقت الحالة :22/01/2024 - 01:30 PM</span
-                          >
-                          <span style="color: #28b446">تم الموافقة</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- table -->
-                  <div class="p-2 py-4">
-                    <div class="container">
-                      <div class="table-responsive mb-3 rounded-4">
-                        <div class="p-3 my-2">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th>#</th>
-                                <th>الصورة</th>
-                                <th>اسم المنتج</th>
-                                <th>القسم الرئيسي</th>
-                                <th>القسم الفرعي</th>
-                                <th>التقييم الاجمالي</th>
-                                <th>السعر الافتراضي</th>
-                                <th>يحتوي على الوان</th>
-                                <th>يحتوي على مقاسات</th>
-                                <th>الخصم</th>
-                                <th>تاريخ انتهاء الخصم</th>
-                                <th>تاريخ ووقت الاضافة</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>
-                                  <img
-                                    src="/assets/images/product-ex.png"
-                                    alt="product"
-                                    width="65"
-                                    height="49"
-                                  />
-                                </td>
-                                <td>جاكيت جلد بسوستة</td>
-                                <td>ملابس رجالي</td>
-                                <td>جواكيت رجالي</td>
-                                <td>
-                                  <span>4.5</span>
-                                  <img
-                                    src="../assets/images/icon/Star 1.svg"
-                                    alt="icon"
-                                    class="mb-1"
-                                  />
-                                </td>
-                                <td>200 ريال يمني</td>
-                                <td>نعم</td>
-                                <td>نعم</td>
-                                <td>يوجد</td>
-                                <td>22/03/2024</td>
-                                <td>22/03/2024-8:30pm</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1"
-                              >السابق</a
-                            >
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link active" href="#">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">القادم</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
               </div>
               <!-- Left Side -->
               <div class="col-md-3 mt-4">
                 <div class="card mb-3">
                   <div class="card-body">
                     <h5 class="card-title">المستخدم</h5>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="d-flex align-items-center gap-2">
-                        <img
-                          src="/assets/images/person-circle.png"
-                          class="rounded-circle me-2"
-                          width="52"
-                          height="51"
-                          alt="Profile"
-                        />
-                        <div>
-                          <p class="mb-0">Mostafa Ahmed</p>
-                          <small class="text-muted" dir="ltr"
-                            >+20 123456 789</small
-                          >
-                        </div>
-                      </div>
-
-                      <span class="marker-icon"
-                        ><img src="/assets/images/icon/map-icon.svg" alt=""
-                      /></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <h5 class="card-title">المندوب</h5>
-                    <div class="d-flex align-items-center gap-2">
-                      <img
-                        src="/assets/images/person-2.png"
-                        class="rounded-circle me-2"
-                        width="52"
-                        height="51"
-                        alt="Profile"
-                      />
-                      <div>
-                        <p class="mb-0">Mostafa Ahmed</p>
-                        <small class="text-muted" dir="ltr"
-                          >+20 123456 789</small
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <h5 class="card-title">نقطة توزيع</h5>
                     <div class="d-flex align-items-center gap-2">
                       <img
                         src="/assets/images/person-circle.png"
@@ -676,7 +472,7 @@
                         alt="Profile"
                       />
                       <div>
-                        <p class="mb-0">الصفا للتوزيع</p>
+                        <p class="mb-0">Mostafa Ahmed</p>
                         <small class="text-muted" dir="ltr"
                           >+20 123456 789</small
                         >
@@ -710,23 +506,90 @@
         </main>
       </div>
     </div>
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعيين مندوب توصيل
+        </h2>
+        <div class="search-input my-3">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="form-control" placeholder="ابحث ..." />
+        </div>
+        <div class="d-flex flex-column mt-3">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact1" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact2" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/person-2.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact3" />
+          </div>
+          <hr />
+        </div>
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            تأكيد
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2023.1.117/js/kendo.all.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('#stepper').kendoStepper({
-          steps: [
-            { label: 'Step 1', icon: 'k-icon k-i-globe' },
-            { label: 'Step 2', icon: 'k-icon k-i-marker-pin-target' },
-            { label: 'Step 3', icon: 'k-icon k-i-check' },
-          ],
-          select: function (e) {
-            console.log('Selected step: ' + e.step.options.label);
-          },
-        });
-      });
-    </script>
   </body>
 </html>

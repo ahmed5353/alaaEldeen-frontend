@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
     <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -24,7 +28,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <div class="overlay" id="overlay"></div>
@@ -54,7 +58,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/users/Users.html">
+                <a class="nav-link" href="/users/users.html">
                   <img src="../assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -78,7 +82,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/productAttributes.html">
+                <a class="nav-link" href="/productAttributes.html">
                   <img src="../assets/images/icon/bags-shopping 1.svg" alt="" />
 
                   سمات المنتجات
@@ -132,7 +136,10 @@
                 <a class="nav-link" href="/orders/orders.html">
                   <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
 
-                  الطلبات<span class="badge bg-danger rounded-circle">1</span>
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
                 </a>
               </li>
               <li class="nav-item">
@@ -230,9 +237,12 @@
           </div>
         </aside>
         <!--  end aside section-->
-        <main class="col-md-9 ms-sm-auto col-lg-10 p-0">
+        <main
+          class="col-md-9 ms-sm-auto col-lg-10 p-0"
+          style="background-color: #f7f9fb"
+        >
           <!--header navbar-->
-          <header class="navbar">
+         <header class="navbar">
             <div class="container d-flex justify-content-between">
               <button class="btn btn-logout d-flex d-none d-md-block">
                 <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
@@ -251,7 +261,7 @@
                   href="/support/support.html"
                 >
                   <img
-                    src="assets/images/icon/support.svg"
+                    src="../assets/images/icon/support.svg"
                     width="40"
                     height="40"
                   />
@@ -259,10 +269,10 @@
                 </a>
                 <a
                   class="mx-3 d-flex flex-column gap-1"
-                  href="/notifications/notifications.html"
+                  href="../notifications/notifications.html"
                 >
                   <img
-                    src="assets/images/icon/notific.svg"
+                    src="../assets/images/icon/notific.svg"
                     width="40"
                     height="40"
                   />
@@ -273,7 +283,7 @@
                   href="personal-file/personal-file.html"
                 >
                   <img
-                    src="assets/images/avatar.png"
+                    src="../assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -291,7 +301,7 @@
           </header>
 
           <!--            breadcrumb -->
-          <div class="border-bottom">
+          <div class="border-bottom bg-white">
             <nav
               dir="rtl"
               class="breadcrumb-nav container"
@@ -299,22 +309,135 @@
             >
               <a href="#">لوحة التحكم </a>
               /
+              <a href="#">الاشعارات</a>
+              /
               <span class="breadcrumb-item active" aria-current="page">
-                سمات المنتجات
+                اضافة اشعار جديد
               </span>
             </nav>
           </div>
 
-          <div class="container pb-3">
-            <h2 class="title-page mb-0">سمات المنتجات</h2>
+          <div class="container bg-white pb-3">
+            <div class="d-flex gap-2 align-items-center">
+              <img
+                src="../assets/images/icon/back.svg"
+                alt="icon"
+                style="cursor: pointer"
+              />
+              <h2 class="title-page mb-0 fw-bold">اضافة اشعار جديد</h2>
+            </div>
 
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="input-wrapper select">
-                <label>النوع</label>
-                <select style="position: relative">
-                  <option value="">الجميع</option>
+            <div>
+              <label
+                class="select-img m-auto text-center position-relative upload-logo"
+              >
+                <div
+                  style="
+                    border: 1px dashed #bfa274;
+                    border-radius: 10px;
+                    background-color: #f8f8f8;
+                  "
+                >
+                  <img
+                    class="preview-img"
+                    src="../assets/images/icon-park-outline_add-four.svg"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <input type="file" class="upload-img-input d-none" />
+                <h5 class="active-color text-decoration-underline mt-2">
+                  اضافة صورة الاشعار
+                </h5>
+                <div
+                  class="preview-container text-center mt-2 d-none"
+                  style="position: absolute; top: -1rem; left: -0.7rem"
+                >
+                  <span class="remove-img">
+                    <svg
+                      width="31"
+                      height="31"
+                      viewBox="0 0 31 31"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="15.4284"
+                        cy="15.1905"
+                        r="14.2071"
+                        fill="#E63050"
+                        stroke="white"
+                        stroke-width="1.3"
+                      />
+                      <path
+                        d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="p-3 py-4 d-flex gap-2 align-items-start"
+            style="background-color: #f6f8fa"
+          >
+            <form class="p-4 bg-white rounded-3 w-75">
+              <div class="d-flex gap-2 align-items-center">
+                <!-- The first column -->
+                <div class="d-flex flex-column gap-3 flex-grow-1">
+                  <div class="input-wrapper p-1">
+                    <label> عنوان النص بالعربي</label>
+                    <input
+                      class="w-100 p-2"
+                      type="text"
+                      placeholder="اكتب هنا"
+                    />
+                  </div>
+
+                  <div class="input-wrapper p-1">
+                    <label> النص بالعربي</label>
+                    <textarea
+                      class="w-100 p-2"
+                      type="text"
+                      placeholder="اكتب هنا"
+                      style="height: 8rem"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="d-flex flex-column gap-3 flex-grow-1">
+                  <div class="input-wrapper p-1">
+                    <label> عنوان النص بالانجليزي</label>
+                    <input
+                      class="w-100 p-2"
+                      type="text"
+                      placeholder="اكتب هنا"
+                    />
+                  </div>
+
+                  <div class="input-wrapper p-1">
+                    <label> النص بالانجليزي</label>
+                    <textarea
+                      class="w-100 p-2"
+                      type="text"
+                      placeholder="اكتب هنا"
+                      style="height: 8rem"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label>حدد المستخدم</label>
+                <select class="w-100">
+                  <option value="">- اختر -</option>
                   <option value="1">لوريم</option>
-                  <option value="2">لوريم</option>
+                  <option value="2">ملابس</option>
+                  <option value="3">لوريم</option>
                 </select>
                 <i
                   class="fa-solid fa-chevron-down"
@@ -322,189 +445,167 @@
                     width: 10px;
                     color: #bfa274;
                     position: absolute;
-                    left: 14px;
+                    left: 1.5rem;
                     top: 18px;
                     z-index: 999;
                   "
                 ></i>
               </div>
-            </div>
-          </div>
-
-          <!-- edit user data -->
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-scroll="true"
-            tabindex="-1"
-            id="edite-section"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
-          >
-            <form class="d-flex flex-column gap-4 justify-content-center p-4">
-              <div class="p-2 border-bottom d-flex justify-content-center">
-                <h4 class="fw-bold">تعديل المسمى</h4>
-              </div>
-
-              <div class="input-custom p-2">
-                <div class="input-wrapper p-2">
-                  <label dir="ltr">(باللغة العربية) الاسم</label>
-                  <input class="w-100 p-2" type="text" value="السمات" />
-                </div>
-                <div class="input-wrapper p-2 mt-3">
-                  <label dir="ltr">(باللغة الانجليزية) الاسم</label>
-                  <input class="w-100 p-2" type="text" value="السمات" />
-                </div>
-              </div>
-
-              <div class="w-100 text-center">
+              <div class="mt-3 me-4">
                 <button
                   type="submit"
-                  class="btn btn-add w-auto m-auto mt-2 px-5"
+                  class="btn btn-add w-auto m-auto px-5 mt-2"
                 >
-                  حفظ
+                  ارسال
                 </button>
               </div>
             </form>
-          </div>
+            <!--tabel-->
+            <div>
+              <div class="container bg-white py-3 rounded-3">
+                <div class="table-container">
+                  <div class="p-3 my-2">
+                    <div class="search-input mb-3">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="ابحث ..."
+                      />
+                    </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>الصورة</th>
+                          <th>الاسم</th>
+                          <th>رقم الموبايل</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label class="custom-checkbox">
+                              <input
+                                type="checkbox"
+                                name="control-panel[]"
+                                checked
+                              />
+                              <span></span>
+                            </label>
+                          </td>
 
-          <!-- confirm delete -->
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="deleteModal"
-            tabindex="-1"
-            aria-labelledby="deleteModalLabel"
-            aria-hidden="true"
-          >
-            <div
-              class="modal-dialog modal-dialog-centered"
-              style="max-width: 24rem"
-            >
-              <div
-                class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
-              >
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="./assets/images/icon/Delete gif.gif"
-                    width="120"
-                    height="120"
-                    alt=""
-                  />
-                  <div class="message">هل أنت متأكد من الحذف</div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                  <button type="button" class="btn-delete">حذف</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--tabel-->
-          <div class="container-tabel p-3 py-4">
-            <div class="container">
-              <div class="table-responsive mb-3">
-                <div class="p-3 my-2">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>الاسم</th>
-                        <th>النوع</th>
-                        <th>عدد المنتجات المرتبطة بالنوع</th>
-                        <th>عدد الاقسام الرئيسية المرتبطة بالنوع</th>
-                        <th>الحالة</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-
-                        <td>السمات</td>
-                        <td>مقاس</td>
-                        <td>45</td>
-                        <td>31</td>
-                        <td class="text-start">
-                          <div
-                            class="form-switch ms-2 d-flex justify-content-center"
-                          >
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckChecked"
-                              checked
-                            />
-                          </div>
-                        </td>
-
-                        <td class="d-flex gap-1 justify-content-end">
-                          <button
-                            class="btn text-success action-btn"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#edite-section"
-                            aria-controls="edite-section"
-                          >
+                          <td>
                             <img
-                              src="./assets/images/icon/pencil 1.svg"
-                              alt=""
+                              src="/assets/images/person-2.png"
+                              alt="avatar"
+                              width="48"
+                              height="47"
                             />
-                          </button>
-                          <!-- trash -->
-                          <button
-                            class="btn action-btn trash-color"
-                            data-bs-toggle="modal"
-                            data-bs-target="#deleteModal"
-                          >
-                            <i class="fa-regular fa-trash-can"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                          </td>
+                          <td>Mostafa Ahmed</td>
+                          <td dir="ltr">+2013213123</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="custom-checkbox">
+                              <input type="checkbox" name="control-panel[]" />
+                              <span></span>
+                            </label>
+                          </td>
+
+                          <td>
+                            <img
+                              src="/assets/images/person-2.png"
+                              alt="avatar"
+                              width="48"
+                              height="47"
+                            />
+                          </td>
+                          <td>Mostafa Ahmed</td>
+                          <td dir="ltr">+2013213123</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="custom-checkbox">
+                              <input type="checkbox" name="control-panel[]" />
+                              <span></span>
+                            </label>
+                          </td>
+
+                          <td>
+                            <img
+                              src="/assets/images/person-2.png"
+                              alt="avatar"
+                              width="48"
+                              height="47"
+                            />
+                          </td>
+                          <td>Mostafa Ahmed</td>
+                          <td dir="ltr">+2013213123</td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <label class="custom-checkbox">
+                              <input type="checkbox" name="control-panel[]" />
+                              <span></span>
+                            </label>
+                          </td>
+
+                          <td>
+                            <img
+                              src="/assets/images/person-2.png"
+                              alt="avatar"
+                              width="48"
+                              height="47"
+                            />
+                          </td>
+                          <td>Mostafa Ahmed</td>
+                          <td dir="ltr">+2013213123</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-              <nav aria-label="Page navigation example   ">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">السابق</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link active" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">القادم</a>
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
         </main>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/script.js"></script>
+    <script src="../assets/script.js"></script>
     <script>
+      // upload image
       $(document).ready(function () {
-        $('#toggleSidebar').on('click', function () {
-          $('#sidebar').toggleClass('show');
-          $('#overlay').toggleClass('show');
+        // Generalized handling for any image upload
+        $('.upload-img-input').change(function (e) {
+          const file = e.target.files[0];
+          const $label = $(this).closest('label');
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $label.find('.preview-img').attr('src', e.target.result);
+              $label.find('.preview-container').removeClass('d-none');
+              $label.find('.remove-img').show();
+            };
+            reader.readAsDataURL(file);
+          }
         });
-        $('#overlay').on('click', function () {
-          $('#sidebar').removeClass('show');
-          $('#overlay').removeClass('show');
+
+        // Generalized handling for removing the image
+        $('.remove-img').click(function () {
+          const $label = $(this).closest('label');
+          const defaultImgSrc = $label.hasClass('upload-logo')
+            ? '../assets/images/icon/img.gif'
+            : '../assets/images/biggerLogo.png';
+
+          $label.find('.preview-img').attr('src', defaultImgSrc);
+          $label.find('.preview-container').addClass('d-none');
+          $(this).hide();
+          $label.find('.upload-img-input').val('');
         });
       });
     </script>

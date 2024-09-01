@@ -869,9 +869,10 @@ input[type='radio']:checked:before {
 }
 
 .btn-cancell {
-  color: #e63050;
-  border: 1px solid #e63050;
-  background-color: white;
+  color: #e63050 !important;
+  border: 1px solid #e63050 !important;
+  background-color: white !important;
+  min-width: 10rem;
 }
 
 .btn-success {
@@ -1432,4 +1433,103 @@ input[type='radio']:checked:before {
 .radio-group-coupon label {
   font-size: 1rem;
   color: #2c3e50; /* Customize the text color */
+}
+
+/* --------------------------------- Orders --------------------------------- */
+.btn-status-orders {
+  border: none;
+  padding: 5px 16px;
+  border-radius: 8px;
+  color: var(--gray-font);
+}
+.btn-status-active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.pending-btn {
+  border: 1px solid var(--gray-font);
+  background-color: #fff !important;
+}
+
+.select-delivery {
+  border: 1px solid #f9a130;
+  color: #f9a130;
+}
+
+.table-container {
+  max-height: 30rem;
+  overflow-y: auto;
+}
+
+/* ----------------------------- conversation ----------------------------- */
+.conv-product-details {
+  color: var(--gray-font);
+  strong {
+    font-size: 16px;
+    color: var(--active-font);
+  }
+}
+
+.stop-conv {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  &:hover {
+    background-color: #f8d7da;
+  }
+}
+
+.chat-msg {
+  max-width: 70%;
+  word-wrap: break-word;
+  margin: 10px 0;
+  padding: 7px;
+}
+
+.sender {
+  border: 1px solid #dbdee1;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: auto;
+}
+
+.reciever {
+  background-color: var(--primary-color);
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-right: auto;
+
+  p {
+    padding: 7px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.message-write {
+  box-shadow: 0px -8px 22px -1px rgba(187, 189, 189, 0.2);
+  input {
+    padding: 0.6rem 1rem;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    border: 1px solid #dcdcdc;
+    color: #a4acad;
+  }
+}
+
+.msg-icons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  img {
+    cursor: pointer;
+  }
 }

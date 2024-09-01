@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/images/spareX-favicon.png"
+    />
     <title>Dashboard</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -24,7 +28,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <div class="overlay" id="overlay"></div>
@@ -54,7 +58,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/users/Users.html">
+                <a class="nav-link" href="/users/users.html">
                   <img src="../assets/images/icon/chart-user 1.svg" alt="" />
 
                   المستخدمين
@@ -71,7 +75,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/subCategories.html">
+                <a class="nav-link" href="/subCategories.html">
                   <img src="../assets/images/icon/folder 1.svg" alt="" />
 
                   الاقسام الفرعية
@@ -132,7 +136,10 @@
                 <a class="nav-link" href="/orders/orders.html">
                   <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
 
-                  الطلبات<span class="badge bg-danger rounded-circle">1</span>
+                  الطلبات<span
+                    class="badge bg-danger rounded-circle rounded-circle"
+                    >1</span
+                  >
                 </a>
               </li>
               <li class="nav-item">
@@ -251,7 +258,7 @@
                   href="/support/support.html"
                 >
                   <img
-                    src="assets/images/icon/support.svg"
+                    src="../assets/images/icon/support.svg"
                     width="40"
                     height="40"
                   />
@@ -259,10 +266,10 @@
                 </a>
                 <a
                   class="mx-3 d-flex flex-column gap-1"
-                  href="/notifications/notifications.html"
+                  href="../notifications/notifications.html"
                 >
                   <img
-                    src="assets/images/icon/notific.svg"
+                    src="../assets/images/icon/notific.svg"
                     width="40"
                     height="40"
                   />
@@ -273,7 +280,7 @@
                   href="personal-file/personal-file.html"
                 >
                   <img
-                    src="assets/images/avatar.png"
+                    src="../assets/images/avatar.png"
                     alt="User Avatar"
                     class="rounded-circle ms-2"
                     width="40"
@@ -289,7 +296,6 @@
               </div>
             </div>
           </header>
-
           <!--            breadcrumb -->
           <div class="border-bottom">
             <nav
@@ -300,14 +306,14 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                الاقسام الفرعية
+                الاشعارات
               </span>
             </nav>
           </div>
 
           <div class="container pb-3">
             <div class="">
-              <h2 class="title-page mb-0">الاقسام الفرعية</h2>
+              <h2 class="title-page mb-0 fw-bold">الاشعارات</h2>
 
               <div
                 class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
@@ -323,7 +329,7 @@
                   </div>
 
                   <span class="daterange-input">
-                    <img src="assets/images/icon/calander.svg" />
+                    <img src="../assets/images/icon/calander.svg" />
                     <input
                       type="text"
                       name="daterange"
@@ -336,16 +342,14 @@
                   </span>
                 </div>
 
-                <button
+                <a
                   class="btn btn-add"
                   type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
+                  href="/notifications/add-notification.html"
                 >
-                  <img width="24" height="24" src="assets/images/Add.gif" />
-                  اضافة قسم فرعي
-                </button>
+                  <img width="24" height="24" src="../assets/images/Add.gif" />
+                  اضافة اشعار جديد
+                </a>
               </div>
               <div class="d-flex"></div>
             </div>
@@ -378,7 +382,7 @@
                 </div>
                 <div class="modal-body text-center">
                   <img
-                    src="./assets/images/icon/Delete gif.gif"
+                    src="../assets/images/icon/Delete gif.gif"
                     width="120"
                     height="120"
                     alt=""
@@ -400,58 +404,44 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>#</th>
-                        <th>اسم القسم الفرعي</th>
-                        <th>اسم القسم الرئيسي</th>
-                        <th>عدد المنتجات المنسدلة</th>
-                        <th>الحالة</th>
+                        <th class="table-head">#</th>
+                        <th class="table-head">الصورة</th>
+                        <th class="table-head">عنوان النص</th>
+
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
-
-                        <td>جواكت رجالي</td>
-                        <td>ملابس رجالي</td>
-                        <td>22</td>
-
-                        <td class="text-start">
-                          <div
-                            class="form-switch ms-2 d-flex justify-content-center"
-                          >
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckChecked"
-                              checked
-                            />
-                          </div>
+                        <td>
+                          <img
+                            src="/assets/images/jacket.png"
+                            alt="product"
+                            width="65"
+                            height="49"
+                          />
                         </td>
 
-                        <td>
-                          <div class="d-flex gap-1 justify-content-end">
-                            <button
-                              class="btn text-success action-btn"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#edite-section"
-                              aria-controls="edite-section"
-                            >
-                              <img
-                                src="../assets/images/icon/pencil 1.svg"
-                                alt=""
-                              />
-                            </button>
-                            <!-- trash -->
-                            <button
-                              class="btn trash-color action-btn"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                          </div>
+                        <td>حماية البيانات</td>
+                        <td class="d-flex gap-1 justify-content-end">
+                          <button
+                            class="btn text-info action-btn"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions"
+                            aria-controls="offcanvasWithBothOptions"
+                          >
+                            <i class="fa-regular fa-eye"></i>
+                          </button>
+
+                          <!-- trash -->
+                          <button
+                            class="btn trash-color action-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal"
+                          >
+                            <i class="fa-regular fa-trash-can"></i>
+                          </button>
                         </td>
                       </tr>
                     </tbody>
@@ -478,130 +468,48 @@
         </main>
       </div>
     </div>
-    <!--add subCategory-->
+    <!--add user-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"
       tabindex="-1"
       id="offcanvasWithBothOptions"
       aria-labelledby="offcanvasWithBothOptionsLabel"
-    >
-      <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center">اضافة قسم فرعي</h2>
-        <form class="d-flex flex-column px-4 gap-4">
-          <div class="input-wrapper">
-            <label>القسم الرئيسي</label>
-            <select class="w-100">
-              <option value="">ملابس</option>
-              <option value="1">لوريم</option>
-              <option value="2">ملابس</option>
-              <option value="3">لوريم</option>
-            </select>
-            <i
-              class="fa-solid fa-chevron-down"
-              style="
-                width: 10px;
-                color: #bfa274;
-                position: absolute;
-                left: 1.5rem;
-                top: 18px;
-                z-index: 999;
-              "
-            ></i>
-          </div>
-          <div class="subcategories-section">
-            <div class="subcategories-container d-flex flex-column gap-3">
-              <div class="input-wrapper">
-                <label>اسم القسم الفرعي-1 بالعربية</label>
-                <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
-              </div>
-              <div class="input-wrapper">
-                <label>اسم القسم الفرعي-1 بالانجليزية</label>
-                <input class="w-100 p-2" type="text" name="sub-category-en-1" />
-              </div>
-            </div>
-            <button
-              type="button"
-              class="add-new-feature add-new-subcategory mt-3 w-100"
-            >
-              <img src="/assets/images/icon/add.svg" alt="" />
-              اضافة قسم فرعي جديد
-            </button>
-          </div>
-
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              اضافة
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!--edit subCategory-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="edite-section"
-      aria-labelledby="offcanvasWithBothOptionsLabel"
+      style="width: 31rem"
     >
       <div class="offcanvas-body">
         <h2 class="title-page border-bottom text-center fw-bold">
-          تعديل القسم الفرعي
+          تفاصيل الاشعار
         </h2>
-        <form class="d-flex flex-column px-4 gap-4">
-          <div class="input-wrapper">
-            <label>القسم الرئيسي</label>
-            <select class="w-100">
-              <option value="">ملابس</option>
-              <option value="1">لوريم</option>
-              <option value="2">ملابس</option>
-              <option value="3">لوريم</option>
-            </select>
-            <i
-              class="fa-solid fa-chevron-down"
-              style="
-                width: 10px;
-                color: #bfa274;
-                position: absolute;
-                left: 1.5rem;
-                top: 18px;
-                z-index: 999;
-              "
-            ></i>
+        <div class="d-flex flex-column px-3 mt-4">
+          <img
+            src="/assets/images/jacket-cover.png"
+            alt="car"
+            width="434"
+            height="290"
+          />
+          <div class="mt-3">
+            <h6 class="fw-bold">حماية البيات</h6>
+            <p>
+              أي معلومات شخصية تزودئا بها عند استخدامك لهذا الموقم ييسوف يماصل
+              وفقا لسيياييية الخصوصية الموجودة لدينا والحفاظ
+            </p>
           </div>
-
-          <div class="subcategories-section">
-            <div class="subcategories-container d-flex flex-column gap-3">
-              <div class="input-wrapper">
-                <label>اسم القسم الفرعي-1 بالعربية</label>
-                <input class="w-100 p-2" type="text" name="sub-category-ar-1" />
-              </div>
-              <div class="input-wrapper">
-                <label>اسم القسم الفرعي-1 بالانجليزية</label>
-                <input class="w-100 p-2" type="text" name="sub-category-en-1" />
-              </div>
-            </div>
-            <button
-              type="button"
-              class="add-new-feature add-new-subcategory w-100 mt-3"
-            >
-              <img src="/assets/images/icon/add.svg" alt="" />
-              اضافة قسم فرعي جديد
-            </button>
+          <hr />
+          <div class="mt-3" dir="ltr">
+            <h6 class="fw-bold">data protection</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus corrupti nostrum blanditiis quae hic ut, sapiente
+              molestiae repellendus incidunt minima doloribus? Illum nobis
+              quibusdam eaque minus reprehenderit quae mollitia repellat.
+            </p>
           </div>
-
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              اضافة
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="/assets/script.js"></script>
     <script>
       $(function () {
         $('input[name="daterange"]').daterangepicker(
@@ -652,85 +560,6 @@
             );
           }
         );
-      });
-
-      $(document).ready(function () {
-        $('.toggle-password').on('click', function () {
-          const target = $(this).data('target');
-          const input = $(target);
-          const type = input.attr('type') === 'password' ? 'text' : 'password';
-          input.attr('type', type);
-          $(this).toggleClass('fa-eye fa-eye-slash');
-        });
-      });
-
-      //     remove images
-      $(document).ready(function () {
-        $('#upploadImg').change(function (e) {
-          const file = e.target.files[0];
-          if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-              $('#preview-img').attr('src', e.target.result);
-              $('#preview-container').removeClass('d-none');
-              $('#remove-img').show();
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-
-        $('#remove-img').click(function () {
-          $('#preview-img').attr('src', 'assets/images/icon/img.gif');
-          $('#preview-container').addClass('d-none');
-          $('#remove-img').hide();
-          $('#upploadImg').val('');
-        });
-      });
-      $(document).ready(function () {
-        $('#toggleSidebar').on('click', function () {
-          $('#sidebar').toggleClass('show');
-          $('#overlay').toggleClass('show');
-        });
-        $('#overlay').on('click', function () {
-          $('#sidebar').removeClass('show');
-          $('#overlay').removeClass('show');
-        });
-      });
-
-      $(document).ready(function () {
-        $('.subcategories-section').each(function (index, section) {
-          let subcategoryCount = $(section).find('.input-wrapper').length / 2;
-          $(section)
-            .find('.add-new-subcategory')
-            .on('click', function () {
-              subcategoryCount++;
-              const newSubcategory = `
-        <div class="subcategory-wrapper d-flex flex-column gap-3 ">
-          <div class="input-wrapper w-100">
-            <label>اسم القسم الفرعي-${subcategoryCount} بالعربية</label>
-            <input class="w-100 p-2" type="text" name="sub-category-ar-${subcategoryCount}" />
-          </div>
-          <div class="input-wrapper w-100">
-            <label>اسم القسم الفرعي-${subcategoryCount} بالانجليزية</label>
-            <div class="d-flex gap-2">
-              <input class="w-100 pt-3 p-2" type="text" name="sub-category-en-${subcategoryCount}" />
-              <button type="button" class="btn p-0 action-btn active-color align-self-center remove-subcategory">
-                <i class="fa-regular fa-trash-can"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      `;
-              $(section)
-                .find('.subcategories-container')
-                .append(newSubcategory);
-            });
-        });
-
-        // Remove subcategory input fields
-        $(document).on('click', '.remove-subcategory', function () {
-          $(this).closest('.subcategory-wrapper').remove();
-        });
       });
     </script>
   </body>
