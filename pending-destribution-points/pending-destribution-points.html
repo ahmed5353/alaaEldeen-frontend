@@ -374,7 +374,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
+                style="max-height: 22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -415,7 +415,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
+                style="max-height: 22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -433,6 +433,78 @@
                     alt=""
                   />
                   <div class="message fw-bold">هل أنت متأكد من الموافقة</div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-add px-5 w-75"
+                    data-bs-toggle="modal"
+                    data-bs-target="#destributionModal"
+                  >
+                    تأكيد
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- accept on distribution Modal -->
+          <div
+            class="modal fade"
+            id="destributionModal"
+            tabindex="-1"
+            aria-labelledby="destributionModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered"
+              style="max-width: 24rem"
+            >
+              <div
+                class="modal-content"
+                style="max-height: 22rem; overflow: hidden"
+              >
+                <div class="modal-header">
+                  <div class="d-flex" style="gap: 3.5rem">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                    <span class="fs-5 fw-bold">الموافقة على نقطة التوزيع</span>
+                  </div>
+                </div>
+                <div class="modal-body text-center">
+                  <div class="input-custom position-relative">
+                    <div class="input-wrapper">
+                      <label> الحد الائتماني</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span
+                      style="
+                        position: absolute;
+                        left: 10px;
+                        top: 0.75rem;
+                        color: #b2b2b2;
+                      "
+                      >ريال يمني</span
+                    >
+                  </div>
+                  <div class="input-custom position-relative mt-3">
+                    <div class="input-wrapper">
+                      <label> الحد الاقصى للمستحقات</label>
+                      <input class="w-100" type="text" />
+                    </div>
+                    <span
+                      style="
+                        position: absolute;
+                        left: 10px;
+                        top: 0.75rem;
+                        color: #b2b2b2;
+                      "
+                      >ريال يمني</span
+                    >
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-add px-5 w-75">

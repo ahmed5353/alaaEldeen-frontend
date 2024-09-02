@@ -23,8 +23,11 @@
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -294,6 +297,110 @@
             </div>
           </header>
 
+          <!-- accept delegate -->
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="accept-delegate"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+            style="overflow-y: auto; max-height: 100vh"
+          >
+            <form class="d-flex flex-column gap-4 justify-content-center p-4">
+              <div class="p-2 border-bottom d-flex justify-content-center">
+                <h4 class="fw-bold">الموافقة على مندوب التوصيل</h4>
+              </div>
+
+              <div class="position-relative flex-grow-1">
+                <div class="input-wrapper p-2">
+                  <label>الحد الائتماني</label>
+                  <input class="w-100" type="text" />
+                </div>
+                <span
+                  style="
+                    position: absolute;
+                    left: 1.2rem;
+                    top: 1rem;
+                    color: #606c7e;
+                  "
+                  >ريال يمني</span
+                >
+              </div>
+              <div class="position-relative flex-grow-1">
+                <div class="input-wrapper p-2">
+                  <label>الحد الاقصى للمستحقات</label>
+                  <input class="w-100" type="text" />
+                </div>
+                <span
+                  style="
+                    position: absolute;
+                    left: 1.2rem;
+                    top: 1rem;
+                    color: #606c7e;
+                  "
+                  >ريال يمني</span
+                >
+              </div>
+              <hr />
+
+              <h5 class="fw-bold text-center">اضافة نطاق عمل</h5>
+              <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="form-control" placeholder="ابحث..." />
+              </div>
+
+              <div class="form-group d-flex align-items-center gap-2">
+                <label for="radiusRange">نطاق العمل بالكيلو متر</label>
+                <input
+                  type="range"
+                  id="radiusRange"
+                  min="1"
+                  max="20"
+                  value="2"
+                  step="1"
+                  class="form-control-range"
+                />
+                <span id="radiusValue">2 KM</span>
+              </div>
+
+              <div id="map2"></div>
+
+              <div class="d-flex gap-3">
+                <div class="input-wrapper select flex-grow-1">
+                  <label>المدينة</label>
+                  <select>
+                    <option value="">اختر</option>
+                    <option value="1">لوريم</option>
+                    <option value="2">لزريم</option>
+                    <option value="3">لوريم</option>
+                  </select>
+                </div>
+                <div class="input-wrapper select flex-grow-1">
+                  <label>المحافظة</label>
+                  <select>
+                    <option value="">اختر</option>
+                    <option value="1">لوريم</option>
+                    <option value="2">لزريم</option>
+                    <option value="3">لوريم</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <label>الشارع</label>
+                <input class="w-100" type="text" placeholder="اكتب هنا ..." />
+              </div>
+
+              <div class="w-100 text-center mt-3">
+                <button
+                  type="submit"
+                  class="btn btn-add w-auto m-auto px-5 fw-bold"
+                >
+                  اضافة
+                </button>
+              </div>
+            </form>
+          </div>
+
           <!-- edit password -->
           <div
             class="offcanvas offcanvas-start"
@@ -375,7 +482,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
+                style="max-height: 22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -390,7 +497,6 @@
                     src="../assets/images/gifs/cancell.gif"
                     width="120"
                     height="120"
-                    alt=""
                   />
                   <div class="message fw-bold">هل أنت متأكد من الرفض</div>
                 </div>
@@ -416,7 +522,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
+                style="max-height: 22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -436,7 +542,14 @@
                   <div class="message fw-bold">هل أنت متأكد من الموافقة</div>
                 </div>
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-add px-5 w-75">
+                  <button
+                    id="confirmButton"
+                    class="btn btn-add px-5 w-75"
+                    type="submit"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#accept-delegate"
+                    aria-controls="accept-delegate"
+                  >
                     تأكيد
                   </button>
                 </div>
@@ -623,6 +736,7 @@
       </div>
     </div>
 
+    <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
@@ -738,6 +852,75 @@
           const type = input.attr('type') === 'password' ? 'text' : 'password';
           input.attr('type', type);
           $(this).toggleClass('fa-eye fa-eye-slash');
+        });
+      });
+
+      $(document).ready(function () {
+        $('#confirmButton').on('click', function () {
+          $('#acceptModal').modal('hide');
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize the map when the page is fully loaded
+        var map2 = L.map('map2').setView([29.8206, 30.8025], 10);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+        }).addTo(map2);
+
+        var marker2 = null;
+        var circle = null;
+
+        function getRadiusFromSlider() {
+          return $('#radiusRange').val() * 1000; // Convert km to meters
+        }
+
+        // Initialize circle with a default position and radius
+        var initialLatLng = [29.8206, 30.8025];
+        var defaultRadius = getRadiusFromSlider();
+        circle = L.circle(initialLatLng, {
+          radius: defaultRadius,
+          color: '#4CAF50',
+          fillColor: '#4CAF50',
+          fillOpacity: 0.2,
+        }).addTo(map2);
+
+        map2.on('click', function (e) {
+          var lat = e.latlng.lat;
+          var lng = e.latlng.lng;
+
+          if (marker2) {
+            map2.removeLayer(marker2);
+          }
+          marker2 = L.marker([lat, lng]).addTo(map2);
+
+          var currentRadius = getRadiusFromSlider();
+
+          if (circle) {
+            map2.removeLayer(circle);
+          }
+          circle = L.circle([lat, lng], {
+            radius: currentRadius,
+            color: '#4CAF50',
+            fillColor: '#4CAF50',
+            fillOpacity: 0.2,
+          }).addTo(map2);
+
+          console.log('Map 2 - Latitude: ' + lat + ', Longitude: ' + lng);
+        });
+
+        $('#radiusRange').on('input', function () {
+          var radiusKm = $(this).val();
+          $('#radiusValue').text(radiusKm + ' KM');
+
+          var radiusMeters = getRadiusFromSlider();
+
+          if (circle) {
+            circle.setRadius(radiusMeters);
+          }
         });
       });
     </script>

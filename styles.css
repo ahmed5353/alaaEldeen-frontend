@@ -966,6 +966,13 @@ input[type='radio']:checked:before {
 .completed .line {
   background-color: #28b446; /* Only the line before the completed step is green */
 }
+.canceled .circle {
+  background-color: red;
+}
+
+.canceled .line {
+  background-color: red; /* Only the line before the completed step is green */
+}
 
 .label {
   font-size: 12px;

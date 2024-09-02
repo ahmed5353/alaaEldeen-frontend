@@ -142,10 +142,6 @@
 
                   الطلبات<span class="badge bg-danger rounded-circle">1</span>
                 </a>
-                  <img src="../assets/images/icon/box-open-full 1.svg" alt="" />
-
-                  الطلبات<span class="badge bg-danger rounded-circle">1</span>
-                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/returns/returns.html">
@@ -250,7 +246,7 @@
           style="background-color: #f7f9fb"
         >
           <!--header navbar-->
-        <header class="navbar">
+          <header class="navbar">
             <div class="container d-flex justify-content-between">
               <button class="btn btn-logout d-flex d-none d-md-block">
                 <i class="fa-solid fa-right-from-bracket p-1"></i> تسجيل خروج
@@ -323,7 +319,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 20rem; overflow: hidden"
+                style="max-height: 22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -1215,10 +1211,9 @@
                       </div>
                       <button
                         class="btn btn-add"
-                        type="button"
                         data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasAddProvince"
-                        aria-controls="offcanvasAddProvince"
+                        data-bs-target="#add-account-bank"
+                        aria-controls="add-account-bank"
                       >
                         <img
                           width="30"
@@ -1254,7 +1249,6 @@
                                 <td></td>
 
                                 <td class="d-flex gap-1 justify-content-end">
-                                  <!-- NOTE: i am here -->
                                   <button
                                     class="btn text-success action-btn"
                                     data-bs-toggle="offcanvas"
@@ -1332,7 +1326,7 @@
                             <thead>
                               <tr>
                                 <th class="table-head">#</th>
-                                <th class="table-head">اسم المحافظة</th>
+                                <th class="table-head">اسم المحفظة</th>
                                 <th class="table-head">رقم المحفظة</th>
 
                                 <th></th>
@@ -4221,12 +4215,11 @@
                                 <thead>
                                   <tr>
                                     <th>#</th>
-                                    <th>السؤال</th>
-                                    <th>الاجابة</th>
+                                    <th>الصورة</th>
+                                    <th>الرابط</th>
 
                                     <th>تاريخ ووقت الانشاء</th>
-                                    <th>عدد المحبين</th>
-                                    <th>عدد الغير محبين</th>
+
                                     <th>الحالة</th>
                                     <th></th>
                                   </tr>
@@ -4234,11 +4227,17 @@
                                 <tbody>
                                   <tr>
                                     <td>1</td>
-                                    <td>طريقة اضافة منتج جديد</td>
-                                    <td>لوريم لوريم لوريم</td>
+                                    <td>
+                                      <img
+                                        src="/assets/images/jacket.png"
+                                        alt="jacket"
+                                        width="65"
+                                        height="49"
+                                      />
+                                    </td>
+                                    <td>https://tsetestses.com</td>
                                     <td dir="ltr">22/03/2024 - 08:30 PM</td>
-                                    <td>20</td>
-                                    <td>5</td>
+
                                     <td class="text-start">
                                       <div
                                         class="form-switch ms-2 d-flex justify-content-center"
@@ -4420,7 +4419,50 @@
     </div>
 
     <!-- *Public Setting -->
-    <!--edit  banvk account-->
+    <!--add  bank account-->
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="add-account-bank"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          اضافة حساب جديد
+        </h2>
+        <form class="d-flex flex-column px-3 gap-4 mt-4">
+          <div class="input-wrapper select">
+            <label>اسم العملة بالعربي</label>
+            <select style="position: relative">
+              <option value="">الجميع</option>
+              <option value="1">مطبع</option>
+              <option value="2">تجار</option>
+              <option value="3">مس��ول</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label>الحساب البنكي بالعربي</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>الحساب البنكي بالانجليزية</label>
+            <input class="w-100" type="text" />
+          </div>
+          <div class="input-wrapper">
+            <label>رقم الحساب</label>
+            <input class="w-100" type="text" />
+          </div>
+
+          <div class="w-100 text-center">
+            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+              حفظ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--edit  bank account-->
     <div
       class="offcanvas offcanvas-start"
       data-bs-scroll="true"

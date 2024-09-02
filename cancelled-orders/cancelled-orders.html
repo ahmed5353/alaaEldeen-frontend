@@ -293,136 +293,7 @@
               </div>
             </div>
           </header>
-          <div
-            class="offcanvas offcanvas-start"
-            data-bs-scroll="true"
-            tabindex="-1"
-            id="question-details"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
-            style="width: 28rem; max-height: 100vh; overflow-y: auto"
-          >
-            <div class="p-2 border-bottom d-flex justify-content-center">
-              <h4 class="fw-bold">المحادثة</h4>
-            </div>
-            <div class="border-bottom d-flex justify-content-center mt-2">
-              <h5 class="header">طريقة اضافة منتج جديد</h5>
-            </div>
 
-            <div class="p-4 h-100">
-              <!-- Chat -->
-              <div class="pb-5">
-                <div>
-                  <div class="d-flex gap-2">
-                    <img
-                      src="../assets/images/person-2.png"
-                      alt="chat-photo"
-                      class="rounded-circle"
-                      width="36"
-                      height="36"
-                    />
-                    <div class="d-flex flex-column">
-                      <span>محمد احمد</span>
-                      <span class="text-secondary small-text">03:30 PM</span>
-                    </div>
-                  </div>
-                  <div class="chat-msg sender">
-                    <p>
-                      صباح الخير انا عايز اعرف اسعار فلاتر الزيت اللي عندك ؟
-                    </p>
-                  </div>
-                </div>
-                <div class="d-flex flex-column">
-                  <span class="text-secondary small-text text-start"
-                    >03:30 PM</span
-                  >
-                  <div class="chat-msg reciever w-100">
-                    <p>لوريم</p>
-                  </div>
-                </div>
-                <div>
-                  <div class="d-flex gap-2">
-                    <img
-                      src="../assets/images/person-2.png"
-                      alt="chat-photo"
-                      class="rounded-circle"
-                      width="36"
-                      height="36"
-                    />
-                    <div class="d-flex flex-column">
-                      <span>محمد احمد</span>
-                      <span class="text-secondary small-text">03:30 PM</span>
-                    </div>
-                  </div>
-                  <div class="chat-msg sender">
-                    <p>
-                      لوريم ايبسوم هو نص شكلي ولهذا يُستخدم في صناعات المطابع
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Write message -->
-
-            <div
-              class="message-write d-flex justify-content-between align-items-center py-2"
-            >
-              <div class="flex-grow-1 position-relative">
-                <input type="text" placeholder="اكتب رسالتك..." />
-                <div class="msg-icons">
-                  <img src="/assets/images/icon/add-photo.svg" alt="add-file" />
-                  <img src="/assets/images/icon/smile.svg" alt="add-file" />
-                </div>
-              </div>
-              <button class="btn btn-send">
-                <img
-                  src="/assets/images/icon/send.svg"
-                  alt="send "
-                  width="42"
-                  height="42"
-                />
-              </button>
-            </div>
-          </div>
-
-          <!-- delete Modal -->
-          <div
-            class="modal fade"
-            id="deleteModal"
-            tabindex="-1"
-            aria-labelledby="deleteModalLabel"
-            aria-hidden="true"
-          >
-            <div
-              class="modal-dialog modal-dialog-centered"
-              style="max-width: 24rem"
-            >
-              <div
-                class="modal-content"
-                style="max-height: 22rem; overflow: hidden"
-              >
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body text-center">
-                  <img
-                    src="../assets/images/icon/Delete gif.gif"
-                    width="120"
-                    height="120"
-                    alt=""
-                  />
-                  <div class="message">هل أنت متأكد من الحذف</div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                  <button type="button" class="btn-delete">حذف</button>
-                </div>
-              </div>
-            </div>
-          </div>
           <!--            breadcrumb -->
           <div class="border-bottom">
             <nav
@@ -433,24 +304,39 @@
               <a href="#">لوحة التحكم </a>
               /
               <span class="breadcrumb-item active" aria-current="page">
-                الدعم الفني
+                الطلبات الملغية
               </span>
             </nav>
           </div>
 
-          <div class="container">
-            <h2 class="title-page mb-0 fw-bold">الدعم الفني</h2>
+          <!--finished products -->
 
-            <div class="d-flex flex-column">
-              <div class="d-flex align-items-center gap-2 flex-wrap mb-4">
+          <div class="container">
+            <div class="d-flex align-items-center gap-2">
+              <a href="/Dashboard.html">
+                <img
+                  src="../assets/images/icon/back.svg"
+                  alt="back icon"
+                  class="back-img"
+                />
+              </a>
+              <h2 class="title-page mb-0 fw-bold">الطلبات الملغية</h2>
+            </div>
+
+            <div
+              class="d-flex align-items-center gap-2 flex-wrap justify-content-between"
+            >
+              <div class="d-flex align-items-center gap-2 flex-wrap">
                 <div class="search-input">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="ابحث باسم المستخدم او رقم الموبايل ..."
+                    style="width: 39rem"
+                    placeholder="ابحث برقم الطلب او رقم موبايل المستخدم او اسم ورقم المندوب او اسم ورقم نقطة التوزيع ...."
                   />
                 </div>
+
                 <span class="daterange-input">
                   <img src="../assets/images/icon/calander.svg" />
                   <input
@@ -461,155 +347,155 @@
                   <i class="fa-solid fa-chevron-left active-color"></i>
                 </span>
               </div>
-              <div class="input-wrapper select align-self-start">
-                <label>نوع المستخدم</label>
-                <select class="position-relative">
-                  <option value="">-اختر-</option>
-                  <option value="1">لوريم</option>
-                  <option value="2">لوريم</option>
-                  <option value="3">لوريم</option>
-                </select>
+            </div>
+            <!-- sheet here -->
+            <div class="d-flex justify-content-between">
+              <div class="d-flex flex-column">
+                <div class="mt-4 d-flex gap-2">
+                  <!-- DropDowm Lists -->
+                  <div class="input-wrapper select">
+                    <label>نوع المنتجات</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select">
+                    <label>نوع الطلب</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select">
+                    <label>حالة الطلب الاخيرة</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select">
+                    <label>محافظة المتجر</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select">
+                    <label>محافظة العميل</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper select">
+                    <label>طريقة الدفع</label>
+                    <select class="">
+                      <option value="">اختر</option>
+                      <option value="1">لوريم</option>
+                      <option value="2">لزريم</option>
+                      <option value="3">لوريم</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!--tabel-->
           <div class="container-tabel p-3 py-4">
             <div class="container">
-              <div class="table-responsive mb-3">
+              <div class="table-responsive mb-3 rounded-3">
                 <div class="p-3 my-2">
                   <table class="table">
                     <thead>
                       <tr>
                         <th>#</th>
+                        <th>رقم الطلب</th>
                         <th>اسم المستخدم</th>
                         <th>رقم موبايل المستخدم</th>
-                        <th>السؤال</th>
+                        <th>عدد المتاجر داخل الطلب</th>
+                        <th>محافظة العميل</th>
+                        <th>محافظة المتجر</th>
+                        <th>اسم المخزن في محافظة العميل</th>
                         <th>تاريخ ووقت الطلب</th>
-                        <th>نوع المستخدم</th>
-                        <th>حالة الدعم</th>
-                        <th>غلق المحادثة</th>
-
+                        <th>نوع المنتجات</th>
+                        <th>نوع التوصيل</th>
+                        <th>اسم مندوب التوصيل</th>
+                        <th>رقم موبايل المندوب</th>
+                        <th>اسم نقطة التوزيع</th>
+                        <th>رقم موبايل نقطة التوزيع</th>
+                        <th>اجمالي تكلفة الطلب</th>
+                        <th>المبلغ المستحق لعلاء الدين</th>
+                        <th>قيمة التوصيل الاجمالية</th>
+                        <th>نسبة المندوب من قيمة التوصيل</th>
+                        <th>المبلغ المستحق للمندوب</th>
+                        <th>نسبة علاء الدين من قيمة التوصيل</th>
+                        <th>المبلغ المستحق لعلاء الدين</th>
+                        <th>نسبة نقطة التوزيع من قيمة التوصيل</th>
+                        <th>المبلغ المستحق لنقطة التوزيع</th>
+                        <th>قيمة الخصم</th>
+                        <th>نوع الطلب</th>
+                        <th>طريقة الدفع</th>
+                        <th>حالة الطلب</th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>1</td>
+                        <td>123456</td>
+                        <td><u>Mostafa Ahmed</u></td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>5</td>
+                        <td>صنعاء</td>
+                        <td>صنعاء</td>
+                        <td>صنعاء</td>
+                        <td dir="ltr">22/01/2024 - 01:30 PM</td>
+                        <td>قابلة للتخزين</td>
+                        <td>توصيل</td>
+                        <td>مصطفى خالد</td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>الصفا للتوزيع</td>
+                        <td dir="ltr">+0123456789</td>
+                        <td>ريال يمني1000</td>
+                        <td>ريال يمني1000</td>
+                        <td>ريال يمني1000</td>
+                        <td>10%</td>
+                        <td>ريال يمني1000</td>
+                        <td>10%</td>
+                        <td>ريال يمني1000</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>10%</td>
+                        <td>حالي</td>
+                        <td>نقدي</td>
 
-                        <td>Mostafa khaled</td>
+                        <td><span class="text-danger">تم الالغاء</span></td>
 
-                        <td dir="ltr">+201231234213</td>
-                        <td>كيف يمكنني حذف منتج ؟</td>
-                        <td dir="ltr">22/03/2024 - 08:30 PM</td>
-                        <td>تاجر</td>
-
-                        <td>
-                          <div
-                            class="d-flex gap-2"
-                            style="margin-right: 2.2rem"
+                        <td class="d-flex gap-1 justify-content-end">
+                          <a
+                            class="btn text-info action-btn"
+                            href="/cancelled-orders/cancelled-order-details.html"
                           >
-                            <button class="support-btn">جاري العمل</button>
-                            <button class="support-btn ended-btn">
-                              تم الانتهاء
-                            </button>
-                          </div>
-                        </td>
-
-                        <td class="text-start">
-                          <div
-                            class="form-switch ms-2 d-flex justify-content-center"
-                          >
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckChecked"
-                              checked
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="d-flex gap-1 justify-content-end">
-                            <a
-                              class="btn text-info action-btn"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#question-details"
-                              aria-controls="question-details"
-                            >
-                              <i class="fa-regular fa-eye"></i>
-                            </a>
-                            <!-- trash -->
-                            <button
-                              class="btn trash-color action-btn"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-
-                        <td>Mostafa khaled</td>
-
-                        <td dir="ltr">+201231234213</td>
-                        <td>كيف يمكنني حذف منتج ؟</td>
-                        <td dir="ltr">22/03/2024 - 08:30 PM</td>
-                        <td>تاجر</td>
-
-                        <td>
-                          <div
-                            class="d-flex gap-2"
-                            style="margin-right: 2.2rem"
-                          >
-                            <button class="support-btn working-btn">
-                              جاري العمل
-                            </button>
-                            <button class="support-btn">تم الانتهاء</button>
-                          </div>
-                        </td>
-
-                        <td class="text-start">
-                          <div
-                            class="form-switch ms-2 d-flex justify-content-center"
-                          >
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              role="switch"
-                              id="flexSwitchCheckChecked"
-                              checked
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="d-flex gap-1 justify-content-end">
-                            <a
-                              class="btn text-info action-btn"
-                              data-bs-toggle="offcanvas"
-                              data-bs-target="#question-details"
-                              aria-controls="question-details"
-                            >
-                              <i class="fa-regular fa-eye"></i>
-                            </a>
-                            <!-- trash -->
-                            <button
-                              class="btn trash-color action-btn"
-                              data-bs-toggle="modal"
-                              data-bs-target="#deleteModal"
-                            >
-                              <i class="fa-regular fa-trash-can"></i>
-                            </button>
-                          </div>
+                            <i class="fa-regular fa-eye"></i>
+                          </a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-              <nav aria-label="Page navigation example   ">
+              <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                   <li class="page-item disabled">
                     <a class="page-link" href="#" tabindex="-1">السابق</a>
@@ -631,6 +517,87 @@
             </div>
           </div>
         </main>
+      </div>
+    </div>
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-body">
+        <h2 class="title-page border-bottom text-center fw-bold">
+          تعيين مندوب توصيل
+        </h2>
+        <div class="search-input my-3">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="form-control" placeholder="ابحث ..." />
+        </div>
+        <div class="d-flex flex-column mt-3">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact1" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/avatar.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact2" />
+          </div>
+          <hr />
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="contact-item d-flex gap-2 align-items-center">
+              <img
+                src="/assets/images/person-2.png"
+                alt="Khaled Mohmed"
+                class="avatar"
+                width="52"
+                height="51"
+              />
+              <div class="d-flex flex-column">
+                <span>Khaled Mohmed</span>
+                <span dir="ltr" class="fw-lighter align-self-start text-muted"
+                  >+20 123456 789</span
+                >
+              </div>
+            </div>
+            <input type="radio" name="contact" id="contact3" />
+          </div>
+          <hr />
+        </div>
+        <div class="w-100 text-center">
+          <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
+            تأكيد
+          </button>
+        </div>
       </div>
     </div>
 
@@ -740,16 +707,6 @@
             );
           }
         );
-      });
-
-      $(document).ready(function () {
-        $('.toggle-password').on('click', function () {
-          const target = $(this).data('target');
-          const input = $(target);
-          const type = input.attr('type') === 'password' ? 'text' : 'password';
-          input.attr('type', type);
-          $(this).toggleClass('fa-eye fa-eye-slash');
-        });
       });
     </script>
   </body>

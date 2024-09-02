@@ -93,7 +93,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/markets/markets.html">
+                <a class="nav-link" href="/markets/markets.html">
                   <img src="../assets/images/icon/shop 1.svg" alt="" />
 
                   المتاجر
@@ -309,7 +309,7 @@
             >
               <div
                 class="modal-content"
-                style="max-height: 22rem; overflow: hidden"
+                style="max-height:22rem; overflow: hidden"
               >
                 <div class="modal-header">
                   <button
@@ -344,12 +344,10 @@
             >
               <a href="/Dashboard.html">لوحة التحكم </a>
               /
-              <a href="/markets/markets.html">المتاجر</a>
+              <a href="/markets/markets.html">المنتجات المنتهية</a>
 
               /
-              <a href="/markets/market-details.html">تفاصيل المتجر</a>
 
-              /
               <span class="breadcrumb-item active" aria-current="page">
                 تفاصيل المنتج
               </span>
@@ -358,14 +356,14 @@
 
           <!-- Main page -->
           <div class="container">
-            <div class="container d-flex jus gap-2">
-              <a href="/markets/markets.html">
+            <div class="container d-flex align-items-center gap-2">
+              <a href="/expired-products/expired-products.html">
                 <img
                   src="../assets/images/icon/back.svg"
                   alt="back icon"
-                  class="back-img"
+                  style="cursor: pointer"
                 />
-              </a>
+              <a>
               <h2 class="title-page mb-0 fw-bold">تفاصيل المنتج</h2>
             </div>
             <!-- PRODUCT Rate -->
@@ -422,7 +420,7 @@
             </div>
             <div>
               <div
-                class="d-flex justify-content-between"
+               
                 id="v-pills-tab"
                 role="tablist"
                 aria-orientation="vertical"
@@ -489,26 +487,7 @@
                     التقييمات
                   </button>
                 </div>
-                <div>
-                  <button
-                    class="btn discount"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions"
-                  >
-                    اضافة خصم
-                  </button>
-                  <button
-                    class="btn flash-sale"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasFlashWithBothOptions"
-                    aria-controls="offcanvasFlashWithBothOptions"
-                  >
-                    اضافة فلاش سيل
-                  </button>
-                </div>
+                
               </div>
               <!-- products -->
               <div class="tab-content" id="v-pills-tabContent">
@@ -897,114 +876,7 @@
         </main>
       </div>
     </div>
-    <!--add discount-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="offcanvasWithBothOptions"
-      aria-labelledby="offcanvasWithBothOptionsLabel"
-    >
-      <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center fw-bold">اضافة خصم</h2>
-        <form class="d-flex flex-column px-3 gap-2 mt-4">
-          <div class="input-custom position-relative">
-            <div class="input-wrapper">
-              <label> نسبة الخصم</label>
-              <input class="w-100" type="text" />
-            </div>
-            <span class="percent-icon">%</span>
-          </div>
-          <div class="d-flex flex-column gap-2">
-            <div class="d-flex flex-column gap-1">
-              <span style="color: #606c7e">التاريخ من</span>
-              <div class="daterange-input">
-                <img src="../assets/images/icon/calander.svg" />
-                <input
-                  type="text"
-                  name="daterange"
-                  class="custom-daterangepicker border-0 text-center"
-                />
-                <i class="fa-solid fa-chevron-down active-color"></i>
-              </div>
-            </div>
-            <div class="d-flex flex-column gap-1">
-              <span style="color: #606c7e">التاريخ الى</span>
-              <div class="daterange-input">
-                <img src="../assets/images/icon/calander.svg" />
-                <input
-                  type="text"
-                  name="daterange"
-                  class="custom-daterangepicker border-0 text-center"
-                />
-                <i class="fa-solid fa-chevron-down active-color"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              تأكيد
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!--add falsh sale-->
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      tabindex="-1"
-      id="offcanvasFlashWithBothOptions"
-      aria-labelledby="offcanvasFlashWithBothOptionsLabel"
-    >
-      <div class="offcanvas-body">
-        <h2 class="title-page border-bottom text-center fw-bold">
-          اضافة فلاش سيل
-        </h2>
-        <form class="d-flex flex-column px-3 gap-2 mt-4">
-          <div class="input-custom position-relative">
-            <div class="input-wrapper">
-              <label> نسبة الخصم</label>
-              <input class="w-100" type="text" />
-            </div>
-            <span class="percent-icon">%</span>
-          </div>
-          <div class="d-flex flex-column gap-2">
-            <div class="d-flex flex-column gap-1">
-              <span style="color: #606c7e">التاريخ من</span>
-              <div class="daterange-input">
-                <img src="../assets/images/icon/calander.svg" />
-                <input
-                  type="text"
-                  name="daterange"
-                  class="custom-daterangepicker border-0 text-center"
-                />
-                <i class="fa-solid fa-chevron-down active-color"></i>
-              </div>
-            </div>
-            <div class="d-flex flex-column gap-1">
-              <span style="color: #606c7e">التاريخ الى</span>
-              <div class="daterange-input">
-                <img src="../assets/images/icon/calander.svg" />
-                <input
-                  type="text"
-                  name="daterange"
-                  class="custom-daterangepicker border-0 text-center"
-                />
-                <i class="fa-solid fa-chevron-down active-color"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-100 text-center">
-            <button type="submit" class="btn btn-add w-auto m-auto px-5 mt-2">
-              تأكيد
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+   
 
     <!--NOTE: user's Rate details -->
     <div
