@@ -955,7 +955,7 @@ input[type='radio']:checked:before {
   z-index: 1;
 }
 .line-long {
-  width: 110%;
+  width: 108%;
   margin-right: -20px;
 }
 
