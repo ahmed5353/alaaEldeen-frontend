@@ -315,74 +315,42 @@
             </nav>
           </div>
 
-          <div class="container">
-            <div class="d-flex gap-2 align-items-center">
-              <a href="/markets/markets.html">
-                <img
-                  src="../assets/images/icon/back.svg"
-                  alt="back icon"
-                  class="back-img"
-                />
-              </a>
-              <h2 class="title-page mb-0 fw-bold">اضافة منتج جديد</h2>
-            </div>
-
-            <div>
-              <label class="select-img m-auto text-center" for="upploadImg">
-                <div class="d-flex align-items-center gap-3 position-relative">
-                  <div>
-                    <div class="add-img">
-                      <img
-                        id="preview-img"
-                        src="../assets/images/icon-park-outline_add-four.svg"
-                        width="16"
-                        height="16"
-                      />
-                    </div>
-                    <input type="file" id="upploadImg" class="d-none" />
-
-                    <div
-                      id="preview-container"
-                      class="text-center mt-2 d-none position-absolute"
-                      style="right: -5rem; top: -1rem"
-                    >
-                      <span id="remove-img"
-                        ><svg
-                          width="31"
-                          height="31"
-                          viewBox="0 0 31 31"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="15.4284"
-                            cy="15.1905"
-                            r="14.2071"
-                            fill="#E63050"
-                            stroke="white"
-                            stroke-width="1.3"
-                          />
-                          <path
-                            d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238"
-                            stroke="white"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                  <h5 class="active-color text-decoration-underline mt-2">
-                    اضافة الصورة الافتراضية
-                  </h5>
-                </div>
-              </label>
-            </div>
+          <div class="d-flex gap-2 align-items-center container">
+            <a href="/markets/markets.html">
+              <img
+                src="../assets/images/icon/back.svg"
+                alt="back icon"
+                class="back-img"
+              />
+            </a>
+            <h2 class="title-page mb-0 fw-bold">اضافة منتج جديد</h2>
           </div>
 
           <div class="p-3 py-4 mt-3" style="background-color: #f6f8fa">
             <form class="p-4 bg-white rounded-3">
+              <div class="riu-container container mb-2">
+                <label class="select-img position-relative d-flex flex-column">
+                  <div class="riu-upload-icon">
+                    <img
+                      class="preview-img"
+                      src="../assets/images/icon-park-outline_add-four.svg"
+                      width="50"
+                      height="50"
+                    />
+                  </div>
+                  <input
+                    class="riu-upload-input d-none"
+                    type="file"
+                    id="upload-images"
+                    name="images[]"
+                    accept="image/*,video/*"
+                    multiple
+                  />
+                  <h5 class="active-color text-decoration-underline mt-2">
+                    اضافة صور او فيديو للمنتج
+                  </h5>
+                </label>
+              </div>
               <div class="d-flex gap-4">
                 <div class="d-flex flex-column gap-3">
                   <!-- product name -->
@@ -856,122 +824,93 @@
               </button>
             </div>
           </div>
+        </main>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/script.js"></script>
 
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-          <script src="../assets/script.js"></script>
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker(
+          {
+            opens: 'left',
+            locale: {
+              format: 'DD/MM/YYYY',
+              applyLabel: 'Apply',
+              cancelLabel: 'Cancel',
+              fromLabel: 'From',
+              toLabel: 'To',
+              customRangeLabel: 'Custom',
+              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+              monthNames: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ],
+              firstDay: 1,
+            },
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format('YYYY'), 10),
+            linkedCalendars: false,
+            autoApply: true,
+            alwaysShowCalendars: false,
+            showCustomRangeLabel: false,
+            maxSpan: {
+              days: 60,
+            },
+          },
+          function (start, end, label) {
+            console.log(
+              'A new date selection was made: ' +
+                start.format('YYYY-MM-DD') +
+                ' to ' +
+                end.format('YYYY-MM-DD')
+            );
+          }
+        );
+      });
 
-          <script>
-            $(function () {
-              $('input[name="daterange"]').daterangepicker(
-                {
-                  opens: 'left',
-                  locale: {
-                    format: 'DD/MM/YYYY',
-                    applyLabel: 'Apply',
-                    cancelLabel: 'Cancel',
-                    fromLabel: 'From',
-                    toLabel: 'To',
-                    customRangeLabel: 'Custom',
-                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                    monthNames: [
-                      'January',
-                      'February',
-                      'March',
-                      'April',
-                      'May',
-                      'June',
-                      'July',
-                      'August',
-                      'September',
-                      'October',
-                      'November',
-                      'December',
-                    ],
-                    firstDay: 1,
-                  },
-                  singleDatePicker: true,
-                  showDropdowns: true,
-                  minYear: 1901,
-                  maxYear: parseInt(moment().format('YYYY'), 10),
-                  linkedCalendars: false,
-                  autoApply: true,
-                  alwaysShowCalendars: false,
-                  showCustomRangeLabel: false,
-                  maxSpan: {
-                    days: 60,
-                  },
-                },
-                function (start, end, label) {
-                  console.log(
-                    'A new date selection was made: ' +
-                      start.format('YYYY-MM-DD') +
-                      ' to ' +
-                      end.format('YYYY-MM-DD')
-                  );
-                }
-              );
-            });
+      $(document).ready(function () {
+        $('.toggle-password').on('click', function () {
+          const target = $(this).data('target');
+          const input = $(target);
+          const type = input.attr('type') === 'password' ? 'text' : 'password';
+          input.attr('type', type);
+          $(this).toggleClass('fa-eye fa-eye-slash');
+        });
+      });
 
-            $(document).ready(function () {
-              $('.toggle-password').on('click', function () {
-                const target = $(this).data('target');
-                const input = $(target);
-                const type =
-                  input.attr('type') === 'password' ? 'text' : 'password';
-                input.attr('type', type);
-                $(this).toggleClass('fa-eye fa-eye-slash');
-              });
-            });
+      $(document).ready(function () {
+        $('#toggleSidebar').on('click', function () {
+          $('#sidebar').toggleClass('show');
+          $('#overlay').toggleClass('show');
+        });
+        $('#overlay').on('click', function () {
+          $('#sidebar').removeClass('show');
+          $('#overlay').removeClass('show');
+        });
+      });
 
-            $(document).ready(function () {
-              $('#upploadImg').change(function (e) {
-                const file = e.target.files[0];
-                if (file) {
-                  const reader = new FileReader();
-                  reader.onload = function (e) {
-                    $('#preview-img').attr('src', e.target.result);
-                    $('#preview-container').removeClass('d-none');
-                    $('#remove-img').show();
-                  };
-                  reader.readAsDataURL(file);
-                }
-              });
+      $(document).ready(function () {
+        let subcategoryCount = 1;
 
-              $('#remove-img').click(function () {
-                $('#preview-img').attr('src', '../assets/images/icon/img.gif');
-                $('#preview-container').addClass('d-none');
-                $('#remove-img').hide();
-                $('#upploadImg').val('');
-              });
-            });
-            $(document).ready(function () {
-              $('#toggleSidebar').on('click', function () {
-                $('#sidebar').toggleClass('show');
-                $('#overlay').toggleClass('show');
-              });
-              $('#overlay').on('click', function () {
-                $('#sidebar').removeClass('show');
-                $('#overlay').removeClass('show');
-              });
-            });
-            // uploading photo
-            $('#upploadImg').on('change', function () {
-              let fileInput = $(this)[0];
-              if (fileInput.files.length > 0) {
-                let formData = new FormData();
-                formData.append('photo', fileInput.files[0]);
-                console.log(formData);
-              }
-            });
-
-            $(document).ready(function () {
-              let subcategoryCount = 1;
-
-              // Add new subcategory input fields
-              $('.add-new-size').on('click', function () {
-                subcategoryCount++;
-                const newSubcategory = `
+        // Add new subcategory input fields
+        $('.add-new-size').on('click', function () {
+          subcategoryCount++;
+          const newSubcategory = `
               <div class="subcategory-wrapper d-flex gap-4 mt-4 align-items-center">
                 <div class="input-wrapper p-1" style="width: 40%">
                   <label>نوع الاضافة</label>
@@ -996,82 +935,82 @@
                 </button>
               </div>
             `;
-                $(newSubcategory).insertBefore('.add-new-size');
-              });
+          $(newSubcategory).insertBefore('.add-new-size');
+        });
 
-              // Remove subcategory input fields
-              $(document).on('click', '.remove-subcategory', function () {
-                $(this).closest('.subcategory-wrapper').remove();
-              });
-            });
-          </script>
-          <script>
-            $(document).ready(function () {
-              let subcategoryIndex = 0; // Initialize counter for subcategories
+        // Remove subcategory input fields
+        $(document).on('click', '.remove-subcategory', function () {
+          $(this).closest('.subcategory-wrapper').remove();
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        let subcategoryIndex = 0; // Initialize counter for subcategories
 
-              function initPickr(pickerElement, inputElement) {
-                // Initialize Pickr
-                const pickr = Pickr.create({
-                  el: pickerElement,
-                  theme: 'nano', // or 'classic', or 'monolith', or 'nano'
-                  swatches: [
-                    'rgba(244, 67, 54, 1)',
-                    'rgba(233, 30, 99, 1)',
-                    'rgba(156, 39, 176, 1)',
-                    'rgba(103, 58, 183, 1)',
-                    'rgba(63, 81, 181, 1)',
-                    'rgba(33, 150, 243, 1)',
-                    'rgba(3, 169, 244, 1)',
-                    'rgba(0, 188, 212, 1)',
-                    'rgba(0, 150, 136, 1)',
-                    'rgba(76, 175, 80, 1)',
-                    'rgba(139, 195, 74, 1)',
-                    'rgba(205, 220, 57, 1)',
-                    'rgba(255, 235, 59, 1)',
-                    'rgba(255, 193, 7, 1)',
-                  ],
-                  components: {
-                    preview: true,
-                    opacity: true,
-                    hue: true,
-                    interaction: {
-                      hex: true,
-                      rgba: true,
-                      input: true,
-                      clear: true,
-                      save: true,
-                    },
-                  },
-                });
+        function initPickr(pickerElement, inputElement) {
+          // Initialize Pickr
+          const pickr = Pickr.create({
+            el: pickerElement,
+            theme: 'nano', // or 'classic', or 'monolith', or 'nano'
+            swatches: [
+              'rgba(244, 67, 54, 1)',
+              'rgba(233, 30, 99, 1)',
+              'rgba(156, 39, 176, 1)',
+              'rgba(103, 58, 183, 1)',
+              'rgba(63, 81, 181, 1)',
+              'rgba(33, 150, 243, 1)',
+              'rgba(3, 169, 244, 1)',
+              'rgba(0, 188, 212, 1)',
+              'rgba(0, 150, 136, 1)',
+              'rgba(76, 175, 80, 1)',
+              'rgba(139, 195, 74, 1)',
+              'rgba(205, 220, 57, 1)',
+              'rgba(255, 235, 59, 1)',
+              'rgba(255, 193, 7, 1)',
+            ],
+            components: {
+              preview: true,
+              opacity: true,
+              hue: true,
+              interaction: {
+                hex: true,
+                rgba: true,
+                input: true,
+                clear: true,
+                save: true,
+              },
+            },
+          });
 
-                // Convert hex color to decimal
-                function hexToDecimal(hex) {
-                  return parseInt(hex.replace('#', ''), 16);
-                }
+          // Convert hex color to decimal
+          function hexToDecimal(hex) {
+            return parseInt(hex.replace('#', ''), 16);
+          }
 
-                // Listen to the save event
-                pickr.on('save', (color) => {
-                  const currentColor = color.toHEXA().toString();
-                  const decimalColor = hexToDecimal(currentColor);
-                  $(pickerElement).css('background-color', currentColor);
-                  $(inputElement).val('0x' + decimalColor);
-                  console.log('COLOR SAVED', '0x' + decimalColor);
-                });
+          // Listen to the save event
+          pickr.on('save', (color) => {
+            const currentColor = color.toHEXA().toString();
+            const decimalColor = hexToDecimal(currentColor);
+            $(pickerElement).css('background-color', currentColor);
+            $(inputElement).val('0x' + decimalColor);
+            console.log('COLOR SAVED', '0x' + decimalColor);
+          });
 
-                // Listen to input changes
-                $(inputElement).on('input', function () {
-                  const currentColor = $(this).val();
-                  if (/^#([0-9A-F]{3}){1,2}$/i.test(currentColor)) {
-                    $(pickerElement).css('background-color', currentColor);
-                    pickr.setColor(currentColor); // Update Pickr's color
-                  }
-                });
-              }
+          // Listen to input changes
+          $(inputElement).on('input', function () {
+            const currentColor = $(this).val();
+            if (/^#([0-9A-F]{3}){1,2}$/i.test(currentColor)) {
+              $(pickerElement).css('background-color', currentColor);
+              pickr.setColor(currentColor); // Update Pickr's color
+            }
+          });
+        }
 
-              // Function to add a new subcategory
-              $('.add-new-color').on('click', function () {
-                subcategoryIndex++;
-                const newSubcategoryHtml = `
+        // Function to add a new subcategory
+        $('.add-new-color').on('click', function () {
+          subcategoryIndex++;
+          const newSubcategoryHtml = `
             <div class="subcategory-wrapper d-flex gap-4 mt-4 align-items-center">
                 <div class="input-wrapper pt-2" style="width: 40%">
                     <label for="color-input-${subcategoryIndex}">اللون</label>
@@ -1108,49 +1047,136 @@
                 </button>
             </div>
         `;
-                $(newSubcategoryHtml).insertBefore('.add-new-color');
+          $(newSubcategoryHtml).insertBefore('.add-new-color');
 
-                // Initialize Pickr for the new color picker button
-                const newPickerElement = $(
-                  `#color-picker-btn-${subcategoryIndex}`
-                )[0]; // Get the DOM element
-                const newInputElement = $(
-                  `#color-input-${subcategoryIndex}`
-                )[0]; // Get the DOM element
-                initPickr(newPickerElement, newInputElement); // Initialize Pickr
-              });
+          // Initialize Pickr for the new color picker button
+          const newPickerElement = $(
+            `#color-picker-btn-${subcategoryIndex}`
+          )[0]; // Get the DOM element
+          const newInputElement = $(`#color-input-${subcategoryIndex}`)[0]; // Get the DOM element
+          initPickr(newPickerElement, newInputElement); // Initialize Pickr
+        });
 
-              // Remove subcategory input fields
-              $(document).on('click', '.remove-subcategory', function () {
-                $(this).closest('.subcategory-wrapper').remove();
-              });
+        // Remove subcategory input fields
+        $(document).on('click', '.remove-subcategory', function () {
+          $(this).closest('.subcategory-wrapper').remove();
+        });
 
-              // Image upload functionality with event delegation
-              $(document).on('change', '.upload-image-input', function (event) {
-                var file = event.target.files[0]; // Get the uploaded file
-                if (file) {
-                  var fileName = file.name; // Get the file name
-                  // Display file name
-                  $(this).parent().hide(); // Hide the upload button
-                  $(this)
-                    .closest('.upload-image-container')
-                    .find('.image-name')
-                    .text('Uploaded Image: ' + fileName);
-                }
-              });
+        // Image upload functionality with event delegation
+        $(document).on('change', '.upload-image-input', function (event) {
+          var file = event.target.files[0]; // Get the uploaded file
+          if (file) {
+            var fileName = file.name; // Get the file name
+            // Display file name
+            $(this).parent().hide(); // Hide the upload button
+            $(this)
+              .closest('.upload-image-container')
+              .find('.image-name')
+              .text('Uploaded Image: ' + fileName);
+          }
+        });
 
-              // Initialize Pickr for the initial color picker buttons on page load
-              $('.color-picker-btn').each(function () {
-                const pickerElement = this;
-                const inputElement = $(this)
-                  .closest('.input-wrapper')
-                  .find('.color-value');
-                initPickr(pickerElement, inputElement[0]); // Pass the actual DOM element
-              });
-            });
-          </script>
-        </main>
-      </div>
-    </div>
+        // Initialize Pickr for the initial color picker buttons on page load
+        $('.color-picker-btn').each(function () {
+          const pickerElement = this;
+          const inputElement = $(this)
+            .closest('.input-wrapper')
+            .find('.color-value');
+          initPickr(pickerElement, inputElement[0]); // Pass the actual DOM element
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        let filesArray = [];
+
+        $(document).on('change', '.riu-upload-input', function (e) {
+          const selectedFiles = Array.from(e.target.files); // Convert FileList to array
+          const container = $(this).closest('.riu-container');
+
+          selectedFiles.forEach((file) => {
+            filesArray.push(file);
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              let mediaHtml = '';
+
+              // Check if the uploaded file is an image
+              if (file.type.startsWith('image/')) {
+                mediaHtml = `
+            <div class="riu-uploaded-media">
+              <img src="${e.target.result}" alt="Uploaded Image" />
+              <span class="riu-remove-img" data-file-name="${file.name}">
+                <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="15.4284" cy="15.1905" r="14.2071" fill="#E63050" stroke="white" stroke-width="1.3" />
+                  <path d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>`;
+              }
+              // Check if the uploaded file is a video
+              else if (file.type.startsWith('video/')) {
+                mediaHtml = `
+            <div class="riu-uploaded-media">
+              <video controls>
+                <source src="${e.target.result}" type="${file.type}">
+                Your browser does not support the video tag.
+              </video>
+              <span class="riu-remove-img" data-file-name="${file.name}">
+                <svg width="20" height="20" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="15.4284" cy="15.1905" r="14.2071" fill="#E63050" stroke="white" stroke-width="1.3" />
+                  <path d="M10.4766 10.238L20.3813 20.1428M10.4766 20.1428L20.3813 10.238" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>`;
+              }
+
+              container.prepend(mediaHtml);
+            };
+            reader.readAsDataURL(file);
+          });
+
+          console.log('Files added:', filesArray);
+        });
+
+        // Remove media from both the display and filesArray
+        $(document).on('click', '.riu-remove-img', function () {
+          const fileName = $(this).data('file-name');
+          filesArray = filesArray.filter((file) => file.name !== fileName); // Filter out the file from the array
+          $(this).closest('.riu-uploaded-media').remove();
+
+          console.log('Files remaining after removal:', filesArray);
+        });
+
+        // Append all files to form data
+        function appendFilesToFormData() {
+          const formData = new FormData();
+          filesArray.forEach((file, index) => {
+            formData.append(`media_${index}`, file);
+          });
+          return formData;
+        }
+
+        // Submit form data
+        $('#add-product').on('submit', function (e) {
+          e.preventDefault();
+
+          if (filesArray.length === 0) {
+            alert('No files selected');
+            return;
+          }
+
+          const formData = appendFilesToFormData();
+
+          // formData contains all images/videos and you can send it via AJAX or any method you want
+          console.log(
+            'FormData content:',
+            formData.getAll('media_0'),
+            formData.getAll('media_1'),
+            formData.getAll('media_2')
+          );
+        });
+      });
+    </script>
   </body>
 </html>

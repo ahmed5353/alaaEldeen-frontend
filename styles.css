@@ -1546,3 +1546,46 @@ input[type='radio']:checked:before {
     cursor: pointer;
   }
 }
+
+/* Image container */
+
+.riu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+}
+
+.riu-upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.riu-uploaded-media {
+  position: relative;
+  width: 145px;
+  height: 145px;
+}
+.riu-uploaded-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.riu-uploaded-media video {
+  width: 100%;
+  height: 120%;
+
+  object-fit: cover;
+  border-radius: 10px;
+}
+.riu-remove-img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #e63050;
+  border-radius: 50%;
+  cursor: pointer;
+}
