@@ -344,11 +344,22 @@
               <hr />
 
               <h5 class="fw-bold text-center">اضافة نطاق عمل</h5>
-              <div class="search-input">
+              <div class="search-input position-relative">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="form-control" placeholder="ابحث..." />
+                <input
+                  type="text"
+                  id="city-search"
+                  class="form-control"
+                  placeholder="ابحث ..."
+                />
+                <button
+                  id="search-btn"
+                  class="position-absolute btn border"
+                  style="left: 1rem; color: #fff; background-color: #bfa274"
+                >
+                  بحث
+                </button>
               </div>
-
               <div class="form-group d-flex align-items-center gap-2">
                 <label for="radiusRange">نطاق العمل بالكيلو متر</label>
                 <input
@@ -877,6 +888,50 @@
         function getRadiusFromSlider() {
           return $('#radiusRange').val() * 1000; // Convert km to meters
         }
+        function searchCity(city) {
+          $.getJSON(
+            'https://nominatim.openstreetmap.org/search?format=json&q=' + city,
+            function (data) {
+              if (data && data.length > 0) {
+                var lat = data[0].lat;
+                var lng = data[0].lon;
+
+                map2.setView([lat, lng], 12);
+
+                if (currentMarker) {
+                  map2.removeLayer(currentMarker);
+                }
+
+                currentMarker = L.marker([lat, lng]).addTo(map);
+                console.log(
+                  'City found:',
+                  city,
+                  'Latitude:',
+                  lat,
+                  'Longitude:',
+                  lng
+                );
+              } else {
+                alert('City not found:', city);
+              }
+            }
+          );
+        }
+
+        $('#search-btn').click(function (e) {
+          e.preventDefault();
+          var city = $('#city-search').val();
+          if (city) {
+            searchCity(city);
+          }
+        });
+
+        $('#city-search').keypress(function (e) {
+          if (e.which == 13) {
+            e.preventDefault();
+            $('#search-btn').click();
+          }
+        });
 
         // Initialize circle with a default position and radius
         var initialLatLng = [29.8206, 30.8025];

@@ -992,14 +992,22 @@
           اضافة نطاق عمل
         </h2>
         <form class="d-flex flex-column px-3 gap-3 mt-2">
-          <div class="search-input">
+          <div class="search-input position-relative">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
               type="text"
+              id="city-search"
               class="form-control"
               style="width: 30rem"
               placeholder="ابحث ..."
             />
+            <button
+              id="search-btn"
+              class="position-absolute btn border"
+              style="left: 1rem; color: #fff; background-color: #bfa274"
+            >
+              بحث
+            </button>
           </div>
           <!-- map -->
           <div id="map"></div>
@@ -1042,10 +1050,9 @@
     <script src="../assets/script.js"></script>
 
     <script>
-      // map
       $(document).ready(function () {
         // Initialize the map and set its view
-        var map = L.map('map').setView([29.8206, 30.8025], 9); // Coordinates and zoom level
+        var map = L.map('map').setView([29.8206, 30.8025], 9); // Default coordinates and zoom level
 
         // Add a tile layer to the map
         L.tileLayer(
@@ -1057,32 +1064,69 @@
 
         // Add click event listener to the map
         map.on('click', function (e) {
-          // Get the latitude and longitude from the click event
           var lat = e.latlng.lat;
           var lng = e.latlng.lng;
 
-          // Remove the current marker if it exists
           if (currentMarker) {
             map.removeLayer(currentMarker);
           }
 
-          // Add a new marker at the clicked location
           currentMarker = L.marker([lat, lng]).addTo(map);
-
-          // Log the latitude and longitude to the console
           console.log('Latitude: ' + lat + ', Longitude: ' + lng);
+        });
+
+        // Function to search for a city using Nominatim API
+        function searchCity(city) {
+          $.getJSON(
+            'https://nominatim.openstreetmap.org/search?format=json&q=' + city,
+            function (data) {
+              if (data && data.length > 0) {
+                var lat = data[0].lat;
+                var lng = data[0].lon;
+
+                map.setView([lat, lng], 12);
+
+                if (currentMarker) {
+                  map.removeLayer(currentMarker);
+                }
+
+                currentMarker = L.marker([lat, lng]).addTo(map);
+                console.log(
+                  'City found:',
+                  city,
+                  'Latitude:',
+                  lat,
+                  'Longitude:',
+                  lng
+                );
+              } else {
+                alert('City not found:', city);
+              }
+            }
+          );
+        }
+
+        $('#search-btn').click(function (e) {
+          e.preventDefault();
+          var city = $('#city-search').val();
+          if (city) {
+            searchCity(city);
+          }
+        });
+
+        $('#city-search').keypress(function (e) {
+          if (e.which == 13) {
+            e.preventDefault();
+            $('#search-btn').click();
+          }
         });
       });
 
       $(document).ready(function () {
         $('.file-upload').change(function () {
-          // Get the ID of the file input
           const fileInputId = $(this).attr('id');
 
-          // Determine the index from the ID
-          const index = fileInputId.split('-').pop(); // This gets 'first', 'second', or 'third'
-
-          // Construct the IDs for the file details and its elements
+          const index = fileInputId.split('-').pop();
           const fileDetailsId = `#file-details-${index}`;
           const fileNameId = `#file-name-${index}`;
           const fileSizeId = `#file-size-${index}`;
